@@ -1,0 +1,26 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">İsim</th>
+            <th scope="col">Soyisim</th>
+            <th scope="col">Email</th>
+            <th scope="col">Şifre</th>
+            <th scope="col">TC No</th>
+            <th scope="col">D-Tarihi</th>
+            <th scope="col">Hakkında</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let applicant of applicants">
+            <td>{{applicant.id}}</td>
+            <td>{{applicant.firstName}}</td>
+            <td>{{applicant.lastName}}</td>
+            <td>{{applicant.email}}</td>
+            <td>{{applicant.password}}</td>
+            <td>{{applicant.nationalIdentity}}</td>
+            <td>{{applicant.dateOfBirth}}</td>
+            <td>{{applicant.about}}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,13 +1,16 @@
-<div class="row">
-  <div class="col-md-12">
+<div class="container-fluid">
+  <div class="row">
     <app-navi></app-navi>
   </div>
+  <br>
+  <div class="row">
+    <div class="col-md-3">
+      blabla
+    </div>
+
+    <div class="col-md-9">sdsds
+      <router-outlet></router-outlet>
+
+    </div>
+  </div>
 </div>
-<div class="row">
-  <div class="col-md-3 border">category</div>
-  <div class="col-md-9 border">bootcamp</div>
-</div>
-<div class="row">
-  <div class="col-md-12 border">footer</div>
-</div>
-<router-outlet></router-outlet>
