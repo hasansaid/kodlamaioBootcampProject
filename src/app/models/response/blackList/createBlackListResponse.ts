@@ -1,6 +1,6 @@
 export interface ICreateBlackListResponse {
   id: number;
   applicantId: number;
-  date: Date;
+  date: string;
   reason: string;
 }

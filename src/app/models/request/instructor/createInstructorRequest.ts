@@ -1,7 +1,7 @@
 export interface ICreateInstructorRequest {
   firstName: string;
   lastName: string;
-  dateOfBirth: Date;
+  dateOfBirth: string;
   email: string;
   password: string;
   companyName: string;

@@ -1,5 +1,5 @@
 export interface ICreateBlackListRequest {
   applicantId: number;
-  date: Date;
+  date: string;
   reason: string;
 }
