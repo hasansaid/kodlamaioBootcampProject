@@ -1,3 +1,4 @@
+import { ICreateBlackListRequest } from './../../models/request/blackList/createBlackListRequest';
 import { IGetBlackListResponse } from './../../models/response/blackList/getBlackListResponse';
 import { IGetAllBlackListResponse } from './../../models/response/blackList/getAllBlackListResponse';
 import { Observable } from 'rxjs';
@@ -20,5 +21,8 @@ export class BlacklistService {
     return this.httpClient.get<IGetBlackListResponse[]>(
       this.apiUrl + '?id=' + id
     );
+  }
+  addBlackList(blackList: ICreateBlackListRequest) {
+    return this.httpClient.post(this.apiUrl, blackList);
   }
 }

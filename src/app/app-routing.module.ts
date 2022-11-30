@@ -1,9 +1,10 @@
+import { BlacklistAddComponent } from './component/blacklist/blacklist-add/blacklist-add.component';
+import { BlacklistDetailComponent } from './component/blacklist/black-list/blacklist-detail/blacklist-detail.component';
 import { ApplicationDetailComponent } from './component/application/application-detail/application-detail.component';
 import { EmployeeDetailComponent } from './component/employee/employee-detail/employee-detail.component';
 import { EmployeListComponent } from './component/employee/employe-list/employe-list.component';
 import { InstructorDetailComponent } from './component/instructor/instructor-detail/instructor-detail.component';
 import { InstructorListComponent } from './component/instructor/instructor-list/instructor-list.component';
-import { BlacklistDetailComponent } from './component/blacklist/black-list/blacklist-detail/blacklist-detail.component';
 import { BootcampAddComponent } from './component/bootcamp/bootcamp-add/bootcamp-add.component';
 import { BootcampDetailComponent } from './component/bootcamp/bootcamp-detail/bootcamp-detail.component';
 import { ApplicantDetailComponent } from './component/applicant/applicant-detail/applicant-detail.component';
@@ -29,6 +30,7 @@ const routes: Routes = [
   //blackList
   { path: 'black-list', component: BlackListComponent },
   { path: 'blacklist-detail/:id', component: BlacklistDetailComponent },
+  { path: 'blacklist-add', component: BlacklistAddComponent },
   //
   //bootcamp
   { path: 'bootcamp-list', component: BootcampListComponent },

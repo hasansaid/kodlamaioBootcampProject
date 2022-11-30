@@ -97,6 +97,18 @@
       "applicantId": 1,
       "date": "30/11/2022",
       "reason": "Aday bootcamp'e katılım göstermedi."
+    },
+    {
+      "applicantId": 2,
+      "date": "30.12.2022",
+      "reason": "Sebep Böyle",
+      "id": 2
+    },
+    {
+      "applicantId": 3,
+      "date": "30.12.2022",
+      "reason": "adsadas",
+      "id": 3
     }
   ]
 }
