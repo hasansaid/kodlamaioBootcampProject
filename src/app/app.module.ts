@@ -11,8 +11,9 @@ import { BlackListComponent } from './component/blacklist/black-list/black-list.
 import { ApplicationListComponent } from './component/application/application-list/application-list.component';
 import { BootcampListComponent } from './component/bootcamp/bootcamp-list/bootcamp-list.component';
 import { ApplicantDetailComponent } from './component/applicant/applicant-detail/applicant-detail.component';
+import { BootcampDetailComponent } from './component/bootcamp/bootcamp-detail/bootcamp-detail.component';
 @NgModule({
-  declarations: [AppComponent, NaviComponent, ApplicantListComponent,BlackListComponent,ApplicationListComponent,BootcampListComponent, ApplicantDetailComponent],
+  declarations: [AppComponent, NaviComponent, ApplicantListComponent,BlackListComponent,ApplicationListComponent,BootcampListComponent, ApplicantDetailComponent, BootcampDetailComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

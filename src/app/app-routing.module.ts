@@ -1,3 +1,4 @@
+import { BootcampDetailComponent } from './component/bootcamp/bootcamp-detail/bootcamp-detail.component';
 import { ApplicantDetailComponent } from './component/applicant/applicant-detail/applicant-detail.component';
 import { BootcampListComponent } from './component/bootcamp/bootcamp-list/bootcamp-list.component';
 import { BlackListComponent } from './component/blacklist/black-list/black-list.component';
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: '', pathMatch: 'full', component: ApplicantListComponent },
   { path: 'applicant-list', component: ApplicantListComponent },
   { path: 'applicant-detail/:id', component: ApplicantDetailComponent },
+  { path: 'bootcamp-detail/:id', component: BootcampDetailComponent },
   //
   //application
   { path: 'application-list', component: ApplicationListComponent },
