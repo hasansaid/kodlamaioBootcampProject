@@ -6,5 +6,5 @@ export interface IUpdateApplicantRequest {
   password: string;
   about: string;
   nationalIdentity: string;
-  dateOfBirth: Date;
+  dateOfBirth: string;
 }

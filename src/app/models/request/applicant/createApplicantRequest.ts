@@ -4,6 +4,6 @@ export interface ICreateApplicantRequest {
   email: string;
   password: string;
   nationalIdentity: string;
-  dateOfBirth: Date;
+  dateOfBirth: string;
   about: string;
 }

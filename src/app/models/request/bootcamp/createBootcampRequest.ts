@@ -1,7 +1,7 @@
 export interface ICreateBootcampRequest {
-    instructorId:number;
-    name:string;
-    dateStart:Date;
-    dateEnd:Date;
-    state:number;
+  instructorId: number;
+  name: string;
+  dateStart: string;
+  dateEnd: string;
+  state: number;
 }

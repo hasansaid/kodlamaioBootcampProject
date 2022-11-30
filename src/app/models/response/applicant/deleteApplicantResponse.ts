@@ -6,5 +6,5 @@ export interface IDeleteApplicantResponse {
   password: string;
   about: string;
   nationalIdentity: string;
-  dateOfBirth: Date;
+  dateOfBirth: string;
 }

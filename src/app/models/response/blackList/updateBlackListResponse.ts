@@ -1,6 +1,6 @@
 export interface IUpdateBlackListResponse {
   id: number;
   applicantId: number;
-  date: Date;
+  date: string;
   reason: string;
 }

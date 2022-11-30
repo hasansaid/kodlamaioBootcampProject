@@ -1,9 +1,8 @@
 export interface IUpdateBootcampRequest {
-    id:number;
-    instructorId:number;
-    name:string;
-    dateStart:Date;
-    dateEnd:Date;
-    state:number;
-
+  id: number;
+  instructorId: number;
+  name: string;
+  dateStart: string;
+  dateEnd: string;
+  state: number;
 }
