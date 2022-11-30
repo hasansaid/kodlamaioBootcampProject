@@ -1,3 +1,6 @@
+import { ApplicationDetailComponent } from './component/application/application-detail/application-detail.component';
+import { EmployeeDetailComponent } from './component/employee/employee-detail/employee-detail.component';
+import { EmployeListComponent } from './component/employee/employe-list/employe-list.component';
 import { InstructorDetailComponent } from './component/instructor/instructor-detail/instructor-detail.component';
 import { InstructorListComponent } from './component/instructor/instructor-list/instructor-list.component';
 import { BlacklistDetailComponent } from './component/blacklist/black-list/blacklist-detail/blacklist-detail.component';
@@ -20,6 +23,8 @@ const routes: Routes = [
   //
   //application
   { path: 'application-list', component: ApplicationListComponent },
+  { path: 'application-detail/:id', component: ApplicationDetailComponent },
+
   //
   //blackList
   { path: 'black-list', component: BlackListComponent },
@@ -34,6 +39,11 @@ const routes: Routes = [
   //instructor
   { path: 'instructor-list', component: InstructorListComponent },
   { path: 'instructor-detail/:id', component: InstructorDetailComponent },
+
+  //
+  //employee
+  { path: 'employee-list', component: EmployeListComponent },
+  { path: 'employee-detail/:id', component: EmployeeDetailComponent },
 ];
 
 @NgModule({

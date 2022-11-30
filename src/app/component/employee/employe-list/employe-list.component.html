@@ -1,4 +1,5 @@
-<h3>Eğitmen Liste Detay</h3>
+<h3>Çalışanlar Listesi</h3>
+<button class="btn btn-primary">Ekle</button>
 <table class="table">
   <thead>
     <tr>
@@ -9,19 +10,22 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let instructor of instructors">
-      <td>{{ instructor.id }}</td>
-      <td>{{ instructor.firstName }}</td>
-      <td>{{ instructor.lastName }}</td>
-      <td>{{ instructor.email }}</td>
-      <td>{{ instructor.companyName }}</td>
+    <tr *ngFor="let employee of employees">
+      <td>{{ employee.id }}</td>
+      <td>{{ employee.firstName }}</td>
+      <td>{{ employee.lastName }}</td>
+      <td>{{ employee.email }}</td>
+      <td>{{ employee.password }}</td>
+      <td>{{ employee.nationalIdentity }}</td>
+      <td>{{ employee.dateOfBirth }}</td>
+      <td>{{ employee.position }}</td>
       <td>
         <button
           type="button"
           class="btn btn-primary"
-          routerLink="/instructor-list"
+          routerLink="/employee-detail/{{ employee.id }}"
         >
-          Dön
+          Detay
         </button>
       </td>
       <td><button type="button" class="btn btn-warning">Düzenle</button></td>

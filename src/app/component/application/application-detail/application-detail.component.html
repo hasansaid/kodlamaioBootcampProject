@@ -1,12 +1,15 @@
-<h3>Başvurular</h3>
-<button class="btn btn-primary">Ekle</button>
+<h3>Başvurular Detay</h3>
 <table class="table">
   <thead>
     <tr>
       <th scope="col">Id</th>
-      <th scope="col">User Id</th>
-      <th scope="col">Bootcamp Id</th>
-      <th scope="col">State</th>
+      <th scope="col">İsim</th>
+      <th scope="col">Soyisim</th>
+      <th scope="col">Email</th>
+      <th scope="col">Şifre</th>
+      <th scope="col">TC No</th>
+      <th scope="col">D-Tarihi</th>
+      <th scope="col">Hakkında</th>
     </tr>
   </thead>
   <tbody>
@@ -15,14 +18,13 @@
       <td>{{ application.userId }}</td>
       <td>{{ application.bootcampId }}</td>
       <td>{{ application.state }}</td>
-
       <td>
         <button
           type="button"
           class="btn btn-primary"
-          routerLink="/application-detail/{{ application.id }}"
+          routerLink="/application-list"
         >
-          Detay
+          Dön
         </button>
       </td>
       <td><button type="button" class="btn btn-warning">Düzenle</button></td>
