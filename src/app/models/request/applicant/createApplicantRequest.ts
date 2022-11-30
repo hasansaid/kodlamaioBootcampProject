@@ -3,7 +3,7 @@ export interface ICreateApplicantRequest {
   lastName: string;
   email: string;
   password: string;
-  nationalIdentity: string;
+  nationalIdentity: number;
   dateOfBirth: string;
   about: string;
 }

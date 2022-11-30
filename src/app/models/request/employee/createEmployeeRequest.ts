@@ -3,7 +3,7 @@ export interface ICreateEmployeeRequest {
   lastName: string;
   email: string;
   password: string;
-  nationalIdentity: string;
+  nationalIdentity: number;
   dateOfBirth: string;
   position: string;
 }

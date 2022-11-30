@@ -7,7 +7,7 @@
       "email": "meydanli@gmail.com",
       "password": "123",
       "about": "Artvin Çoruh Üniversitesinden 2016 yılında mezun oldum. Frontend Developer. ",
-      "nationalIdentity": "87525696514",
+      "nationalIdentity": 87525696514,
       "dateOfBirth": "25/10/1995"
     },
     {
@@ -17,7 +17,7 @@
       "email": "turan@gmail.com",
       "password": "123",
       "about": "Bartın Üniversitesinden 2021 yılında mezun oldum. Frontend Developer. ",
-      "nationalIdentity": "87525696514",
+      "nationalIdentity": 87525696514,
       "dateOfBirth": "25/10/1995"
     }
   ],
@@ -38,7 +38,7 @@
       "lastName": "Karaca",
       "email": "karaca@gmail.com",
       "password": "123",
-      "nationalIdentity": "65412398765",
+      "nationalIdentity": 65412398765,
       "dateOfBirth": "19/07/1991",
       "position": "Müdür"
     }
