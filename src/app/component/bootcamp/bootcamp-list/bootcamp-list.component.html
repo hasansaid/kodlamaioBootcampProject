@@ -1,0 +1,22 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Eğitmen Kimliği</th>
+            <th scope="col">İsim</th>
+            <th scope="col">Başlangıç Tarihi</th>
+            <th scope="col">Bitiş Tarihi</th>
+            <th scope="col">Durumu</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let bootcamp of bootcamps">
+            <td>{{bootcamp.id}}</td>
+            <td>{{bootcamp.instructorId}}</td>
+            <td>{{bootcamp.name}}</td>
+            <td>{{bootcamp.dateStart}}</td>
+            <td>{{bootcamp.dateEnd}}</td>
+            <td>{{bootcamp.state}}</td>
+        </tr>
+    </tbody>
+</table>

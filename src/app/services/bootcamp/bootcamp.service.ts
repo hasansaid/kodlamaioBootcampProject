@@ -1,0 +1,19 @@
+import { Observable } from 'rxjs';
+import { IGetAllBootcampResponse } from './../../models/response/bootcamp/getAllBootcampResponse';
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class BootcampService {
+
+  apiUrl = 'http://localhost:3000/bootcamp';
+
+  constructor(private httpClient: HttpClient) { }
+
+  getAllBootcamp(): Observable<IGetAllBootcampResponse[]> {
+    return this.httpClient.get<IGetAllBootcampResponse[]>(this.apiUrl);
+  }
+  
+}

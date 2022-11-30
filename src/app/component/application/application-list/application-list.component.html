@@ -1,0 +1,18 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">User Id</th>
+            <th scope="col">Bootcamp Id</th>
+            <th scope="col">State</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let application of applications">
+            <td>{{application.id}}</td>
+            <td>{{application.userId}}</td>
+            <td>{{application.bootcampId}}</td>
+            <td>{{application.state}}</td>
+        </tr>
+    </tbody>
+</table>

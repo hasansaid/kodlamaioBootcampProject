@@ -1,0 +1,18 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">applicantId</th>
+            <th scope="col">Tarih</th>
+            <th scope="col">Hakkında</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let blacklist of blacklists">
+            <td>{{blacklist.id}}</td>
+            <td>{{blacklist.applicantId}}</td>
+            <td>{{blacklist.date}}</td>
+            <td>{{blacklist.reason}}</td>
+        </tr>
+    </tbody>
+</table>
