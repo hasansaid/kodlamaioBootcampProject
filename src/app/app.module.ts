@@ -14,8 +14,10 @@ import { ApplicantDetailComponent } from './component/applicant/applicant-detail
 import { BootcampDetailComponent } from './component/bootcamp/bootcamp-detail/bootcamp-detail.component';
 import { BootcampAddComponent } from './component/bootcamp/bootcamp-add/bootcamp-add.component';
 import { BlacklistDetailComponent } from './component/blacklist/black-list/blacklist-detail/blacklist-detail.component';
+import { InstructorListComponent } from './component/instructor/instructor-list/instructor-list.component';
+import { InstructorDetailComponent } from './component/instructor/instructor-detail/instructor-detail.component';
 @NgModule({
-  declarations: [AppComponent, NaviComponent, ApplicantListComponent,BlackListComponent,ApplicationListComponent,BootcampListComponent, ApplicantDetailComponent, BootcampDetailComponent, BootcampAddComponent, BlacklistDetailComponent],
+  declarations: [AppComponent, NaviComponent, ApplicantListComponent,BlackListComponent,ApplicationListComponent,BootcampListComponent, ApplicantDetailComponent, BootcampDetailComponent, BootcampAddComponent, BlacklistDetailComponent, InstructorListComponent, InstructorDetailComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -1,4 +1,4 @@
-export interface IGetAllInstructorResponse {
+export interface IGetInstructorResponse {
   id: number;
   firstName: string;
   lastName: string;

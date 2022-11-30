@@ -1,3 +1,5 @@
+import { InstructorDetailComponent } from './component/instructor/instructor-detail/instructor-detail.component';
+import { InstructorListComponent } from './component/instructor/instructor-list/instructor-list.component';
 import { BlacklistDetailComponent } from './component/blacklist/black-list/blacklist-detail/blacklist-detail.component';
 import { BootcampAddComponent } from './component/bootcamp/bootcamp-add/bootcamp-add.component';
 import { BootcampDetailComponent } from './component/bootcamp/bootcamp-detail/bootcamp-detail.component';
@@ -29,6 +31,9 @@ const routes: Routes = [
   { path: 'bootcamp-add', component: BootcampAddComponent },
 
   //
+  //instructor
+  { path: 'instructor-list', component: InstructorListComponent },
+  { path: 'instructor-detail/:id', component: InstructorDetailComponent },
 ];
 
 @NgModule({
