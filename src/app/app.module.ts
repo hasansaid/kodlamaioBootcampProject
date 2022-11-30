@@ -10,8 +10,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BlackListComponent } from './component/blacklist/black-list/black-list.component';
 import { ApplicationListComponent } from './component/application/application-list/application-list.component';
 import { BootcampListComponent } from './component/bootcamp/bootcamp-list/bootcamp-list.component';
+import { ApplicantDetailComponent } from './component/applicant/applicant-detail/applicant-detail.component';
 @NgModule({
-  declarations: [AppComponent, NaviComponent, ApplicantListComponent,BlackListComponent,ApplicationListComponent,BootcampListComponent],
+  declarations: [AppComponent, NaviComponent, ApplicantListComponent,BlackListComponent,ApplicationListComponent,BootcampListComponent, ApplicantDetailComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

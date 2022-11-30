@@ -1,3 +1,4 @@
+import { IGetApplicantResponse } from './../../models/response/applicant/getApplicantResponse';
 import { IGetAllApplicantResponse } from './../../models/response/applicant/getAllApplicantResponse';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -13,5 +14,11 @@ export class ApplicantService {
 
   getAllApplicant(): Observable<IGetAllApplicantResponse[]> {
     return this.httpClient.get<IGetAllApplicantResponse[]>(this.apiUrl);
+  }
+
+  getApplicant(id: number): Observable<IGetApplicantResponse[]> {
+    return this.httpClient.get<IGetApplicantResponse[]>(
+      this.apiUrl + '?id=' + id
+    );
   }
 }

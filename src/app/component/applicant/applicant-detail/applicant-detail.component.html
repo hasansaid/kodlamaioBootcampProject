@@ -1,4 +1,4 @@
-<h3>Adaylar</h3>
+<h3>Adaylar Detay</h3>
 <table class="table">
     <thead>
         <tr>
@@ -13,7 +13,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let applicant of applicants">
+        <tr *ngFor="let applicant of applicant">
             <td>{{applicant.id}}</td>
             <td>{{applicant.firstName}}</td>
             <td>{{applicant.lastName}}</td>
@@ -22,8 +22,7 @@
             <td>{{applicant.nationalIdentity}}</td>
             <td>{{applicant.dateOfBirth}}</td>
             <td>{{applicant.about}}</td>
-            <td><button type="button" class="btn btn-primary"
-                    routerLink="/applicant-detail/{{applicant.id}}">Detay</button></td>
+            <td><button type="button" class="btn btn-primary" routerLink="">Dön</button></td>
             <td><button type="button" class="btn btn-warning">Düzenle</button></td>
             <td><button type="button" class="btn btn-danger">Sil</button></td>
         </tr>
