@@ -23,6 +23,7 @@ export class BlackListComponent implements OnInit {
 
   getAllBlackList(){
     this.blacklistService.GetAllBlackList().subscribe((data) => (this.blacklists = data));
+    
   }
 
 }
