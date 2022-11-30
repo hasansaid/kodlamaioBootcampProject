@@ -1,18 +1,24 @@
+import { IGetBlackListResponse } from './../../models/response/blackList/getBlackListResponse';
 import { IGetAllBlackListResponse } from './../../models/response/blackList/getAllBlackListResponse';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class BlacklistService {
-
   apiUrl = 'http://localhost:3000/blacklist';
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {}
 
-  GetAllBlackList(): Observable<IGetAllBlackListResponse[]>{
+  GetAllBlackList(): Observable<IGetAllBlackListResponse[]> {
     return this.httpClient.get<IGetAllBlackListResponse[]>(this.apiUrl);
+  }
+
+  getBlackList(id: number): Observable<IGetBlackListResponse[]> {
+    return this.httpClient.get<IGetBlackListResponse[]>(
+      this.apiUrl + '?id=' + id
+    );
   }
 }

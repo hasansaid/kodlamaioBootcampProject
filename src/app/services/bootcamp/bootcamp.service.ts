@@ -1,3 +1,4 @@
+import { ICreateBootcampRequest } from './../../models/request/bootcamp/createBootcampRequest';
 import { IGetBootcampResponse } from './../../models/response/bootcamp/getBootcampResponse';
 import { Observable } from 'rxjs';
 import { IGetAllBootcampResponse } from './../../models/response/bootcamp/getAllBootcampResponse';
@@ -19,5 +20,8 @@ export class BootcampService {
     return this.httpClient.get<IGetBootcampResponse[]>(
       this.apiUrl + '?id=' + id
     );
+  }
+  addBootcamp(bootcamp: ICreateBootcampRequest) {
+    return this.httpClient.post(this.apiUrl, bootcamp);
   }
 }

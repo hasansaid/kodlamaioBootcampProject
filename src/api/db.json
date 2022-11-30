@@ -59,6 +59,22 @@
       "dateStart": "15/12/2022",
       "dateEnd": "15/03/2023",
       "state": 1
+    },
+    {
+      "instructorId": 3,
+      "name": "Java Kampı",
+      "dateStart": "30.11.2022",
+      "dateEnd": "30.12.2022",
+      "state": "1",
+      "id": 3
+    },
+    {
+      "instructorId": 1,
+      "name": "Flutter",
+      "dateStart": "30.11.2022",
+      "dateEnd": "30.12.2022",
+      "state": "1",
+      "id": 4
     }
   ],
   "application": [

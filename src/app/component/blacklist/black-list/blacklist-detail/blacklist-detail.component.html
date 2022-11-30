@@ -1,5 +1,4 @@
-<h3>Kara Liste</h3>
-<button class="btn btn-primary">Ekle</button>
+<h3>Kara Liste Detay</h3>
 <table class="table">
   <thead>
     <tr>
@@ -16,12 +15,8 @@
       <td>{{ blacklist.date }}</td>
       <td>{{ blacklist.reason }}</td>
       <td>
-        <button
-          type="button"
-          class="btn btn-primary"
-          routerLink="/blacklist-detail/{{ blacklist.id }}"
-        >
-          Detay
+        <button type="button" class="btn btn-primary" routerLink="/black-list">
+          Dön
         </button>
       </td>
       <td><button type="button" class="btn btn-warning">Düzenle</button></td>

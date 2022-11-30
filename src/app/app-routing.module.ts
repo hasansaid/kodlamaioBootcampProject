@@ -1,3 +1,5 @@
+import { BlacklistDetailComponent } from './component/blacklist/black-list/blacklist-detail/blacklist-detail.component';
+import { BootcampAddComponent } from './component/bootcamp/bootcamp-add/bootcamp-add.component';
 import { BootcampDetailComponent } from './component/bootcamp/bootcamp-detail/bootcamp-detail.component';
 import { ApplicantDetailComponent } from './component/applicant/applicant-detail/applicant-detail.component';
 import { BootcampListComponent } from './component/bootcamp/bootcamp-list/bootcamp-list.component';
@@ -13,16 +15,19 @@ const routes: Routes = [
   { path: '', pathMatch: 'full', component: ApplicantListComponent },
   { path: 'applicant-list', component: ApplicantListComponent },
   { path: 'applicant-detail/:id', component: ApplicantDetailComponent },
-  { path: 'bootcamp-detail/:id', component: BootcampDetailComponent },
   //
   //application
   { path: 'application-list', component: ApplicationListComponent },
   //
   //blackList
   { path: 'black-list', component: BlackListComponent },
+  { path: 'blacklist-detail/:id', component: BlacklistDetailComponent },
   //
   //bootcamp
   { path: 'bootcamp-list', component: BootcampListComponent },
+  { path: 'bootcamp-detail/:id', component: BootcampDetailComponent },
+  { path: 'bootcamp-add', component: BootcampAddComponent },
+
   //
 ];
 
