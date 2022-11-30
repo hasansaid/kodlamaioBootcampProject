@@ -17,11 +17,11 @@ export class BlacklistDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params) =>
-      this.getBootcamp(params['id'])
+      this.getBlackList(params['id'])
     );
   }
 
-  getBootcamp(id: number) {
+  getBlackList(id: number) {
     this.blacklistService
       .getBlackList(id)
       .subscribe((data) => (this.blacklists = data));

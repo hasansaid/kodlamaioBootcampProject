@@ -1,3 +1,6 @@
+import { InstructorAddComponent } from './component/instructor/instructor-add/instructor-add.component';
+import { EmployeeAddComponent } from './component/employee/employee-add/employee-add.component';
+import { ApplicantAddComponent } from './component/applicant/applicant-add/applicant-add.component';
 import { BlacklistAddComponent } from './component/blacklist/blacklist-add/blacklist-add.component';
 import { BlacklistDetailComponent } from './component/blacklist/black-list/blacklist-detail/blacklist-detail.component';
 import { ApplicationDetailComponent } from './component/application/application-detail/application-detail.component';
@@ -21,6 +24,7 @@ const routes: Routes = [
   { path: '', pathMatch: 'full', component: ApplicantListComponent },
   { path: 'applicant-list', component: ApplicantListComponent },
   { path: 'applicant-detail/:id', component: ApplicantDetailComponent },
+  { path: 'applicant-add', component: ApplicantAddComponent },
   //
   //application
   { path: 'application-list', component: ApplicationListComponent },
@@ -41,11 +45,13 @@ const routes: Routes = [
   //instructor
   { path: 'instructor-list', component: InstructorListComponent },
   { path: 'instructor-detail/:id', component: InstructorDetailComponent },
+  { path: 'instructor-add', component: InstructorAddComponent },
 
   //
   //employee
   { path: 'employee-list', component: EmployeListComponent },
   { path: 'employee-detail/:id', component: EmployeeDetailComponent },
+  { path: 'employee-add', component: EmployeeAddComponent },
 ];
 
 @NgModule({

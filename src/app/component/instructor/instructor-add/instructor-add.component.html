@@ -2,55 +2,73 @@
   <div class="col-md-12">
     <div class="card">
       <div class="card-header">
-        <h5 class="title">Bootcamp Ekle</h5>
+        <h5 class="title">Eğitmen Ekle</h5>
       </div>
       <div class="card-body">
         <!-- [formGroup]="carAddForm" ile map işlemini yapmış oluruz. -->
-        <form [formGroup]="bootcampAddForm">
+        <form [formGroup]="instructorAddForm">
           <div style="margin-top: 5px" class="form-group">
             <!-- anguların önemsediği kısım formControlName dir. İlişkilendirmeyi bunun üzerinden yapar. -->
             <input
-              type="number"
-              id="instructorId"
-              formControlName="instructorId"
+              type="text"
+              id="firstName"
+              formControlName="firstName"
               class="form-control"
-              placeholder="Eğitmen Id Giriniz..."
+              placeholder="Eğitmen Adını Giriniz..."
             />
           </div>
           <div style="margin-top: 5px" class="form-group">
             <input
               type="text"
-              id="name"
-              formControlName="name"
+              id="lastName"
+              formControlName="lastName"
               class="form-control"
-              placeholder="Bootcamp İsmini Giriniz..."
+              placeholder="Eğitmen Soyadını Giriniz..."
             />
           </div>
           <div style="margin-top: 5px" class="form-group">
             <input
               type="text"
-              id="dateStart"
-              formControlName="dateStart"
+              id="dateOfBirth"
+              formControlName="dateOfBirth"
               class="form-control"
-              placeholder="Bootcamp Başlangıç Tarihi Giriniz..."
+              placeholder="Eğitmen Doğum Tarihi Giriniz..."
             />
           </div>
           <div style="margin-top: 5px" class="form-group">
             <input
               type="text"
-              id="dateEnd"
-              formControlName="dateEnd"
+              id="email"
+              formControlName="email"
               class="form-control"
-              placeholder="Bootcamp Bitiş Tarihi Giriniz..."
+              placeholder="Eğitmen email Giriniz..."
             />
           </div>
           <div style="margin-top: 5px" class="form-group">
             <input
               type="text"
-              id="state"
-              formControlName="state"
+              id="password"
+              formControlName="password"
               class="form-control"
-              placeholder="Bootcamp Durumu Giriniz..."
+              placeholder="Eğitmen Şifresini Giriniz..."
+            />
+          </div>
+          <div style="margin-top: 5px" class="form-group">
+            <input
+              type="text"
+              id="companyName"
+              formControlName="companyName"
+              class="form-control"
+              placeholder="Eğitmen Şirket Adı Giriniz..."
+            />
+          </div>
+          <div style="margin-top: 5px" class="form-group">
+            <input
+              type="text"
+              id="nationalIdentity"
+              formControlName="nationalIdentity"
+              class="form-control"
+              placeholder="Eğitmen Tc Kimlik No Giriniz..."
             />
           </div>
         </form>
@@ -62,7 +80,7 @@
             class="btn btn-primary"
             type="button"
             (click)="add()"
-            routerLink="/bootcamp-list"
+            routerLink="/instructor-list"
           >
             Ekle
           </button>

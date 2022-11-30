@@ -1,3 +1,4 @@
+import { ICreateEmployeeRequest } from './../../models/request/employee/createEmployeeRequest';
 import { IGetAllEmployeeResponse } from './../../models/response/employee/getAllEmployeeResponse';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
@@ -16,7 +17,10 @@ export class EmployeeService {
   }
   getEmployee(id: number): Observable<IGetEmployeeResponse[]> {
     return this.httpClient.get<IGetEmployeeResponse[]>(
-      this.apiUrl + '?id' + id
+      this.apiUrl + '?id=' + id
     );
+  }
+  addEmployee(employee: ICreateEmployeeRequest) {
+    return this.httpClient.post(this.apiUrl, employee);
   }
 }

@@ -1,3 +1,4 @@
+import { ICreateApplicantRequest } from './../../models/request/applicant/createApplicantRequest';
 import { IGetApplicantResponse } from './../../models/response/applicant/getApplicantResponse';
 import { IGetAllApplicantResponse } from './../../models/response/applicant/getAllApplicantResponse';
 import { HttpClient } from '@angular/common/http';
@@ -20,5 +21,8 @@ export class ApplicantService {
     return this.httpClient.get<IGetApplicantResponse[]>(
       this.apiUrl + '?id=' + id
     );
+  }
+  addApplicant(applicant: ICreateApplicantRequest) {
+    return this.httpClient.post(this.apiUrl, applicant);
   }
 }

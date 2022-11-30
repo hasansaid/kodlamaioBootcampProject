@@ -1,32 +1,39 @@
 <h3>Adaylar</h3>
-<td><button type="button" class="btn btn-primary">Ekle</button></td>
+<td>
+  <button type="button" class="btn btn-primary" routerLink="/applicant-add">
+    Ekle
+  </button>
+</td>
 <table class="table">
-    <thead>
-        <tr>
-            <th scope="col">Id</th>
-            <th scope="col">İsim</th>
-            <th scope="col">Soyisim</th>
-            <th scope="col">Email</th>
-            <th scope="col">Detay</th>
-            <th scope="col">Düzenle</th>
-            <th scope="col">Sil</th>
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">İsim</th>
+      <th scope="col">Soyisim</th>
+      <th scope="col">Email</th>
+      <th scope="col">Detay</th>
+      <th scope="col">Düzenle</th>
+      <th scope="col">Sil</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let applicant of applicants">
+      <td>{{ applicant.id }}</td>
+      <td>{{ applicant.firstName }}</td>
+      <td>{{ applicant.lastName }}</td>
+      <td>{{ applicant.email }}</td>
 
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let applicant of applicants">
-            <td>{{applicant.id}}</td>
-            <td>{{applicant.firstName}}</td>
-            <td>{{applicant.lastName}}</td>
-            <td>{{applicant.email}}</td>
-
-            <td><button type="button" class="btn btn-primary"
-                    routerLink="/applicant-detail/{{applicant.id}}">Detay</button></td>
-            <td><button type="button" class="btn btn-warning">Düzenle</button></td>
-            <td><button type="button" class="btn btn-danger">Sil</button></td>
-        </tr>
-
-    </tbody>
-
-
+      <td>
+        <button
+          type="button"
+          class="btn btn-primary"
+          routerLink="/applicant-detail/{{ applicant.id }}"
+        >
+          Detay
+        </button>
+      </td>
+      <td><button type="button" class="btn btn-warning">Düzenle</button></td>
+      <td><button type="button" class="btn btn-danger">Sil</button></td>
+    </tr>
+  </tbody>
 </table>

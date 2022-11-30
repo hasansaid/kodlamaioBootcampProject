@@ -1,3 +1,4 @@
+import { ICreateInstructorRequest } from './../../models/request/instructor/createInstructorRequest';
 import { IGetInstructorResponse } from './../../models/response/instructor/getInstructorResponse';
 import { IGetAllInstructorResponse } from 'src/app/models/response/instructor/getAllInstructorResponse';
 import { Observable } from 'rxjs';
@@ -19,5 +20,8 @@ export class InstructorService {
     return this.httpClient.get<IGetInstructorResponse[]>(
       this.apiUrl + '?id=' + id
     );
+  }
+  addInstructor(instructor: ICreateInstructorRequest) {
+    return this.httpClient.post(this.apiUrl, instructor);
   }
 }

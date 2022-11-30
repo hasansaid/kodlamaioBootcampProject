@@ -14,7 +14,7 @@ import {
   styleUrls: ['./bootcamp-add.component.css'],
 })
 export class BootcampAddComponent implements OnInit {
-  bootcampAddForm!: FormGroup;
+  bootcampAddForm: FormGroup;
   constructor(
     private formBuilder: FormBuilder,
     private activatedRoute: ActivatedRoute,

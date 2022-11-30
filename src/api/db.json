@@ -19,6 +19,16 @@
       "about": "Bartın Üniversitesinden 2021 yılında mezun oldum. Frontend Developer. ",
       "nationalIdentity": 87525696514,
       "dateOfBirth": "25/10/1995"
+    },
+    {
+      "firstName": "Ali",
+      "lastName": "Mehmet",
+      "email": "mehmet@gmail.com",
+      "password": "12345",
+      "nationalIdentity": "12345678911",
+      "dateOfBirth": "25.25.2022",
+      "about": "Ankara Çankayalı",
+      "id": 3
     }
   ],
   "instructor": [
@@ -29,6 +39,16 @@
       "email": "sertkaya@gmail.com",
       "password": "123",
       "companyName": "kodlamaio"
+    },
+    {
+      "firstName": "ali",
+      "lastName": "veli",
+      "dateOfBirth": "25.10.1995",
+      "email": "veli@gmail.com",
+      "password": "12356",
+      "companyName": "kodlama.io",
+      "nationalIdentity": "12345689978",
+      "id": 2
     }
   ],
   "employee": [
@@ -41,6 +61,16 @@
       "nationalIdentity": 65412398765,
       "dateOfBirth": "19/07/1991",
       "position": "Müdür"
+    },
+    {
+      "firstName": "ahmet",
+      "lastName": "ali",
+      "email": "ahmet@gmail.com",
+      "password": "12312",
+      "nationalIdentity": 12345678901,
+      "dateOfBirth": "25.12.2022",
+      "position": "Müdür Yardımcısı",
+      "id": 2
     }
   ],
   "bootcamp": [
