@@ -5,4 +5,5 @@ export interface IUpdateInstructorResponse {
   email: string;
   password: string;
   companyName: string;
+  nationalIdentity: number;
 }
