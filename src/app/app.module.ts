@@ -24,6 +24,7 @@ import { BlacklistDetailComponent } from './component/blacklist/black-list/black
 import { ApplicantAddComponent } from './component/applicant/applicant-add/applicant-add.component';
 import { EmployeeAddComponent } from './component/employee/employee-add/employee-add.component';
 import { InstructorAddComponent } from './component/instructor/instructor-add/instructor-add.component';
+import { ApplicationAddComponent } from './component/application/application-add/application-add.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,6 +46,7 @@ import { InstructorAddComponent } from './component/instructor/instructor-add/in
     EmployeeAddComponent,
     BlacklistDetailComponent,
     InstructorAddComponent,
+    ApplicationAddComponent,
   ],
   imports: [
     BrowserModule,

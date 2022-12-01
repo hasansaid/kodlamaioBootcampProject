@@ -1,3 +1,5 @@
+import { ICreateApplicationRequest } from './../../models/request/application/createApplicationRequest';
+import { ICreateApplicantRequest } from './../../models/request/applicant/createApplicantRequest';
 import { IGetApplicationResponse } from './../../models/response/application/getApplicationResponse';
 import { IGetAllApplicationResponse } from './../../models/response/application/getAllApplicationResponse';
 import { Observable } from 'rxjs';
@@ -20,5 +22,8 @@ export class ApplicationService {
     return this.httpClient.get<IGetApplicationResponse[]>(
       this.apiUrl + '?id=' + id
     );
+  }
+  addApplication(application: ICreateApplicationRequest) {
+    return this.httpClient.post(this.apiUrl, application);
   }
 }

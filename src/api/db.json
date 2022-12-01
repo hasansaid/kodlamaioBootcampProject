@@ -119,6 +119,12 @@
       "userId": 2,
       "bootcampId": 1,
       "state": 1
+    },
+    {
+      "applicantId": 3,
+      "bootcampId": 3,
+      "state": "3",
+      "id": 3
     }
   ],
   "blacklist": [
