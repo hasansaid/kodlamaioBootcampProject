@@ -1,3 +1,6 @@
+import { BlacklistUpdateComponent } from './component/blacklist/blacklist-update/blacklist-update.component';
+import { InstructorUpdateComponent } from './component/instructor/instructor-update/instructor-update.component';
+import { EmployeeUpdateComponent } from './component/employee/employee-update/employee-update.component';
 import { BootcampUpdateComponent } from './component/bootcamp/bootcamp-update/bootcamp-update.component';
 import { ApplicantUpdateComponent } from './component/applicant/applicant-update/applicant-update.component';
 import { ApplicationUpdateComponent } from './component/application/application-update/application-update.component';
@@ -43,6 +46,7 @@ const routes: Routes = [
   { path: 'black-list', component: BlackListComponent },
   { path: 'blacklist-detail/:id', component: BlacklistDetailComponent },
   { path: 'blacklist-add', component: BlacklistAddComponent },
+  { path: 'blacklist-update/:id', component: BlacklistUpdateComponent },
   //
   //bootcamp
   { path: 'bootcamp-list', component: BootcampListComponent },
@@ -55,12 +59,14 @@ const routes: Routes = [
   { path: 'instructor-list', component: InstructorListComponent },
   { path: 'instructor-detail/:id', component: InstructorDetailComponent },
   { path: 'instructor-add', component: InstructorAddComponent },
+  { path: 'instructor-update/:id', component: InstructorUpdateComponent },
 
   //
   //employee
   { path: 'employee-list', component: EmployeListComponent },
   { path: 'employee-detail/:id', component: EmployeeDetailComponent },
   { path: 'employee-add', component: EmployeeAddComponent },
+  { path: 'employee-update/:id', component: EmployeeUpdateComponent },
 ];
 
 @NgModule({
