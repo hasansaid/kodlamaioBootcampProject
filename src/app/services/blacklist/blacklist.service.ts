@@ -23,4 +23,7 @@ export class BlacklistService {
   addBlackList(blackList: ICreateBlackListRequest) {
     return this.httpClient.post(this.apiUrl, blackList);
   }
+  updateBlackList(id: number, blacklist: any) {
+    return this.httpClient.put(this.apiUrl + '/' + id, blacklist);
+  }
 }

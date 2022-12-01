@@ -1,1 +1,62 @@
-<p>blacklist-update works!</p>
+<div class="content">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="title">Kara Liste Düzenleme Sayfası</h5>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="blackListUpdateForm" *ngIf="blackListUpdateForm">
+          <div style="margin-top: 5px" class="form-group">
+            <input
+              type="number"
+              id="id"
+              formControlName="id"
+              class="form-control"
+              placeholder="Aday Id Giriniz..."
+            />
+          </div>
+          <div style="margin-top: 5px" class="form-group">
+            <input
+              type="number"
+              id="applicantId"
+              formControlName="applicantId"
+              class="form-control"
+              placeholder="applicantId Id  Giriniz..."
+            />
+          </div>
+          <div style="margin-top: 5px" class="form-group">
+            <input
+              type="text"
+              id="date"
+              formControlName="date"
+              class="form-control"
+              placeholder="date giriniz"
+            />
+          </div>
+          <div style="margin-top: 5px" class="form-group">
+            <input
+              type="text"
+              id="reason"
+              formControlName="reason"
+              class="form-control"
+              placeholder="Sebep"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="car-footer">
+        <div class="d-grid gap-2">
+          <button
+            style="margin-bottom: 10px; margin-left: 15px; margin-right: 15px"
+            class="btn btn-primary"
+            type="button"
+            (click)="updateBlackList()"
+            routerLink="/black-list"
+          >
+            Güncelle
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
