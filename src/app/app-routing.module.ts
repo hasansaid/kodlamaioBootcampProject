@@ -1,3 +1,4 @@
+import { ApplicantUpdateComponent } from './component/applicant/applicant-update/applicant-update.component';
 import { ApplicationUpdateComponent } from './component/application/application-update/application-update.component';
 import { ApplicationAddComponent } from './component/application/application-add/application-add.component';
 import { InstructorAddComponent } from './component/instructor/instructor-add/instructor-add.component';
@@ -27,6 +28,8 @@ const routes: Routes = [
   { path: 'applicant-list', component: ApplicantListComponent },
   { path: 'applicant-detail/:id', component: ApplicantDetailComponent },
   { path: 'applicant-add', component: ApplicantAddComponent },
+  { path: 'applicant-update/:id', component: ApplicantUpdateComponent },
+
   //
   //application
   { path: 'application-list', component: ApplicationListComponent },

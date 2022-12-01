@@ -32,7 +32,15 @@
           Detay
         </button>
       </td>
-      <td><button type="button" class="btn btn-warning">Düzenle</button></td>
+      <td>
+        <button
+          type="button"
+          class="btn btn-warning"
+          routerLink="/applicant-update/{{ applicant.id }}"
+        >
+          Düzenle
+        </button>
+      </td>
       <td><button type="button" class="btn btn-danger">Sil</button></td>
     </tr>
   </tbody>

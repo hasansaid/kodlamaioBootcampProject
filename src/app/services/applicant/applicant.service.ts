@@ -23,4 +23,7 @@ export class ApplicantService {
   addApplicant(applicant: ICreateApplicantRequest) {
     return this.httpClient.post(this.apiUrl, applicant);
   }
+  updateApplicant(id: number, applicant: any) {
+    return this.httpClient.put(this.apiUrl + '/' + id, applicant);
+  }
 }

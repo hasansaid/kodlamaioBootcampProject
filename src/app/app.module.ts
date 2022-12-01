@@ -26,6 +26,7 @@ import { EmployeeAddComponent } from './component/employee/employee-add/employee
 import { InstructorAddComponent } from './component/instructor/instructor-add/instructor-add.component';
 import { ApplicationAddComponent } from './component/application/application-add/application-add.component';
 import { ApplicationUpdateComponent } from './component/application/application-update/application-update.component';
+import { ApplicantUpdateComponent } from './component/applicant/applicant-update/applicant-update.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,6 +50,7 @@ import { ApplicationUpdateComponent } from './component/application/application-
     InstructorAddComponent,
     ApplicationAddComponent,
     ApplicationUpdateComponent,
+    ApplicantUpdateComponent,
   ],
   imports: [
     BrowserModule,
