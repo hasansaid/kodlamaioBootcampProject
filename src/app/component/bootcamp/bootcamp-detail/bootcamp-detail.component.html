@@ -11,7 +11,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let bootcamp of bootcamps">
+    <tr>
       <td>{{ bootcamp.id }}</td>
       <td>{{ bootcamp.instructorId }}</td>
       <td>{{ bootcamp.name }}</td>
@@ -20,11 +20,7 @@
       <td>{{ bootcamp.state }}</td>
 
       <td>
-        <button
-          type="button"
-          class="btn btn-primary"
-          routerLink="/bootcamp-list"
-        >
+        <button type="button" class="btn btn-primary" routerLink="/bootcamp-list">
           Dön
         </button>
       </td>

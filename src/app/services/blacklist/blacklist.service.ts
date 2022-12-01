@@ -17,10 +17,8 @@ export class BlacklistService {
     return this.httpClient.get<IGetAllBlackListResponse[]>(this.apiUrl);
   }
 
-  getBlackList(id: number): Observable<IGetBlackListResponse[]> {
-    return this.httpClient.get<IGetBlackListResponse[]>(
-      this.apiUrl + '?id=' + id
-    );
+  getBlackList(id: number): Observable<IGetBlackListResponse> {
+    return this.httpClient.get<IGetBlackListResponse>(this.apiUrl + '/' + id);
   }
   addBlackList(blackList: ICreateBlackListRequest) {
     return this.httpClient.post(this.apiUrl, blackList);

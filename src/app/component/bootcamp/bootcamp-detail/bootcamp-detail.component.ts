@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bootcamp-detail.component.css'],
 })
 export class BootcampDetailComponent implements OnInit {
-  bootcamps: IGetBootcampResponse[] = [];
+  bootcamp: IGetBootcampResponse;
   constructor(
     private bootcampService: BootcampService,
     private activatedRoute: ActivatedRoute
@@ -24,7 +24,7 @@ export class BootcampDetailComponent implements OnInit {
 
   getBootcamp(id: number) {
     this.bootcampService.getBootcamp(id).subscribe((data) => {
-      this.bootcamps = data;
+      this.bootcamp = data;
     });
   }
 }

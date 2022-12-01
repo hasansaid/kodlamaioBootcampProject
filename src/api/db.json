@@ -109,21 +109,21 @@
   ],
   "application": [
     {
-      "id": 1,
+      "userId": 1,
+      "bootcampId": 2,
+      "state": 2,
+      "id": 1
+    },
+    {
       "userId": 1,
       "bootcampId": 1,
-      "state": 1
+      "state": 1,
+      "id": 2
     },
     {
-      "id": 2,
-      "userId": 2,
+      "userId": 1,
       "bootcampId": 1,
-      "state": 1
-    },
-    {
-      "applicantId": 3,
-      "bootcampId": 3,
-      "state": "3",
+      "state": 1,
       "id": 3
     }
   ],

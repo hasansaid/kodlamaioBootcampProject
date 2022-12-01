@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./employee-detail.component.css'],
 })
 export class EmployeeDetailComponent implements OnInit {
-  employees: IGetEmployeeResponse[] = [];
+  employee: IGetEmployeeResponse;
   constructor(
     private employeeService: EmployeeService,
     private activatedRoute: ActivatedRoute
@@ -24,6 +24,6 @@ export class EmployeeDetailComponent implements OnInit {
   getEmployee(id: number) {
     this.employeeService
       .getEmployee(id)
-      .subscribe((data) => (this.employees = data));
+      .subscribe((data) => (this.employee = data));
   }
 }

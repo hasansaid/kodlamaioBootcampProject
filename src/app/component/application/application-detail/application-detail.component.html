@@ -13,17 +13,13 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let application of applications">
+    <tr>
       <td>{{ application.id }}</td>
       <td>{{ application.userId }}</td>
       <td>{{ application.bootcampId }}</td>
       <td>{{ application.state }}</td>
       <td>
-        <button
-          type="button"
-          class="btn btn-primary"
-          routerLink="/application-list"
-        >
+        <button type="button" class="btn btn-primary" routerLink="/application-list">
           Dön
         </button>
       </td>

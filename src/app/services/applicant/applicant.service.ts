@@ -17,10 +17,8 @@ export class ApplicantService {
     return this.httpClient.get<IGetAllApplicantResponse[]>(this.apiUrl);
   }
 
-  getApplicant(id: number): Observable<IGetApplicantResponse[]> {
-    return this.httpClient.get<IGetApplicantResponse[]>(
-      this.apiUrl + '?id=' + id
-    );
+  getApplicant(id: number): Observable<IGetApplicantResponse> {
+    return this.httpClient.get<IGetApplicantResponse>(this.apiUrl + '/' + id);
   }
   addApplicant(applicant: ICreateApplicantRequest) {
     return this.httpClient.post(this.apiUrl, applicant);

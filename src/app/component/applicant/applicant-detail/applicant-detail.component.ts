@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./applicant-detail.component.css'],
 })
 export class ApplicantDetailComponent implements OnInit {
-  applicant: IGetAllApplicantResponse[] = [];
+  applicant: IGetAllApplicantResponse;
   constructor(
     private applicantService: ApplicantService,
     private activatedRoute: ActivatedRoute

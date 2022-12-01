@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./blacklist-detail.component.css'],
 })
 export class BlacklistDetailComponent implements OnInit {
-  blacklists: IGetBlackListResponse[] = [];
+  blacklist: IGetBlackListResponse;
   constructor(
     private blacklistService: BlacklistService,
     private activatedRoute: ActivatedRoute
@@ -24,6 +24,6 @@ export class BlacklistDetailComponent implements OnInit {
   getBlackList(id: number) {
     this.blacklistService
       .getBlackList(id)
-      .subscribe((data) => (this.blacklists = data));
+      .subscribe((data) => (this.blacklist = data));
   }
 }

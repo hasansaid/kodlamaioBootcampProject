@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./application-detail.component.css'],
 })
 export class ApplicationDetailComponent implements OnInit {
-  applications: IGetApplicationResponse[] = [];
+  application: IGetApplicationResponse;
   constructor(
     private applicationService: ApplicationService,
     private activatedRoute: ActivatedRoute
@@ -24,6 +24,6 @@ export class ApplicationDetailComponent implements OnInit {
   getApplication(id: number) {
     this.applicationService
       .getApplication(id)
-      .subscribe((data) => (this.applications = data));
+      .subscribe((data) => (this.application = data));
   }
 }

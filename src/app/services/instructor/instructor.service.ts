@@ -16,10 +16,8 @@ export class InstructorService {
     return this.httpClient.get<IGetAllInstructorResponse[]>(this.apiUrl);
   }
 
-  getInstructor(id: number): Observable<IGetInstructorResponse[]> {
-    return this.httpClient.get<IGetInstructorResponse[]>(
-      this.apiUrl + '?id=' + id
-    );
+  getInstructor(id: number): Observable<IGetInstructorResponse> {
+    return this.httpClient.get<IGetInstructorResponse>(this.apiUrl + '/' + id);
   }
   addInstructor(instructor: ICreateInstructorRequest) {
     return this.httpClient.post(this.apiUrl, instructor);

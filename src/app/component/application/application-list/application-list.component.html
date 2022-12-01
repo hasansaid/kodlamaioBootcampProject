@@ -17,15 +17,12 @@
       <td>{{ application.state }}</td>
 
       <td>
-        <button
-          type="button"
-          class="btn btn-primary"
-          routerLink="/application-detail/{{ application.id }}"
-        >
+        <button type="button" class="btn btn-primary" routerLink="/application-detail/{{ application.id }}">
           Detay
         </button>
       </td>
-      <td><button type="button" class="btn btn-warning">Düzenle</button></td>
+      <td><button type="button" class="btn btn-warning"
+          routerLink="/application-update/{{application.id}}">Düzenle</button></td>
       <td><button type="button" class="btn btn-danger">Sil</button></td>
     </tr>
   </tbody>

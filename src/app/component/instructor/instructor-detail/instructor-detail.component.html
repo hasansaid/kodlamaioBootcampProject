@@ -9,18 +9,14 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let instructor of instructors">
+    <tr>
       <td>{{ instructor.id }}</td>
       <td>{{ instructor.firstName }}</td>
       <td>{{ instructor.lastName }}</td>
       <td>{{ instructor.email }}</td>
       <td>{{ instructor.companyName }}</td>
       <td>
-        <button
-          type="button"
-          class="btn btn-primary"
-          routerLink="/instructor-list"
-        >
+        <button type="button" class="btn btn-primary" routerLink="/instructor-list">
           Dön
         </button>
       </td>

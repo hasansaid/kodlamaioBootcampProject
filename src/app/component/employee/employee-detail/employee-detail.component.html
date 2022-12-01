@@ -9,7 +9,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let employee of employees">
+    <tr>
       <td>{{ employee.id }}</td>
       <td>{{ employee.firstName }}</td>
       <td>{{ employee.lastName }}</td>
@@ -19,11 +19,7 @@
       <td>{{ employee.dateOfBirth }}</td>
       <td>{{ employee.position }}</td>
       <td>
-        <button
-          type="button"
-          class="btn btn-primary"
-          routerLink="/employee-list"
-        >
+        <button type="button" class="btn btn-primary" routerLink="/employee-list">
           Dön
         </button>
       </td>

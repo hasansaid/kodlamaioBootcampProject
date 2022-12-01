@@ -16,10 +16,8 @@ export class BootcampService {
   getAllBootcamp(): Observable<IGetAllBootcampResponse[]> {
     return this.httpClient.get<IGetAllBootcampResponse[]>(this.apiUrl);
   }
-  getBootcamp(id: number): Observable<IGetBootcampResponse[]> {
-    return this.httpClient.get<IGetBootcampResponse[]>(
-      this.apiUrl + '?id=' + id
-    );
+  getBootcamp(id: number): Observable<IGetBootcampResponse> {
+    return this.httpClient.get<IGetBootcampResponse>(this.apiUrl + '/' + id);
   }
   addBootcamp(bootcamp: ICreateBootcampRequest) {
     return this.httpClient.post(this.apiUrl, bootcamp);

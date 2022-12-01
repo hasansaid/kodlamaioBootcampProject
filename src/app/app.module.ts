@@ -25,6 +25,7 @@ import { ApplicantAddComponent } from './component/applicant/applicant-add/appli
 import { EmployeeAddComponent } from './component/employee/employee-add/employee-add.component';
 import { InstructorAddComponent } from './component/instructor/instructor-add/instructor-add.component';
 import { ApplicationAddComponent } from './component/application/application-add/application-add.component';
+import { ApplicationUpdateComponent } from './component/application/application-update/application-update.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,6 +48,7 @@ import { ApplicationAddComponent } from './component/application/application-add
     BlacklistDetailComponent,
     InstructorAddComponent,
     ApplicationAddComponent,
+    ApplicationUpdateComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-<h3>Adaylar Detay</h3>
+<h3>{{applicant.firstName}} {{applicant.lastName}}</h3>
 <table class="table">
     <thead>
         <tr>
@@ -16,7 +16,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let applicant of applicant">
+        <tr>
             <td>{{applicant.id}}</td>
             <td>{{applicant.firstName}}</td>
             <td>{{applicant.lastName}}</td>

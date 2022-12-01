@@ -15,10 +15,8 @@ export class EmployeeService {
   getAllEmployee(): Observable<IGetAllEmployeeResponse[]> {
     return this.httpClient.get<IGetAllEmployeeResponse[]>(this.apiUrl);
   }
-  getEmployee(id: number): Observable<IGetEmployeeResponse[]> {
-    return this.httpClient.get<IGetEmployeeResponse[]>(
-      this.apiUrl + '?id=' + id
-    );
+  getEmployee(id: number): Observable<IGetEmployeeResponse> {
+    return this.httpClient.get<IGetEmployeeResponse>(this.apiUrl + '/' + id);
   }
   addEmployee(employee: ICreateEmployeeRequest) {
     return this.httpClient.post(this.apiUrl, employee);

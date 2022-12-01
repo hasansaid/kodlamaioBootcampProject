@@ -28,9 +28,9 @@ export class ApplicationListComponent implements OnInit {
       .subscribe((data) => (this.applications = data));
   }
 
-  getApplication(id: number) {
-    this.applicationService
-      .getApplication(id)
-      .subscribe((data) => (this.applications = data));
-  }
+  // getApplication(id: number) {
+  //   this.applicationService
+  //     .getApplication(id)
+  //     .subscribe((data) => (this.applications = data));
+  // }
 }

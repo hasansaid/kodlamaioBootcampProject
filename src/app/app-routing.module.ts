@@ -1,3 +1,4 @@
+import { ApplicationUpdateComponent } from './component/application/application-update/application-update.component';
 import { ApplicationAddComponent } from './component/application/application-add/application-add.component';
 import { InstructorAddComponent } from './component/instructor/instructor-add/instructor-add.component';
 import { EmployeeAddComponent } from './component/employee/employee-add/employee-add.component';
@@ -31,6 +32,7 @@ const routes: Routes = [
   { path: 'application-list', component: ApplicationListComponent },
   { path: 'application-detail/:id', component: ApplicationDetailComponent },
   { path: 'application-add', component: ApplicationAddComponent },
+  { path: 'application-update/:id', component: ApplicationUpdateComponent },
 
   //
   //blackList

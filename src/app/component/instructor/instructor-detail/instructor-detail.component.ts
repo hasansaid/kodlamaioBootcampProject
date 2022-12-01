@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./instructor-detail.component.css'],
 })
 export class InstructorDetailComponent implements OnInit {
-  instructors: IGetInstructorResponse[] = [];
+  instructor: IGetInstructorResponse;
   constructor(
     private instructorService: InstructorService,
     private activatedRoute: ActivatedRoute
@@ -23,6 +23,6 @@ export class InstructorDetailComponent implements OnInit {
   getInstructor(id: number) {
     this.instructorService
       .getInstructor(id)
-      .subscribe((data) => (this.instructors = data));
+      .subscribe((data) => (this.instructor = data));
   }
 }
