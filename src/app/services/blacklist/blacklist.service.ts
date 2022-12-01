@@ -26,4 +26,7 @@ export class BlacklistService {
   updateBlackList(id: number, blacklist: any) {
     return this.httpClient.put(this.apiUrl + '/' + id, blacklist);
   }
+  deleteBlackList(blackList: IGetAllBlackListResponse) {
+    return this.httpClient.delete(this.apiUrl + '/' + blackList.id);
+  }
 }

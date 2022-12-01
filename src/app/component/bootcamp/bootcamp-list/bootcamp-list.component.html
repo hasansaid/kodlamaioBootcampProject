@@ -20,24 +20,16 @@
       <td>{{ bootcamp.dateEnd }}</td>
       <td>{{ bootcamp.state }}</td>
       <td>
-        <button
-          type="button"
-          class="btn btn-primary"
-          routerLink="/bootcamp-detail/{{ bootcamp.id }}"
-        >
+        <button type="button" class="btn btn-primary" routerLink="/bootcamp-detail/{{ bootcamp.id }}">
           Detay
         </button>
       </td>
       <td>
-        <button
-          type="button"
-          class="btn btn-warning"
-          routerLink="/bootcamp-update/{{ bootcamp.id }}"
-        >
+        <button type="button" class="btn btn-warning" routerLink="/bootcamp-update/{{ bootcamp.id }}">
           Düzenle
         </button>
       </td>
-      <td><button type="button" class="btn btn-danger">Sil</button></td>
+      <td><button type="button" class="btn btn-danger" (click)="deleteBootcamp(bootcamp)">Sil</button></td>
     </tr>
   </tbody>
 </table>

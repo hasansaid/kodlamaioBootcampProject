@@ -29,4 +29,7 @@ export class ApplicationService {
   updateApplication(id: number, application: any) {
     return this.httpClient.put(this.apiUrl + '/' + id, application);
   }
+  deleteApplication(application: IGetAllApplicationResponse) {
+    return this.httpClient.delete(this.apiUrl + '/' + application.id);
+  }
 }

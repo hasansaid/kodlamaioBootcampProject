@@ -24,4 +24,8 @@ export class EmployeListComponent implements OnInit {
       .getAllEmployee()
       .subscribe((data) => (this.employees = data));
   }
+  deleteEmployee(employee: IGetAllEmployeeResponse) {
+    this.employees = this.employees.filter((a) => a !== employee);
+    this.employeeService.deleteEmployee(employee).subscribe();
+  }
 }

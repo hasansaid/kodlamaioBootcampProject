@@ -19,16 +19,6 @@
       "about": "Bartın Üniversitesinden 2021 yılında mezun oldum. Frontend Developer. ",
       "nationalIdentity": 87525696514,
       "dateOfBirth": "25/10/1995"
-    },
-    {
-      "firstName": "Ali",
-      "lastName": "Mehmet",
-      "email": "mehmet@gmail.com",
-      "password": "12345",
-      "nationalIdentity": "12345678911",
-      "dateOfBirth": "25.25.2022",
-      "about": "Ankara Çankayalı",
-      "id": 3
     }
   ],
   "instructor": [
@@ -61,16 +51,6 @@
       "nationalIdentity": 65412398765,
       "dateOfBirth": "19/07/1991",
       "position": "Müdür"
-    },
-    {
-      "firstName": "ahmet",
-      "lastName": "ali",
-      "email": "ahmet@gmail.com",
-      "password": "12312",
-      "nationalIdentity": 12345678901,
-      "dateOfBirth": "25.12.2022",
-      "position": "Müdür Yardımcısı",
-      "id": 2
     }
   ],
   "bootcamp": [
@@ -97,14 +77,6 @@
       "dateEnd": "30.12.2022",
       "state": "1",
       "id": 3
-    },
-    {
-      "instructorId": 1,
-      "name": "Flutter",
-      "dateStart": "30.11.2022",
-      "dateEnd": "30.12.2022",
-      "state": "1",
-      "id": 4
     }
   ],
   "application": [
@@ -119,12 +91,6 @@
       "bootcampId": 1,
       "state": 1,
       "id": 2
-    },
-    {
-      "userId": 1,
-      "bootcampId": 1,
-      "state": 1,
-      "id": 3
     }
   ],
   "blacklist": [
@@ -139,12 +105,6 @@
       "date": "30.12.2022",
       "reason": "Sebep Böyle",
       "id": 2
-    },
-    {
-      "applicantId": 3,
-      "date": "30.12.2022",
-      "reason": "adsadas",
-      "id": 3
     }
   ]
 }

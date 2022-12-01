@@ -24,24 +24,16 @@
       <td>{{ applicant.email }}</td>
 
       <td>
-        <button
-          type="button"
-          class="btn btn-primary"
-          routerLink="/applicant-detail/{{ applicant.id }}"
-        >
+        <button type="button" class="btn btn-primary" routerLink="/applicant-detail/{{ applicant.id }}">
           Detay
         </button>
       </td>
       <td>
-        <button
-          type="button"
-          class="btn btn-warning"
-          routerLink="/applicant-update/{{ applicant.id }}"
-        >
+        <button type="button" class="btn btn-warning" routerLink="/applicant-update/{{ applicant.id }}">
           Düzenle
         </button>
       </td>
-      <td><button type="button" class="btn btn-danger">Sil</button></td>
+      <td><button type="button" class="btn btn-danger" (click)="deleteApplicant(applicant)">Sil</button></td>
     </tr>
   </tbody>
 </table>

@@ -25,4 +25,8 @@ export class ApplicantListComponent implements OnInit {
       .getAllApplicant()
       .subscribe((data) => (this.applicants = data));
   }
+  deleteApplicant(applicant: IGetAllApplicantResponse) {
+    this.applicants = this.applicants.filter((a) => a !== applicant);
+    this.applicantService.deleteApplicant(applicant).subscribe();
+  }
 }
