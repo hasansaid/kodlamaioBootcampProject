@@ -20,11 +20,23 @@
       <td>{{ bootcamp.state }}</td>
 
       <td>
-        <button type="button" class="btn btn-primary" routerLink="/bootcamp-list">
+        <button
+          type="button"
+          class="btn btn-primary"
+          routerLink="/bootcamp-list"
+        >
           Dön
         </button>
       </td>
-      <td><button type="button" class="btn btn-warning">Düzenle</button></td>
+      <td>
+        <button
+          type="button"
+          class="btn btn-warning"
+          routerLink="/bootcamp-update/{{ bootcamp.id }}"
+        >
+          Düzenle
+        </button>
+      </td>
       <td><button type="button" class="btn btn-danger">Sil</button></td>
     </tr>
   </tbody>

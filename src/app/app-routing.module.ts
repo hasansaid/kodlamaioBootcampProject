@@ -1,3 +1,4 @@
+import { BootcampUpdateComponent } from './component/bootcamp/bootcamp-update/bootcamp-update.component';
 import { ApplicantUpdateComponent } from './component/applicant/applicant-update/applicant-update.component';
 import { ApplicationUpdateComponent } from './component/application/application-update/application-update.component';
 import { ApplicationAddComponent } from './component/application/application-add/application-add.component';
@@ -47,6 +48,7 @@ const routes: Routes = [
   { path: 'bootcamp-list', component: BootcampListComponent },
   { path: 'bootcamp-detail/:id', component: BootcampDetailComponent },
   { path: 'bootcamp-add', component: BootcampAddComponent },
+  { path: 'bootcamp-update/:id', component: BootcampUpdateComponent },
 
   //
   //instructor

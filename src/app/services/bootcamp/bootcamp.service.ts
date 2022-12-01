@@ -22,4 +22,7 @@ export class BootcampService {
   addBootcamp(bootcamp: ICreateBootcampRequest) {
     return this.httpClient.post(this.apiUrl, bootcamp);
   }
+  updateBootcamp(id: number, bootcamp: any) {
+    return this.httpClient.put(this.apiUrl + '/' + id, bootcamp);
+  }
 }

@@ -77,7 +77,7 @@
     {
       "id": 1,
       "instructorId": 1,
-      "name": "Frontend Bootcamp",
+      "name": "Frontend Bootcampas",
       "dateStart": "01/12/2022",
       "dateEnd": "15/02/2023",
       "state": 1
@@ -85,7 +85,7 @@
     {
       "id": 2,
       "instructorId": 1,
-      "name": "Backend Bootcamp",
+      "name": "Backend Bootcamps",
       "dateStart": "15/12/2022",
       "dateEnd": "15/03/2023",
       "state": 1
