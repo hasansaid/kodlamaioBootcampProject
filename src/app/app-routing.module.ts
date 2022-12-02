@@ -1,3 +1,10 @@
+import { ApplicantNotificationComponent } from './component/userApplicant/applicant-notification/applicant-notification.component';
+import { ApplicantBootcampComponent } from './component/userApplicant/applicant-bootcamp/applicant-bootcamp.component';
+import { ApplicantPageComponent } from './component/userApplicant/applicant-page/applicant-page.component';
+import { ApplicantComponent } from './pages/applicant/applicant.component';
+import { InstructorApplicantComponent } from './component/userInstructor/instructor-applicant/instructor-applicant.component';
+import { InstructorBootcampComponent } from './component/userInstructor/instructor-bootcamp/instructor-bootcamp.component';
+import { InstructorPageComponent } from './component/userInstructor/instructor-page/instructor-page.component';
 import { InstructorComponent } from './pages/instructor/instructor.component';
 import { AdminPageComponent } from './component/admin/admin-page/admin-page.component';
 import { InstructorLoginComponent } from './component/instructor/instructor-login/instructor-login.component';
@@ -70,7 +77,30 @@ const routes: Routes = [
     ],
   },
 
-  { path: 'instructor', component: InstructorComponent, children: [] },
+  {
+    path: 'instructor',
+    component: InstructorComponent,
+    children: [
+      { path: '', component: InstructorPageComponent },
+      { path: 'instructor-page', component: InstructorPageComponent },
+      { path: 'instructor-bootcamp', component: InstructorBootcampComponent },
+      { path: 'instructor-applicant', component: InstructorApplicantComponent },
+    ],
+  },
+
+  {
+    path: 'applicant',
+    component: ApplicantComponent,
+    children: [
+      { path: '', component: ApplicantPageComponent },
+      { path: 'applicant-page', component: ApplicantPageComponent },
+      { path: 'applicant-bootcamp', component: ApplicantBootcampComponent },
+      {
+        path: 'applicant-notification',
+        component: ApplicantNotificationComponent,
+      },
+    ],
+  },
   //
   //applicant
   {

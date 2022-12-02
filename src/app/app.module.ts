@@ -45,6 +45,12 @@ import { HomeFooterComponent } from './component/home/home-footer/home-footer.co
 import { AdminPageComponent } from './component/admin/admin-page/admin-page.component';
 import { ApplicantComponent } from './pages/applicant/applicant.component';
 import { InstructorComponent } from './pages/instructor/instructor.component';
+import { InstructorPageComponent } from './component/userInstructor/instructor-page/instructor-page.component';
+import { InstructorBootcampComponent } from './component/userInstructor/instructor-bootcamp/instructor-bootcamp.component';
+import { InstructorApplicantComponent } from './component/userInstructor/instructor-applicant/instructor-applicant.component';
+import { ApplicantPageComponent } from './component/userApplicant/applicant-page/applicant-page.component';
+import { ApplicantBootcampComponent } from './component/userApplicant/applicant-bootcamp/applicant-bootcamp.component';
+import { ApplicantNotificationComponent } from './component/userApplicant/applicant-notification/applicant-notification.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -87,6 +93,12 @@ import { InstructorComponent } from './pages/instructor/instructor.component';
     AdminPageComponent,
     ApplicantComponent,
     InstructorComponent,
+    InstructorPageComponent,
+    InstructorBootcampComponent,
+    InstructorApplicantComponent,
+    ApplicantPageComponent,
+    ApplicantBootcampComponent,
+    ApplicantNotificationComponent,
   ],
   imports: [
     BrowserModule,
