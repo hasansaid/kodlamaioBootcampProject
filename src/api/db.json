@@ -41,13 +41,10 @@
       "companyName": "kodlamaio"
     },
     {
-      "firstName": "ali",
-      "lastName": "veli",
-      "dateOfBirth": "25.10.1995",
+      "firstName": "Salih",
+      "lastName": "Yılmaz",
       "email": "veli@gmail.com",
-      "password": "12356",
       "companyName": "kodlama.io",
-      "nationalIdentity": "12345689978",
       "id": 2
     }
   ],
