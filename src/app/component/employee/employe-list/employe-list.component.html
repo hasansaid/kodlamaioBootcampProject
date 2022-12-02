@@ -4,9 +4,13 @@
   <thead>
     <tr>
       <th scope="col">Id</th>
-      <th scope="col">applicantId</th>
-      <th scope="col">Tarih</th>
-      <th scope="col">Hakkında</th>
+      <th scope="col">İsim</th>
+      <th scope="col">Soyadı</th>
+      <th scope="col">E-Mail</th>
+      <th scope="col">Şifre</th>
+      <th scope="col">TC.Kimlik</th>
+      <th scope="col">Doğum Tarihi</th>
+      <th scope="col">Durum</th>
     </tr>
   </thead>
   <tbody>
@@ -24,7 +28,7 @@
           Detay
         </button>
       </td>
-      <td><button type="button" class="btn btn-warning">Düzenle</button></td>
+      <td><button type="button" class="btn btn-warning" routerLink="/employee-update//{{employee.id}}">Düzenle</button></td>
       <td><button type="button" class="btn btn-danger" (click)="deleteEmployee(employee)">Sil</button></td>
     </tr>
   </tbody>

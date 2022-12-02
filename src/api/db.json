@@ -48,7 +48,7 @@
       "lastName": "Karaca",
       "email": "karaca@gmail.com",
       "password": "123",
-      "nationalIdentity": 65412398765,
+      "nationalIdentity": "65412398765",
       "dateOfBirth": "19/07/1991",
       "position": "Müdür"
     }
