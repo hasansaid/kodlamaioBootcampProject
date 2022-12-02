@@ -25,4 +25,8 @@ export class BlackListComponent implements OnInit {
       .GetAllBlackList()
       .subscribe((data) => (this.blacklists = data));
   }
+  deleteBlackList(blackList: IGetAllBlackListResponse) {
+    this.blacklists = this.blacklists.filter((a) => a !== blackList);
+    this.blacklistService.deleteBlackList(blackList).subscribe();
+  }
 }

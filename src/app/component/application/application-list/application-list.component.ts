@@ -27,6 +27,10 @@ export class ApplicationListComponent implements OnInit {
       .getAllApplication()
       .subscribe((data) => (this.applications = data));
   }
+  deleteApplication(applications: IGetAllApplicationResponse) {
+    this.applications = this.applications.filter((a) => a !== applications);
+    this.applicationService.deleteApplication(applications).subscribe();
+  }
 
   // getApplication(id: number) {
   //   this.applicationService

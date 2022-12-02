@@ -1,4 +1,4 @@
-<h3>Başvurular</h3>
+<h3>-Başvurular-</h3>
 <button class="btn btn-primary" routerLink="/application-add">Ekle</button>
 <table class="table">
   <thead>
@@ -17,13 +17,32 @@
       <td>{{ application.state }}</td>
 
       <td>
-        <button type="button" class="btn btn-primary" routerLink="/application-detail/{{ application.id }}">
+        <button
+          type="button"
+          class="btn btn-primary"
+          routerLink="/application-detail/{{ application.id }}"
+        >
           Detay
         </button>
       </td>
-      <td><button type="button" class="btn btn-warning"
-          routerLink="/application-update/{{application.id}}">Düzenle</button></td>
-      <td><button type="button" class="btn btn-danger">Sil</button></td>
+      <td>
+        <button
+          type="button"
+          class="btn btn-warning"
+          routerLink="/application-update/{{ application.id }}"
+        >
+          Düzenle
+        </button>
+      </td>
+      <td>
+        <button
+          type="button"
+          class="btn btn-danger"
+          (click)="deleteApplication(application)"
+        >
+          Sil
+        </button>
+      </td>
     </tr>
   </tbody>
 </table>

@@ -21,4 +21,7 @@ export class EmployeeService {
   addEmployee(employee: ICreateEmployeeRequest) {
     return this.httpClient.post(this.apiUrl, employee);
   }
+  deleteEmployee(employee: IGetAllEmployeeResponse) {
+    return this.httpClient.delete(this.apiUrl + '/' + employee.id);
+  }
 }

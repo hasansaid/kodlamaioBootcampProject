@@ -20,10 +20,15 @@ export class ApplicantService {
   getApplicant(id: number): Observable<IGetApplicantResponse> {
     return this.httpClient.get<IGetApplicantResponse>(this.apiUrl + '/' + id);
   }
+
+  //add-update-delete
   addApplicant(applicant: ICreateApplicantRequest) {
     return this.httpClient.post(this.apiUrl, applicant);
   }
   updateApplicant(id: number, applicant: any) {
     return this.httpClient.put(this.apiUrl + '/' + id, applicant);
+  }
+  deleteApplicant(applicant: IGetAllApplicantResponse) {
+    return this.httpClient.delete(this.apiUrl + '/' + applicant.id);
   }
 }
