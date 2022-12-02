@@ -32,6 +32,8 @@ import { EmployeeUpdateComponent } from './component/employee/employee-update/em
 import { InstructorUpdateComponent } from './component/instructor/instructor-update/instructor-update.component';
 import { BlacklistUpdateComponent } from './component/blacklist/blacklist-update/blacklist-update.component';
 import { EmployeeLoginComponent } from './component/employee/employee-login/employee-login.component';
+import { HomeComponent } from './pages/home/home.component';
+import { AdminComponent } from './pages/admin/admin.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,6 +63,8 @@ import { EmployeeLoginComponent } from './component/employee/employee-login/empl
     InstructorUpdateComponent,
     BlacklistUpdateComponent,
     EmployeeLoginComponent,
+    HomeComponent,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,5 @@
+import { HomeComponent } from './pages/home/home.component';
+import { AdminComponent } from './pages/admin/admin.component';
 import { LoginEmployeGuard } from './guards/login-employe.guard';
 import { EmployeeLoginComponent } from './component/employee/employee-login/employee-login.component';
 import { BlacklistUpdateComponent } from './component/blacklist/blacklist-update/blacklist-update.component';
@@ -28,12 +30,25 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  //applicant
+  //admin-home pages
+  {
+    path: 'admin',
+    component: AdminComponent,
+    children: [
+      { path: 'applicant', component: ApplicantListComponent },
+      { path: 'employee', component: EmployeListComponent },
+      { path: 'instructor', component: InstructorListComponent },
+      { path: 'application', component: ApplicationListComponent },
+      { path: 'bootcamp', component: BootcampListComponent },
+      { path: 'blacklist', component: BlackListComponent },
+    ],
+  },
   {
     path: '',
-    component: ApplicantListComponent,
-    canActivate: [LoginEmployeGuard],
+    component: HomeComponent,
   },
+  //
+  //applicant
   {
     path: '',
     pathMatch: 'full',
