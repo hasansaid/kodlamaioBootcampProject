@@ -50,7 +50,9 @@
       "password": "123",
       "nationalIdentity": 65412398765,
       "dateOfBirth": "19/07/1991",
-      "position": "Müdür"
+      "position": "Müdür",
+      "token": "HRTRASD",
+      "expiration": "01/01/2023"
     }
   ],
   "bootcamp": [

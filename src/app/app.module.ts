@@ -31,6 +31,7 @@ import { BootcampUpdateComponent } from './component/bootcamp/bootcamp-update/bo
 import { EmployeeUpdateComponent } from './component/employee/employee-update/employee-update.component';
 import { InstructorUpdateComponent } from './component/instructor/instructor-update/instructor-update.component';
 import { BlacklistUpdateComponent } from './component/blacklist/blacklist-update/blacklist-update.component';
+import { EmployeeLoginComponent } from './component/employee/employee-login/employee-login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,6 +60,7 @@ import { BlacklistUpdateComponent } from './component/blacklist/blacklist-update
     EmployeeUpdateComponent,
     InstructorUpdateComponent,
     BlacklistUpdateComponent,
+    EmployeeLoginComponent,
   ],
   imports: [
     BrowserModule,
