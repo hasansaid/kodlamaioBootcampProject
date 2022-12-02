@@ -15,12 +15,13 @@
       <td>{{ blacklist.date }}</td>
       <td>{{ blacklist.reason }}</td>
       <td>
-        <button type="button" class="btn btn-primary" routerLink="/admin/blacklist">
+        <button type="button" class="btn btn-primary" routerLink="/admin/admin-blacklist">
           Dön
         </button>
       </td>
-      <td><button type="button" class="btn btn-warning" routerLink="/blacklist-update/{{ blacklist.id }}">Düzenle</button></td>
-     
+      <td><button type="button" class="btn btn-warning"
+          routerLink="/blacklist-update/{{ blacklist.id }}">Düzenle</button></td>
+
     </tr>
   </tbody>
 </table>

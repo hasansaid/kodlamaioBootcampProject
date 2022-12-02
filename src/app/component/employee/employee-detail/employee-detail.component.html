@@ -23,20 +23,12 @@
       <td>{{ employee.dateOfBirth }}</td>
       <td>{{ employee.position }}</td>
       <td>
-        <button
-          type="button"
-          class="btn btn-primary"
-          routerLink="/employee-list"
-        >
+        <button type="button" class="btn btn-primary" routerLink="/admin/admin-employee">
           Dön
         </button>
       </td>
       <td>
-        <button
-          type="button"
-          class="btn btn-warning"
-          routerLink="/employee-update/{{ employee.id }}"
-        >
+        <button type="button" class="btn btn-warning" routerLink="/employee-update/{{ employee.id }}">
           Düzenle
         </button>
       </td>

@@ -43,6 +43,8 @@ import { ApplicantLoginComponent } from './component/applicant/applicant-login/a
 import { InstructorLoginComponent } from './component/instructor/instructor-login/instructor-login.component';
 import { HomeFooterComponent } from './component/home/home-footer/home-footer.component';
 import { AdminPageComponent } from './component/admin/admin-page/admin-page.component';
+import { ApplicantComponent } from './pages/applicant/applicant.component';
+import { InstructorComponent } from './pages/instructor/instructor.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -83,6 +85,8 @@ import { AdminPageComponent } from './component/admin/admin-page/admin-page.comp
     InstructorLoginComponent,
     HomeFooterComponent,
     AdminPageComponent,
+    ApplicantComponent,
+    InstructorComponent,
   ],
   imports: [
     BrowserModule,

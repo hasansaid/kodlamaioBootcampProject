@@ -19,11 +19,12 @@
       <td>{{ application.bootcampId }}</td>
       <td>{{ application.state }}</td>
       <td>
-        <button type="button" class="btn btn-primary" routerLink="/admin/application">
+        <button type="button" class="btn btn-primary" routerLink="/admin/admin-application">
           Dön
         </button>
       </td>
-      <td><button type="button" class="btn btn-warning" routerLink="/application-update/{{application.id}}">Düzenle</button></td>
+      <td><button type="button" class="btn btn-warning"
+          routerLink="/application-update/{{application.id}}">Düzenle</button></td>
     </tr>
   </tbody>
 </table>

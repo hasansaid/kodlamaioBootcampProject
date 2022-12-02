@@ -1,3 +1,4 @@
+import { InstructorComponent } from './pages/instructor/instructor.component';
 import { AdminPageComponent } from './component/admin/admin-page/admin-page.component';
 import { InstructorLoginComponent } from './component/instructor/instructor-login/instructor-login.component';
 import { ApplicantLoginComponent } from './component/applicant/applicant-login/applicant-login.component';
@@ -38,19 +39,19 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  //admin-home pages
+  //home-admin-instructor-applicant pages
   {
     path: '',
     component: HomeComponent,
     children: [
       { path: '', component: HomePageComponent },
-      { path: 'bootcamp', component: HomeBootcampListComponent },
-      { path: 'instructor', component: HomeInstructorListComponent },
-      { path: 'about', component: HomeAboutComponent },
-      { path: 'contact', component: HomeContactComponent },
-      { path: 'login-employee', component: EmployeeLoginComponent },
-      { path: 'login-instructor', component: InstructorLoginComponent },
-      { path: 'login-applicant', component: ApplicantLoginComponent },
+      { path: 'home-bootcamp', component: HomeBootcampListComponent },
+      { path: 'home-instructor', component: HomeInstructorListComponent },
+      { path: 'home-about', component: HomeAboutComponent },
+      { path: 'home-contact', component: HomeContactComponent },
+      { path: 'home-login-employee', component: EmployeeLoginComponent },
+      { path: 'home-login-instructor', component: InstructorLoginComponent },
+      { path: 'home-login-applicant', component: ApplicantLoginComponent },
     ],
   },
   {
@@ -59,15 +60,17 @@ const routes: Routes = [
     canActivate: [LoginEmployeGuard],
     children: [
       { path: '', component: AdminPageComponent },
-      { path: 'page', component: AdminPageComponent },
-      { path: 'applicant', component: ApplicantListComponent },
-      { path: 'employee', component: EmployeListComponent },
-      { path: 'instructor', component: InstructorListComponent },
-      { path: 'application', component: ApplicationListComponent },
-      { path: 'bootcamp', component: BootcampListComponent },
-      { path: 'blacklist', component: BlackListComponent },
+      { path: 'admin-page', component: AdminPageComponent },
+      { path: 'admin-applicant', component: ApplicantListComponent },
+      { path: 'admin-employee', component: EmployeListComponent },
+      { path: 'admin-instructor', component: InstructorListComponent },
+      { path: 'admin-application', component: ApplicationListComponent },
+      { path: 'admin-bootcamp', component: BootcampListComponent },
+      { path: 'admin-blacklist', component: BlackListComponent },
     ],
   },
+
+  { path: 'instructor', component: InstructorComponent, children: [] },
   //
   //applicant
   {
