@@ -31,13 +31,10 @@
       "companyName": "kodlamaio"
     },
     {
-      "firstName": "ali",
-      "lastName": "veli",
-      "dateOfBirth": "25.10.1995",
+      "firstName": "Salih",
+      "lastName": "Yılmaz",
       "email": "veli@gmail.com",
-      "password": "12356",
       "companyName": "kodlama.io",
-      "nationalIdentity": "12345689978",
       "id": 2
     }
   ],
@@ -48,7 +45,7 @@
       "lastName": "Karaca",
       "email": "karaca@gmail.com",
       "password": "123",
-      "nationalIdentity": 65412398765,
+      "nationalIdentity": "65412398765",
       "dateOfBirth": "19/07/1991",
       "position": "Müdür",
       "token": "HRTRASD",
