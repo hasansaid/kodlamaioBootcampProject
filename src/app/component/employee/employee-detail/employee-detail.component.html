@@ -23,12 +23,23 @@
       <td>{{ employee.dateOfBirth }}</td>
       <td>{{ employee.position }}</td>
       <td>
-        <button type="button" class="btn btn-primary" routerLink="/employee-list">
+        <button
+          type="button"
+          class="btn btn-primary"
+          routerLink="/employee-list"
+        >
           Dön
         </button>
       </td>
-      <td><button type="button" class="btn btn-warning">Düzenle</button></td>
-      <td><button type="button" class="btn btn-danger">Sil</button></td>
+      <td>
+        <button
+          type="button"
+          class="btn btn-warning"
+          routerLink="/employee-update/{{ employee.id }}"
+        >
+          Düzenle
+        </button>
+      </td>
     </tr>
   </tbody>
 </table>
