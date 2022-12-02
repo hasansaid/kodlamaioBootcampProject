@@ -7,6 +7,9 @@
       <th scope="col">User Id</th>
       <th scope="col">Bootcamp Id</th>
       <th scope="col">State</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
@@ -17,29 +20,17 @@
       <td>{{ application.state }}</td>
 
       <td>
-        <button
-          type="button"
-          class="btn btn-primary"
-          routerLink="/application-detail/{{ application.id }}"
-        >
+        <button type="button" class="btn btn-primary" routerLink="/application-detail/{{ application.id }}">
           Detay
         </button>
       </td>
       <td>
-        <button
-          type="button"
-          class="btn btn-warning"
-          routerLink="/application-update/{{ application.id }}"
-        >
+        <button type="button" class="btn btn-warning" routerLink="/application-update/{{ application.id }}">
           Düzenle
         </button>
       </td>
       <td>
-        <button
-          type="button"
-          class="btn btn-danger"
-          (click)="deleteApplication(application)"
-        >
+        <button type="button" class="btn btn-danger" (click)="deleteApplication(application)">
           Sil
         </button>
       </td>

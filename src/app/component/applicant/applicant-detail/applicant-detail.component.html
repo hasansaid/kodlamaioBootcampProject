@@ -26,18 +26,13 @@
       <td>{{ applicant.dateOfBirth }}</td>
       <td>{{ applicant.about }}</td>
       <td>
-        <button type="button" class="btn btn-primary" routerLink="">Dön</button>
+        <button type="button" class="btn btn-primary" routerLink="/admin/applicant">Dön</button>
       </td>
       <td>
-        <button
-          type="button"
-          class="btn btn-warning"
-          routerLink="/applicant-update/{{ applicant.id }}"
-        >
+        <button type="button" class="btn btn-warning" routerLink="/applicant-update/{{ applicant.id }}">
           Düzenle
         </button>
       </td>
-      <td><button type="button" class="btn btn-danger">Sil</button></td>
     </tr>
   </tbody>
 </table>
