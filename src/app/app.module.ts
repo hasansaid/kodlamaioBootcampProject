@@ -42,6 +42,7 @@ import { HomeContactComponent } from './component/home/home-contact/home-contact
 import { ApplicantLoginComponent } from './component/applicant/applicant-login/applicant-login.component';
 import { InstructorLoginComponent } from './component/instructor/instructor-login/instructor-login.component';
 import { HomeFooterComponent } from './component/home/home-footer/home-footer.component';
+import { AdminPageComponent } from './component/admin/admin-page/admin-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -81,6 +82,7 @@ import { HomeFooterComponent } from './component/home/home-footer/home-footer.co
     ApplicantLoginComponent,
     InstructorLoginComponent,
     HomeFooterComponent,
+    AdminPageComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,4 @@
+import { AdminPageComponent } from './component/admin/admin-page/admin-page.component';
 import { InstructorLoginComponent } from './component/instructor/instructor-login/instructor-login.component';
 import { ApplicantLoginComponent } from './component/applicant/applicant-login/applicant-login.component';
 import { HomeContactComponent } from './component/home/home-contact/home-contact.component';
@@ -57,7 +58,8 @@ const routes: Routes = [
     component: AdminComponent,
     canActivate: [LoginEmployeGuard],
     children: [
-      { path: '', component: ApplicantListComponent },
+      { path: '', component: AdminPageComponent },
+      { path: 'page', component: AdminPageComponent },
       { path: 'applicant', component: ApplicantListComponent },
       { path: 'employee', component: EmployeListComponent },
       { path: 'instructor', component: InstructorListComponent },

@@ -16,12 +16,14 @@
       <td>{{ instructor.email }}</td>
       <td>{{ instructor.companyName }}</td>
       <td>
-        <button type="button" class="btn btn-primary" routerLink="/instructor-list">
+        <button type="button" class="btn btn-primary" routerLink="/admin/instructor">
           Dön
         </button>
       </td>
-      <td><button type="button" class="btn btn-warning">Düzenle</button></td>
-      <td><button type="button" class="btn btn-danger">Sil</button></td>
+      <td><button type=" button" class="btn btn-warning"
+          routerLink="/instructor-update/{{instructor.id}}">Düzenle</button>
+      </td>
+
     </tr>
   </tbody>
 </table>
