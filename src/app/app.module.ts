@@ -34,6 +34,14 @@ import { BlacklistUpdateComponent } from './component/blacklist/blacklist-update
 import { EmployeeLoginComponent } from './component/employee/employee-login/employee-login.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AdminComponent } from './pages/admin/admin.component';
+import { HomePageComponent } from './component/home/home-page/home-page.component';
+import { HomeBootcampListComponent } from './component/home/home-bootcamp-list/home-bootcamp-list.component';
+import { HomeInstructorListComponent } from './component/home/home-instructor-list/home-instructor-list.component';
+import { HomeAboutComponent } from './component/home/home-about/home-about.component';
+import { HomeContactComponent } from './component/home/home-contact/home-contact.component';
+import { ApplicantLoginComponent } from './component/applicant/applicant-login/applicant-login.component';
+import { InstructorLoginComponent } from './component/instructor/instructor-login/instructor-login.component';
+import { HomeFooterComponent } from './component/home/home-footer/home-footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -65,6 +73,14 @@ import { AdminComponent } from './pages/admin/admin.component';
     EmployeeLoginComponent,
     HomeComponent,
     AdminComponent,
+    HomePageComponent,
+    HomeBootcampListComponent,
+    HomeInstructorListComponent,
+    HomeAboutComponent,
+    HomeContactComponent,
+    ApplicantLoginComponent,
+    InstructorLoginComponent,
+    HomeFooterComponent,
   ],
   imports: [
     BrowserModule,

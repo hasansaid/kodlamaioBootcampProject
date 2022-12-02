@@ -1,3 +1,10 @@
+import { InstructorLoginComponent } from './component/instructor/instructor-login/instructor-login.component';
+import { ApplicantLoginComponent } from './component/applicant/applicant-login/applicant-login.component';
+import { HomeContactComponent } from './component/home/home-contact/home-contact.component';
+import { HomeAboutComponent } from './component/home/home-about/home-about.component';
+import { HomeInstructorListComponent } from './component/home/home-instructor-list/home-instructor-list.component';
+import { HomeBootcampListComponent } from './component/home/home-bootcamp-list/home-bootcamp-list.component';
+import { HomePageComponent } from './component/home/home-page/home-page.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AdminComponent } from './pages/admin/admin.component';
 import { LoginEmployeGuard } from './guards/login-employe.guard';
@@ -32,9 +39,25 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   //admin-home pages
   {
+    path: '',
+    component: HomeComponent,
+    children: [
+      { path: '', component: HomePageComponent },
+      { path: 'bootcamp', component: HomeBootcampListComponent },
+      { path: 'instructor', component: HomeInstructorListComponent },
+      { path: 'about', component: HomeAboutComponent },
+      { path: 'contact', component: HomeContactComponent },
+      { path: 'login-employee', component: EmployeeLoginComponent },
+      { path: 'login-instructor', component: InstructorLoginComponent },
+      { path: 'login-applicant', component: ApplicantLoginComponent },
+    ],
+  },
+  {
     path: 'admin',
     component: AdminComponent,
+    canActivate: [LoginEmployeGuard],
     children: [
+      { path: '', component: ApplicantListComponent },
       { path: 'applicant', component: ApplicantListComponent },
       { path: 'employee', component: EmployeListComponent },
       { path: 'instructor', component: InstructorListComponent },
@@ -42,10 +65,6 @@ const routes: Routes = [
       { path: 'bootcamp', component: BootcampListComponent },
       { path: 'blacklist', component: BlackListComponent },
     ],
-  },
-  {
-    path: '',
-    component: HomeComponent,
   },
   //
   //applicant

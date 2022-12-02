@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" routerLink="">LOGO</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -8,27 +8,34 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" routerLink="">Anasayfa</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="employee-login">Giriş</a>
+                    <a class="nav-link" routerLink="bootcamp">Bootcamp</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="instructor">Eğitmenler</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="about">Hakkımızda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="contact">İletişim</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                        Dropdown
+                        Giriş
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" routerLink="login-employee">Çalışan Giriş</a></li>
+                        <li><a class="dropdown-item" routerLink="login-instructor">Eğitmen Giriş</a></li>
+                        <li><a class="dropdown-item" routerLink="login-applicant">Aday Giriş</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><a class="dropdown-item">Aday Kayıt Ol</a></li>
                     </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
                 </li>
             </ul>
             <form class="d-flex" role="search">
@@ -38,3 +45,5 @@
         </div>
     </div>
 </nav>
+<router-outlet></router-outlet>
+<app-home-footer></app-home-footer>
