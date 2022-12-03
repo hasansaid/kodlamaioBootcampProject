@@ -5,32 +5,63 @@
         <ul class="breadcrumb">
           <li class="breadcrumb__item breadcrumb__item-firstChild">
             <span class="breadcrumb__inner">
-              <span class="breadcrumb__title">Anasayfa</span>
+              <span class="breadcrumb__title" routerLink="">Anasayfa</span>
             </span>
           </li>
           <li class="breadcrumb__item">
             <span class="breadcrumb__inner">
-              <span class="breadcrumb__title">Bootcampler</span>
+              <span class="breadcrumb__title" routerLink="home-bootcamp"
+                >Bootcampler</span
+              >
             </span>
           </li>
           <li class="breadcrumb__item">
             <span class="breadcrumb__inner">
-              <span class="breadcrumb__title">Eğitmenler</span>
+              <span class="breadcrumb__title" routerLink="home-instructor"
+                >Eğitmenler</span
+              >
             </span>
           </li>
           <li class="breadcrumb__item breadcrumb__item-lastChild">
             <span class="breadcrumb__inner">
-              <span class="breadcrumb__title">Hakkımızda</span>
+              <span class="breadcrumb__title" routerLink="home-about"
+                >Hakkımızda</span
+              >
             </span>
           </li>
           <li class="breadcrumb__item breadcrumb__item-lastChild">
             <span class="breadcrumb__inner">
-              <span class="breadcrumb__title">İletişim</span>
+              <span class="breadcrumb__title" routerLink="home-contact"
+                >İletişim</span
+              >
             </span>
           </li>
           <li class="breadcrumb__item breadcrumb__item-lastChild">
             <span class="breadcrumb__inner">
-              <span class="breadcrumb__title">Giriş Yap </span>
+              <span
+                class="breadcrumb__title dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Giriş Yap
+              </span>
+
+              <ul class="dropdown-menu">
+                <li class="breadcrumb__item breadcrumb__item-lastChild">
+                  <a class="dropdown-item" routerLink="home-login-employee"
+                    >Çalışan Girişi</a
+                  >
+                </li>
+                <li class="breadcrumb__item breadcrumb__item-lastChild">
+                  <a class="dropdown-item" routerLink="home-login-instructor"
+                    >Eğitmen Girişi</a
+                  >
+                </li>
+                <li class="breadcrumb__item breadcrumb__item-lastChild">
+                  <a class="dropdown-item" routerLink="home-login-applicant"
+                    >Aday Girişi</a
+                  >
+                </li>
+              </ul>
             </span>
           </li>
         </ul>
