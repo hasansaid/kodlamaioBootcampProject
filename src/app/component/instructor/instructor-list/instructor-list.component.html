@@ -1,32 +1,61 @@
-<h3>Eğitmenler Listesi</h3>
-<button class="btn btn-primary" routerLink="instructor-add">Ekle</button>
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Id</th>
-      <th scope="col">İsim</th>
-      <th scope="col">Soyisim</th>
-      <th scope="col">Email</th>
-      <th scope="col">Password</th>
-      <th scope="col">CompanyName</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let instructor of instructors">
-      <td>{{ instructor.id }}</td>
-      <td>{{ instructor.firstName }}</td>
-      <td>{{ instructor.lastName }}</td>
-      <td>{{ instructor.email }}</td>
-      <td>{{ instructor.password }}</td>
-      <td>{{ instructor.companyName }}</td>
-      <td>
-        <button type="button" class="btn btn-primary" routerLink="instructor-detail/{{ instructor.id }}">
-          Detay
-        </button>
-      </td>
-      <td><button type="button" class="btn btn-warning"
-          routerLink="/instructor-update/{{instructor.id}}">Düzenle</button></td>
-      <td><button type="button" class="btn btn-danger">Sil</button></td>
-    </tr>
-  </tbody>
-</table>
+<section class="intro">
+
+  <div class="bg-image h-100">
+    <div class="mask d-flex align-items-center h-100">
+      <div class="container" style="height: 723px; ;">
+        <div style="display:flex; justify-content:space-evenly; margin-top: 10px;">
+          <div style="color:azure">
+            <h2>Eğitmen Listesi</h2>
+          </div>
+          <div>
+            <button type="button" class="btn btn-primary" routerLink="instructor-add">
+              Eğitimen Ekle
+            </button>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <div class="card mask-custom">
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-borderless text-white mb-0">
+                    <thead>
+                      <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">İsim</th>
+                        <th scope="col">Soyisim</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Password</th>
+                        <th scope="col">CompanyName</th>
+                      </tr>
+
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let instructor of instructors">
+                        <td>{{ instructor.id }}</td>
+                        <td>{{ instructor.firstName }}</td>
+                        <td>{{ instructor.lastName }}</td>
+                        <td>{{ instructor.email }}</td>
+                        <td>{{ instructor.password }}</td>
+                        <td>{{ instructor.companyName }}</td>
+                        <td>
+                          <button type="button" class="btn btn-primary"
+                            routerLink="instructor-detail/{{ instructor.id }}">
+                            Detay
+                          </button>
+                        </td>
+                        <td><button type="button" class="btn btn-warning"
+                            routerLink="/instructor-update/{{instructor.id}}">Düzenle</button></td>
+                        <td><button type="button" class="btn btn-danger">Sil</button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

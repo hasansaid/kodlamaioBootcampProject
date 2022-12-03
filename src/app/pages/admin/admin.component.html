@@ -3,82 +3,86 @@
 <head> </head>
 
 <body>
-    <div class="area col-md-4"></div>
-    <nav class="main-menu">
-        <ul>
-            <li>
-                <a>
-                    <i class="fa fa-home fa-2x"></i>
-                    <span class="nav-text" routerLink="admin-page"> Anasayfa </span>
-                </a>
-            </li>
-            <li class=" has-subnav">
-                <a>
-                    <i class="fa fa-laptop fa-2x"></i>
-                    <span class="nav-text" routerLink="admin-bootcamp"> Bootcamp </span>
-                </a>
-            </li>
-            <li class="has-subnav">
-                <a>
-                    <i class="fa fa-list fa-2x"></i>
-                    <span class="nav-text" routerLink="admin-application">
-                        Başvurular
-                    </span>
-                </a>
-            </li>
-            <li class="has-subnav">
-                <a>
-                    <i class="fa fa-folder-open fa-2x"></i>
-                    <span class="nav-text" routerLink="admin-blacklist"> Kara Liste </span>
-                </a>
-            </li>
-            <li>
-                <a>
-                    <i class="fa fa-bar-chart-o fa-2x"></i>
-                    <span class="nav-text" routerLink="admin-applicant"> Adaylar </span>
-                </a>
-            </li>
-            <li>
-                <a>
-                    <i class="fa fa-font fa-2x"></i>
-                    <span class="nav-text" routerLink="admin-instructor">
-                        Eğitmenler
-                    </span>
-                </a>
-            </li>
-            <li>
-                <a>
-                    <i class="fa fa-table fa-2x"></i>
-                    <span class="nav-text" routerLink="admin-employee">
-                        Çalışanlar
-                    </span>
-                </a>
-            </li>
-            <li>
-                <a>
-                    <i class="fa fa-map-marker fa-2x"></i>
-                    <span class="nav-text"> Maps </span>
-                </a>
-            </li>
-            <li>
-                <a>
-                    <i class="fa fa-info fa-2x"></i>
-                    <span class="nav-text"> Documentation </span>
-                </a>
-            </li>
-        </ul>
+    <div class="container-fluid">
+        <div class="col-md-5">
+            <div class="area col-md-4"></div>
+            <nav class="main-menu">
+                <ul>
+                    <li>
+                        <a>
+                            <i class="fa fa-home fa-2x"></i>
+                            <span class="nav-text" routerLink="admin-page"> Anasayfa </span>
+                        </a>
+                    </li>
+                    <li class=" has-subnav">
+                        <a>
+                            <i class="fa fa-laptop fa-2x"></i>
+                            <span class="nav-text" routerLink="admin-bootcamp"> Bootcamp </span>
+                        </a>
+                    </li>
+                    <li class="has-subnav">
+                        <a>
+                            <i class="fa fa-list fa-2x"></i>
+                            <span class="nav-text" routerLink="admin-application">
+                                Başvurular
+                            </span>
+                        </a>
+                    </li>
+                    <li class="has-subnav">
+                        <a>
+                            <i class="fa fa-folder-open fa-2x"></i>
+                            <span class="nav-text" routerLink="admin-blacklist"> Kara Liste </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i class="fa fa-bar-chart-o fa-2x"></i>
+                            <span class="nav-text" routerLink="admin-applicant"> Adaylar </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i class="fa fa-font fa-2x"></i>
+                            <span class="nav-text" routerLink="admin-instructor">
+                                Eğitmenler
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i class="fa fa-table fa-2x"></i>
+                            <span class="nav-text" routerLink="admin-employee">
+                                Çalışanlar
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i class="fa fa-map-marker fa-2x"></i>
+                            <span class="nav-text"> Maps </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i class="fa fa-info fa-2x"></i>
+                            <span class="nav-text"> Documentation </span>
+                        </a>
+                    </li>
+                </ul>
 
-        <ul class="logout">
-            <li routerLink="">
-                <a>
-                    <i class="fa fa-power-off fa-2x"></i>
-                    <span class="nav-text"> Logout </span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <div>
-        <router-outlet></router-outlet>
+                <ul class="logout">
+                    <li routerLink="">
+                        <a>
+                            <i class="fa fa-power-off fa-2x"></i>
+                            <span class="nav-text"> Logout </span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-md-15">
+            <router-outlet></router-outlet>
+        </div>
     </div>
 </body>
 
