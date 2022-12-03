@@ -36,7 +36,7 @@ export class EmployeeLoginComponent implements OnInit {
         if (data.length > 0) {
           this.tokenModel = data[0];
           localStorage.setItem('token', this.tokenModel.token);
-          this.router.navigate(['']);
+          this.router.navigate(['admin']);
           alert('Giriş Başarılı');
         } else {
           alert('Başarısız');

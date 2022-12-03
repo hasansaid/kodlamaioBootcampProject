@@ -1,3 +1,4 @@
+import { LoginApplicantGuard } from './guards/applicantGuard/login-applicant.guard';
 import { ApplicantNotificationComponent } from './component/userApplicant/applicant-notification/applicant-notification.component';
 import { ApplicantBootcampComponent } from './component/userApplicant/applicant-bootcamp/applicant-bootcamp.component';
 import { ApplicantPageComponent } from './component/userApplicant/applicant-page/applicant-page.component';

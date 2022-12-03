@@ -8,7 +8,9 @@
       "password": "147852",
       "about": "Artvin Çoruh Üniversitesinden 2016 yılında mezun oldum. Frontend Developer. ",
       "nationalIdentity": 87525696514,
-      "dateOfBirth": "25/10/1995"
+      "dateOfBirth": "25/10/1995",
+      "token": "HRTRASD",
+      "expiration": "01/01/2023"
     },
     {
       "id": 2,
@@ -18,7 +20,9 @@
       "password": "123",
       "about": "Bartın Üniversitesinden 2021 yılında mezun oldum. Frontend Developer. ",
       "nationalIdentity": 87525696514,
-      "dateOfBirth": "25/10/1995"
+      "dateOfBirth": "25/10/1995",
+      "token": "HRTRASD",
+      "expiration": "01/01/2023"
     }
   ],
   "instructor": [
@@ -28,14 +32,18 @@
       "lastName": "Sertkaya",
       "email": "sertkaya@gmail.com",
       "password": "123",
-      "companyName": "kodlamaio"
+      "companyName": "kodlamaio",
+      "token": "HRTRASD",
+      "expiration": "01/01/2023"
     },
     {
       "firstName": "Salih",
       "lastName": "Yılmaz",
       "email": "veli@gmail.com",
       "companyName": "kodlama.io",
-      "id": 2
+      "id": 2,
+      "token": "HRTRASD",
+      "expiration": "01/01/2023"
     }
   ],
   "employee": [
@@ -97,13 +105,17 @@
       "id": 1,
       "applicantId": 1,
       "date": "30/11/2022",
-      "reason": "Aday bootcamp'e katılım göstermedimiacaba"
+      "reason": "Aday bootcamp'e katılım göstermedimiacaba",
+      "token": "HRTRASD",
+      "expiration": "01/01/2023"
     },
     {
       "applicantId": 2,
       "date": "30.12.2022",
       "reason": "Sebep Böyle",
-      "id": 3
+      "id": 3,
+      "token": "HRTRASD",
+      "expiration": "01/01/2023"
     }
   ]
 }
