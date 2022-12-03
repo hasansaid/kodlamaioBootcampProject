@@ -1,5 +1,5 @@
 <h3>Eğitmenler Listesi</h3>
-<button class="btn btn-primary" routerLink="/instructor-add">Ekle</button>
+<button class="btn btn-primary" routerLink="instructor-add">Ekle</button>
 <table class="table">
   <thead>
     <tr>
@@ -20,15 +20,12 @@
       <td>{{ instructor.password }}</td>
       <td>{{ instructor.companyName }}</td>
       <td>
-        <button
-          type="button"
-          class="btn btn-primary"
-          routerLink="/instructor-detail/{{ instructor.id }}"
-        >
+        <button type="button" class="btn btn-primary" routerLink="instructor-detail/{{ instructor.id }}">
           Detay
         </button>
       </td>
-      <td><button type="button" class="btn btn-warning" routerLink="/instructor-update/{{instructor.id}}">Düzenle</button></td>
+      <td><button type="button" class="btn btn-warning"
+          routerLink="/instructor-update/{{instructor.id}}">Düzenle</button></td>
       <td><button type="button" class="btn btn-danger">Sil</button></td>
     </tr>
   </tbody>

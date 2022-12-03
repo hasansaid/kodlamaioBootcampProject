@@ -1,7 +1,7 @@
 import { IGetAllApplicantResponse } from './../../../models/response/applicant/getAllApplicantResponse';
 import { ApplicantService } from './../../../services/applicant/applicant.service';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-applicant-list',
@@ -13,7 +13,8 @@ export class ApplicantListComponent implements OnInit {
 
   constructor(
     private applicantService: ApplicantService,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit(): void {

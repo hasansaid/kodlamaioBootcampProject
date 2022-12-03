@@ -1,6 +1,6 @@
 <h3>Adaylar</h3>
 <td>
-  <button type="button" class="btn btn-primary" routerLink="/applicant-add">
+  <button type="button" class="btn btn-primary" routerLink="applicant-add">
     Ekle
   </button>
 </td>
@@ -24,9 +24,10 @@
       <td>{{ applicant.email }}</td>
 
       <td>
-        <button type="button" class="btn btn-primary" routerLink="/applicant-detail/{{ applicant.id }}">
+        <button type="button" class="btn btn-primary" routerLink="applicant-detail//{{applicant.id}}">
           Detay
         </button>
+
       </td>
       <td>
         <button type="button" class="btn btn-warning" routerLink="/applicant-update/{{ applicant.id }}">
