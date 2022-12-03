@@ -1,51 +1,68 @@
-<h3>Bootcamp</h3>
-<button class="btn btn-primary" routerLink="/bootcamp-add">Ekle</button>
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Id</th>
-      <th scope="col">Eğitmen Kimliği</th>
-      <th scope="col">İsim</th>
-      <th scope="col">Başlangıç Tarihi</th>
-      <th scope="col">Bitiş Tarihi</th>
-      <th scope="col">Durumu</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let bootcamp of bootcamps">
-      <td>{{ bootcamp.id }}</td>
-      <td>{{ bootcamp.instructorId }}</td>
-      <td>{{ bootcamp.name }}</td>
-      <td>{{ bootcamp.dateStart }}</td>
-      <td>{{ bootcamp.dateEnd }}</td>
-      <td>{{ bootcamp.state }}</td>
-      <td>
-        <button
-          type="button"
-          class="btn btn-primary"
-          routerLink="/bootcamp-detail/{{ bootcamp.id }}"
-        >
-          Detay
-        </button>
-      </td>
-      <td>
-        <button
-          type="button"
-          class="btn btn-warning"
-          routerLink="/bootcamp-update/{{ bootcamp.id }}"
-        >
-          Düzenle
-        </button>
-      </td>
-      <td>
-        <button
-          type="button"
-          class="btn btn-danger"
-          (click)="deleteBootcamp(bootcamp)"
-        >
-          Sil
-        </button>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<section class="intro">
+
+  <div class="bg-image h-100"
+    style="background-image: url(https://mdbootstrap.com/img/Photos/new-templates/glassmorphism-article/img7.jpg);">
+    <div class="mask d-flex align-items-center h-100">
+      <div class="container" style="height: 723px; ;">
+        <div style="display:flex; justify-content:space-evenly; margin-top: 10px;">
+          <div style="color:azure">
+            <h2>Bootcamp Listesi</h2>
+          </div>
+          <div>
+            <button type="button" class="btn btn-primary" routerLink="bootcamp-add">
+              Bootcamp Ekle
+            </button>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <div class="card mask-custom">
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-borderless text-white mb-0">
+                    <thead>
+                      <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Eğitmen Kimliği</th>
+                        <th scope="col">İsim</th>
+                        <th scope="col">Başlangıç Tarihi</th>
+                        <th scope="col">Bitiş Tarihi</th>
+                        <th scope="col">Durumu</th>
+                      </tr>
+
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let bootcamp of bootcamps">
+                        <td>{{ bootcamp.id }}</td>
+                        <td>{{ bootcamp.instructorId }}</td>
+                        <td>{{ bootcamp.name }}</td>
+                        <td>{{ bootcamp.dateStart }}</td>
+                        <td>{{ bootcamp.dateEnd }}</td>
+                        <td>{{ bootcamp.state }}</td>
+                        <td>
+                          <button type="button" class="btn btn-primary" routerLink="bootcamp-detail/{{ bootcamp.id }}">
+                            Detay
+                          </button>
+                        </td>
+                        <td>
+                          <button type="button" class="btn btn-warning" routerLink="/bootcamp-update/{{ bootcamp.id }}">
+                            Düzenle
+                          </button>
+                        </td>
+                        <td>
+                          <button type="button" class="btn btn-danger" (click)="deleteBootcamp(bootcamp)">
+                            Sil
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,39 +1,66 @@
-<h3>Adaylar</h3>
-<td>
-  <button type="button" class="btn btn-primary" routerLink="/applicant-add">
-    Ekle
-  </button>
-</td>
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Id</th>
-      <th scope="col">İsim</th>
-      <th scope="col">Soyisim</th>
-      <th scope="col">Email</th>
-      <th scope="col">Detay</th>
-      <th scope="col">Düzenle</th>
-      <th scope="col">Sil</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let applicant of applicants">
-      <td>{{ applicant.id }}</td>
-      <td>{{ applicant.firstName }}</td>
-      <td>{{ applicant.lastName }}</td>
-      <td>{{ applicant.email }}</td>
+<section class="intro">
 
-      <td>
-        <button type="button" class="btn btn-primary" routerLink="/applicant-detail/{{ applicant.id }}">
-          Detay
-        </button>
-      </td>
-      <td>
-        <button type="button" class="btn btn-warning" routerLink="/applicant-update/{{ applicant.id }}">
-          Düzenle
-        </button>
-      </td>
-      <td><button type="button" class="btn btn-danger" (click)="deleteApplicant(applicant)">Sil</button></td>
-    </tr>
-  </tbody>
-</table>
+  <div class="bg-image h-100">
+    <div class="mask d-flex align-items-center h-100">
+      <div class="container" style="height: 723px; ;">
+        <div style="display:flex; justify-content:space-evenly; margin-top: 10px;">
+          <div style="color:azure">
+            <h2>Adaylar Listesi</h2>
+          </div>
+          <div>
+            <button type="button" class="btn btn-primary" routerLink="applicant-add">
+              Aday Ekle
+            </button>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <div class="card mask-custom">
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-borderless text-white mb-0">
+                    <thead>
+                      <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">İsim</th>
+                        <th scope="col">Soyisim</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Detay</th>
+                        <th scope="col">Düzenle</th>
+                        <th scope="col">Sil</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let applicant of applicants">
+                        <td>{{ applicant.id }}</td>
+                        <td>{{ applicant.firstName }}</td>
+                        <td>{{ applicant.lastName }}</td>
+                        <td>{{ applicant.email }}</td>
+
+                        <td>
+                          <button type="button" class="btn btn-primary" routerLink="applicant-detail//{{applicant.id}}">
+                            Detay
+                          </button>
+
+                        </td>
+                        <td>
+                          <button type="button" class="btn btn-warning"
+                            routerLink="/applicant-update/{{ applicant.id }}">
+                            Düzenle
+                          </button>
+                        </td>
+                        <td><button type="button" class="btn btn-danger"
+                            (click)="deleteApplicant(applicant)">Sil</button></td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

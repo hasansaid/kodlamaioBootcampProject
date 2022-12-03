@@ -75,6 +75,54 @@ const routes: Routes = [
       { path: 'admin-application', component: ApplicationListComponent },
       { path: 'admin-bootcamp', component: BootcampListComponent },
       { path: 'admin-blacklist', component: BlackListComponent },
+      {
+        path: 'admin-applicant/applicant-detail/:id',
+        component: ApplicantDetailComponent,
+      },
+      {
+        path: 'admin-applicant/applicant-add',
+        component: ApplicantAddComponent,
+      },
+      {
+        path: 'admin-application/application-detail/:id',
+        component: ApplicationDetailComponent,
+      },
+      {
+        path: 'admin-application/application-add',
+        component: ApplicationAddComponent,
+      },
+      {
+        path: 'admin-blacklist/blacklist-detail/:id',
+        component: BlacklistDetailComponent,
+      },
+      {
+        path: 'admin-blacklist/blacklist-add',
+        component: BlacklistAddComponent,
+      },
+      {
+        path: 'admin-bootcamp/bootcamp-detail/:id',
+        component: BootcampDetailComponent,
+      },
+      {
+        path: 'admin-bootcamp/bootcamp-add',
+        component: BootcampAddComponent,
+      },
+      {
+        path: 'admin-instructor/instructor-detail/:id',
+        component: InstructorDetailComponent,
+      },
+      {
+        path: 'admin-instructor/instructor-add',
+        component: InstructorAddComponent,
+      },
+      {
+        path: 'admin-employee/employee-detail/:id',
+        component: EmployeeDetailComponent,
+      },
+      {
+        path: 'admin-employee/employee-add',
+        component: EmployeeAddComponent,
+      },
     ],
   },
 
@@ -110,21 +158,6 @@ const routes: Routes = [
     component: ApplicantListComponent,
     canActivate: [LoginEmployeGuard],
   },
-  // {
-  //   path: 'applicant-list',
-  //   component: ApplicantListComponent,
-  //   canActivate: [LoginEmployeGuard],
-  // },
-  {
-    path: 'applicant-detail/:id',
-    component: ApplicantDetailComponent,
-    canActivate: [LoginEmployeGuard],
-  },
-  {
-    path: 'applicant-add',
-    component: ApplicantAddComponent,
-    canActivate: [LoginEmployeGuard],
-  },
   {
     path: 'applicant-update/:id',
     component: ApplicantUpdateComponent,
@@ -133,21 +166,7 @@ const routes: Routes = [
 
   //
   //application
-  // {
-  //   path: 'application-list',
-  //   component: ApplicationListComponent,
-  //   canActivate: [LoginEmployeGuard],
-  // },
-  {
-    path: 'application-detail/:id',
-    component: ApplicationDetailComponent,
-    canActivate: [LoginEmployeGuard],
-  },
-  {
-    path: 'application-add',
-    component: ApplicationAddComponent,
-    canActivate: [LoginEmployeGuard],
-  },
+
   {
     path: 'application-update/:id',
     component: ApplicationUpdateComponent,
@@ -156,21 +175,7 @@ const routes: Routes = [
 
   //
   //blackList
-  // {
-  //   path: 'black-list',
-  //   component: BlackListComponent,
-  //   canActivate: [LoginEmployeGuard],
-  // },
-  {
-    path: 'blacklist-detail/:id',
-    component: BlacklistDetailComponent,
-    canActivate: [LoginEmployeGuard],
-  },
-  {
-    path: 'blacklist-add',
-    component: BlacklistAddComponent,
-    canActivate: [LoginEmployeGuard],
-  },
+
   {
     path: 'blacklist-update/:id',
     component: BlacklistUpdateComponent,
@@ -178,21 +183,7 @@ const routes: Routes = [
   },
   //
   //bootcamp
-  // {
-  //   path: 'bootcamp-list',
-  //   component: BootcampListComponent,
-  //   canActivate: [LoginEmployeGuard],
-  // },
-  {
-    path: 'bootcamp-detail/:id',
-    component: BootcampDetailComponent,
-    canActivate: [LoginEmployeGuard],
-  },
-  {
-    path: 'bootcamp-add',
-    component: BootcampAddComponent,
-    canActivate: [LoginEmployeGuard],
-  },
+
   {
     path: 'bootcamp-update/:id',
     component: BootcampUpdateComponent,
@@ -201,21 +192,7 @@ const routes: Routes = [
 
   //
   //instructor
-  // {
-  //   path: 'instructor-list',
-  //   component: InstructorListComponent,
-  //   canActivate: [LoginEmployeGuard],
-  // },
-  {
-    path: 'instructor-detail/:id',
-    component: InstructorDetailComponent,
-    canActivate: [LoginEmployeGuard],
-  },
-  {
-    path: 'instructor-add',
-    component: InstructorAddComponent,
-    canActivate: [LoginEmployeGuard],
-  },
+
   {
     path: 'instructor-update/:id',
     component: InstructorUpdateComponent,
@@ -224,21 +201,7 @@ const routes: Routes = [
 
   //
   //employee
-  // {
-  //   path: 'employee-list',
-  //   component: EmployeListComponent,
-  //   canActivate: [LoginEmployeGuard],
-  // },
-  {
-    path: 'employee-detail/:id',
-    component: EmployeeDetailComponent,
-    canActivate: [LoginEmployeGuard],
-  },
-  {
-    path: 'employee-add',
-    component: EmployeeAddComponent,
-    canActivate: [LoginEmployeGuard],
-  },
+
   {
     path: 'employee-update/:id',
     component: EmployeeUpdateComponent,
