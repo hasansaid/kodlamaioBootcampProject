@@ -110,11 +110,11 @@ const routes: Routes = [
     component: ApplicantListComponent,
     canActivate: [LoginEmployeGuard],
   },
-  {
-    path: 'applicant-list',
-    component: ApplicantListComponent,
-    canActivate: [LoginEmployeGuard],
-  },
+  // {
+  //   path: 'applicant-list',
+  //   component: ApplicantListComponent,
+  //   canActivate: [LoginEmployeGuard],
+  // },
   {
     path: 'applicant-detail/:id',
     component: ApplicantDetailComponent,
@@ -133,11 +133,11 @@ const routes: Routes = [
 
   //
   //application
-  {
-    path: 'application-list',
-    component: ApplicationListComponent,
-    canActivate: [LoginEmployeGuard],
-  },
+  // {
+  //   path: 'application-list',
+  //   component: ApplicationListComponent,
+  //   canActivate: [LoginEmployeGuard],
+  // },
   {
     path: 'application-detail/:id',
     component: ApplicationDetailComponent,
@@ -156,11 +156,11 @@ const routes: Routes = [
 
   //
   //blackList
-  {
-    path: 'black-list',
-    component: BlackListComponent,
-    canActivate: [LoginEmployeGuard],
-  },
+  // {
+  //   path: 'black-list',
+  //   component: BlackListComponent,
+  //   canActivate: [LoginEmployeGuard],
+  // },
   {
     path: 'blacklist-detail/:id',
     component: BlacklistDetailComponent,
@@ -178,11 +178,11 @@ const routes: Routes = [
   },
   //
   //bootcamp
-  {
-    path: 'bootcamp-list',
-    component: BootcampListComponent,
-    canActivate: [LoginEmployeGuard],
-  },
+  // {
+  //   path: 'bootcamp-list',
+  //   component: BootcampListComponent,
+  //   canActivate: [LoginEmployeGuard],
+  // },
   {
     path: 'bootcamp-detail/:id',
     component: BootcampDetailComponent,
@@ -201,11 +201,11 @@ const routes: Routes = [
 
   //
   //instructor
-  {
-    path: 'instructor-list',
-    component: InstructorListComponent,
-    canActivate: [LoginEmployeGuard],
-  },
+  // {
+  //   path: 'instructor-list',
+  //   component: InstructorListComponent,
+  //   canActivate: [LoginEmployeGuard],
+  // },
   {
     path: 'instructor-detail/:id',
     component: InstructorDetailComponent,
@@ -224,11 +224,11 @@ const routes: Routes = [
 
   //
   //employee
-  {
-    path: 'employee-list',
-    component: EmployeListComponent,
-    canActivate: [LoginEmployeGuard],
-  },
+  // {
+  //   path: 'employee-list',
+  //   component: EmployeListComponent,
+  //   canActivate: [LoginEmployeGuard],
+  // },
   {
     path: 'employee-detail/:id',
     component: EmployeeDetailComponent,
