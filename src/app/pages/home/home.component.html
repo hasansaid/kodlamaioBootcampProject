@@ -1,49 +1,46 @@
-<nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid">
-        <a class="navbar-brand" routerLink="">LOGO</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="home-page" routerLink="">Anasayfa</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="home-bootcamp">Bootcamp</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="home-instructor">Eğitmenler</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="home-about">Hakkımızda</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="home-contact">İletişim</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Giriş
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" routerLink="home-login-employee">Çalışan Giriş</a></li>
-                        <li><a class="dropdown-item" routerLink="home-login-instructor">Eğitmen Giriş</a></li>
-                        <li><a class="dropdown-item" routerLink="home-login-applicant">Aday Giriş</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item">Aday Kayıt Ol</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-        </div>
+<div style="width: 100%">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="container mt-3 me-auto ms-auto">
+        <ul class="breadcrumb">
+          <li class="breadcrumb__item breadcrumb__item-firstChild">
+            <span class="breadcrumb__inner">
+              <span class="breadcrumb__title">Anasayfa</span>
+            </span>
+          </li>
+          <li class="breadcrumb__item">
+            <span class="breadcrumb__inner">
+              <span class="breadcrumb__title">Bootcampler</span>
+            </span>
+          </li>
+          <li class="breadcrumb__item">
+            <span class="breadcrumb__inner">
+              <span class="breadcrumb__title">Eğitmenler</span>
+            </span>
+          </li>
+          <li class="breadcrumb__item breadcrumb__item-lastChild">
+            <span class="breadcrumb__inner">
+              <span class="breadcrumb__title">Hakkımızda</span>
+            </span>
+          </li>
+          <li class="breadcrumb__item breadcrumb__item-lastChild">
+            <span class="breadcrumb__inner">
+              <span class="breadcrumb__title">İletişim</span>
+            </span>
+          </li>
+          <li class="breadcrumb__item breadcrumb__item-lastChild">
+            <span class="breadcrumb__inner">
+              <span class="breadcrumb__title">Giriş Yap </span>
+            </span>
+          </li>
+        </ul>
+      </div>
     </div>
-</nav>
-<router-outlet></router-outlet>
-<app-home-footer></app-home-footer>
+  </div>
+  <div class="row">
+    <div class="col-md-12 text-center"><router-outlet></router-outlet></div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12 text-center"><app-home-footer></app-home-footer></div>
+</div>
