@@ -1,7 +1,6 @@
 <section class="intro">
 
-  <div class="bg-image h-100"
-    style="background-image: url(https://mdbootstrap.com/img/Photos/new-templates/glassmorphism-article/img7.jpg);">
+  <div class="bg-image h-100">
     <div class="mask d-flex align-items-center h-100">
       <div class="container" style="height: 723px; ;">
         <div style="display:flex; justify-content:space-evenly; margin-top: 10px;">
@@ -9,7 +8,7 @@
             <h2>Kara Liste</h2>
           </div>
           <div>
-            <button type="button" class="btn btn-primary" routerLink="blacklist-add">
+            <button class="button-33" role="button" routerLink="blacklist-add">
               Kara Listeye Ekle
             </button>
           </div>
@@ -22,10 +21,10 @@
                   <table class="table table-borderless text-white mb-0">
                     <thead>
                       <tr>
-                        <th scope="col">Id</th>
-                        <th scope="col">applicantId</th>
+                        <th scope="col">Sıra Numarası</th>
+                        <th scope="col">Aday Numarası</th>
                         <th scope="col">Tarih</th>
-                        <th scope="col">Hakkında</th>
+                        <th scope="col">Kara Listeye Alınma Sebebi</th>
                       </tr>
 
                     </thead>
@@ -36,19 +35,17 @@
                         <td>{{ blacklist.date }}</td>
                         <td>{{ blacklist.reason }}</td>
                         <td>
-                          <button type="button" class="btn btn-primary"
-                            routerLink="blacklist-detail/{{ blacklist.id }}">
+                          <button class="button-6A" role="button" routerLink="blacklist-detail/{{ blacklist.id }}">
                             Detay
                           </button>
                         </td>
                         <td>
-                          <button type="button" class="btn btn-warning"
-                            routerLink="/blacklist-update/{{ blacklist.id }}">
+                          <button class="button-6B" role="button" routerLink="/blacklist-update/{{ blacklist.id }}">
                             Düzenle
                           </button>
                         </td>
-                        <td><button type="button" class="btn btn-danger"
-                            (click)="deleteBlackList(blacklist)">Sil</button></td>
+                        <td><button class="button-62" role="button" (click)="deleteBlackList(blacklist)">Sil</button>
+                        </td>
                       </tr>
                     </tbody>
                   </table>

@@ -2,6 +2,11 @@ html,
 body,
 .intro {
   height: 100%;
+  background: linear-gradient(
+    149deg,
+    rgb(22, 211, 142) 0%,
+    rgb(219, 230, 224) 100%
+  );
 }
 
 table td,
