@@ -1,19 +1,21 @@
-<div class="bg-light rounded h-100 p-4">
+<div class="bg-light mt-5 shadow-lg rounded h-100 p-4">
   <div class="mb-4">
-    <div style="display:flex; justify-content:space-evenly; margin-top: 10px;">
+    <div style="display: flex; justify-content: space-evenly; margin-top: 10px">
       <div>
         <h2>Kara Liste</h2>
       </div>
       <div>
-        <button type="button" class="btn btn-outline-success m-2" routerLink="blacklist-add">Kara Listeye Ekle</button>
-
+        <button
+          type="button"
+          class="btn btn-outline-success shadow m-2"
+          routerLink="blacklist-add"
+        >
+          Kara Listeye Ekle
+        </button>
       </div>
     </div>
     <div class="table-responsive">
-
       <table class="table">
-
-
         <thead>
           <tr>
             <th scope="col">Sıra Numarası</th>
@@ -32,22 +34,35 @@
             <td>{{ blacklist.date }}</td>
             <td>{{ blacklist.reason }}</td>
             <td>
-              <button type="button" class="btn btn-outline-secondary m-2"
-                routerLink="blacklist-detail/{{ blacklist.id }}">
+              <button
+                type="button"
+                class="btn btn-outline-secondary shadow m-2"
+                routerLink="blacklist-detail/{{ blacklist.id }}"
+              >
                 Detay
               </button>
             </td>
             <td>
-              <button type="button" class="btn btn-outline-warning m-2"
-                routerLink="blacklist-update/{{ blacklist.id }}">
+              <button
+                type="button"
+                class="btn btn-outline-warning shadow m-2"
+                routerLink="blacklist-update/{{ blacklist.id }}"
+              >
                 Düzenle
               </button>
             </td>
-            <td><button type="button" class="btn btn-outline-danger m-2"
-                (click)="deleteBlackList(blacklist)">Sil</button>
+            <td>
+              <button
+                type="button"
+                class="btn btn-outline-danger shadow m-2"
+                (click)="deleteBlackList(blacklist)"
+              >
+                Sil
+              </button>
             </td>
           </tr>
         </tbody>
       </table>
     </div>
   </div>
+</div>
