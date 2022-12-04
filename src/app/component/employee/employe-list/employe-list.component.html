@@ -1,6 +1,3 @@
-
-
-
 <div class="bg-light rounded h-100 p-4">
   <div class="mb-4">
     <div style="display:flex; justify-content:space-evenly; margin-top: 10px;">
@@ -8,7 +5,7 @@
         <h2>Çalışanlar Listesi</h2>
       </div>
       <div>
-        <button type="button" class="btn btn-outline-success m-2" routerLink="applicant-add">Çalışanlar Ekle</button>
+        <button type="button" class="btn btn-outline-success m-2" routerLink="employee-add">Çalışanlar Ekle</button>
 
       </div>
     </div>
@@ -43,7 +40,8 @@
             <td>{{ employee.dateOfBirth }}</td>
             <td>{{ employee.position }}</td>
             <td>
-              <button type="button" class="  btn btn-outline-secondary m-2" routerLink="employee-detail/{{ employee.id }}">
+              <button type="button" class="  btn btn-outline-secondary m-2"
+                routerLink="employee-detail/{{ employee.id }}">
                 Detay
               </button>
             </td>
