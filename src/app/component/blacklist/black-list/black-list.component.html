@@ -1,60 +1,53 @@
-<section class="intro">
+<div class="bg-light rounded h-100 p-4">
+  <div class="mb-4">
+    <div style="display:flex; justify-content:space-evenly; margin-top: 10px;">
+      <div>
+        <h2>Kara Liste</h2>
+      </div>
+      <div>
+        <button type="button" class="btn btn-outline-success m-2" routerLink="blacklist-add">Kara Listeye Ekle</button>
 
-  <div class="bg-image h-100">
-    <div class="mask d-flex align-items-center h-100">
-      <div class="container" style="height: 723px; ;">
-        <div style="display:flex; justify-content:space-evenly; margin-top: 10px;">
-          <div style="color:azure">
-            <h2>Kara Liste</h2>
-          </div>
-          <div>
-            <button class="button-33" role="button" routerLink="blacklist-add">
-              Kara Listeye Ekle
-            </button>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-12">
-            <div class="card mask-custom">
-              <div class="card-body">
-                <div class="table-responsive">
-                  <table class="table table-borderless text-white mb-0">
-                    <thead>
-                      <tr>
-                        <th scope="col">Sıra Numarası</th>
-                        <th scope="col">Aday Numarası</th>
-                        <th scope="col">Tarih</th>
-                        <th scope="col">Kara Listeye Alınma Sebebi</th>
-                      </tr>
-
-                    </thead>
-                    <tbody>
-                      <tr *ngFor="let blacklist of blacklists">
-                        <td>{{ blacklist.id }}</td>
-                        <td>{{ blacklist.applicantId }}</td>
-                        <td>{{ blacklist.date }}</td>
-                        <td>{{ blacklist.reason }}</td>
-                        <td>
-                          <button class="button-6A" role="button" routerLink="blacklist-detail/{{ blacklist.id }}">
-                            Detay
-                          </button>
-                        </td>
-                        <td>
-                          <button class="button-6B" role="button" routerLink="blacklist-update/{{ blacklist.id }}">
-                            Düzenle
-                          </button>
-                        </td>
-                        <td><button class="button-62" role="button" (click)="deleteBlackList(blacklist)">Sil</button>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
+    <div class="table-responsive">
+
+      <table class="table">
+
+
+        <thead>
+          <tr>
+            <th scope="col">Sıra Numarası</th>
+            <th scope="col">Aday Numarası</th>
+            <th scope="col">Tarih</th>
+            <th scope="col">Kara Listeye Alınma Sebebi</th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let blacklist of blacklists">
+            <td>{{ blacklist.id }}</td>
+            <td>{{ blacklist.applicantId }}</td>
+            <td>{{ blacklist.date }}</td>
+            <td>{{ blacklist.reason }}</td>
+            <td>
+              <button type="button" class="btn btn-outline-secondary m-2"
+                routerLink="blacklist-detail/{{ blacklist.id }}">
+                Detay
+              </button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-outline-warning m-2"
+                routerLink="blacklist-update/{{ blacklist.id }}">
+                Düzenle
+              </button>
+            </td>
+            <td><button type="button" class="btn btn-outline-danger m-2"
+                (click)="deleteBlackList(blacklist)">Sil</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
-</section>
