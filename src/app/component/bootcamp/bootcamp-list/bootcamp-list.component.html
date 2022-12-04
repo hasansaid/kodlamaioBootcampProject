@@ -1,67 +1,56 @@
-<section class="intro">
+<div class="bg-light rounded h-100 p-4">
+  <div class="mb-4">
+    <div style="display:flex; justify-content:space-evenly; margin-top: 10px;">
+      <div>
+        <h2>Bootcamp Listesi</h2>
+      </div>
+      <div>
+        <button type="button" class="btn btn-outline-success m-2" routerLink="bootcamp-add">Bootcamp Ekle</button>
 
-  <div class="bg-image h-100">
-    <div class="mask d-flex align-items-center h-100">
-      <div class="container" style="height: 723px; ;">
-        <div style="display:flex; justify-content:space-evenly; margin-top: 10px;">
-          <div style="color:azure">
-            <h2>Bootcamp Listesi</h2>
-          </div>
-          <div>
-            <button class="button-33" role="button" routerLink="bootcamp-add">
-              Bootcamp Ekle
-            </button>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-12">
-            <div class="card mask-custom">
-              <div class="card-body">
-                <div class="table-responsive">
-                  <table class="table table-borderless text-white mb-0">
-                    <thead>
-                      <tr>
-                        <th scope="col">Id</th>
-                        <th scope="col">Eğitmen Kimliği</th>
-                        <th scope="col">İsim</th>
-                        <th scope="col">Başlangıç Tarihi</th>
-                        <th scope="col">Bitiş Tarihi</th>
-                        <th scope="col">Durumu</th>
-                      </tr>
-
-                    </thead>
-                    <tbody>
-                      <tr *ngFor="let bootcamp of bootcamps">
-                        <td>{{ bootcamp.id }}</td>
-                        <td>{{ bootcamp.instructorId }}</td>
-                        <td>{{ bootcamp.name }}</td>
-                        <td>{{ bootcamp.dateStart }}</td>
-                        <td>{{ bootcamp.dateEnd }}</td>
-                        <td>{{ bootcamp.state }}</td>
-                        <td>
-                          <button class="button-6A" role="button" routerLink="bootcamp-detail/{{ bootcamp.id }}">
-                            Detay
-                          </button>
-                        </td>
-                        <td>
-                          <button class="button-6B" role="button" routerLink="bootcamp-update/{{ bootcamp.id }}">
-                            Düzenle
-                          </button>
-                        </td>
-                        <td>
-                          <button class="button-62" role="button" (click)="deleteBootcamp(bootcamp)">
-                            Sil
-                          </button>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
+    <div class="table-responsive">
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Eğitmen Kimliği</th>
+            <th scope="col">İsim</th>
+            <th scope="col">Başlangıç Tarihi</th>
+            <th scope="col">Bitiş Tarihi</th>
+            <th scope="col">Durumu</th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let bootcamp of bootcamps">
+            <td>{{ bootcamp.id }}</td>
+            <td>{{ bootcamp.instructorId }}</td>
+            <td>{{ bootcamp.name }}</td>
+            <td>{{ bootcamp.dateStart }}</td>
+            <td>{{ bootcamp.dateEnd }}</td>
+            <td>{{ bootcamp.state }}</td>
+            <td>
+              <button type="button" class="btn btn-outline-secondary m-2"
+                routerLink="bootcamp-detail/{{ bootcamp.id }}">
+                Detay
+              </button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-outline-warning m-2" routerLink="bootcamp-update/{{ bootcamp.id }}">
+                Düzenle
+              </button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-outline-danger m-2" (click)="deleteBootcamp(bootcamp)">
+                Sil
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
-</section>
