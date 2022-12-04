@@ -1,14 +1,14 @@
-<div class="content">
+<!-- <div class="content">
   <div class="col-md-12">
     <div class="card">
       <div class="card-header">
         <h5 class="title">Bootcamp Ekle</h5>
       </div>
       <div class="card-body">
-        <!-- [formGroup]="carAddForm" ile map işlemini yapmış oluruz. -->
+       
         <form [formGroup]="bootcampAddForm">
           <div style="margin-top: 5px" class="form-group">
-            <!-- anguların önemsediği kısım formControlName dir. İlişkilendirmeyi bunun üzerinden yapar. -->
+            
             <input type="number" id="instructorId" formControlName="instructorId" class="form-control"
               placeholder="Eğitmen Id Giriniz..." />
           </div>
@@ -44,4 +44,57 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootcamp Ekle</title>
+</head>
+
+<body>
+  <form [formGroup]="bootcampAddForm" method="post" class="shadow mt-5">
+    <h1>Bootcamp Ekle</h1>
+    <fieldset>
+      <label for="name">Eğitmen Id:</label>
+      <input formControlName="instructorId" type="number" id="name" name="user_name" placeholder="Eğitmen Id Giriniz..">
+    </fieldset>
+    <fieldset>
+      <label for="name">Bootcamp İsmi:</label>
+      <input formControlName="name" type="text" id="name" name="user_name" placeholder="Bootcamp İsmini Giriniz..">
+    </fieldset>
+
+    <div class="row">
+      <div class="col-md-6">
+        <fieldset>
+          <label for="name">Bootcamp Başlangıç Tarih:</label>
+          <input formControlName="dateStart" type="text" id="name" name="user_name"
+            placeholder="Bootcamp Başlangıç Tarihi Giriniz..">
+        </fieldset>
+      </div>
+      <div class="col-md-6">
+        <fieldset>
+          <label for="name">Bootcamp Bitiş Tarih:</label>
+          <input formControlName="dateEnd" type="text" id="name" name="user_name"
+            placeholder="Bootcamp Bitiş Tarihi Giriniz..">
+        </fieldset>
+      </div>
+    </div>
+
+    <fieldset>
+      <label for="name">Uygunluk Durumu:</label>
+      <input formControlName="state" type="number" id="name" name="user_name" placeholder="1:Uygun - 2:Uygun Değil..">
+    </fieldset>
+    <div class="row">
+      <div class="col-md-6 "><button class="button" routerLink="/admin/admin-bootcamp" type="submit">Geri
+          Dön</button></div>
+      <div class="col-md-6"><button class="buttonA" (click)="add()" routerLink="/admin/admin-bootcamp"
+          type="submit">Bootcamp Ekle</button>
+      </div>
+    </div>
+  </form>
+</body>
+
+</html>
