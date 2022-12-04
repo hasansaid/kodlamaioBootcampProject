@@ -1,66 +1,57 @@
-<section class="intro">
+<div class="bg-light rounded h-100 p-4">
+  <div class="mb-4">
+    <div style="display:flex; justify-content:space-evenly; margin-top: 10px;">
+      <div>
+        <h2>Çalışanlar Listesi</h2>
+      </div>
+      <div>
+        <button type="button" class="btn btn-outline-success m-2" routerLink="employee-add">Çalışanlar Ekle</button>
 
-  <div class="bg-image h-100">
-    <div class="mask d-flex align-items-center h-100">
-      <div class="container" style="height: 723px; ;">
-        <div style="display:flex; justify-content:space-evenly; margin-top: 10px;">
-          <div style="color:azure">
-            <h2>Çalışanlar Listesi</h2>
-          </div>
-          <div>
-            <button type="button" class="btn btn-primary" routerLink="employee-add">
-              Çalışan Ekle
-            </button>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-12">
-            <div class="card mask-custom">
-              <div class="card-body">
-                <div class="table-responsive">
-                  <table class="table table-borderless text-white mb-0">
-                    <thead>
-                      <tr>
-                        <th scope="col">Id</th>
-                        <th scope="col">İsim</th>
-                        <th scope="col">Soyadı</th>
-                        <th scope="col">E-Mail</th>
-                        <th scope="col">Şifre</th>
-                        <th scope="col">TC.Kimlik</th>
-                        <th scope="col">Doğum Tarihi</th>
-                        <th scope="col">Durum</th>
-                      </tr>
-
-                    </thead>
-                    <tbody>
-                      <tr *ngFor="let employee of employees">
-                        <td>{{ employee.id }}</td>
-                        <td>{{ employee.firstName }}</td>
-                        <td>{{ employee.lastName }}</td>
-                        <td>{{ employee.email }}</td>
-                        <td>{{ employee.password }}</td>
-                        <td>{{ employee.nationalIdentity }}</td>
-                        <td>{{ employee.dateOfBirth }}</td>
-                        <td>{{ employee.position }}</td>
-                        <td>
-                          <button type="button" class="btn btn-primary" routerLink="employee-detail/{{ employee.id }}">
-                            Detay
-                          </button>
-                        </td>
-                        <td><button type="button" class="btn btn-warning"
-                            routerLink="employee-update//{{employee.id}}">Düzenle</button>
-                        </td>
-                        <td><button type="button" class="btn btn-danger" (click)="deleteEmployee(employee)">Sil</button>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
+    <div class="table-responsive">
+
+      <table class="table">
+
+
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">İsim</th>
+            <th scope="col">Soyadı</th>
+            <th scope="col">E-Mail</th>
+            <th scope="col">Şifre</th>
+            <th scope="col">TC.Kimlik</th>
+            <th scope="col">Doğum Tarihi</th>
+            <th scope="col">Durum</th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let employee of employees">
+            <td>{{ employee.id }}</td>
+            <td>{{ employee.firstName }}</td>
+            <td>{{ employee.lastName }}</td>
+            <td>{{ employee.email }}</td>
+            <td>{{ employee.password }}</td>
+            <td>{{ employee.nationalIdentity }}</td>
+            <td>{{ employee.dateOfBirth }}</td>
+            <td>{{ employee.position }}</td>
+            <td>
+              <button type="button" class="  btn btn-outline-secondary m-2"
+                routerLink="employee-detail/{{ employee.id }}">
+                Detay
+              </button>
+            </td>
+            <td><button type="button" class="btn btn-outline-warning m-2"
+                routerLink="employee-update//{{employee.id}}">Düzenle</button>
+            </td>
+            <td><button type="button" class="btn btn-outline-danger m-2" (click)="deleteEmployee(employee)">Sil</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
-</section>
