@@ -51,6 +51,7 @@ import { InstructorApplicantComponent } from './component/userInstructor/instruc
 import { ApplicantPageComponent } from './component/userApplicant/applicant-page/applicant-page.component';
 import { ApplicantBootcampComponent } from './component/userApplicant/applicant-bootcamp/applicant-bootcamp.component';
 import { ApplicantNotificationComponent } from './component/userApplicant/applicant-notification/applicant-notification.component';
+import { AdminSidebarComponent } from './component/admin/admin-sidebar/admin-sidebar/admin-sidebar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -99,6 +100,7 @@ import { ApplicantNotificationComponent } from './component/userApplicant/applic
     ApplicantPageComponent,
     ApplicantBootcampComponent,
     ApplicantNotificationComponent,
+    AdminSidebarComponent,
   ],
   imports: [
     BrowserModule,

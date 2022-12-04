@@ -84,6 +84,10 @@ const routes: Routes = [
         component: ApplicantAddComponent,
       },
       {
+        path: 'admin-applicant/applicant-update/:id',
+        component: ApplicantUpdateComponent,
+      },
+      {
         path: 'admin-application/application-detail/:id',
         component: ApplicationDetailComponent,
       },
@@ -91,6 +95,11 @@ const routes: Routes = [
         path: 'admin-application/application-add',
         component: ApplicationAddComponent,
       },
+      {
+        path: 'application-update/:id',
+        component: ApplicationUpdateComponent,
+      },
+
       {
         path: 'admin-blacklist/blacklist-detail/:id',
         component: BlacklistDetailComponent,
@@ -158,11 +167,11 @@ const routes: Routes = [
     component: ApplicantListComponent,
     canActivate: [LoginEmployeGuard],
   },
-  {
-    path: 'applicant-update/:id',
-    component: ApplicantUpdateComponent,
-    canActivate: [LoginEmployeGuard],
-  },
+  // {
+  //   path: 'applicant-update/:id',
+  //   component: ApplicantUpdateComponent,
+  //   canActivate: [LoginEmployeGuard],
+  // },
 
   //
   //application

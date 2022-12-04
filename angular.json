@@ -21,12 +21,32 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "src/styles.css",
-              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./src/template/css/adminstyle.css",
+              "./src/template/lib/owlcarousel/assets/owl.carousel.css",
+              "./src/template/lib/owlcarousel/assets/owl.carousel.min.css",
+              "./src/template/lib/owlcarousel/assets/owl.theme.default.css",
+              "./src/template/lib/owlcarousel/assets/owl.theme.default.min.css",
+              "./src/template/lib/owlcarousel/assets/owl.theme.green.css",
+              "./src/template/lib/owlcarousel/assets/owl.theme.green.min.css",
+              "./src/template/lib/tempusdominus/css/tempusdominus-bootstrap-4.css",
+              "./src/template/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
             ],
             "scripts": [
               "./node_modules/jquery/dist/jquery.min.js",
               "./node_modules/@popperjs/core/dist/umd/popper.min.js",
-              "./node_modules/bootstrap/dist/js/bootstrap.min.js"
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "./src/template/js/main.js",
+              "./src/template/lib/chart/chart.min.js",
+              "./src/template/lib/easing/easing.js",
+              "./src/template/lib/easing/easing.min.js",
+              "./src/template/lib/owlcarousel/owl.carousel.js",
+              "./src/template/lib/owlcarousel/owl.carousel.min.js",
+              "./src/template/lib/tempusdominus/js/moment-timezone.min.js",
+              "./src/template/lib/tempusdominus/js/moment.min.js",
+              "./src/template/lib/tempusdominus/js/tempusdominus-bootstrap-4.js",
+              "./src/template/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js",
+              "./src/template/lib/waypoints/waypoints.min.js"
             ]
           },
           "configurations": {

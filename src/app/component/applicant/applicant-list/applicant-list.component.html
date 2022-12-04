@@ -1,58 +1,52 @@
-<section class="intro">
+<div class="bg-light rounded h-100 p-4">
+  <div class="mb-4">
+    <div style="display:flex; justify-content:space-evenly; margin-top: 10px;">
+      <div>
+        <h2>Adaylar Listesi</h2>
+      </div>
+      <div>
+        <button type="button" class="btn btn-outline-success m-2" routerLink="applicant-add">Aday Ekle</button>
 
-  <div class="bg-image h-100">
-    <div class="mask d-flex align-items-center h-100">
-      <div class="container" style="height: 723px; ;">
-        <div style="display:flex; justify-content:space-evenly; margin-top: 10px;">
-          <div style="color:azure">
-            <h2>Adaylar Listesi</h2>
-          </div>
-          <div>
-            <button class="button-33" role="button" routerLink="applicant-add">Aday Ekle</button>
-
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-12">
-            <div class="card mask-custom">
-              <div class="card-body">
-                <div class="table-responsive">
-                  <table class="table table-borderless text-white mb-0">
-                    <thead>
-                      <tr>
-                        <th scope="col">Aday Numarası</th>
-                        <th scope="col">İsim</th>
-                        <th scope="col">Soyisim</th>
-                        <th scope="col">Email</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr *ngFor="let applicant of applicants">
-                        <td>{{ applicant.id }}</td>
-                        <td>{{ applicant.firstName }}</td>
-                        <td>{{ applicant.lastName }}</td>
-                        <td>{{ applicant.email }}</td>
-
-                        <td>
-                          <button class="button-6A" role="button" routerLink="applicant-detail//{{applicant.id}}">Detaya
-                            Git</button>
-                        </td>
-                        <td>
-                          <button class="button-6B" role="button" routerLink="/applicant-update/{{ applicant.id }}">
-                            Düzenle
-                          </button>
-                        </td>
-                        <td><button (click)="deleteApplicant(applicant)" class="button-62" role="button">Aday
-                            Sil</button></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
+    <div class="table-responsive">
+
+      <table class="table">
+
+
+        <thead>
+          <tr>
+            <th scope="col">Aday Numarası</th>
+            <th scope="col">İsim</th>
+            <th scope="col">Soyisim</th>
+            <th scope="col">Email</th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let applicant of applicants">
+            <td>{{ applicant.id }}</td>
+            <td>{{ applicant.firstName }}</td>
+            <td>{{ applicant.lastName }}</td>
+            <td>{{ applicant.email }}</td>
+
+            <td>
+              <button type="button" class="btn btn-outline-secondary m-2"
+                routerLink="applicant-detail//{{applicant.id}}">Detaya
+                Git</button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-outline-warning m-2"
+                routerLink="applicant-update/{{ applicant.id }}">
+                Düzenle
+              </button>
+            </td>
+            <td><button (click)="deleteApplicant(applicant)" type="button" class="btn btn-outline-danger m-2">Aday
+                Sil</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
-</section>
