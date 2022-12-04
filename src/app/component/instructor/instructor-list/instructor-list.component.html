@@ -5,11 +5,7 @@
         <h2>Eğitmenler Listesi</h2>
       </div>
       <div>
-        <button
-          type="button"
-          class="btn btn-outline-success shadow m-2"
-          routerLink="instructor-add"
-        >
+        <button type="button" class="btn btn-outline-success shadow m-2" routerLink="instructor-add">
           Eğitmen Ekle
         </button>
       </div>
@@ -38,20 +34,14 @@
             <td>{{ instructor.password }}</td>
             <td>{{ instructor.companyName }}</td>
             <td>
-              <button
-                type="button"
-                class="btn btn-outline-secondary shadow m-2"
-                routerLink="instructor-detail/{{ instructor.id }}"
-              >
+              <button type="button" class="btn btn-outline-secondary shadow m-2"
+                routerLink="instructor-detail/{{ instructor.id }}">
                 Detay
               </button>
             </td>
             <td>
-              <button
-                type="button"
-                class="btn btn-outline-warning shadow m-2"
-                routerLink="instructor-update/{{ instructor.id }}"
-              >
+              <button type="button" class="btn btn-outline-warning shadow m-2"
+                routerLink="instructor-update/{{ instructor.id }}">
                 Düzenle
               </button>
             </td>
