@@ -1,19 +1,21 @@
-<div class="bg-light rounded h-100 p-4">
+<div class="bg-light shadow-lg mt-5 p-5 rounded h-100 p-4">
   <div class="mb-4">
-    <div style="display:flex; justify-content:space-evenly; margin-top: 10px;">
+    <div style="display: flex; justify-content: space-evenly; margin-top: 10px">
       <div>
         <h2>Adaylar Listesi</h2>
       </div>
       <div>
-        <button type="button" class="btn btn-outline-success m-2" routerLink="applicant-add">Aday Ekle</button>
-
+        <button
+          type="button"
+          class="btn btn-outline-success shadow m-2"
+          routerLink="applicant-add"
+        >
+          Aday Ekle
+        </button>
       </div>
     </div>
     <div class="table-responsive">
-
       <table class="table">
-
-
         <thead>
           <tr>
             <th scope="col">Aday Numarası</th>
@@ -33,20 +35,35 @@
             <td>{{ applicant.email }}</td>
 
             <td>
-              <button type="button" class="btn btn-outline-secondary m-2"
-                routerLink="applicant-detail//{{applicant.id}}">Detaya
-                Git</button>
+              <button
+                type="button"
+                class="btn btn-outline-secondary shadow m-2"
+                routerLink="applicant-detail//{{ applicant.id }}"
+              >
+                Detaya Git
+              </button>
             </td>
             <td>
-              <button type="button" class="btn btn-outline-warning m-2"
-                routerLink="applicant-update/{{ applicant.id }}">
+              <button
+                type="button"
+                class="btn btn-outline-warning shadow m-2"
+                routerLink="applicant-update/{{ applicant.id }}"
+              >
                 Düzenle
               </button>
             </td>
-            <td><button (click)="deleteApplicant(applicant)" type="button" class="btn btn-outline-danger m-2">Aday
-                Sil</button></td>
+            <td>
+              <button
+                (click)="deleteApplicant(applicant)"
+                type="button"
+                class="btn btn-outline-danger m-2"
+              >
+                Aday Sil
+              </button>
+            </td>
           </tr>
         </tbody>
       </table>
     </div>
   </div>
+</div>
