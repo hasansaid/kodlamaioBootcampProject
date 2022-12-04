@@ -1,59 +1,3 @@
-<!-- <div class="content">
-  <div class="col-md-12">
-    <div class="card">
-      <div class="card-header">
-        <h5 class="title">Aday Detay</h5>
-      </div>
-      <div class="card-body">
-        
-        <form [formGroup]="applicantForm">
-          <div style="margin-top: 5px" class="form-group">
-           
-            <input type="text" id="firstName" formControlName="firstName" class="form-control"
-              placeholder="İsim Giriniz..." />
-          </div>
-          <div style="margin-top: 5px" class="form-group">
-            <input type="text" id="lastName" formControlName="lastName" class="form-control"
-              placeholder="Soyadı Giriniz..." />
-          </div>
-          <div style="margin-top: 5px" class="form-group">
-            <input type="text" id="email" formControlName="email" class="form-control"
-              placeholder="Email Yazınız ..." />
-          </div>
-          <div style="margin-top: 5px" class="form-group">
-            <input type="text" id="password" formControlName="password" class="form-control"
-              placeholder="Şifresini Yazınız ..." />
-          </div>
-          <div style="margin-top: 5px" class="form-group">
-            <input type="text" id="nationalIdentity" formControlName="nationalIdentity" class="form-control"
-              placeholder="Tc Kimlik No Yazınız ..." />
-          </div>
-          <div style="margin-top: 5px" class="form-group">
-            <input type="text" id="dateOfBirth" formControlName="dateOfBirth" class="form-control"
-              placeholder="Doğum Tarihini Yazınız ..." />
-          </div>
-          <div style="margin-top: 5px" class="form-group">
-            <input type="text" id="about" formControlName="about" class="form-control"
-              placeholder="Hakkında Yazınız..." />
-          </div>
-        </form>
-      </div>
-      <div class="car-footer">
-        <div class="d-grid gap-2">
-          <button style="margin-bottom: 10px; margin-left: 15px; margin-right: 15px" class="btn btn-primary"
-            type="button" (click)="add()" routerLink="/admin/admin-applicant">
-            Ekle
-          </button>
-          <button style="margin-bottom: 10px; margin-left: 15px; margin-right: 15px" class="btn btn-primary"
-            type="button" routerLink="/admin/admin-applicant">
-            Geri Dön
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
-
 <html>
 
 <head>
@@ -100,9 +44,10 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6"><button routerLink="/admin/admin-applicant" type="submit">Geri
+      <div class="col-md-6 "><button class="button" routerLink="/admin/admin-applicant" type="submit">Geri
           Dön</button></div>
-      <div class="col-md-6"><button (click)="add()" routerLink="/admin/admin-applicant" type="submit">Aday Ekle</button>
+      <div class="col-md-6"><button class="buttonA" (click)="add()" routerLink="/admin/admin-applicant"
+          type="submit">Aday Ekle</button>
       </div>
     </div>
   </form>
