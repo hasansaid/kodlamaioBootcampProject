@@ -1,6 +1,7 @@
 import { BlacklistService } from './../../../services/blacklist/blacklist.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import {
   FormBuilder,
   FormGroup,
@@ -18,7 +19,9 @@ export class BlacklistAddComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private activatedRoute: ActivatedRoute,
-    private blacklistService: BlacklistService
+    private blacklistService: BlacklistService,
+    private toastrService: ToastrService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -37,10 +40,11 @@ export class BlacklistAddComponent implements OnInit {
     if (this.blackListAddForm.valid) {
       let blackListModel = Object.assign({}, this.blackListAddForm.value);
       this.blacklistService.addBlackList(blackListModel).subscribe((data) => {
-        alert('Kara Listeye Eklendi');
+        this.toastrService.success('Kara Liste Ekleme Başarılı');
+        this.router.navigate(['/admin/admin-blacklist']);
       });
     } else {
-      alert('Karalisteye Eklenemedi Kontol Et');
+      this.toastrService.warning('Form Eksik!!!');
     }
   }
 }

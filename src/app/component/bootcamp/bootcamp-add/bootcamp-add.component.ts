@@ -1,6 +1,7 @@
 import { BootcampService } from './../../../services/bootcamp/bootcamp.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import {
   FormBuilder,
   FormGroup,
@@ -18,7 +19,9 @@ export class BootcampAddComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private activatedRoute: ActivatedRoute,
-    private bootcampService: BootcampService
+    private bootcampService: BootcampService,
+    private toastrService: ToastrService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -38,10 +41,11 @@ export class BootcampAddComponent implements OnInit {
     if (this.bootcampAddForm.valid) {
       let bootcampModel = Object.assign({}, this.bootcampAddForm.value);
       this.bootcampService.addBootcamp(bootcampModel).subscribe((data) => {
-        alert('Bootcamp Eklendi');
+        this.toastrService.success('Bootcamp Ekleme Başarılı');
+        this.router.navigate(['/admin/admin-bootcamp']);
       });
     } else {
-      alert('Bootcamp Eklenmedi');
+      this.toastrService.warning('Form Eksik!!!');
     }
   }
 }

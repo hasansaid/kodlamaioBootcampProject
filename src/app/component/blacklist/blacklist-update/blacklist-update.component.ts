@@ -8,6 +8,7 @@ import {
   FormControl,
   Validators,
 } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-blacklist-update',
   templateUrl: './blacklist-update.component.html',
@@ -19,7 +20,8 @@ export class BlacklistUpdateComponent implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private formBuilder: FormBuilder,
-    private blacklistService: BlacklistService
+    private blacklistService: BlacklistService,
+    private toastrService: ToastrService
   ) {}
 
   ngOnInit(): void {
@@ -54,5 +56,6 @@ export class BlacklistUpdateComponent implements OnInit {
         this.blackListUpdateForm.value
       )
       .subscribe();
+      this.toastrService.success('Kara Liste Güncelleme Başarılı');
   }
 }

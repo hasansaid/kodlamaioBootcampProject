@@ -8,6 +8,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { IUpdateBootcampRequest } from 'src/app/models/request/bootcamp/updateBootcampRequest';
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-bootcamp-update',
   templateUrl: './bootcamp-update.component.html',
@@ -19,7 +20,8 @@ export class BootcampUpdateComponent implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private formBuilder: FormBuilder,
-    private bootcampService: BootcampService
+    private bootcampService: BootcampService,
+    private toastrService: ToastrService
   ) {}
 
   ngOnInit(): void {
@@ -54,5 +56,6 @@ export class BootcampUpdateComponent implements OnInit {
         this.bootcampUpdateForm.value
       )
       .subscribe();
+      this.toastrService.success('Bootcamp Güncelleme Başarılı');
   }
 }
