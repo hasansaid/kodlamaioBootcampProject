@@ -44,26 +44,24 @@
     margin-left: 0px;
 }
 .services_text { width: 100%; font-size: 14px; margin-left: 0px; margin-top: 0px; }
-.moremore_bt {
-    width: 170px;
-    float: left;
-    margin-top: 30px;
-    position: relative;
-    z-index: 2;
-}
-.moremore_bt { margin-top: 0px; width: 160px; }
-.moremore_bt a {
-    width: 100%;
-    float: left;
-    font-size: 16px;
-    color: #4aafff;
-    border: 2px solid #88c6f8;
-    text-align: center;
-    padding: 10px 0px;
-    border-radius: 40px;
-}
 .image_1{
     width: 100%;
     float: left;
 }
 .image_1 { padding-top: 30px; }
+
+/*** Team ***/
+.team-item img {
+    border-radius: 8px 60px 0 0;
+}
+.team-item .team-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background: #FFFFFF;
+    transition: .5s;
+}
+.team-item {
+    box-shadow: 0 0 45px rgb(0 0 0 / 8%);
+}
