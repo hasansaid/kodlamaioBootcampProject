@@ -1,109 +1,43 @@
-<!-- <div class="content">
-  <div class="col-md-12">
-    <div class="card">
-      <div class="card-header">
-        <h5 class="title">Başvuru Ekle</h5>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Başvuru Ekle</title>
+</head>
+
+<body>
+  <form [formGroup]="applicationAddForm" method="post" class="shadow mt-4 border">
+    <h1>Başvuru Ekle</h1>
+
+    <fieldset>
+      <label for="name">Ad:</label>
+      <input formControlName="applicantId" type="number" id="name" name="user_name"
+        placeholder="applicantId Id Giriniz.." />
+    </fieldset>
+    <fieldset>
+      <label for="name">bootcampId:</label>
+      <input formControlName="bootcampId" type="number" id="name" name="user_name"
+        placeholder="bootcampId Id Giriniz.." />
+    </fieldset>
+    <fieldset>
+      <label for="name">State:</label>
+      <input formControlName="state" type="text" id="name" name="user_name" placeholder="1:Uygun - 2:Uygun Değil.." />
+    </fieldset>
+
+    <div class="row">
+      <div class="col-md-6">
+        <button class="button" routerLink="/admin/admin-application" type="submit">
+          Geri Dön
+        </button>
       </div>
-      <div class="card-body">
-        
-        <form [formGroup]="applicationAddForm">
-          <div style="margin-top: 5px" class="form-group">
-            
-            <input type="number" id="applicantId" formControlName="applicantId" class="form-control"
-              placeholder="applicantId Id Giriniz..." />
-          </div>
-          <div style="margin-top: 5px" class="form-group">
-            <input type="number" id="bootcampId" formControlName="bootcampId" class="form-control"
-              placeholder="bootcampId  Giriniz..." />
-          </div>
-          <div style="margin-top: 5px" class="form-group">
-            <input type="text" id="state" formControlName="state" class="form-control" placeholder="state Giriniz..." />
-          </div>
-        </form>
-      </div>
-      <div class="car-footer">
-        <div class="d-grid gap-2">
-          <button style="margin-bottom: 10px; margin-left: 15px; margin-right: 15px" class="btn btn-primary"
-            type="button" (click)="add()" routerLink="/admin/admin-application">
-            Ekle
-          </button>
-          <button style="margin-bottom: 10px; margin-left: 15px; margin-right: 15px" class="btn btn-primary"
-            type="button" routerLink="/admin/admin-application">
-            Geri Dön
-          </button>
-        </div>
+      <div class="col-md-6">
+        <button class="buttonA" (click)="add()" routerLink="/admin/admin-application" type="submit">
+          Başvuru Ekle
+        </button>
       </div>
     </div>
-  </div>
-</div> -->
+  </form>
+</body>
 
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Başvuru Ekle</title>
-  </head>
-
-  <body>
-    <form
-      [formGroup]="applicationAddForm"
-      method="post"
-      class="shadow mt-4 border"
-    >
-      <h1>Başvuru Ekle</h1>
-
-      <fieldset>
-        <label for="name">Ad:</label>
-        <input
-          formControlName="applicantId"
-          type="number"
-          id="name"
-          name="user_name"
-          placeholder="applicantId Id Giriniz.."
-        />
-      </fieldset>
-      <fieldset>
-        <label for="name">bootcampId:</label>
-        <input
-          formControlName="bootcampId"
-          type="number"
-          id="name"
-          name="user_name"
-          placeholder="bootcampId Id Giriniz.."
-        />
-      </fieldset>
-      <fieldset>
-        <label for="name">State:</label>
-        <input
-          formControlName="state"
-          type="text"
-          id="name"
-          name="user_name"
-          placeholder="1:Uygun - 2:Uygun Değil.."
-        />
-      </fieldset>
-
-      <div class="row">
-        <div class="col-md-6">
-          <button
-            class="button"
-            routerLink="/admin/admin-application"
-            type="submit"
-          >
-            Geri Dön
-          </button>
-        </div>
-        <div class="col-md-6">
-          <button
-            class="buttonA"
-            (click)="add()"
-            routerLink="/admin/admin-application"
-            type="submit"
-          >
-            Aday Ekle
-          </button>
-        </div>
-      </div>
-    </form>
-  </body>
 </html>

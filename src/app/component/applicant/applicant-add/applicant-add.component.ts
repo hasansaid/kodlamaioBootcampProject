@@ -1,6 +1,7 @@
 import { ApplicantService } from './../../../services/applicant/applicant.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import {
   FormBuilder,
   FormGroup,
@@ -18,7 +19,9 @@ export class ApplicantAddComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private activatedRoute: ActivatedRoute,
-    private applicantService: ApplicantService
+    private applicantService: ApplicantService,
+    private toastrService: ToastrService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -41,10 +44,11 @@ export class ApplicantAddComponent implements OnInit {
     if (this.applicantForm.valid) {
       let applicantModel = Object.assign({}, this.applicantForm.value);
       this.applicantService.addApplicant(applicantModel).subscribe((data) => {
-        alert('Aday Eklendi');
+        this.toastrService.success('Aday Ekleme Başarılı');
+        this.router.navigate(['/admin/admin-applicant']);
       });
     } else {
-      alert('Aday Eklenemedi Kontol Et');
+      this.toastrService.warning('Form Eksik!!!');
     }
   }
 }

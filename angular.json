@@ -30,7 +30,8 @@
               "./src/template/lib/owlcarousel/assets/owl.theme.green.css",
               "./src/template/lib/owlcarousel/assets/owl.theme.green.min.css",
               "./src/template/lib/tempusdominus/css/tempusdominus-bootstrap-4.css",
-              "./src/template/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
+              "./src/template/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css",
+              "node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": [
               "./node_modules/jquery/dist/jquery.min.js",

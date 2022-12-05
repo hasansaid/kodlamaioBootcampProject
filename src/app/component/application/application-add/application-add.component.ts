@@ -2,6 +2,7 @@ import { ApplicationService } from './../../../services/application/application.
 import { ActivatedRoute } from '@angular/router';
 import { ApplicantService } from './../../../services/applicant/applicant.service';
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import {
   FormBuilder,
   FormGroup,
@@ -19,7 +20,8 @@ export class ApplicationAddComponent implements OnInit {
   constructor(
     private applicationService: ApplicationService,
     private formBuilder: FormBuilder,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private toastrService: ToastrService
   ) {}
 
   ngOnInit(): void {
@@ -38,11 +40,9 @@ export class ApplicationAddComponent implements OnInit {
       let applicationModel = Object.assign({}, this.applicationAddForm.value);
       this.applicationService
         .addApplication(applicationModel)
-        .subscribe((data) => {
-          alert('Başvurular Eklendi');
-        });
+        .subscribe((data) => {});
     } else {
-      alert('Başvuru Eklenemedi');
+      this.toastrService.warning('Dikkat');
     }
   }
 }
