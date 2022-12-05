@@ -1,154 +1,50 @@
-<!-- <div class="content">
-  <div class="col-md-12">
-    <div class="card">
-      <div class="card-header">
-        <h5 class="title">Eğitmen Düzenleme Sayfası</h5>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eğitmen Güncelle</title>
+</head>
+
+<body>
+  <form [formGroup]="intructorUpdateForm" *ngIf="intructorUpdateForm" method="post" class="shadow mt-4 border">
+    <h1>
+      {{ intructor.firstName }} {{ intructor.lastName }}
+
+    </h1>
+
+    <fieldset>
+      <label for="name">Ad:</label>
+      <input formControlName="firstName" type="text" id="firstName" name="user_name" />
+    </fieldset>
+    <fieldset>
+      <label for="name">Soyad:</label>
+      <input formControlName="lastName" type="text" id="lastName" name="user_name" />
+    </fieldset>
+
+
+    <fieldset>
+      <label for="name">Email:</label>
+      <input formControlName="email" type="text" id="email" name="user_name" />
+    </fieldset>
+    <fieldset>
+      <label for="name">Şirket Adı:</label>
+      <input formControlName="companyName" type="text" id="companyName" name="user_name" />
+    </fieldset>
+
+    <div class="row">
+      <div class="col-md-6">
+        <button class="button" routerLink="/admin/admin-instructor" type="submit">
+          Geri Dön
+        </button>
       </div>
-      <div class="card-body">
-        <form [formGroup]="intructorUpdateForm" *ngIf="intructorUpdateForm">
-          <div style="margin-top: 5px" class="form-group">
-            <input
-              type="text"
-              id="firstName"
-              formControlName="firstName"
-              class="form-control"
-              placeholder="İsim Giriniz..."
-            />
-          </div>
-          <div style="margin-top: 5px" class="form-group">
-            <input
-              type="text"
-              id="lastName"
-              formControlName="lastName"
-              class="form-control"
-              placeholder="Soyisim Giriniz..."
-            />
-          </div>
-          <div style="margin-top: 5px" class="form-group">
-            <input
-              type="text"
-              id="email"
-              formControlName="email"
-              class="form-control"
-              placeholder="E-mail Giriniz..."
-            />
-          </div>
-          <div style="margin-top: 5px" class="form-group">
-            <input
-              type="text"
-              id="companyName"
-              formControlName="companyName"
-              class="form-control"
-              placeholder="Kurum Adı Giriniz..."
-            />
-          </div>
-        </form>
-      </div>
-      <div class="car-footer">
-        <div class="d-grid gap-2">
-          <button
-            style="margin-bottom: 10px; margin-left: 15px; margin-right: 15px"
-            class="btn btn-primary"
-            type="button"
-            (click)="updateIntructor()"
-            routerLink="/admin/admin-instructor"
-          >
-            Güncelle
-          </button>
-          <button
-            style="margin-bottom: 10px; margin-left: 15px; margin-right: 15px"
-            class="btn btn-primary"
-            type="button"
-            routerLink="/admin/admin-instructor"
-          >
-            Dön
-          </button>
-        </div>
+      <div class="col-md-6">
+        <button class="buttonA" (click)="updateIntructor()" routerLink="/admin/admin-instructor" type="submit">
+          Düzenle
+        </button>
       </div>
     </div>
-  </div>
-</div> -->
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Eğitmen Güncelle</title>
-  </head>
+  </form>
+</body>
 
-  <body>
-    <form
-      [formGroup]="intructorUpdateForm"
-      *ngIf="intructorUpdateForm"
-      method="post"
-      class="shadow mt-4 border"
-    >
-      <h1>
-        " {{ intructor.firstName }} {{ intructor.lastName }}" Bilgilerini
-        Güncelle
-      </h1>
-      <div class="row">
-        <div class="col-md-6">
-          <fieldset>
-            <label for="name">Ad:</label>
-            <input
-              formControlName="firstName"
-              type="text"
-              id="firstName"
-              name="user_name"
-            />
-          </fieldset>
-          <fieldset>
-            <label for="name">Soyad:</label>
-            <input
-              formControlName="lastName"
-              type="text"
-              id="lastName"
-              name="user_name"
-            />
-          </fieldset>
-        </div>
-        <div class="col-md-6">
-          <fieldset>
-            <label for="name">Email:</label>
-            <input
-              formControlName="email"
-              type="text"
-              id="email"
-              name="user_name"
-            />
-          </fieldset>
-          <fieldset>
-            <label for="name">Şirket Adı:</label>
-            <input
-              formControlName="companyName"
-              type="text"
-              id="companyName"
-              name="user_name"
-            />
-          </fieldset>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <button
-            class="button"
-            (click)="updateIntructor()"
-            routerLink="/admin/admin-instructor"
-            type="submit"
-          >
-            Güncelle
-          </button>
-        </div>
-        <div class="col-md-6">
-          <button
-            class="buttonA"
-            routerLink="/admin/admin-instructor"
-            type="submit"
-          >
-            Dön
-          </button>
-        </div>
-      </div>
-    </form>
-  </body>
 </html>

@@ -1,109 +1,71 @@
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Eğitmen Ekle</title>
-  </head>
 
-  <body>
-    <form
-      [formGroup]="instructorAddForm"
-      method="post"
-      class="shadow mt-4 border"
-    >
-      <h1>Eğitmen Ekle</h1>
-      <div class="row">
-        <div class="col-md-6">
-          <fieldset>
-            <label for="name">Ad:</label>
-            <input
-              formControlName="firstName"
-              type="text"
-              id="name"
-              name="user_name"
-              placeholder="Eğitmen Adını Giriniz..."
-            />
-          </fieldset>
-          <fieldset>
-            <label for="name">Soyad:</label>
-            <input
-              formControlName="lastName"
-              type="text"
-              id="name"
-              name="user_name"
-              placeholder="Eğitmen Soyadını Giriniz..."
-            />
-          </fieldset>
-          <fieldset>
-            <label for="name">Doğum Tarihi:</label>
-            <input
-              formControlName="dateOfBirth"
-              type="text"
-              id="name"
-              name="user_name"
-              placeholder="Doğum Tarihini Giriniz..."
-            />
-          </fieldset>
-          <fieldset>
-            <label for="name">Email:</label>
-            <input
-              formControlName="email"
-              type="text"
-              id="name"
-              name="user_name"
-              placeholder="Email Giriniz..."
-            />
-          </fieldset>
-        </div>
-        <div class="col-md-6">
-          <fieldset>
-            <label for="name">Şifre:</label>
-            <input
-              formControlName="password"
-              type="text"
-              id="name"
-              name="user_name"
-              placeholder="Şifre Giriniz..."
-            />
-          </fieldset>
-          <fieldset>
-            <label for="name">Şirket Adı:</label>
-            <input
-              formControlName="companyName"
-              type="text"
-              id="name"
-              name="user_name"
-              placeholder="Şirket Adını Giriniz..."
-            />
-          </fieldset>
-          <fieldset>
-            <label for="name">TC Kimlik No:</label>
-            <input
-              formControlName="nationalIdentity"
-              type="text"
-              id="name"
-              name="user_name"
-              placeholder="TC Kimlik No Giriniz..."
-            />
-          </fieldset>
-        </div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eğitmen Ekle</title>
+</head>
+
+<body>
+  <form [formGroup]="instructorAddForm" method="post" class="shadow mt-4 border">
+    <h1>Eğitmen Ekle</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <fieldset>
+          <label for="name">Ad:</label>
+          <input formControlName="firstName" type="text" id="name" name="user_name"
+            placeholder="Eğitmen Adını Giriniz..." />
+        </fieldset>
+
+
+        <fieldset>
+          <label for="name">Email:</label>
+          <input formControlName="email" type="text" id="name" name="user_name" placeholder="Email Giriniz..." />
+        </fieldset>
+        <fieldset>
+          <label for="name">Doğum Tarihi:</label>
+          <input formControlName="dateOfBirth" type="text" id="name" name="user_name"
+            placeholder="Doğum Tarihini Giriniz..." />
+        </fieldset>
+        <fieldset>
+          <label for="name">Şirket Adı:</label>
+          <input formControlName="companyName" type="text" id="name" name="user_name"
+            placeholder="Şirket Adını Giriniz..." />
+        </fieldset>
       </div>
-      <div class="row">
-        <div class="col-md-6">
-          <button
-            class="button"
-            routerLink="/admin/admin-instructor"
-            type="submit"
-          >
-            Geri Dön
-          </button>
-        </div>
-        <div class="col-md-6">
-          <button class="buttonA" (click)="add()" type="submit">
-            Aday Ekle
-          </button>
-        </div>
+      <div class="col-md-6">
+        <fieldset>
+          <label for="name">Soyad:</label>
+          <input formControlName="lastName" type="text" id="name" name="user_name"
+            placeholder="Eğitmen Soyadını Giriniz..." />
+        </fieldset>
+        <fieldset>
+          <label for="name">Şifre:</label>
+          <input formControlName="password" type="text" id="name" name="user_name" placeholder="Şifre Giriniz..." />
+        </fieldset>
+
+        <fieldset>
+          <label for="name">TC Kimlik No:</label>
+          <input formControlName="nationalIdentity" type="text" id="name" name="user_name"
+            placeholder="TC Kimlik No Giriniz..." />
+        </fieldset>
+
+
       </div>
-    </form>
-  </body>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <button class="button" routerLink="/admin/admin-instructor" type="submit">
+          Geri Dön
+        </button>
+      </div>
+      <div class="col-md-6">
+        <button class="buttonA" (click)="add()" type="submit">
+          Eğitmen Ekle
+        </button>
+      </div>
+    </div>
+  </form>
+</body>
+
 </html>

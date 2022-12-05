@@ -25,14 +25,11 @@
   ],
   "instructor": [
     {
-      "id": 1,
       "firstName": "Hasan",
       "lastName": "Sertkaya",
       "email": "sertkaya@gmail.com",
-      "password": "123",
       "companyName": "kodlamaio",
-      "token": "HRTRASD",
-      "expiration": "01/01/2023"
+      "id": 1
     },
     {
       "firstName": "Salih",
@@ -53,9 +50,7 @@
       "password": "123",
       "nationalIdentity": "65412398765",
       "dateOfBirth": "19/07/1991",
-      "position": "Müdür",
-      "token": "HRTRASD",
-      "expiration": "01/01/2023"
+      "position": "Müdür"
     }
   ],
   "bootcamp": [

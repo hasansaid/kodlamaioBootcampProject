@@ -1,43 +1,3 @@
-<!-- <div class="content">
-  <div class="col-md-12">
-    <div class="card">
-      <div class="card-header">
-        <h5 class="title">Kara Liste Düzenleme Sayfası</h5>
-      </div>
-      <div class="card-body">
-        <form [formGroup]="blackListUpdateForm" *ngIf="blackListUpdateForm">
-          <div style="margin-top: 5px" class="form-group">
-            <input type="number" id="id" formControlName="id" class="form-control" placeholder="Aday Id Giriniz..." />
-          </div>
-          <div style="margin-top: 5px" class="form-group">
-            <input type="number" id="applicantId" formControlName="applicantId" class="form-control"
-              placeholder="applicantId Id  Giriniz..." />
-          </div>
-          <div style="margin-top: 5px" class="form-group">
-            <input type="text" id="date" formControlName="date" class="form-control" placeholder="date giriniz" />
-          </div>
-          <div style="margin-top: 5px" class="form-group">
-            <input type="text" id="reason" formControlName="reason" class="form-control" placeholder="Sebep" />
-          </div>
-        </form>
-      </div>
-      <div class="car-footer">
-        <div class="d-grid gap-2">
-          <button style="margin-bottom: 10px; margin-left: 15px; margin-right: 15px" class="btn btn-primary"
-            type="button" (click)="updateBlackList()" routerLink="/admin/admin-black-list">
-            Güncelle
-          </button>
-          <button style="margin-bottom: 10px; margin-left: 15px; margin-right: 15px" class="btn btn-primary"
-            type="button" routerLink="/admin/admin-blacklist">
-            Geri Dön
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
-
-
 <html>
 
 <head>
@@ -48,27 +8,22 @@
 
 <body>
   <form [formGroup]="blackListUpdateForm" *ngIf="blackListUpdateForm" method="post" class="shadow mt-4 border">
-    <h1>Kara Liste Güncelle</h1>
-    <div class="row">
-      <div class="col-md-6">
-        <fieldset>
-          <label for="name">Aday Id:</label>
-          <input formControlName="id" type="number" id="name" name="user_name"
-          >
-        </fieldset>
-        <fieldset>
-          <label for="name">applicantId:</label>
-          <input formControlName="applicantId" type="number" id="name" name="user_name"
-          >
-        </fieldset>
-        <fieldset>
-          <label for="name">Tarih Durumu</label>
-          <input formControlName="date" type="text" id="name" name="user_name"
-          >
-        </fieldset>
-        
-      </div>
-    </div>
+    <h1>Kara Liste</h1>
+
+    <fieldset>
+      <label for="name">Aday Id:</label>
+      <input formControlName="id" type="number" id="name" name="user_name">
+    </fieldset>
+    <fieldset>
+      <label for="name">applicantId:</label>
+      <input formControlName="applicantId" type="number" id="name" name="user_name">
+    </fieldset>
+    <fieldset>
+      <label for="name">Tarih Durumu</label>
+      <input formControlName="date" type="text" id="name" name="user_name">
+    </fieldset>
+
+
     <div class="row">
       <div class="col-md-6 "><button class="button" routerLink="/admin/admin-blacklist" type="submit">Geri
           Dön</button></div>
