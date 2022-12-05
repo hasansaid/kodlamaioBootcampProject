@@ -28,6 +28,7 @@
       "firstName": "Hasan",
       "lastName": "Sertkaya",
       "email": "sertkaya@gmail.com",
+      "password": "123",
       "companyName": "kodlamaio",
       "id": 1
     },
@@ -60,7 +61,8 @@
       "name": "Frontend Bootcampas",
       "dateStart": "01/12/2022",
       "dateEnd": "15/02/2023",
-      "state": 1
+      "state": 1,
+      "about": "blablablablalbalbablab"
     },
     {
       "id": 2,
@@ -68,7 +70,8 @@
       "name": "Backend Bootcamps",
       "dateStart": "15/12/2022",
       "dateEnd": "15/03/2023",
-      "state": 1
+      "state": 1,
+      "about": "blablablablalbalbablab"
     },
     {
       "instructorId": 3,
@@ -76,7 +79,8 @@
       "dateStart": "30.11.2022",
       "dateEnd": "30.12.2022",
       "state": "1",
-      "id": 3
+      "id": 3,
+      "about": "blablablablalbalbablab"
     }
   ],
   "application": [
