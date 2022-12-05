@@ -3,6 +3,8 @@ import { IUpdateApplicationRequest } from './../../../models/request/application
 import { ApplicationService } from './../../../services/application/application.service';
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
+
 import {
   FormGroup,
   FormBuilder,
@@ -20,7 +22,8 @@ export class ApplicationUpdateComponent implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private formBuilder: FormBuilder,
-    private applicationService: ApplicationService
+    private applicationService: ApplicationService,
+    private toastrService: ToastrService
   ) {}
 
   ngOnInit(): void {
@@ -54,28 +57,6 @@ export class ApplicationUpdateComponent implements OnInit {
         this.applicationUpdateForm.value
       )
       .subscribe();
+    this.toastrService.success('Başvuru Düzenlendi');
   }
-
-  // getApplicationDataForm() {
-  //   this.applicationService
-  //     .getApplication(this.activatedRoute.snapshot.params['id'])
-  //     .subscribe((result) => {
-  //       this.applicationUpdateForm = new FormGroup({
-  //         userId: new FormControl(result['userId']),
-  //         bootcampId: new FormControl(result['bootcampId']),
-  //         state: new FormControl(result['state']),
-  //       });
-  //     });
-  // }
-
-  // updateApplication() {
-  //   this.applicationService
-  //     .updateApplication(
-  //       this.activatedRoute.snapshot.params['id'],
-  //       this.applicationUpdateForm.value
-  //     )
-  //     .subscribe(() => {
-  //       alert('Başvuru bilgileri Güncellendi');
-  //     });
-  // }
 }

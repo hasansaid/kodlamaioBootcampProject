@@ -1,5 +1,5 @@
 import { ApplicationService } from './../../../services/application/application.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ApplicantService } from './../../../services/applicant/applicant.service';
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
@@ -21,7 +21,8 @@ export class ApplicationAddComponent implements OnInit {
     private applicationService: ApplicationService,
     private formBuilder: FormBuilder,
     private activatedRoute: ActivatedRoute,
-    private toastrService: ToastrService
+    private toastrService: ToastrService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -41,8 +42,10 @@ export class ApplicationAddComponent implements OnInit {
       this.applicationService
         .addApplication(applicationModel)
         .subscribe((data) => {});
+      this.toastrService.success('Başvuru Eklendi');
+      this.router.navigate(['/admin/admin-application']);
     } else {
-      this.toastrService.warning('Dikkat');
+      this.toastrService.warning('Form Eksik!!');
     }
   }
 }
