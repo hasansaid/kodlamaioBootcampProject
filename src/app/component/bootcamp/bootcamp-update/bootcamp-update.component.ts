@@ -56,6 +56,6 @@ export class BootcampUpdateComponent implements OnInit {
         this.bootcampUpdateForm.value
       )
       .subscribe();
-      this.toastrService.success('Bootcamp Güncelleme Başarılı');
+      this.toastrService.success('Bootcamp Güncelleme Başarılıı');
   }
 }

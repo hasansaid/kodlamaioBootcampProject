@@ -1,3 +1,51 @@
+<!-- <div class="content">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="title">Bootcamp Düzenleme Sayfası</h5>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="bootcampUpdateForm" *ngIf="bootcampUpdateForm">
+          <div style="margin-top: 5px" class="form-group">
+            <input type="number" id="id" formControlName="id" class="form-control" placeholder="Aday Id Giriniz..." />
+          </div>
+          <div style="margin-top: 5px" class="form-group">
+            <input type="number" id="instructorId" formControlName="instructorId" class="form-control"
+              placeholder="Bootcamp Id  Giriniz..." />
+          </div>
+          <div style="margin-top: 5px" class="form-group">
+            <input type="text" id="name" formControlName="name" class="form-control"
+              placeholder="--1:Uygun, 2:Uygun Değil-- Uygunluk Durumunu Giriniz..." />
+          </div>
+          <div style="margin-top: 5px" class="form-group">
+            <input type="text" id="dateStart" formControlName="dateStart" class="form-control"
+              placeholder="--1:Uygun, 2:Uygun Değil-- Uygunluk Durumunu Giriniz..." />
+          </div>
+          <div style="margin-top: 5px" class="form-group">
+            <input type="text" id="dateEnd" formControlName="dateEnd" class="form-control"
+              placeholder="Bootcamp Bitiş Tarihi" />
+          </div>
+          <div style="margin-top: 5px" class="form-group">
+            <input type="text" id="state" formControlName="state" class="form-control"
+              placeholder="--1:Uygun, 2:Uygun Değil-- Uygunluk Durumunu Giriniz..." />
+          </div>
+        </form>
+      </div>
+      <div class="car-footer">
+        <div class="d-grid gap-2">
+          <button style="margin-bottom: 10px; margin-left: 15px; margin-right: 15px" class="btn btn-primary"
+            type="button" (click)="updateBootcamp()" routerLink="/admin/admin-bootcamp">
+            Güncelle
+          </button>
+          <button style="margin-bottom: 10px; margin-left: 15px; margin-right: 15px" class="btn btn-primary"
+            type="button" routerLink="/admin/admin-bootcamp">
+            Geri Dön
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
 <html>
 
 <head>
@@ -8,7 +56,7 @@
 
 <body>
   <form [formGroup]="bootcampUpdateForm" *ngIf="bootcampUpdateForm" method="post" class="shadow mt-4 border">
-    <h1>{{ bootcamp.name }}</h1>
+    <h1>{{ bootcamp.name }} Düzenle</h1>
     <fieldset>
       <label for="name">Eğitmen Id:</label>
       <input formControlName="instructorId" type="number" id="name" name="user_name"
@@ -47,7 +95,7 @@
         </button>
       </div>
       <div class="col-md-6">
-        <button class="buttonA" (click)="(updateBootcamp)" routerLink="/admin/admin-bootcamp" type="submit">
+        <button class="buttonA" (click)="updateBootcamp()" routerLink="/admin/admin-bootcamp" type="submit">
           Düzenle
         </button>
       </div>
