@@ -23,36 +23,6 @@
       "dateOfBirth": "25/10/1995",
       "token": "HRTRASD",
       "expiration": "01/01/2023"
-    },
-    {
-      "firstName": "asda",
-      "lastName": "asda",
-      "email": "asda",
-      "password": "123",
-      "nationalIdentity": "98765432112",
-      "dateOfBirth": "11/10/1995",
-      "about": "Mehmet Akif Ersoy Üniversitesinden 3.20 ortalama ile mezun oldum.",
-      "id": 3
-    },
-    {
-      "firstName": "asdasdaasdas",
-      "lastName": "asdasd",
-      "email": "asdasda",
-      "password": "123",
-      "nationalIdentity": "98765432112",
-      "dateOfBirth": "11/10/1995",
-      "about": "Mehmet Akif Ersoy Üniversitesinden 3.20 ortalama ile mezun oldum.",
-      "id": 4
-    },
-    {
-      "firstName": "asdasd",
-      "lastName": "asdas",
-      "email": "dasdasda",
-      "password": "123123",
-      "nationalIdentity": "74125896328",
-      "dateOfBirth": "11/10/1995",
-      "about": "Mehmet Akif Ersoy Üniversitesinden 3.20 ortalama ile mezun oldum.",
-      "id": 5
     }
   ],
   "instructor": [

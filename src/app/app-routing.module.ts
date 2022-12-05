@@ -84,6 +84,10 @@ const routes: Routes = [
         component: ApplicantAddComponent,
       },
       {
+        path: 'admin-applicant/applicant-update/:id',
+        component: ApplicantUpdateComponent,
+      },
+      {
         path: 'admin-application/application-detail/:id',
         component: ApplicationDetailComponent,
       },
@@ -92,12 +96,21 @@ const routes: Routes = [
         component: ApplicationAddComponent,
       },
       {
+        path: 'admin-application/application-update/:id',
+        component: ApplicationUpdateComponent,
+      },
+
+      {
         path: 'admin-blacklist/blacklist-detail/:id',
         component: BlacklistDetailComponent,
       },
       {
         path: 'admin-blacklist/blacklist-add',
         component: BlacklistAddComponent,
+      },
+      {
+        path: 'admin-blacklist/blacklist-update/:id',
+        component: BlacklistUpdateComponent,
       },
       {
         path: 'admin-bootcamp/bootcamp-detail/:id',
@@ -108,6 +121,10 @@ const routes: Routes = [
         component: BootcampAddComponent,
       },
       {
+        path: 'admin-bootcamp/bootcamp-update/:id',
+        component: BootcampUpdateComponent,
+      },
+      {
         path: 'admin-instructor/instructor-detail/:id',
         component: InstructorDetailComponent,
       },
@@ -116,12 +133,20 @@ const routes: Routes = [
         component: InstructorAddComponent,
       },
       {
+        path: 'admin-instructor/instructor-update/:id',
+        component: InstructorUpdateComponent,
+      },
+      {
         path: 'admin-employee/employee-detail/:id',
         component: EmployeeDetailComponent,
       },
       {
         path: 'admin-employee/employee-add',
         component: EmployeeAddComponent,
+      },
+      {
+        path: 'admin-employee/employee-update/:id',
+        component: EmployeeUpdateComponent,
       },
     ],
   },
@@ -149,63 +174,6 @@ const routes: Routes = [
         component: ApplicantNotificationComponent,
       },
     ],
-  },
-  //
-  //applicant
-  {
-    path: '',
-    pathMatch: 'full',
-    component: ApplicantListComponent,
-    canActivate: [LoginEmployeGuard],
-  },
-  {
-    path: 'applicant-update/:id',
-    component: ApplicantUpdateComponent,
-    canActivate: [LoginEmployeGuard],
-  },
-
-  //
-  //application
-
-  {
-    path: 'application-update/:id',
-    component: ApplicationUpdateComponent,
-    canActivate: [LoginEmployeGuard],
-  },
-
-  //
-  //blackList
-
-  {
-    path: 'blacklist-update/:id',
-    component: BlacklistUpdateComponent,
-    canActivate: [LoginEmployeGuard],
-  },
-  //
-  //bootcamp
-
-  {
-    path: 'bootcamp-update/:id',
-    component: BootcampUpdateComponent,
-    canActivate: [LoginEmployeGuard],
-  },
-
-  //
-  //instructor
-
-  {
-    path: 'instructor-update/:id',
-    component: InstructorUpdateComponent,
-    canActivate: [LoginEmployeGuard],
-  },
-
-  //
-  //employee
-
-  {
-    path: 'employee-update/:id',
-    component: EmployeeUpdateComponent,
-    canActivate: [LoginEmployeGuard],
   },
   {
     path: 'employee-login',

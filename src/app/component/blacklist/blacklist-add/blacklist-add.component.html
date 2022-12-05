@@ -1,38 +1,38 @@
-<div class="content">
-  <div class="col-md-12">
-    <div class="card">
-      <div class="card-header">
-        <h5 class="title">Kara Listeye Ekle</h5>
-      </div>
-      <div class="card-body">
-        <!-- [formGroup]="carAddForm" ile map işlemini yapmış oluruz. -->
-        <form [formGroup]="blackListAddForm">
-          <div style="margin-top: 5px" class="form-group">
-            <!-- anguların önemsediği kısım formControlName dir. İlişkilendirmeyi bunun üzerinden yapar. -->
-            <input type="number" id="applicantId" formControlName="applicantId" class="form-control"
-              placeholder="Aday Id Giriniz..." />
-          </div>
-          <div style="margin-top: 5px" class="form-group">
-            <input type="text" id="date" formControlName="date" class="form-control" placeholder="Tarih Giriniz..." />
-          </div>
-          <div style="margin-top: 5px" class="form-group">
-            <input type="text" id="reason" formControlName="reason" class="form-control"
-              placeholder="Sebebini Yazınız ..." />
-          </div>
-        </form>
-      </div>
-      <div class="car-footer">
-        <div class="d-grid gap-2">
-          <button style="margin-bottom: 10px; margin-left: 15px; margin-right: 15px" class="btn btn-primary"
-            type="button" (click)="add()" routerLink="/admin/admin-black-list">
-            Ekle
-          </button>
-          <button style="margin-bottom: 10px; margin-left: 15px; margin-right: 15px" class="btn btn-primary"
-            type="button" routerLink="/admin/admin-blacklist">
-            Geri Dön
-          </button>
-        </div>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kara Listeye Ekle</title>
+</head>
+
+<body>
+  <form [formGroup]="blackListAddForm" method="post" class="shadow mt-5">
+    <h1>Kara Listeye Ekle</h1>
+
+
+    <fieldset>
+      <label for="name">Ad:</label>
+      <input formControlName="applicantId" type="text" id="name" name="user_name">
+    </fieldset>
+    <fieldset>
+      <label for="name">Tarih:</label>
+      <input formControlName="date" type="text" id="name" name="user_name">
+    </fieldset>
+    <fieldset>
+      <label for="name">Email:</label>
+      <input formControlName="reason" type="text" id="name" name="user_name">
+    </fieldset>
+
+
+    <div class="row">
+      <div class="col-md-6 "><button class="button" routerLink="/admin/admin-blacklist" type="submit">Geri
+          Dön</button></div>
+      <div class="col-md-6"><button class="buttonA" (click)="add()" routerLink="/admin/admin-blacklist"
+          type="submit">Kara Listeye Ekle</button>
       </div>
     </div>
-  </div>
-</div>
+  </form>
+</body>
+
+</html>

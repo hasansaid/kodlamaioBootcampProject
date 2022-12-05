@@ -1,63 +1,69 @@
-<section class="intro">
-
-  <div class="bg-image h-100">
-    <div class="mask d-flex align-items-center h-100">
-      <div class="container" style="height: 723px; ;">
-        <div style="display:flex; justify-content:space-evenly; margin-top: 10px;">
-          <div style="color:azure">
-            <h2>Başvurular Listesi</h2>
-          </div>
-          <div>
-            <button class="button-33" role="button" routerLink="application-add">
-              Başvuru Ekle
-            </button>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-12">
-            <div class="card mask-custom">
-              <div class="card-body">
-                <div class="table-responsive">
-                  <table class="table table-borderless text-white mb-0">
-                    <thead>
-                      <tr>
-                        <th scope="col">Id</th>
-                        <th scope="col">User Id</th>
-                        <th scope="col">Bootcamp Id</th>
-                        <th scope="col">State</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr *ngFor="let application of applications">
-                        <td>{{ application.id }}</td>
-                        <td>{{ application.userId }}</td>
-                        <td>{{ application.bootcampId }}</td>
-                        <td>{{ application.state }}</td>
-
-                        <td>
-                          <button class="button-6A" role="button" routerLink="application-detail/{{ application.id }}">
-                            Detaya Git
-                          </button>
-                        </td>
-                        <td>
-                          <button class="button-6B" role="button" routerLink="/application-update/{{ application.id }}">
-                            Düzenle
-                          </button>
-                        </td>
-                        <td>
-                          <button class="button-62" role="button" (click)="deleteApplication(application)">
-                            Başvuru Sil
-                          </button>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+<div class="bg-light mt-4 p-5 border shadow-lg rounded h-100 p-4">
+  <div class="mb-4">
+    <div style="display: flex; justify-content: space-evenly; margin-top: 10px">
+      <div>
+        <h2>Başvurular Listesi</h2>
+      </div>
+      <div>
+        <button
+          type="button"
+          class="btn btn-outline-success shadow m-2"
+          routerLink="application-add"
+        >
+          Başvuru Ekle
+        </button>
       </div>
     </div>
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">User Id</th>
+            <th scope="col">Bootcamp Id</th>
+            <th scope="col">State</th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let application of applications">
+            <td>{{ application.id }}</td>
+            <td>{{ application.userId }}</td>
+            <td>{{ application.bootcampId }}</td>
+            <td>{{ application.state }}</td>
+
+            <td>
+              <button
+                type="button"
+                class="btn btn-outline-danger shadow m-2"
+                routerLink="application-detail/{{ application.id }}"
+              >
+                Detaya Git
+              </button>
+            </td>
+            <td>
+              <button
+                type="button"
+                class="btn btn-outline-warning shadow m-2"
+                routerLink="application-update/{{ application.id }}"
+              >
+                Düzenle
+              </button>
+            </td>
+            <td>
+              <button
+                type="button"
+                class="btn btn-outline-secondary shadow m-2"
+                (click)="deleteApplication(application)"
+              >
+                Başvuru Sil
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
-</section>
+</div>

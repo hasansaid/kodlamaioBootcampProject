@@ -1,55 +1,61 @@
-<div class="content">
-  <div class="col-md-12">
-    <div class="card">
-      <div class="card-header">
-        <h5 class="title">Eğitmen Ekle</h5>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eğitmen Ekle</title>
+</head>
+
+<body>
+  <form [formGroup]="instructorAddForm" method="post" class="shadow mt-5">
+    <h1>Eğitmen Ekle</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <fieldset>
+          <label for="name">Ad:</label>
+          <input formControlName="firstName" type="text" id="name" name="user_name"
+            placeholder="Eğitmen Adını Giriniz...">
+        </fieldset>
+        <fieldset>
+          <label for="name">Soyad:</label>
+          <input formControlName="lastName" type="text" id="name" name="user_name"
+            placeholder="Eğitmen Soyadını Giriniz...">
+        </fieldset>
+        <fieldset>
+          <label for="name">Doğum Tarihi:</label>
+          <input formControlName="dateOfBirth" type="text" id="name" name="user_name"
+            placeholder="Doğum Tarihini Giriniz...">
+        </fieldset>
+        <fieldset>
+          <label for="name">Email:</label>
+          <input formControlName="email" type="text" id="name" name="user_name" placeholder="Email Giriniz...">
+        </fieldset>
       </div>
-      <div class="card-body">
-        <!-- [formGroup]="carAddForm" ile map işlemini yapmış oluruz. -->
-        <form [formGroup]="instructorAddForm">
-          <div style="margin-top: 5px" class="form-group">
-            <!-- anguların önemsediği kısım formControlName dir. İlişkilendirmeyi bunun üzerinden yapar. -->
-            <input type="text" id="firstName" formControlName="firstName" class="form-control"
-              placeholder="Eğitmen Adını Giriniz..." />
-          </div>
-          <div style="margin-top: 5px" class="form-group">
-            <input type="text" id="lastName" formControlName="lastName" class="form-control"
-              placeholder="Eğitmen Soyadını Giriniz..." />
-          </div>
-          <div style="margin-top: 5px" class="form-group">
-            <input type="text" id="dateOfBirth" formControlName="dateOfBirth" class="form-control"
-              placeholder="Eğitmen Doğum Tarihi Giriniz..." />
-          </div>
-          <div style="margin-top: 5px" class="form-group">
-            <input type="text" id="email" formControlName="email" class="form-control"
-              placeholder="Eğitmen email Giriniz..." />
-          </div>
-          <div style="margin-top: 5px" class="form-group">
-            <input type="text" id="password" formControlName="password" class="form-control"
-              placeholder="Eğitmen Şifresini Giriniz..." />
-          </div>
-          <div style="margin-top: 5px" class="form-group">
-            <input type="text" id="companyName" formControlName="companyName" class="form-control"
-              placeholder="Eğitmen Şirket Adı Giriniz..." />
-          </div>
-          <div style="margin-top: 5px" class="form-group">
-            <input type="text" id="nationalIdentity" formControlName="nationalIdentity" class="form-control"
-              placeholder="Eğitmen Tc Kimlik No Giriniz..." />
-          </div>
-        </form>
-      </div>
-      <div class="car-footer">
-        <div class="d-grid gap-2">
-          <button style="margin-bottom: 10px; margin-left: 15px; margin-right: 15px" class="btn btn-primary"
-            type="button" (click)="add()" routerLink="/admin/admin-instructor">
-            Ekle
-          </button>
-          <button style="margin-bottom: 10px; margin-left: 15px; margin-right: 15px" class="btn btn-primary"
-            type="button" routerLink="/admin/admin-instructor">
-            Geri Dön
-          </button>
-        </div>
+      <div class="col-md-6">
+        <fieldset>
+          <label for="name">Şifre:</label>
+          <input formControlName="password" type="text" id="name" name="user_name" placeholder="Şifre Giriniz...">
+        </fieldset>
+        <fieldset>
+          <label for="name">Şirket Adı:</label>
+          <input formControlName="companyName" type="text" id="name" name="user_name"
+            placeholder="Şirket Adını Giriniz...">
+        </fieldset>
+        <fieldset>
+          <label for="name">TC Kimlik No:</label>
+          <input formControlName="nationalIdentity" type="text" id="name" name="user_name"
+            placeholder="TC Kimlik No Giriniz...">
+        </fieldset>
       </div>
     </div>
-  </div>
-</div>
+    <div class="row">
+      <div class="col-md-6 "><button class="button" routerLink="/admin/admin-instructor" type="submit">Geri
+          Dön</button></div>
+      <div class="col-md-6"><button class="buttonA" (click)="add()" routerLink="/admin/admin-instructor"
+          type="submit">Aday Ekle</button>
+      </div>
+    </div>
+  </form>
+</body>
+
+</html>
