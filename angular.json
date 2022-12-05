@@ -47,7 +47,8 @@
               "./src/template/lib/tempusdominus/js/moment.min.js",
               "./src/template/lib/tempusdominus/js/tempusdominus-bootstrap-4.js",
               "./src/template/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js",
-              "./src/template/lib/waypoints/waypoints.min.js"
+              "./src/template/lib/waypoints/waypoints.min.js",
+              "./src/template/sd/carousel.js"
             ]
           },
           "configurations": {
