@@ -2,6 +2,7 @@ import { ApplicantService } from './../../../services/applicant/applicant.servic
 import { ActivatedRoute } from '@angular/router';
 import { IUpdateApplicantRequest } from './../../../models/request/applicant/updateApplicantRequest';
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import {
   FormGroup,
   FormBuilder,
@@ -20,7 +21,8 @@ export class ApplicantUpdateComponent implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private formBuilder: FormBuilder,
-    private applicantService: ApplicantService
+    private applicantService: ApplicantService,
+    private toastrService: ToastrService
   ) {}
 
   ngOnInit(): void {
@@ -58,5 +60,6 @@ export class ApplicantUpdateComponent implements OnInit {
         this.applicantUpdateForm.value
       )
       .subscribe();
+    this.toastrService.success('Düzenleme Başarılı');
   }
 }
