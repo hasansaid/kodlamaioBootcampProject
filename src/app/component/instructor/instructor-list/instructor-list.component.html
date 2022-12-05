@@ -5,11 +5,7 @@
         <h2>Eğitmenler Listesi</h2>
       </div>
       <div>
-        <button
-          type="button"
-          class="btn btn-outline-success shadow m-2"
-          routerLink="instructor-add"
-        >
+        <button type="button" class="btn btn-outline-success shadow m-2" routerLink="instructor-add">
           Eğitmen Ekle
         </button>
       </div>
@@ -18,12 +14,12 @@
       <table class="table">
         <thead>
           <tr>
-            <th scope="col">Id</th>
-            <th scope="col">İsim</th>
-            <th scope="col">Soyisim</th>
-            <th scope="col">Email</th>
-            <th scope="col">Password</th>
-            <th scope="col">CompanyName</th>
+            <th scope="col" style="text-align:center;">Id</th>
+            <th scope="col" style="text-align:center;">İsim</th>
+            <th scope="col" style="text-align:center;">Soyisim</th>
+            <th scope="col" style="text-align:center;">Email</th>
+            <th scope="col" style="text-align:center;">Password</th>
+            <th scope="col" style="text-align:center;">CompanyName</th>
             <th></th>
             <th></th>
             <th></th>
@@ -31,27 +27,21 @@
         </thead>
         <tbody>
           <tr *ngFor="let instructor of instructors">
-            <td>{{ instructor.id }}</td>
-            <td>{{ instructor.firstName }}</td>
-            <td>{{ instructor.lastName }}</td>
-            <td>{{ instructor.email }}</td>
-            <td>{{ instructor.password }}</td>
-            <td>{{ instructor.companyName }}</td>
+            <td style="text-align:center;">{{ instructor.id }}</td>
+            <td style="text-align:center;">{{ instructor.firstName }}</td>
+            <td style="text-align:center;">{{ instructor.lastName }}</td>
+            <td style="text-align:center;">{{ instructor.email }}</td>
+            <td style="text-align:center;">{{ instructor.password }}</td>
+            <td style="text-align:center;">{{ instructor.companyName }}</td>
             <td>
-              <button
-                type="button"
-                class="btn btn-outline-secondary shadow m-2"
-                routerLink="instructor-detail/{{ instructor.id }}"
-              >
+              <button type="button" class="btn btn-outline-secondary shadow m-2"
+                routerLink="instructor-detail/{{ instructor.id }}">
                 Detay
               </button>
             </td>
             <td>
-              <button
-                type="button"
-                class="btn btn-outline-warning shadow m-2"
-                routerLink="instructor-update/{{ instructor.id }}"
-              >
+              <button type="button" class="btn btn-outline-warning shadow m-2"
+                routerLink="instructor-update/{{ instructor.id }}">
                 Düzenle
               </button>
             </td>

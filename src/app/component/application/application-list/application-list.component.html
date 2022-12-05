@@ -5,11 +5,7 @@
         <h2>Başvurular Listesi</h2>
       </div>
       <div>
-        <button
-          type="button"
-          class="btn btn-outline-success shadow m-2"
-          routerLink="application-add"
-        >
+        <button type="button" class="btn btn-outline-success shadow m-2" routerLink="application-add">
           Başvuru Ekle
         </button>
       </div>
@@ -18,10 +14,10 @@
       <table class="table">
         <thead>
           <tr>
-            <th scope="col">Id</th>
-            <th scope="col">User Id</th>
-            <th scope="col">Bootcamp Id</th>
-            <th scope="col">State</th>
+            <th scope="col" style="text-align:center;">Id</th>
+            <th scope="col" style="text-align:center;">User Id</th>
+            <th scope="col" style="text-align:center;">Bootcamp Id</th>
+            <th scope="col" style="text-align:center;">State</th>
             <th></th>
             <th></th>
             <th></th>
@@ -29,35 +25,26 @@
         </thead>
         <tbody>
           <tr *ngFor="let application of applications">
-            <td>{{ application.id }}</td>
-            <td>{{ application.userId }}</td>
-            <td>{{ application.bootcampId }}</td>
-            <td>{{ application.state }}</td>
+            <td style="text-align:center;">{{ application.id }}</td>
+            <td style="text-align:center;">{{ application.userId }}</td>
+            <td style="text-align:center;">{{ application.bootcampId }}</td>
+            <td style="text-align:center;">{{ application.state }}</td>
 
             <td>
-              <button
-                type="button"
-                class="btn btn-outline-danger shadow m-2"
-                routerLink="application-detail/{{ application.id }}"
-              >
+              <button type="button" class="btn btn-outline-danger shadow m-2"
+                routerLink="application-detail/{{ application.id }}">
                 Detaya Git
               </button>
             </td>
             <td>
-              <button
-                type="button"
-                class="btn btn-outline-warning shadow m-2"
-                routerLink="application-update/{{ application.id }}"
-              >
+              <button type="button" class="btn btn-outline-warning shadow m-2"
+                routerLink="application-update/{{ application.id }}">
                 Düzenle
               </button>
             </td>
             <td>
-              <button
-                type="button"
-                class="btn btn-outline-secondary shadow m-2"
-                (click)="deleteApplication(application)"
-              >
+              <button type="button" class="btn btn-outline-secondary shadow m-2"
+                (click)="deleteApplication(application)">
                 Başvuru Sil
               </button>
             </td>
