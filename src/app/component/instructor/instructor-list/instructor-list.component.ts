@@ -1,4 +1,5 @@
-import { ActivatedRoute } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { ActivatedRoute, Router } from '@angular/router';
 import { InstructorService } from './../../../services/instructor/instructor.service';
 import { Component, OnInit } from '@angular/core';
 import { IGetAllInstructorResponse } from 'src/app/models/response/instructor/getAllInstructorResponse';
@@ -12,7 +13,9 @@ export class InstructorListComponent implements OnInit {
   instructors: IGetAllInstructorResponse[] = [];
   constructor(
     private instructorService: InstructorService,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private toastrService: ToastrService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -23,5 +26,11 @@ export class InstructorListComponent implements OnInit {
     this.instructorService
       .getAllInstructor()
       .subscribe((data) => (this.instructors = data));
+  }
+  deleteInsturctor(employee: IGetAllInstructorResponse) {
+    this.instructors = this.instructors.filter((a) => a !== employee);
+    this.instructorService.deleteInstructor(employee).subscribe();
+    this.toastrService.error('Çalışan Silme Başarılı');
+    this.router.navigate(['/admin/admin-instructor']);
   }
 }

@@ -1,5 +1,6 @@
+import { ToastrService } from 'ngx-toastr';
 import { EmployeeService } from './../../../services/employee/employee.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import {
   FormBuilder,
@@ -18,7 +19,9 @@ export class EmployeeAddComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private activatedRoute: ActivatedRoute,
-    private employeeService: EmployeeService
+    private employeeService: EmployeeService,
+    private toastrService: ToastrService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -40,10 +43,11 @@ export class EmployeeAddComponent implements OnInit {
     if (this.employeeAddForm.valid) {
       let employeeModel = Object.assign({}, this.employeeAddForm.value);
       this.employeeService.addEmployee(employeeModel).subscribe((data) => {
-        alert(' Çalışan Eklendi');
+        this.toastrService.success('Çalışan Ekleme Başarılı');
+        this.router.navigate(['/admin/admin-employee']);
       });
     } else {
-      alert('Çalışan Eklenemedi Kontol Et');
+      this.toastrService.warning('Form Eksik!!!');
     }
   }
 }
