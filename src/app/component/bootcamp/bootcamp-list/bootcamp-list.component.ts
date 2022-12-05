@@ -2,6 +2,7 @@ import { ActivatedRoute } from '@angular/router';
 import { IGetAllBootcampResponse } from './../../../models/response/bootcamp/getAllBootcampResponse';
 import { BootcampService } from './../../../services/bootcamp/bootcamp.service';
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-bootcamp-list',
@@ -13,7 +14,8 @@ export class BootcampListComponent implements OnInit {
 
   constructor(
     private bootcampService: BootcampService,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private toastrService: ToastrService
   ) {}
 
   ngOnInit(): void {
@@ -28,5 +30,7 @@ export class BootcampListComponent implements OnInit {
   deleteBootcamp(bootcamp: IGetAllBootcampResponse) {
     this.bootcamps = this.bootcamps.filter((a) => a !== bootcamp);
     this.bootcampService.deleteBootcamp(bootcamp).subscribe();
+    this.toastrService.success('Bootcamp Sil Başarılıı');
+
   }
 }

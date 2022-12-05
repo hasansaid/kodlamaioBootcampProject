@@ -2,6 +2,7 @@ import { IGetAllBlackListResponse } from './../../../models/response/blackList/g
 import { ActivatedRoute } from '@angular/router';
 import { BlacklistService } from './../../../services/blacklist/blacklist.service';
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-black-list',
@@ -13,7 +14,8 @@ export class BlackListComponent implements OnInit {
 
   constructor(
     private blacklistService: BlacklistService,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private toastrService: ToastrService
   ) {}
 
   ngOnInit(): void {
@@ -28,5 +30,6 @@ export class BlackListComponent implements OnInit {
   deleteBlackList(blackList: IGetAllBlackListResponse) {
     this.blacklists = this.blacklists.filter((a) => a !== blackList);
     this.blacklistService.deleteBlackList(blackList).subscribe();
+     this.toastrService.success('Kara Liste Sil Başarılı');
   }
 }
