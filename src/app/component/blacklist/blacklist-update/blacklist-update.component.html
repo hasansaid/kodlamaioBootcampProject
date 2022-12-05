@@ -1,4 +1,4 @@
-<div class="content">
+<!-- <div class="content">
   <div class="col-md-12">
     <div class="card">
       <div class="card-header">
@@ -35,4 +35,48 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
+
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kara Liste Güncelle</title>
+</head>
+
+<body>
+  <form [formGroup]="blackListUpdateForm" *ngIf="blackListUpdateForm" method="post" class="shadow mt-4 border">
+    <h1>Kara Liste Güncelle</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <fieldset>
+          <label for="name">Aday Id:</label>
+          <input formControlName="id" type="number" id="name" name="user_name"
+          >
+        </fieldset>
+        <fieldset>
+          <label for="name">applicantId:</label>
+          <input formControlName="applicantId" type="number" id="name" name="user_name"
+          >
+        </fieldset>
+        <fieldset>
+          <label for="name">Tarih Durumu</label>
+          <input formControlName="date" type="text" id="name" name="user_name"
+          >
+        </fieldset>
+        
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 "><button class="button" routerLink="/admin/admin-blacklist" type="submit">Geri
+          Dön</button></div>
+      <div class="col-md-6"><button class="buttonA" (click)="updateBlackList()" routerLink="/admin/admin-black-list"
+          type="submit">Düzenle</button>
+      </div>
+    </div>
+  </form>
+</body>
+
+</html>
