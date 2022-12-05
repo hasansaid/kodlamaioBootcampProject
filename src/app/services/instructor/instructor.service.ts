@@ -23,10 +23,15 @@ export class InstructorService {
   addInstructor(instructor: ICreateInstructorRequest) {
     return this.httpClient.post(this.apiUrl, instructor);
   }
-  getUpdateInstructor(id:number){
-    return this.httpClient.get<IUpdateInstructorResponse>(this.apiUrl + '/' + id);
+  getUpdateInstructor(id: number) {
+    return this.httpClient.get<IUpdateInstructorResponse>(
+      this.apiUrl + '/' + id
+    );
   }
-  updateInstructor(id:number, instructor:IGetInstructorResponse){
-    return this.httpClient.put(this.apiUrl + '/' + id,instructor);
+  updateInstructor(id: number, instructor: IGetInstructorResponse) {
+    return this.httpClient.put(this.apiUrl + '/' + id, instructor);
+  }
+  deleteInstructor(employee: IGetAllInstructorResponse) {
+    return this.httpClient.delete(this.apiUrl + '/' + employee.id);
   }
 }

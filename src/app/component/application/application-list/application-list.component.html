@@ -31,7 +31,7 @@
             <td style="text-align:center;">{{ application.state }}</td>
 
             <td>
-              <button type="button" class="btn btn-outline-danger shadow m-2"
+              <button type="button" class="btn btn-outline-secondary shadow m-2"
                 routerLink="application-detail/{{ application.id }}">
                 Detaya Git
               </button>
@@ -43,8 +43,7 @@
               </button>
             </td>
             <td>
-              <button type="button" class="btn btn-outline-secondary shadow m-2"
-                (click)="deleteApplication(application)">
+              <button type="button" class="btn btn-outline-danger shadow m-2" (click)="deleteApplication(application)">
                 Başvuru Sil
               </button>
             </td>

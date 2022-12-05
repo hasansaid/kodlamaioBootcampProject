@@ -1,5 +1,6 @@
+import { ToastrService } from 'ngx-toastr';
 import { InstructorService } from './../../../services/instructor/instructor.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import {
   FormBuilder,
@@ -18,7 +19,9 @@ export class InstructorAddComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private activatedRoute: ActivatedRoute,
-    private instructorService: InstructorService
+    private instructorService: InstructorService,
+    private toastrService: ToastrService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -42,10 +45,11 @@ export class InstructorAddComponent implements OnInit {
       this.instructorService
         .addInstructor(instructorModel)
         .subscribe((data) => {
-          alert('Eğitmen Eklendi');
+          this.toastrService.success('Eğitmen Ekleme Başarılı');
+          this.router.navigate(['/admin/admin-instructor']);
         });
     } else {
-      alert('Eğitmen Eklenemedi Kontrol Et');
+      this.toastrService.warning('Form Eksik!!!');
     }
   }
 }

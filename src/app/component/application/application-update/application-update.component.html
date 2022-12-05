@@ -1,44 +1,3 @@
-<!-- <div class="content">
-    <div class="col-md-12">
-        <div class="card">
-            <div class="card-header">
-                <h5 class="title">Başvuru Düzenleme Sayfası</h5>
-            </div>
-            <div class="card-body">
-
-                <form [formGroup]="applicationUpdateForm" *ngIf="applicationUpdateForm">
-                    <div style="margin-top: 5px" class="form-group">
-
-                        <input type="number" id="userId" formControlName="userId" class="form-control"
-                            placeholder="Aday Id Giriniz..." />
-                    </div>
-                    <div style="margin-top: 5px" class="form-group">
-                        <input type="number" id="bootcampId" formControlName="bootcampId" class="form-control"
-                            placeholder="Bootcamp Id  Giriniz..." />
-                    </div>
-                    <div style="margin-top: 5px" class="form-group">
-                        <input type="number" id="state" formControlName="state" class="form-control"
-                            placeholder="--1:Uygun, 2:Uygun Değil-- Uygunluk Durumunu Giriniz..." />
-                    </div>
-                </form>
-            </div>
-            <div class="car-footer">
-                <div class="d-grid gap-2">
-                    <button style="margin-bottom: 10px; margin-left: 15px; margin-right: 15px" class="btn btn-primary"
-                        type="button" (click)="updateApplication()" routerLink="/admin/admin-application">
-                        Güncelle
-                    </button>
-                    <button style="margin-bottom: 10px; margin-left: 15px; margin-right: 15px" class="btn btn-primary"
-                        type="button" routerLink="/admin/admin-application">
-                        Geri Dön
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
-
-
 <html>
 
 <head>
@@ -50,26 +9,18 @@
 <body>
   <form [formGroup]="applicationUpdateForm" *ngIf="applicationUpdateForm" method="post" class="shadow mt-4 border">
     <h1>Başvuru Güncelle</h1>
-    <div class="row">
-      <div class="col-md-6">
-        <fieldset>
-          <label for="name">User Id:</label>
-          <input formControlName="userId" type="number" id="name" name="user_name"
-          >
-        </fieldset>
-        <fieldset>
-          <label for="name">BootcampId:</label>
-          <input formControlName="bootcampId" type="number" id="name" name="user_name"
-          >
-        </fieldset>
-        <fieldset>
-          <label for="name">Uygunluk Durumu</label>
-          <input formControlName="state" type="text" id="name" name="user_name"
-          >
-        </fieldset>
-        
-      </div>
-    </div>
+    <fieldset>
+      <label for="name">User Id:</label>
+      <input formControlName="userId" type="number" id="name" name="user_name">
+    </fieldset>
+    <fieldset>
+      <label for="name">BootcampId:</label>
+      <input formControlName="bootcampId" type="number" id="name" name="user_name">
+    </fieldset>
+    <fieldset>
+      <label for="name">Uygunluk Durumu</label>
+      <input formControlName="state" type="text" id="name" name="user_name">
+    </fieldset>
     <div class="row">
       <div class="col-md-6 "><button class="button" routerLink="/admin/admin-application" type="submit">Geri
           Dön</button></div>

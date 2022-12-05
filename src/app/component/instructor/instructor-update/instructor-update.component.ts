@@ -1,3 +1,4 @@
+import { ToastrService } from 'ngx-toastr';
 import { ActivatedRoute } from '@angular/router';
 import { IGetInstructorResponse } from './../../../models/response/instructor/getInstructorResponse';
 
@@ -8,21 +9,23 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-instructor-update',
   templateUrl: './instructor-update.component.html',
-  styleUrls: ['./instructor-update.component.css']
+  styleUrls: ['./instructor-update.component.css'],
 })
 export class InstructorUpdateComponent implements OnInit {
-  intructor:IGetInstructorResponse;
+  intructor: IGetInstructorResponse;
   intructorUpdateForm: FormGroup;
   constructor(
     private activatedRoute: ActivatedRoute,
-    private instructorService:InstructorService,
-    private formBuilder:FormBuilder) { }
+    private instructorService: InstructorService,
+    private formBuilder: FormBuilder,
+    private toastrService: ToastrService
+  ) {}
 
   ngOnInit(): void {
     this.getByIdIntructor();
   }
 
-  createIntructorUpdateForm(){
+  createIntructorUpdateForm() {
     this.intructorUpdateForm = this.formBuilder.group({
       firstName: [this.intructor.firstName, Validators.required],
       lastName: [this.intructor.lastName, Validators.required],
@@ -34,25 +37,26 @@ export class InstructorUpdateComponent implements OnInit {
     });
   }
 
-  getIntructor(id:number){
+  getIntructor(id: number) {
     this.instructorService.getInstructor(id).subscribe((data) => {
       this.intructor = data;
       this.createIntructorUpdateForm();
     });
   }
 
-  getByIdIntructor(){
+  getByIdIntructor() {
     this.activatedRoute.params.subscribe((params) => {
       this.getIntructor(params['id']);
     });
   }
 
-  updateIntructor(){
-    this.instructorService.updateInstructor(
-      this.activatedRoute.snapshot.params['id'],
-      this.intructorUpdateForm.value
-    )
-    .subscribe();
+  updateIntructor() {
+    this.instructorService
+      .updateInstructor(
+        this.activatedRoute.snapshot.params['id'],
+        this.intructorUpdateForm.value
+      )
+      .subscribe();
+    this.toastrService.success('Düzenleme Başarılı');
   }
-
 }

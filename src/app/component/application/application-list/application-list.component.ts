@@ -4,6 +4,7 @@ import { ApplicationService } from './../../../services/application/application.
 import { IGetAllApplicationResponse } from './../../../models/response/application/getAllApplicationResponse';
 import { Component, OnInit } from '@angular/core';
 import { IGetApplicantResponse } from 'src/app/models/response/applicant/getApplicantResponse';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-application-list',
@@ -15,7 +16,8 @@ export class ApplicationListComponent implements OnInit {
 
   constructor(
     private applicationService: ApplicationService,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private toastrService: ToastrService
   ) {}
 
   ngOnInit(): void {
@@ -30,11 +32,6 @@ export class ApplicationListComponent implements OnInit {
   deleteApplication(applications: IGetAllApplicationResponse) {
     this.applications = this.applications.filter((a) => a !== applications);
     this.applicationService.deleteApplication(applications).subscribe();
+    this.toastrService.error('Başvuru Silindi');
   }
-
-  // getApplication(id: number) {
-  //   this.applicationService
-  //     .getApplication(id)
-  //     .subscribe((data) => (this.applications = data));
-  // }
 }

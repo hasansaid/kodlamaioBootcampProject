@@ -1,174 +1,65 @@
-<!-- <div class="content">
-  <div class="col-md-12">
-    <div class="card">
-      <div class="card-header">
-        <h5 class="title">Aday Düzenleme Sayfası</h5>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aday Güncelle</title>
+</head>
+
+<body>
+  <form [formGroup]="applicantUpdateForm" *ngIf="applicantUpdateForm" method="post" class="shadow mt-4 border">
+    <h1>{{ applicant.firstName }} {{ applicant.lastName }} Düzenle</h1>
+    <div class="row">
+      <div class="col-md-6">
+
+        <fieldset>
+          <label for="name">Ad:</label>
+          <input formControlName="firstName" type="text" id="name" name="user_name" />
+        </fieldset>
+
+        <fieldset>
+          <label for="name">Email:</label>
+          <input formControlName="email" type="text" id="name" name="user_name" />
+        </fieldset>
+        <fieldset>
+          <label for="name">Doğum Tarihi:</label>
+          <input formControlName="dateOfBirth" type="text" id="name" name="user_name" />
+        </fieldset>
       </div>
-      <div class="card-body">
-        <form [formGroup]="applicantUpdateForm" *ngIf="applicantUpdateForm">
-          <div style="margin-top: 5px" class="form-group">
-            <input type="number" id="id" formControlName="id" class="form-control" placeholder="Aday Id Giriniz..." />
-          </div>
-          <div style="margin-top: 5px" class="form-group">
-            <input type="text" id="firstName" formControlName="firstName" class="form-control"
-              placeholder="Bootcamp Id  Giriniz..." />
-          </div>
-          <div style="margin-top: 5px" class="form-group">
-            <input type="text" id="lastName" formControlName="lastName" class="form-control"
-              placeholder="--1:Uygun, 2:Uygun Değil-- Uygunluk Durumunu Giriniz..." />
-          </div>
-          <div style="margin-top: 5px" class="form-group">
-            <input type="text" id="email" formControlName="email" class="form-control"
-              placeholder="--1:Uygun, 2:Uygun Değil-- Uygunluk Durumunu Giriniz..." />
-          </div>
-          <div style="margin-top: 5px" class="form-group">
-            <input type="text" id="password" formControlName="password" class="form-control"
-              placeholder="--1:Uygun, 2:Uygun Değil-- Uygunluk Durumunu Giriniz..." />
-          </div>
-          <div style="margin-top: 5px" class="form-group">
-            <input type="text" id="about" formControlName="about" class="form-control"
-              placeholder="--1:Uygun, 2:Uygun Değil-- Uygunluk Durumunu Giriniz..." />
-          </div>
-          <div style="margin-top: 5px" class="form-group">
-            <input type="text" id="nationalIdentity" formControlName="nationalIdentity" class="form-control"
-              placeholder="--1:Uygun, 2:Uygun Değil-- Uygunluk Durumunu Giriniz..." />
-          </div>
-          <div style="margin-top: 5px" class="form-group">
-            <input type="text" id="dateOfBirth" formControlName="dateOfBirth" class="form-control"
-              placeholder="--1:Uygun, 2:Uygun Değil-- Uygunluk Durumunu Giriniz..." />
-          </div>
-        </form>
+      <div class="col-md-6">
+        <fieldset>
+          <label for="name">Soyad:</label>
+          <input formControlName="lastName" type="text" id="name" name="user_name" />
+        </fieldset>
+        <fieldset>
+          <label for="name">Şifre:</label>
+          <input formControlName="password" type="text" id="name" name="user_name" />
+        </fieldset>
+        <fieldset>
+          <label for="name">TC Kimlik No:</label>
+          <input formControlName="nationalIdentity" type="text" id="name" name="user_name" />
+        </fieldset>
+
+
       </div>
-      <div class="car-footer">
-        <div class="d-grid gap-2">
-          <button style="margin-bottom: 10px; margin-left: 15px; margin-right: 15px" class="btn btn-primary"
-            type="button" (click)="updateApplicant()" routerLink="/admin/admin-applicant">
-            Güncelle
-          </button>
-          <button style="margin-bottom: 10px; margin-left: 15px; margin-right: 15px" class="btn btn-primary"
-            type="button" routerLink="/admin/admin-applicant">
-            Geri Dön
-          </button>
-        </div>
+      <fieldset>
+        <label for="name" style="text-align: center;">Hakkında</label>
+        <textarea formControlName="about" type="text" id="name" name="user_name"></textarea>
+      </fieldset>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <button class="button" routerLink="/admin/admin-applicant" type="submit">
+          Geri Dön
+        </button>
+      </div>
+      <div class="col-md-6">
+        <button class="buttonA" (click)="updateApplicant()" routerLink="/admin/admin-applicant" type="submit">
+          Düzenle
+        </button>
       </div>
     </div>
-  </div>
-</div> -->
+  </form>
+</body>
 
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aday Güncelle</title>
-  </head>
-
-  <body>
-    <form
-      [formGroup]="applicantUpdateForm"
-      *ngIf="applicantUpdateForm"
-      method="post"
-      class="shadow mt-4 border"
-    >
-      <h1>{{ applicant.firstName }} {{ applicant.lastName }} Düzenle</h1>
-      <div class="row">
-        <div class="col-md-6">
-          <fieldset>
-            <label for="name">Aday Id:</label>
-            <input
-              formControlName="id"
-              type="number"
-              id="name"
-              name="user_name"
-            />
-          </fieldset>
-          <fieldset>
-            <label for="name">Ad:</label>
-            <input
-              formControlName="firstName"
-              type="text"
-              id="name"
-              name="user_name"
-            />
-          </fieldset>
-          <fieldset>
-            <label for="name">Soyad:</label>
-            <input
-              formControlName="lastName"
-              type="text"
-              id="name"
-              name="user_name"
-            />
-          </fieldset>
-          <fieldset>
-            <label for="name">Email:</label>
-            <input
-              formControlName="email"
-              type="text"
-              id="name"
-              name="user_name"
-            />
-          </fieldset>
-          <fieldset>
-            <label for="name">Şifre:</label>
-            <input
-              formControlName="password"
-              type="text"
-              id="name"
-              name="user_name"
-            />
-          </fieldset>
-        </div>
-        <div class="col-md-6">
-          <fieldset>
-            <label for="name">TC Kimlik No</label>
-            <input
-              formControlName="nationalIdentity"
-              type="text"
-              id="name"
-              name="user_name"
-            />
-          </fieldset>
-          <fieldset>
-            <label for="name">Doğum Tarihi:</label>
-            <input
-              formControlName="dateOfBirth"
-              type="text"
-              id="name"
-              name="user_name"
-            />
-          </fieldset>
-          <fieldset>
-            <label for="name">Hakkında:</label>
-            <input
-              formControlName="about"
-              type="text"
-              id="name"
-              name="user_name"
-            />
-          </fieldset>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <button
-            class="button"
-            routerLink="/admin/admin-applicant"
-            type="submit"
-          >
-            Geri Dön
-          </button>
-        </div>
-        <div class="col-md-6">
-          <button
-            class="buttonA"
-            (click)="updateApplicant()"
-            routerLink="/admin/admin-applicant"
-            type="submit"
-          >
-            Düzenle
-          </button>
-        </div>
-      </div>
-    </form>
-  </body>
 </html>

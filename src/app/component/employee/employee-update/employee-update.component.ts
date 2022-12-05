@@ -1,5 +1,6 @@
+import { ToastrService } from 'ngx-toastr';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { IUpdateEmployeeRequest } from 'src/app/models/request/employee/updateEmployeeRequest';
 import { EmployeeService } from 'src/app/services/employee/employee.service';
 import {
@@ -11,18 +12,18 @@ import {
 @Component({
   selector: 'app-employee-update',
   templateUrl: './employee-update.component.html',
-  styleUrls: ['./employee-update.component.css']
+  styleUrls: ['./employee-update.component.css'],
 })
 export class EmployeeUpdateComponent implements OnInit {
-
   employeeUpdateForm: FormGroup;
   employee: IUpdateEmployeeRequest;
 
   constructor(
-    private activatedRoute:ActivatedRoute,
+    private activatedRoute: ActivatedRoute,
     private formBuilder: FormBuilder,
-    private employeeService:EmployeeService,
-  ) { }
+    private employeeService: EmployeeService,
+    private toastrService: ToastrService
+  ) {}
 
   ngOnInit(): void {
     this.getByIdEmployee();
@@ -37,8 +38,7 @@ export class EmployeeUpdateComponent implements OnInit {
       password: [this.employee.password, Validators.required],
       nationalIdentity: [this.employee.nationalIdentity, Validators.required],
       dateOfBirth: [this.employee.dateOfBirth, Validators.required],
-      position: [this.employee.position, Validators.required]
-      
+      position: [this.employee.position, Validators.required],
     });
   }
 
@@ -62,6 +62,6 @@ export class EmployeeUpdateComponent implements OnInit {
         this.employeeUpdateForm.value
       )
       .subscribe();
+    this.toastrService.success('Düzenleme Başarılı');
   }
-
 }
