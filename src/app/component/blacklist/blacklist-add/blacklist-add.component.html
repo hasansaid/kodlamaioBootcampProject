@@ -1,38 +1,62 @@
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kara Listeye Ekle</title>
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kara Listeye Ekle</title>
-</head>
+  <body>
+    <form
+      [formGroup]="blackListAddForm"
+      method="post"
+      class="shadow mt-4 border"
+    >
+      <h1>Kara Listeye Ekle</h1>
 
-<body>
-  <form [formGroup]="blackListAddForm" method="post" class="shadow mt-5">
-    <h1>Kara Listeye Ekle</h1>
+      <fieldset>
+        <label for="name">Ad:</label>
+        <input
+          formControlName="applicantId"
+          type="text"
+          id="name"
+          name="user_name"
+        />
+      </fieldset>
+      <fieldset>
+        <label for="name">Tarih:</label>
+        <input formControlName="date" type="text" id="name" name="user_name" />
+      </fieldset>
+      <fieldset>
+        <label for="name">Email:</label>
+        <input
+          formControlName="reason"
+          type="text"
+          id="name"
+          name="user_name"
+        />
+      </fieldset>
 
-
-    <fieldset>
-      <label for="name">Ad:</label>
-      <input formControlName="applicantId" type="text" id="name" name="user_name">
-    </fieldset>
-    <fieldset>
-      <label for="name">Tarih:</label>
-      <input formControlName="date" type="text" id="name" name="user_name">
-    </fieldset>
-    <fieldset>
-      <label for="name">Email:</label>
-      <input formControlName="reason" type="text" id="name" name="user_name">
-    </fieldset>
-
-
-    <div class="row">
-      <div class="col-md-6 "><button class="button" routerLink="/admin/admin-blacklist" type="submit">Geri
-          Dön</button></div>
-      <div class="col-md-6"><button class="buttonA" (click)="add()" routerLink="/admin/admin-blacklist"
-          type="submit">Kara Listeye Ekle</button>
+      <div class="row">
+        <div class="col-md-6">
+          <button
+            class="button"
+            routerLink="/admin/admin-blacklist"
+            type="submit"
+          >
+            Geri Dön
+          </button>
+        </div>
+        <div class="col-md-6">
+          <button
+            class="buttonA"
+            (click)="add()"
+            routerLink="/admin/admin-blacklist"
+            type="submit"
+          >
+            Kara Listeye Ekle
+          </button>
+        </div>
       </div>
-    </div>
-  </form>
-</body>
-
+    </form>
+  </body>
 </html>
