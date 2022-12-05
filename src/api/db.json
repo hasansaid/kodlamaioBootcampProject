@@ -30,7 +30,9 @@
       "email": "sertkaya@gmail.com",
       "password": "123",
       "companyName": "kodlamaio",
-      "id": 1
+      "id": 1,
+      "token": "ASDASD",
+      "expiration": "01/01/2023"
     },
     {
       "firstName": "Salih",
@@ -39,6 +41,15 @@
       "companyName": "kodlama.io",
       "id": 2,
       "token": "HRTRASD",
+      "expiration": "01/01/2023"
+    },
+    {
+      "firstName": "Emir",
+      "lastName": "Yılmaz",
+      "email": "emir@gmail.com",
+      "companyName": "kodlama.io",
+      "id": 3,
+      "token": "ASLKDASKLD",
       "expiration": "01/01/2023"
     }
   ],
@@ -58,29 +69,38 @@
     {
       "id": 1,
       "instructorId": 1,
-      "name": "Frontend Bootcampas",
+      "name": "Frontend Bootcamp",
       "dateStart": "01/12/2022",
       "dateEnd": "15/02/2023",
       "state": 1,
-      "about": "blablablablalbalbablab"
+      "about": "Angular ile frontend eğitimimiz başlamak üzere..."
     },
     {
       "id": 2,
       "instructorId": 1,
-      "name": "Backend Bootcamps",
+      "name": "Backend Bootcamp",
       "dateStart": "15/12/2022",
       "dateEnd": "15/03/2023",
       "state": 1,
-      "about": "blablablablalbalbablab"
+      "about": "C# ile backend eğitimimiz başlamak üzere..."
     },
     {
       "instructorId": 3,
-      "name": "Java Kampı",
+      "name": "Java Bootcamp",
       "dateStart": "30.11.2022",
       "dateEnd": "30.12.2022",
       "state": "1",
       "id": 3,
-      "about": "blablablablalbalbablab"
+      "about": "Java eğitimimiz başlamak üzere.."
+    },
+    {
+      "instructorId": 3,
+      "name": "Frontend Bootcamp",
+      "dateStart": "30.11.2022",
+      "dateEnd": "30.12.2022",
+      "state": "1",
+      "id": 4,
+      "about": "React ile frontend eğitimimiz başlamak üzere..."
     }
   ],
   "application": [

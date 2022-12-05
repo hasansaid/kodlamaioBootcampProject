@@ -1,1 +1,20 @@
-<p>home-instructor-list works!</p>
+<br> <br>
+<div class="d-flex justify-content-center">
+    <div class="container " *ngFor="let instructor of instructors">
+        <div class="img-container">
+            <img src="https://dl.memuplay.com/new_market/img/com.vicman.newprofilepic.icon.2022-06-07-21-33-07.png"
+                alt="">
+        </div>
+        <ul class="social-media">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+        </ul>
+        <div class="user-info">
+            <h2>{{instructor.firstName}} {{instructor.lastName}}</h2>
+            <span>{{instructor.email}}</span>
+        </div>
+    </div>
+</div>
