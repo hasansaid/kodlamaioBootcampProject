@@ -1,4 +1,4 @@
-<div class="content">
+<!-- <div class="content">
     <div class="col-md-12">
         <div class="card">
             <div class="card-header">
@@ -36,4 +36,48 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
+
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Başvuru Güncelle</title>
+</head>
+
+<body>
+  <form [formGroup]="applicationUpdateForm" *ngIf="applicationUpdateForm" method="post" class="shadow mt-4 border">
+    <h1>Başvuru Güncelle</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <fieldset>
+          <label for="name">User Id:</label>
+          <input formControlName="userId" type="number" id="name" name="user_name"
+          >
+        </fieldset>
+        <fieldset>
+          <label for="name">BootcampId:</label>
+          <input formControlName="bootcampId" type="number" id="name" name="user_name"
+          >
+        </fieldset>
+        <fieldset>
+          <label for="name">Uygunluk Durumu</label>
+          <input formControlName="state" type="text" id="name" name="user_name"
+          >
+        </fieldset>
+        
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 "><button class="button" routerLink="/admin/admin-application" type="submit">Geri
+          Dön</button></div>
+      <div class="col-md-6"><button class="buttonA" (click)="updateApplication()" routerLink="/admin/admin-application"
+          type="submit">Düzenle</button>
+      </div>
+    </div>
+  </form>
+</body>
+
+</html>
