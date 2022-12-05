@@ -1,145 +1,58 @@
-<!-- <div class="content">
-  <div class="col-md-12">
-    <div class="card">
-      <div class="card-header">
-        <h5 class="title">Bootcamp Düzenleme Sayfası</h5>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bootcamp Ekle</title>
+</head>
+
+<body>
+  <form [formGroup]="bootcampUpdateForm" *ngIf="bootcampUpdateForm" method="post" class="shadow mt-4 border">
+    <h1>{{ bootcamp.name }} Düzenle</h1>
+    <fieldset>
+      <label for="name">Eğitmen Id:</label>
+      <input formControlName="instructorId" type="number" id="name" name="user_name"
+        placeholder="Eğitmen Id Giriniz.." />
+    </fieldset>
+    <fieldset>
+      <label for="name">Bootcamp İsmi:</label>
+      <input formControlName="name" type="text" id="name" name="user_name" placeholder="Bootcamp İsmini Giriniz.." />
+    </fieldset>
+
+    <div class="row">
+      <div class="col-md-6">
+        <fieldset>
+          <label for="name">Bootcamp Başlangıç Tarih:</label>
+          <input formControlName="dateStart" type="text" id="name" name="user_name"
+            placeholder="Bootcamp Başlangıç Tarihi Giriniz.." />
+        </fieldset>
       </div>
-      <div class="card-body">
-        <form [formGroup]="bootcampUpdateForm" *ngIf="bootcampUpdateForm">
-          <div style="margin-top: 5px" class="form-group">
-            <input type="number" id="id" formControlName="id" class="form-control" placeholder="Aday Id Giriniz..." />
-          </div>
-          <div style="margin-top: 5px" class="form-group">
-            <input type="number" id="instructorId" formControlName="instructorId" class="form-control"
-              placeholder="Bootcamp Id  Giriniz..." />
-          </div>
-          <div style="margin-top: 5px" class="form-group">
-            <input type="text" id="name" formControlName="name" class="form-control"
-              placeholder="--1:Uygun, 2:Uygun Değil-- Uygunluk Durumunu Giriniz..." />
-          </div>
-          <div style="margin-top: 5px" class="form-group">
-            <input type="text" id="dateStart" formControlName="dateStart" class="form-control"
-              placeholder="--1:Uygun, 2:Uygun Değil-- Uygunluk Durumunu Giriniz..." />
-          </div>
-          <div style="margin-top: 5px" class="form-group">
-            <input type="text" id="dateEnd" formControlName="dateEnd" class="form-control"
-              placeholder="Bootcamp Bitiş Tarihi" />
-          </div>
-          <div style="margin-top: 5px" class="form-group">
-            <input type="text" id="state" formControlName="state" class="form-control"
-              placeholder="--1:Uygun, 2:Uygun Değil-- Uygunluk Durumunu Giriniz..." />
-          </div>
-        </form>
-      </div>
-      <div class="car-footer">
-        <div class="d-grid gap-2">
-          <button style="margin-bottom: 10px; margin-left: 15px; margin-right: 15px" class="btn btn-primary"
-            type="button" (click)="updateBootcamp()" routerLink="/admin/admin-bootcamp">
-            Güncelle
-          </button>
-          <button style="margin-bottom: 10px; margin-left: 15px; margin-right: 15px" class="btn btn-primary"
-            type="button" routerLink="/admin/admin-bootcamp">
-            Geri Dön
-          </button>
-        </div>
+      <div class="col-md-6">
+        <fieldset>
+          <label for="name">Bootcamp Bitiş Tarih:</label>
+          <input formControlName="dateEnd" type="text" id="name" name="user_name"
+            placeholder="Bootcamp Bitiş Tarihi Giriniz.." />
+        </fieldset>
       </div>
     </div>
-  </div>
-</div> -->
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bootcamp Ekle</title>
-  </head>
 
-  <body>
-    <form
-      [formGroup]="bootcampUpdateForm"
-      *ngIf="bootcampUpdateForm"
-      method="post"
-      class="shadow mt-4 border"
-    >
-      <h1>{{ bootcamp.name }} Düzenle</h1>
-      <fieldset>
-        <label for="name">Eğitmen Id:</label>
-        <input
-          formControlName="instructorId"
-          type="number"
-          id="name"
-          name="user_name"
-          placeholder="Eğitmen Id Giriniz.."
-        />
-      </fieldset>
-      <fieldset>
-        <label for="name">Bootcamp İsmi:</label>
-        <input
-          formControlName="name"
-          type="text"
-          id="name"
-          name="user_name"
-          placeholder="Bootcamp İsmini Giriniz.."
-        />
-      </fieldset>
-
-      <div class="row">
-        <div class="col-md-6">
-          <fieldset>
-            <label for="name">Bootcamp Başlangıç Tarih:</label>
-            <input
-              formControlName="dateStart"
-              type="text"
-              id="name"
-              name="user_name"
-              placeholder="Bootcamp Başlangıç Tarihi Giriniz.."
-            />
-          </fieldset>
-        </div>
-        <div class="col-md-6">
-          <fieldset>
-            <label for="name">Bootcamp Bitiş Tarih:</label>
-            <input
-              formControlName="dateEnd"
-              type="text"
-              id="name"
-              name="user_name"
-              placeholder="Bootcamp Bitiş Tarihi Giriniz.."
-            />
-          </fieldset>
-        </div>
+    <fieldset>
+      <label for="name">Uygunluk Durumu:</label>
+      <input formControlName="state" type="number" id="name" name="user_name" placeholder="1:Uygun - 2:Uygun Değil.." />
+    </fieldset>
+    <div class="row">
+      <div class="col-md-6">
+        <button class="button" routerLink="/admin/admin-bootcamp" type="submit">
+          Geri Dön
+        </button>
       </div>
-
-      <fieldset>
-        <label for="name">Uygunluk Durumu:</label>
-        <input
-          formControlName="state"
-          type="number"
-          id="name"
-          name="user_name"
-          placeholder="1:Uygun - 2:Uygun Değil.."
-        />
-      </fieldset>
-      <div class="row">
-        <div class="col-md-6">
-          <button
-            class="button"
-            routerLink="/admin/admin-bootcamp"
-            type="submit"
-          >
-            Geri Dön
-          </button>
-        </div>
-        <div class="col-md-6">
-          <button
-            class="buttonA"
-            (click)="updateBootcamp()"
-            routerLink="/admin/admin-bootcamp"
-            type="submit"
-          >
-            Düzenle
-          </button>
-        </div>
+      <div class="col-md-6">
+        <button class="buttonA" (click)="updateBootcamp()" routerLink="/admin/admin-bootcamp" type="submit">
+          Düzenle
+        </button>
       </div>
-    </form>
-  </body>
+    </div>
+  </form>
+</body>
+
 </html>
