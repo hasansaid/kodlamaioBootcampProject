@@ -13,9 +13,9 @@
   justify-content: center;
 }
 .solution_cards_box .solution_card {
-  width: 1200px;
+  width: 1050px;
   height: auto;
-  margin-left: -280px;
+  margin-left: -250px;
 
   margin-left: 50x;
   /* flex: 0 50%; */
