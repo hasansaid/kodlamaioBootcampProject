@@ -59,24 +59,31 @@
     <h1>Bootcamp Ekle</h1>
     <div class="row">
       <div class="col-md-6">
+
         <fieldset>
-          <label for="name">Eğitmen Id:</label>
-          <input formControlName="instructorId" type="number" id="name" name="user_name"
-            placeholder="Eğitmen Id Giriniz.." />
+          <label for="name">Eğitmen Seç:</label>
+          <select id="instructorId" formControlName="instructorId" class="form-select rounded-0">
+            <option type="number" [value]="null" disabled hidden></option>
+            <option type="number" *ngFor="let instructor of instructors" [value]="instructor.id">
+              {{ instructor.firstName }} {{ instructor.lastName }}
+            </option>
+          </select>
         </fieldset>
       </div>
       <div class="col-md-6">
         <fieldset>
-          <label for="name">Eğitmen </label>
-          <input formControlName="instructorName" type="number" id="name" name="user_name"
-            placeholder="Eğitmen İsmi Giriniz.." />
+          <label for="name">Bootcamp İsmi:</label>
+          <input formControlName="name" type="text" id="name" name="user_name"
+            placeholder="Bootcamp İsmini Giriniz.." />
         </fieldset>
       </div>
     </div>
 
+
     <fieldset>
-      <label for="name">Bootcamp İsmi:</label>
-      <input formControlName="name" type="text" id="name" name="user_name" placeholder="Bootcamp İsmini Giriniz.." />
+      <label for="name">Bootcamp Hakkında:</label>
+      <input formControlName="about" type="text" id="name" name="user_name"
+        placeholder="Bootcamp Hakkında Bilgi Giriniz.." />
     </fieldset>
 
     <div class="row">

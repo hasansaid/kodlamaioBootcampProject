@@ -1,3 +1,4 @@
+import { HomeBootcampDetailComponent } from './component/home/home-bootcamp-detail/home-bootcamp-detail/home-bootcamp-detail.component';
 import { LoginApplicantGuard } from './guards/applicantGuard/login-applicant.guard';
 import { ApplicantNotificationComponent } from './component/userApplicant/applicant-notification/applicant-notification.component';
 import { ApplicantBootcampComponent } from './component/userApplicant/applicant-bootcamp/applicant-bootcamp.component';
@@ -59,14 +60,35 @@ const routes: Routes = [
       { path: 'home-contact', component: HomeContactComponent },
       { path: 'home-login-employee', component: EmployeeLoginComponent },
       { path: 'home-login-instructor', component: InstructorLoginComponent },
-      { path: 'home-login-employee/home-login-instructor', component: InstructorLoginComponent },
+      {
+        path: 'home-login-employee/home-login-instructor',
+        component: InstructorLoginComponent,
+      },
       { path: 'home-login-applicant', component: ApplicantLoginComponent },
-      { path: 'home-login-employee/home-login-applicant', component: ApplicantLoginComponent },
-      { path: 'home-login-employee/home-login-applicant/home-login-instructor', component: InstructorLoginComponent },
-      { path: 'home-login-employee/home-login-applicant/home-login-employee', component: InstructorLoginComponent },
-      { path: 'home-login-employee/home-login-instructor/home-login-employee', component: InstructorLoginComponent },
-      { path: 'home-login-employee/home-login-instructor/home-login-applicant', component: InstructorLoginComponent },
-      
+      {
+        path: 'home-login-employee/home-login-applicant',
+        component: ApplicantLoginComponent,
+      },
+      {
+        path: 'home-login-employee/home-login-applicant/home-login-instructor',
+        component: InstructorLoginComponent,
+      },
+      {
+        path: 'home-login-employee/home-login-applicant/home-login-employee',
+        component: InstructorLoginComponent,
+      },
+      {
+        path: 'home-login-employee/home-login-instructor/home-login-employee',
+        component: InstructorLoginComponent,
+      },
+      {
+        path: 'home-login-employee/home-login-instructor/home-login-applicant',
+        component: InstructorLoginComponent,
+      },
+      {
+        path: 'home-bootcamp-detail/:id',
+        component: HomeBootcampDetailComponent,
+      },
     ],
   },
   {
@@ -82,7 +104,7 @@ const routes: Routes = [
       { path: 'admin-application', component: ApplicationListComponent },
       { path: 'admin-bootcamp', component: BootcampListComponent },
       { path: 'admin-blacklist', component: BlackListComponent },
-      
+
       {
         path: 'admin-applicant/applicant-detail/:id',
         component: ApplicantDetailComponent,
