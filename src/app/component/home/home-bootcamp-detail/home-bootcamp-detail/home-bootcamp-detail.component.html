@@ -1,0 +1,177 @@
+<div class="row mt-5">
+  <div class="col-md-12">
+    <div
+      class="container shadow rounded-5 p-5 mt-5 mb-5"
+      style="background-image: linear-gradient(126deg, #e9e9ff, #e2e7eb)"
+    >
+      <div class="row">
+        <div class="col-md-6">
+          <img
+            src="{{ bootcamp.image }} "
+            style="width: 600px"
+            class="rounded-5"
+            alt=""
+          />
+        </div>
+        <div class="col-md-6">
+          <h1 class="display-2 mb-5 text-center">
+            {{ bootcamp.name }}
+          </h1>
+          <p class="lead">{{ bootcamp.about }}</p>
+          <p class="lead">Başlangıç Tarihi: {{ bootcamp.dateStart }}</p>
+          <p class="lead">Bitiş Tarihi:{{ bootcamp.dateEnd }}</p>
+          <p class="lead">Detayları</p>
+          <p class="lead">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus
+            odit dolorum commodi molestias sunt non, asperiores placeat aperiam
+            provident officia consequatur ipsum vero omnis distinctio hic,
+            quibusdam, velit quaerat deserunt eaque culpa? Eos obcaecati
+            repudiandae explicabo vel aperiam possimus ipsam, harum iusto, id
+            repellat nisi incidunt voluptatem ut suscipit at!
+          </p>
+          <!-- Button trigger modal -->
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            Başvuru Formu
+          </button>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h2>Başvuru Formu</h2>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <form method="post" [formGroup]="applicantForm">
+                    <fieldset>
+                      <label for="name">Ad</label>
+                      <input
+                        formControlName="firstName"
+                        type="text"
+                        id="name"
+                        class="form-control"
+                        name="user_name"
+                        placeholder="Adınızı Yazınız ..."
+                      />
+                    </fieldset>
+                    <fieldset>
+                      <label for="name">Soyad</label>
+                      <input
+                        formControlName="lastName"
+                        type="text"
+                        class="form-control"
+                        id="name"
+                        name="user_name"
+                        placeholder="Soyadınızı Giriniz.."
+                      />
+                    </fieldset>
+                    <fieldset>
+                      <label for="name">Doğum Tarihi:</label>
+                      <input
+                        formControlName="dateOfBirth"
+                        type="text"
+                        class="form-control"
+                        id="name"
+                        name="user_name"
+                        placeholder="Doğum Tarihini Giriniz .."
+                      />
+                    </fieldset>
+                    <fieldset>
+                      <label for="name">Tc Kimlik No:</label>
+                      <input
+                        formControlName="nationalIdentity"
+                        type="text"
+                        class="form-control"
+                        id="name"
+                        name="user_name"
+                        placeholder="Tc Kimlik No Yazınız.."
+                      />
+                    </fieldset>
+                    <fieldset>
+                      <label for="name">Email:</label>
+                      <input
+                        formControlName="email"
+                        type="text"
+                        class="form-control"
+                        id="name"
+                        name="user_name"
+                        placeholder="Email Yazınız.."
+                      />
+                    </fieldset>
+                    <fieldset>
+                      <label for="name">Şifrenizi Giriniz:</label>
+                      <input
+                        formControlName="password"
+                        type="text"
+                        class="form-control"
+                        id="name"
+                        name="user_name"
+                        placeholder="Şifrenizi Yazınız"
+                      />
+                    </fieldset>
+                    <fieldset>
+                      <label for="name">Resminiz:</label>
+                      <input
+                        formControlName="image"
+                        type="text"
+                        class="form-control"
+                        id="name"
+                        name="user_name"
+                        placeholder="Resminizin Yolunu Yazınız"
+                      />
+                    </fieldset>
+                    <fieldset>
+                      <label for="name">Kısa Özgeçmiş Yazınız:</label>
+                      <input
+                        formControlName="about"
+                        type="text"
+                        class="form-control"
+                        id="name"
+                        name="user_name"
+                        placeholder="Kısaca Kendinizi Tanıtın"
+                      />
+                    </fieldset>
+
+                    <div class="row">
+                      <div class="col-md-6"></div>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button type="button" (click)="add()" class="btn btn-primary">
+                    Save changes
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-home-footer></app-home-footer>

@@ -1,50 +1,57 @@
-<div class="row shadow-sm position-fixed top-0 start-0 w-100 bg-white asd">
-  <div class="col-md-12">
-    <div class="container-fluid p-1 rounded">
-      <nav class="navbar navbar-expand-lg rounded-2">
-        <div class="container-fluid">
-          <a class="navbar-brand me-5" href="#">Bootcamp Project</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" routerLink="/"
-                  >Anasayfa</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" routerLink="home-bootcamp">Bootcamp</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" routerLink="home-instructor">Eğitmenler</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" routerLink="home-about">Hakkımızda</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" routerLink="home-contact">İletişim</a>
-              </li>
-            </ul>
+<div>
+  <div
+    class="row shadow-sm position-fixed top-0 start-0 bg-white asd"
+    style="width: 100%"
+  >
+    <div class="col-md-12">
+      <div class="container-fluid p-1 rounded">
+        <nav class="navbar navbar-expand-lg rounded-2">
+          <div class="container-fluid">
+            <a class="navbar-brand me-5" href="#">Bootcamp Project</a>
             <button
-              class="btn btn-warning btn-md rounded-pill"
-              routerLink="home-login-employee"
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
             >
-              Giriş Yap
+              <span class="navbar-toggler-icon"></span>
             </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" routerLink="/"
+                    >Anasayfa</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="home-bootcamp">Bootcamp</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="home-instructor"
+                    >Eğitmenler</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="home-about">Hakkımızda</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="home-contact">İletişim</a>
+                </li>
+              </ul>
+              <button
+                class="btn btn-warning btn-md rounded-pill"
+                routerLink="home-login-employee"
+              >
+                Giriş Yap
+              </button>
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </div>
   </div>
+  <router-outlet></router-outlet>
 </div>
-<router-outlet></router-outlet>
