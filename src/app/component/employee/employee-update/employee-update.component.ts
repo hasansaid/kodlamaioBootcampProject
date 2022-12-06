@@ -39,6 +39,7 @@ export class EmployeeUpdateComponent implements OnInit {
       nationalIdentity: [this.employee.nationalIdentity, Validators.required],
       dateOfBirth: [this.employee.dateOfBirth, Validators.required],
       position: [this.employee.position, Validators.required],
+      image: [this.employee.image, Validators.required],
     });
   }
 

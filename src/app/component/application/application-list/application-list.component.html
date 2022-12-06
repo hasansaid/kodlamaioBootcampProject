@@ -14,9 +14,9 @@
       <table class="table">
         <thead>
           <tr>
-            <th scope="col" style="text-align:center;">Id</th>
-            <th scope="col" style="text-align:center;">User Id</th>
-            <th scope="col" style="text-align:center;">Bootcamp Id</th>
+            <th scope="col" style="text-align:center;">Başvuru Id</th>
+            <th scope="col" style="text-align:center;">Başvuran</th>
+            <th scope="col" style="text-align:center;">Bootcamp</th>
             <th scope="col" style="text-align:center;">State</th>
             <th></th>
             <th></th>
@@ -26,8 +26,8 @@
         <tbody>
           <tr *ngFor="let application of applications">
             <td style="text-align:center;">{{ application.id }}</td>
-            <td style="text-align:center;">{{ application.userId }}</td>
-            <td style="text-align:center;">{{ application.bootcampId }}</td>
+            <td style="text-align:center;">{{ application.userName }}</td>
+            <td style="text-align:center;">{{ application.bootcampName }}</td>
             <td style="text-align:center;">{{ application.state }}</td>
 
             <td>

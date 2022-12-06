@@ -37,6 +37,7 @@ export class InstructorAddComponent implements OnInit {
       password: ['', Validators.required],
       companyName: ['', Validators.required],
       nationalIdentity: ['', Validators.required],
+      image: ['', Validators.required],
     });
   }
   add() {
