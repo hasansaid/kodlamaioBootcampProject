@@ -14,7 +14,7 @@
       <thead>
         <tr>
           <th scope="col" style="text-align:center;">Id</th>
-          <th scope="col" style="text-align:center;">Eğitmen Kimliği</th>
+          <th scope="col" style="text-align:center;">Eğitmen</th>
           <th scope="col" style="text-align:center;">İsim</th>
           <th scope="col" style="text-align:center;">Başlangıç Tarihi</th>
           <th scope="col" style="text-align:center;">Bitiş Tarihi</th>
@@ -27,7 +27,7 @@
       <tbody>
         <tr *ngFor="let bootcamp of bootcamps">
           <td style="text-align:center;">{{ bootcamp.id }}</td>
-          <td style="text-align:center;">{{ bootcamp.instructorId }}</td>
+          <td style="text-align:center;">{{ bootcamp.instructorName }}</td>
           <td style="text-align:center;">{{ bootcamp.name }}</td>
           <td style="text-align:center;">{{ bootcamp.dateStart }}</td>
           <td style="text-align:center;">{{ bootcamp.dateEnd }}</td>

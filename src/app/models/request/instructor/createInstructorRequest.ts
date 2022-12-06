@@ -5,5 +5,4 @@ export interface ICreateInstructorRequest {
   email: string;
   password: string;
   companyName: string;
-  nationalIdentity: number;
 }
