@@ -37,6 +37,7 @@ export class EmployeeAddComponent implements OnInit {
       nationalIdentity: ['', Validators.required],
       dateOfBirth: ['', Validators.required],
       position: ['', Validators.required],
+      image: ['', Validators.required],
     });
   }
   add() {

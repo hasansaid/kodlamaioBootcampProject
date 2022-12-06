@@ -3,7 +3,7 @@
     {
       "id": 1,
       "firstName": "Uğur",
-      "lastName": "Meydanli",
+      "lastName": "Meydanlı",
       "email": "meydanliugur@gmail.com",
       "password": "147852",
       "about": "Artvin Çoruh Üniversitesinden 2016 yılında mezun oldum. Frontend Developer. ",
@@ -46,7 +46,8 @@
       "id": 1,
       "token": "ASDASD",
       "expiration": "01/01/2023",
-      "image": ""
+      "image": "",
+      "dateOfBirth": "19/07/1991"
     },
     {
       "firstName": "Salih",
@@ -56,7 +57,8 @@
       "id": 2,
       "token": "HRTRASD",
       "expiration": "01/01/2023",
-      "image": ""
+      "image": "",
+      "dateOfBirth": "19/07/1991"
     },
     {
       "firstName": "Engin Demiroğ",
@@ -66,7 +68,8 @@
       "id": 3,
       "token": "ASLKDASKLD",
       "expiration": "01/01/2023",
-      "image": ""
+      "image": "",
+      "dateOfBirth": "19/07/1991"
     }
   ],
   "employee": [
@@ -132,15 +135,27 @@
   "application": [
     {
       "userId": 1,
-      "bootcampId": 2,
+      "bootcampId": 3,
       "state": 2,
-      "id": 1
+      "id": 1,
+      "userName": "Uğur Meydanlı",
+      "bootcampName": "Java Bootcamp"
     },
     {
-      "userId": 1,
+      "userId": 2,
       "bootcampId": 1,
       "state": 1,
-      "id": 2
+      "id": 2,
+      "userName": "Seyfettin Turan",
+      "bootcampName": "FrontEnd Bootcamp"
+    },
+    {
+      "userId": 3,
+      "bootcampId": 2,
+      "state": 1,
+      "id": 3,
+      "userName": "Seyfettin Turan",
+      "bootcampName": "Backend Bootcamp"
     }
   ],
   "blacklist": [

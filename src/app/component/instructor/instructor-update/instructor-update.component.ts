@@ -30,11 +30,11 @@ export class InstructorUpdateComponent implements OnInit {
     this.intructorUpdateForm = this.formBuilder.group({
       firstName: [this.intructor.firstName, Validators.required],
       lastName: [this.intructor.lastName, Validators.required],
-      // dateOfBirth: [this.intructor.dateOfBirth, Validators.required],
+      dateOfBirth: [this.intructor.dateOfBirth, Validators.required],
       email: [this.intructor.email, Validators.required],
-      // password: [this.intructor.password, Validators.required],
+      password: [this.intructor.password, Validators.required],
       companyName: [this.intructor.companyName, Validators.required],
-      // nationalIdentity: [this.intructor.nationalIdentity, Validators.required],
+      image: [this.intructor.image, Validators.required],
     });
   }
 
