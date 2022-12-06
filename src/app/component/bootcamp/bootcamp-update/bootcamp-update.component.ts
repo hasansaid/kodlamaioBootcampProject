@@ -1,3 +1,6 @@
+import { ICreateBootcampRequest } from './../../../models/request/bootcamp/createBootcampRequest';
+import { InstructorService } from './../../../services/instructor/instructor.service';
+import { IGetAllInstructorResponse } from './../../../models/response/instructor/getAllInstructorResponse';
 import { BootcampService } from './../../../services/bootcamp/bootcamp.service';
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
@@ -17,26 +20,35 @@ import { ToastrService } from 'ngx-toastr';
 export class BootcampUpdateComponent implements OnInit {
   bootcampUpdateForm: FormGroup;
   bootcamp: IUpdateBootcampRequest;
+  instructors: IGetAllInstructorResponse[] = [];
   constructor(
     private activatedRoute: ActivatedRoute,
     private formBuilder: FormBuilder,
     private bootcampService: BootcampService,
-    private toastrService: ToastrService
+    private toastrService: ToastrService,
+    private instructorService: InstructorService
   ) {}
 
   ngOnInit(): void {
+    this.getInstructorAll();
+  }
+
+  getInstructorAll() {
+    this.instructorService
+      .getAllInstructor()
+      .subscribe((data) => (this.instructors = data));
     this.getByIdBootcamp();
   }
 
   createBootcampUpdateForm() {
     this.bootcampUpdateForm = this.formBuilder.group({
-      id: [this.bootcamp.id, Validators.required],
       instructorId: [this.bootcamp.instructorId, Validators.required],
       name: [this.bootcamp.name, Validators.required],
       dateStart: [this.bootcamp.dateStart, Validators.required],
       dateEnd: [this.bootcamp.dateEnd, Validators.required],
       state: [this.bootcamp.state, Validators.required],
-      instructorName: [this.bootcamp.instructorName, Validators.required],
+      about: [this.bootcamp.about, Validators.required],
+      image: [this.bootcamp.image, Validators.required],
     });
   }
   getBootcamp(id: number) {
@@ -50,13 +62,26 @@ export class BootcampUpdateComponent implements OnInit {
       this.getBootcamp(params['id']);
     });
   }
+
   updateBootcamp() {
-    this.bootcampService
-      .updateBootcamp(
-        this.activatedRoute.snapshot.params['id'],
+    if (this.bootcampUpdateForm.valid) {
+      let bootcamp: ICreateBootcampRequest = Object.assign(
+        {},
         this.bootcampUpdateForm.value
-      )
-      .subscribe();
-    this.toastrService.success('Bootcamp Güncelleme Başarılıı');
+      );
+      this.instructorService
+        .getInstructor(bootcamp.instructorId)
+        .subscribe((data) => {
+          bootcamp.instructorName = data.firstName + ' ' + data.lastName;
+
+          this.bootcampService
+            .updateBootcamp(this.activatedRoute.snapshot.params['id'], bootcamp)
+            .subscribe(() => {
+              this.toastrService.success('Bootcamp Bilgileri Güncellendi');
+            });
+        });
+    } else {
+      this.toastrService.error('Dikkat Form Eksik!!!');
+    }
   }
 }

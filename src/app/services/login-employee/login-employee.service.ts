@@ -23,4 +23,8 @@ export class LoginEmployeeService {
       return false;
     }
   }
+
+  logout() {
+    localStorage.removeItem('token');
+  }
 }
