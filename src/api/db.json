@@ -61,8 +61,8 @@
       "dateOfBirth": "19/07/1991"
     },
     {
-      "firstName": "Engin Demiroğ",
-      "lastName": "Yılmaz",
+      "firstName": "Engin",
+      "lastName": "Demiroğ",
       "email": "engin@gmail.com",
       "companyName": "kodlama.io",
       "id": 3,
@@ -88,25 +88,25 @@
   ],
   "bootcamp": [
     {
-      "id": 1,
-      "instructorId": 1,
+      "instructorId": "3",
       "name": "Frontend Bootcamp",
       "dateStart": "01/12/2022",
       "dateEnd": "15/02/2023",
       "state": 1,
       "about": "Angular ile frontend eğitimimiz başlamak üzere...",
-      "instructorName": "Hasan Sertkaya",
-      "image": ""
+      "image": "asdasd",
+      "instructorName": "Engin Demiroğ",
+      "id": 1
     },
     {
-      "id": 2,
-      "instructorId": 1,
+      "instructorId": "3",
       "name": "Backend Bootcamp",
       "dateStart": "15/12/2022",
       "dateEnd": "15/03/2023",
       "state": 1,
       "about": "C# ile backend eğitimimiz başlamak üzere...",
-      "instructorName": "Hasan Sertkaya",
+      "id": 2,
+      "instructorName": "Engin Demiroğ",
       "image": ""
     },
     {
