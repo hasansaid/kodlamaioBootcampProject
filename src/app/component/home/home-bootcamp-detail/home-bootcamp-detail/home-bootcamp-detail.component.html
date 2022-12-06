@@ -47,10 +47,10 @@
             aria-labelledby="exampleModalLabel"
             aria-hidden="true"
           >
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-xl">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h2>Başvuru Formu</h2>
+                  <h2>{{ bootcamp.name }} Başvuru Formu</h2>
                   <button
                     type="button"
                     class="btn-close"
@@ -60,94 +60,98 @@
                 </div>
                 <div class="modal-body">
                   <form method="post" [formGroup]="applicantForm">
-                    <fieldset>
-                      <label for="name">Ad</label>
-                      <input
-                        formControlName="firstName"
-                        type="text"
-                        id="name"
-                        class="form-control"
-                        name="user_name"
-                        placeholder="Adınızı Yazınız ..."
-                      />
-                    </fieldset>
-                    <fieldset>
-                      <label for="name">Soyad</label>
-                      <input
-                        formControlName="lastName"
-                        type="text"
-                        class="form-control"
-                        id="name"
-                        name="user_name"
-                        placeholder="Soyadınızı Giriniz.."
-                      />
-                    </fieldset>
-                    <fieldset>
-                      <label for="name">Doğum Tarihi:</label>
-                      <input
-                        formControlName="dateOfBirth"
-                        type="text"
-                        class="form-control"
-                        id="name"
-                        name="user_name"
-                        placeholder="Doğum Tarihini Giriniz .."
-                      />
-                    </fieldset>
-                    <fieldset>
-                      <label for="name">Tc Kimlik No:</label>
-                      <input
-                        formControlName="nationalIdentity"
-                        type="text"
-                        class="form-control"
-                        id="name"
-                        name="user_name"
-                        placeholder="Tc Kimlik No Yazınız.."
-                      />
-                    </fieldset>
-                    <fieldset>
-                      <label for="name">Email:</label>
-                      <input
-                        formControlName="email"
-                        type="text"
-                        class="form-control"
-                        id="name"
-                        name="user_name"
-                        placeholder="Email Yazınız.."
-                      />
-                    </fieldset>
-                    <fieldset>
-                      <label for="name">Şifrenizi Giriniz:</label>
-                      <input
-                        formControlName="password"
-                        type="text"
-                        class="form-control"
-                        id="name"
-                        name="user_name"
-                        placeholder="Şifrenizi Yazınız"
-                      />
-                    </fieldset>
-                    <fieldset>
-                      <label for="name">Resminiz:</label>
-                      <input
-                        formControlName="image"
-                        type="text"
-                        class="form-control"
-                        id="name"
-                        name="user_name"
-                        placeholder="Resminizin Yolunu Yazınız"
-                      />
-                    </fieldset>
-                    <fieldset>
-                      <label for="name">Kısa Özgeçmiş Yazınız:</label>
-                      <input
-                        formControlName="about"
-                        type="text"
-                        class="form-control"
-                        id="name"
-                        name="user_name"
-                        placeholder="Kısaca Kendinizi Tanıtın"
-                      />
-                    </fieldset>
+                    <div class="row g-3">
+                      <div class="col-md-6">
+                        <label for="name">Ad</label>
+                        <input
+                          formControlName="firstName"
+                          type="text"
+                          id="name"
+                          class="form-control"
+                          name="user_name"
+                          placeholder="Adınızı Yazınız ..."
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label for="name">Soyad</label>
+                        <input
+                          formControlName="lastName"
+                          type="text"
+                          class="form-control"
+                          id="name"
+                          name="user_name"
+                          placeholder="Soyadınızı Giriniz.."
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label for="name">Doğum Tarihi:</label>
+                        <input
+                          formControlName="dateOfBirth"
+                          type="text"
+                          class="form-control"
+                          id="name"
+                          name="user_name"
+                          placeholder="Doğum Tarihini Giriniz .."
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label for="name">Email:</label>
+                        <input
+                          formControlName="email"
+                          type="email"
+                          class="form-control"
+                          id="name"
+                          name="user_name"
+                          placeholder="Email Yazınız.."
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label for="name">Tc Kimlik No:</label>
+                        <input
+                          formControlName="nationalIdentity"
+                          type="text"
+                          class="form-control"
+                          id="name"
+                          name="user_name"
+                          placeholder="Tc Kimlik No Yazınız.."
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label for="name">Şifrenizi Giriniz:</label>
+                        <input
+                          formControlName="password"
+                          type="password"
+                          class="form-control"
+                          id="name"
+                          name="user_name"
+                          placeholder="Şifrenizi Yazınız"
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label for="name">Resminiz:</label>
+                        <input
+                          formControlName="image"
+                          type="text"
+                          class="form-control"
+                          id="name"
+                          name="user_name"
+                          placeholder="Resminizin Yolunu Yazınız"
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label for="name">Kısa Özgeçmiş Yazınız:</label>
+                        <input
+                          formControlName="about"
+                          type="text"
+                          class="form-control"
+                          id="name"
+                          name="user_name"
+                          placeholder="Kısaca Kendinizi Tanıtın"
+                        />
+                      </div>
+                    </div>
+
+                    <fieldset></fieldset>
 
                     <div class="row">
                       <div class="col-md-6"></div>

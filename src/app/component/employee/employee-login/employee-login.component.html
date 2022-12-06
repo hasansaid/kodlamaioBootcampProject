@@ -1,112 +1,28 @@
-<!-- <form [formGroup]="loginEmployeeForm">
-  <h3>Giriş Yap</h3>
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email</label>
-
-    <input
-      type="email"
-      class="form-control"
-      id="exampleInputEmail1"
-      aria-describedby="emailHelp"
-      formControlName="email"
-    />
-    <label for="exampleInputEmail1" class="form-label">Şifre</label>
-
-    <input
-      type="name"
-      class="form-control"
-      id="exampleInputEmail1"
-      aria-describedby="emailHelp"
-      formControlName="password"
-    />
-
-    <button type="submit" class="btn btn-primary" (click)="loginEmployee()">
-      Ekle
-    </button>
-  </div>
-</form> -->
-<!-- <div class="container">
-  <div class="screen">
-    <div class="screen__content">
+<div class="container">
+  <div class="left">
+    <div class="header">
+      <h2 class="animation a1">Çalışan Giriş Ekranı</h2>
+      <h4 class="animation a2">Kullanıcı Adı ve Şifresinizi Yazınız</h4>
+    </div>
+    <div class="form">
       <form class="login" [formGroup]="loginEmployeeForm">
-        <div class="login__field">
-          <i class="login__icon fas fa-user"></i>
-          <input
-            type="text"
-            class="login__input"
-            placeholder="User name / Email"
-            formControlName="email"
-          />
-        </div>
-        <div class="login__field">
-          <i class="login__icon fas fa-lock"></i>
-          <input
-            type="password"
-            class="login__input"
-            formControlName="password"
-            placeholder="Password"
-          />
-        </div>
-        <button
-          class="button login__submit"
-          type="submit"
-          (click)="loginEmployee()"
-        >
-          <span class="button__text">Log In Now</span>
-          <i class="button__icon fas fa-chevron-right"></i>
-        </button>
+        <input
+          type="email"
+          formControlName="email"
+          class="form-field animation a3"
+          placeholder="Email Adresiniz"
+        />
+        <input
+          type="password"
+          formControlName="password"
+          class="form-field animation a4"
+          placeholder="Şifreniz"
+        />
       </form>
-      <div class="social-login">
-        <h3>log in via</h3>
-        <div class="social-icons">
-          <a href="#" class="social-login__icon fab fa-instagram"></a>
-          <a href="#" class="social-login__icon fab fa-facebook"></a>
-          <a href="#" class="social-login__icon fab fa-twitter"></a>
-        </div>
-      </div>
-    </div>
-    <div class="screen__background">
-      <span class="screen__background__shape screen__background__shape4"></span>
-      <span class="screen__background__shape screen__background__shape3"></span>
-      <span class="screen__background__shape screen__background__shape2"></span>
-      <span class="screen__background__shape screen__background__shape1"></span>
+      <button class="animation a6" (click)="loginEmployee()">GİRİŞ YAP</button>
     </div>
   </div>
-</div> -->
-
-
-
-<div class="login-box">
-  <h2>Çalışan Giriş Ekranı</h2>
-
-  <div  class="egitmen_1" ><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7oFtg2tvghPRYpzoHiTh9Nv6XAkXSrGRn2A&usqp=CAU" style="width:90px; height:80px; margin-bottom: 20px; float:left; margin-left:35px;margin-right:10px;">
-  </div>
-
-  <div class="egitmen_1" routerLink="home-login-applicant"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7oFtg2tvghPRYpzoHiTh9Nv6XAkXSrGRn2A&usqp=CAU" style="width:90px; height:80px; margin-bottom: 20px; float:left; margin-right:10px;"></div>
-
-  <div class="egitmen_1" routerLink="home-login-instructor"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7oFtg2tvghPRYpzoHiTh9Nv6XAkXSrGRn2A&usqp=CAU" style="width:90px; height:80px; margin-bottom: 20px; ">
-  </div>
-
-  <form class="login" [formGroup]="loginEmployeeForm">
-    <div class="user-box">
-      <input type="text" name="" required="" formControlName="email">
-      <label>E-Mail</label>
-    </div>
-    <div class="user-box">
-      <input type="password" name="" required="" formControlName="password">
-      <label>Password</label>
-    </div>
-    <div class="giris" style= "text-align: center; ">
-    <a (click)="loginEmployee()" >
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      Giriş
-    </a>
-  </div>
-  </form>
+  <div class="right"></div>
 </div>
-
 
 <router-outlet></router-outlet>
