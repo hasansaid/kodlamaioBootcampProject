@@ -36,6 +36,7 @@ export class BootcampUpdateComponent implements OnInit {
       dateStart: [this.bootcamp.dateStart, Validators.required],
       dateEnd: [this.bootcamp.dateEnd, Validators.required],
       state: [this.bootcamp.state, Validators.required],
+      instructorName: [this.bootcamp.instructorName, Validators.required],
     });
   }
   getBootcamp(id: number) {
@@ -56,6 +57,6 @@ export class BootcampUpdateComponent implements OnInit {
         this.bootcampUpdateForm.value
       )
       .subscribe();
-      this.toastrService.success('Bootcamp Güncelleme Başarılıı');
+    this.toastrService.success('Bootcamp Güncelleme Başarılıı');
   }
 }

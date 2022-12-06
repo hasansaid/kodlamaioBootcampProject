@@ -6,4 +6,6 @@ export interface IGetAllBootcampResponse {
   dateEnd: string;
   state: number;
   about: string;
+  instructorName: string;
+  image: string;
 }

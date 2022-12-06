@@ -7,4 +7,5 @@ export interface IGetAllEmployeeResponse {
   nationalIdentity: number;
   dateOfBirth: string;
   position: string;
+  image: string;
 }

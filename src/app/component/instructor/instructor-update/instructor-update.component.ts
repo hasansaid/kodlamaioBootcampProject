@@ -1,3 +1,4 @@
+import { IUpdateInstructorRequest } from './../../../models/request/instructor/updateInstructorRequest';
 import { ToastrService } from 'ngx-toastr';
 import { ActivatedRoute } from '@angular/router';
 import { IGetInstructorResponse } from './../../../models/response/instructor/getInstructorResponse';
@@ -12,7 +13,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./instructor-update.component.css'],
 })
 export class InstructorUpdateComponent implements OnInit {
-  intructor: IGetInstructorResponse;
+  intructor: IUpdateInstructorRequest;
   intructorUpdateForm: FormGroup;
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -29,11 +30,11 @@ export class InstructorUpdateComponent implements OnInit {
     this.intructorUpdateForm = this.formBuilder.group({
       firstName: [this.intructor.firstName, Validators.required],
       lastName: [this.intructor.lastName, Validators.required],
-      // dateOfBirth: [this.intructor.dateOfBirth, Validators.required],
+      dateOfBirth: [this.intructor.dateOfBirth, Validators.required],
       email: [this.intructor.email, Validators.required],
-      // password: [this.intructor.password, Validators.required],
+      password: [this.intructor.password, Validators.required],
       companyName: [this.intructor.companyName, Validators.required],
-      // nationalIdentity: [this.intructor.nationalIdentity, Validators.required],
+      image: [this.intructor.image, Validators.required],
     });
   }
 

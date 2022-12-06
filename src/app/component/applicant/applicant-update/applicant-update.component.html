@@ -25,6 +25,10 @@
           <label for="name">Doğum Tarihi:</label>
           <input formControlName="dateOfBirth" type="text" id="name" name="user_name" />
         </fieldset>
+        <fieldset>
+          <label for="name">Resim:</label>
+          <input formControlName="image" type="text" id="name" name="user_name" />
+        </fieldset>
       </div>
       <div class="col-md-6">
         <fieldset>
@@ -39,13 +43,13 @@
           <label for="name">TC Kimlik No:</label>
           <input formControlName="nationalIdentity" type="text" id="name" name="user_name" />
         </fieldset>
-
+        <fieldset>
+          <label for="name">Hakkında:</label>
+          <textarea formControlName="about" type="text" id="name" name="user_name"></textarea>
+        </fieldset>
 
       </div>
-      <fieldset>
-        <label for="name" style="text-align: center;">Hakkında</label>
-        <textarea formControlName="about" type="text" id="name" name="user_name"></textarea>
-      </fieldset>
+
     </div>
     <div class="row">
       <div class="col-md-6">
