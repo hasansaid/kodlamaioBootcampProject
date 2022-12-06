@@ -6,4 +6,5 @@ export interface ICreateBootcampRequest {
   state: number;
   about: string;
   instructorName: string;
+  image: string;
 }

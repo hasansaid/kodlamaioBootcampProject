@@ -6,4 +6,5 @@ export interface IGetInstructorResponse {
   password: string;
   companyName: string;
   dateOfBirth: string;
+  image: string;
 }

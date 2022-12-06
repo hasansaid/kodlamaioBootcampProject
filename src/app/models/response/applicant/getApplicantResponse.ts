@@ -7,4 +7,5 @@ export interface IGetApplicantResponse {
   about: string;
   nationalIdentity: number;
   dateOfBirth: string;
+  image: string;
 }

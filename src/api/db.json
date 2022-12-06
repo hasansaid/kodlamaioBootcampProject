@@ -8,7 +8,8 @@
       "password": "147852",
       "about": "Artvin Çoruh Üniversitesinden 2016 yılında mezun oldum. Frontend Developer. ",
       "nationalIdentity": 87525696514,
-      "dateOfBirth": "25/10/1995"
+      "dateOfBirth": "25/10/1995",
+      "image": "https://png.pngtree.com/png-vector/20191110/ourlarge/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg"
     },
     {
       "id": 2,
@@ -20,7 +21,19 @@
       "nationalIdentity": 87525696514,
       "dateOfBirth": "25/10/1995",
       "token": "HRTRASD",
-      "expiration": "01/01/2023"
+      "expiration": "01/01/2023",
+      "image": ""
+    },
+    {
+      "firstName": "asdas",
+      "lastName": "asdas",
+      "email": "asdasd",
+      "password": "asdas",
+      "nationalIdentity": "asdasdas",
+      "dateOfBirth": "sdasd",
+      "about": "asdasd",
+      "image": "C:\\fakepath\\ben.jfif",
+      "id": 3
     }
   ],
   "instructor": [
@@ -32,7 +45,8 @@
       "companyName": "kodlamaio",
       "id": 1,
       "token": "ASDASD",
-      "expiration": "01/01/2023"
+      "expiration": "01/01/2023",
+      "image": ""
     },
     {
       "firstName": "Salih",
@@ -41,7 +55,8 @@
       "companyName": "kodlama.io",
       "id": 2,
       "token": "HRTRASD",
-      "expiration": "01/01/2023"
+      "expiration": "01/01/2023",
+      "image": ""
     },
     {
       "firstName": "Engin Demiroğ",
@@ -50,7 +65,8 @@
       "companyName": "kodlama.io",
       "id": 3,
       "token": "ASLKDASKLD",
-      "expiration": "01/01/2023"
+      "expiration": "01/01/2023",
+      "image": ""
     }
   ],
   "employee": [
@@ -63,7 +79,8 @@
       "nationalIdentity": "65412398765",
       "dateOfBirth": "19/07/1991",
       "position": "Müdür",
-      "token": "MMMUUDDDRRR"
+      "token": "MMMUUDDDRRR",
+      "image": ""
     }
   ],
   "bootcamp": [
@@ -75,7 +92,8 @@
       "dateEnd": "15/02/2023",
       "state": 1,
       "about": "Angular ile frontend eğitimimiz başlamak üzere...",
-      "instructorName": "Hasan Sertkaya"
+      "instructorName": "Hasan Sertkaya",
+      "image": ""
     },
     {
       "id": 2,
@@ -85,7 +103,8 @@
       "dateEnd": "15/03/2023",
       "state": 1,
       "about": "C# ile backend eğitimimiz başlamak üzere...",
-      "instructorName": "Hasan Sertkaya"
+      "instructorName": "Hasan Sertkaya",
+      "image": ""
     },
     {
       "instructorId": 3,
@@ -95,7 +114,8 @@
       "state": "1",
       "id": 3,
       "about": "Java eğitimimiz başlamak üzere..",
-      "instructorName": "Engin Demiroğ"
+      "instructorName": "Engin Demiroğ",
+      "image": ""
     },
     {
       "instructorId": 3,
@@ -105,7 +125,8 @@
       "state": "1",
       "id": 4,
       "about": "React ile frontend eğitimimiz başlamak üzere...",
-      "instructorName": "Engin Demiroğ"
+      "instructorName": "Engin Demiroğ",
+      "image": ""
     }
   ],
   "application": [

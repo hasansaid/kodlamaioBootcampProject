@@ -6,4 +6,5 @@ export interface ICreateApplicantRequest {
   nationalIdentity: number;
   dateOfBirth: string;
   about: string;
+  image: string;
 }
