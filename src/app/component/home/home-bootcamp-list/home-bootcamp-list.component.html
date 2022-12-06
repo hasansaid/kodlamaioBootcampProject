@@ -25,84 +25,38 @@
 <div class="container py-2">
   <h3 class="text-center display-2 mb-4">Başvuruya Açık Bootcampler</h3>
   <hr />
-  <div class="card-group col-md-12 gap-2">
-    <div class="card shadow-lg rounded-4">
-      <img
-        src="https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://cdn.filestackcontent.com/qUyYtyzXTrOSH2M2ApBh"
-        class="card-img-top p-2 rounded-4"
-        alt="..."
-      />
-      <div class="card-body">
-        <h5 class="card-title p-2">
-          (2022) Java Geliştirici Yetiştirme kampı -JAVA
-        </h5>
-        <small class="text-muted">06.12.2022-08.01.2023</small>
 
-        <p class="card-text">Online- you can join from anywhere</p>
-        <p class="card-text">
-          <small class="text-muted">All Countries</small>
-          <button class="btn btn-primary d-flex">Detay</button>
-        </p>
-      </div>
-    </div>
-    <div class="card shadow-lg rounded-4">
-      <img
-        src="https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/Zk7d1MdoSJ6cEShVbfd0"
-        class="card-img-top p-2 rounded-4"
-        alt="..."
-      />
-      <div class="card-body">
-        <h5 class="card-title p-2">
-          Yazılım Geliştirici Yetiştirme Kampı (C# + ANGULAR)
-        </h5>
-        <p class="card-text">
-          This is a wider card with supporting text below as a natural lead-in
-          to additional content. This content is a little bit longer.
-        </p>
-        <p class="card-text">
-          <small class="text-muted">Last updated 3 mins ago</small>
-          <button class="btn btn-primary d-flex">Detay</button>
-        </p>
-      </div>
-    </div>
-    <div class="card shadow-lg rounded-4">
-      <img
-        src="https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://cdn.filestackcontent.com/ujZYJ3lwSOihtnbP9LsG"
-        class="card-img-top p-2 rounded-4"
-        alt="..."
-      />
-      <div class="card-body">
-        <h5 class="card-title text-center">
-          Senior Yazılım Geliştirici Yetiştirme Kampı (.NET)
-        </h5>
-        <p class="card-text">
-          This is a wider card with supporting text below as a natural lead-in
-          to additional content. This content is a little bit longer.
-        </p>
-        <p class="card-text">
-          <small class="text-muted">Last updated 3 mins ago</small>
-          <button class="btn btn-primary d-flex">Detay</button>
-        </p>
-      </div>
-    </div>
-    <div class="card shadow-lg rounded-4">
-      <img
-        src="https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://cdn.filestackcontent.com/ujZYJ3lwSOihtnbP9LsG"
-        class="card-img-top p-2 rounded-4"
-        alt="..."
-      />
-      <div class="card-body">
-        <h5 class="card-title text-center">
-          Senior Yazılım Geliştirici Yetiştirme Kampı (.NET)
-        </h5>
-        <p class="card-text">
-          This is a wider card with supporting text below as a natural lead-in
-          to additional content. This content is a little bit longer.
-        </p>
-        <p class="card-text">
-          <small class="text-muted">Last updated 3 mins ago</small>
-          <button class="btn btn-primary d-flex">Detay</button>
-        </p>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let bootcamp of bootcamps">
+      <div class="card shadow-lg rounded-4">
+        <img
+          src="https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://cdn.filestackcontent.com/ujZYJ3lwSOihtnbP9LsG"
+          class="card-img-top p-2 rounded-4"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title text-center">
+            {{ bootcamp.name }}
+          </h5>
+          <p class="card-text">Eğitmen: {{ bootcamp.instructorName }}</p>
+          <p class="card-text">Detay: {{ bootcamp.about }}</p>
+          <p class="card-text">
+            <small class="text-muted"
+              >Başlangıç Tarihi {{ bootcamp.dateStart }}</small
+            >
+            <br />
+            <small class="text-muted"
+              >Bitiş Tarihi {{ bootcamp.dateEnd }}</small
+            >
+
+            <button
+              class="btn btn-primary d-flex"
+              routerLink="/home-bootcamp-detail/{{ bootcamp.id }}"
+            >
+              Detay
+            </button>
+          </p>
+        </div>
       </div>
     </div>
   </div>
