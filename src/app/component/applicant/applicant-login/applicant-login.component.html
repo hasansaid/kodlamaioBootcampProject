@@ -25,7 +25,7 @@
     </button>
   </div>
 </form> -->
-<div class="container">
+<!-- <div class="container">
   <div class="screen">
     <div class="screen__content">
       <form class="login" [formGroup]="loginApplicantForm">
@@ -74,5 +74,39 @@
       <span class="screen__background__shape screen__background__shape1"></span>
     </div>
   </div>
+</div> -->
+
+
+<div class="login-box">
+  <h2>Aday Giriş Ekranı</h2>
+
+  <div  class="egitmen_1" routerLink="home-login-employee" ><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7oFtg2tvghPRYpzoHiTh9Nv6XAkXSrGRn2A&usqp=CAU" style="width:90px; height:80px; margin-bottom: 20px; float:left; margin-left:35px;margin-right:10px;">
+  </div>
+
+  <div class="egitmen_1" ><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7oFtg2tvghPRYpzoHiTh9Nv6XAkXSrGRn2A&usqp=CAU" style="width:90px; height:80px; margin-bottom: 20px; float:left; margin-right:10px;">
+  </div>
+
+  <div class="egitmen_1" routerLink="home-login-instructor"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7oFtg2tvghPRYpzoHiTh9Nv6XAkXSrGRn2A&usqp=CAU" style="width:90px; height:80px; margin-bottom: 20px; ">
+  </div>
+
+  <form class="login" [formGroup]="loginApplicantForm">
+    <div class="user-box">
+      <input type="text" name="" required="" formControlName="email">
+      <label>E-Mail</label>
+    </div>
+    <div class="user-box">
+      <input type="password" name="" required="" formControlName="password">
+      <label>Password</label>
+    </div>
+    <div class="giris" style= "text-align: center; ">
+    <a (click)="loginApplicant()">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Giriş
+    </a>
+  </div>
+  </form>
 </div>
 <router-outlet></router-outlet>
