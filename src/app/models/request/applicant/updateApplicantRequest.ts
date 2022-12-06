@@ -7,4 +7,5 @@ export interface IUpdateApplicantRequest {
   about: string;
   nationalIdentity: number;
   dateOfBirth: string;
+  image: string;
 }

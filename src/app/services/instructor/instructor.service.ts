@@ -1,4 +1,4 @@
-import { IUpdateInstructorResponse } from './../../models/response/instructor/updateInstructorResponse';
+import { IUpdateInstructorRequest } from './../../models/request/instructor/updateInstructorRequest';
 import { ICreateInstructorRequest } from './../../models/request/instructor/createInstructorRequest';
 import { IGetInstructorResponse } from './../../models/response/instructor/getInstructorResponse';
 import { IGetAllInstructorResponse } from 'src/app/models/response/instructor/getAllInstructorResponse';
@@ -24,11 +24,11 @@ export class InstructorService {
     return this.httpClient.post(this.apiUrl, instructor);
   }
   getUpdateInstructor(id: number) {
-    return this.httpClient.get<IUpdateInstructorResponse>(
+    return this.httpClient.get<IUpdateInstructorRequest>(
       this.apiUrl + '/' + id
     );
   }
-  updateInstructor(id: number, instructor: IGetInstructorResponse) {
+  updateInstructor(id: number, instructor: IUpdateInstructorRequest) {
     return this.httpClient.put(this.apiUrl + '/' + id, instructor);
   }
   deleteInstructor(employee: IGetAllInstructorResponse) {

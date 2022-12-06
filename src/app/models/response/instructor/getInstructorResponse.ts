@@ -3,5 +3,8 @@ export interface IGetInstructorResponse {
   firstName: string;
   lastName: string;
   email: string;
+  password: string;
   companyName: string;
+  dateOfBirth: string;
+  image: string;
 }

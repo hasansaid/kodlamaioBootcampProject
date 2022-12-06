@@ -39,6 +39,7 @@ export class ApplicantUpdateComponent implements OnInit {
       about: [this.applicant.about, Validators.required],
       nationalIdentity: [this.applicant.nationalIdentity, Validators.required],
       dateOfBirth: [this.applicant.dateOfBirth, Validators.required],
+      image: [this.applicant.image, Validators.required],
     });
   }
 

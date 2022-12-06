@@ -1,3 +1,4 @@
+import { IUpdateInstructorRequest } from './../../../models/request/instructor/updateInstructorRequest';
 import { ToastrService } from 'ngx-toastr';
 import { ActivatedRoute } from '@angular/router';
 import { IGetInstructorResponse } from './../../../models/response/instructor/getInstructorResponse';
@@ -12,7 +13,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./instructor-update.component.css'],
 })
 export class InstructorUpdateComponent implements OnInit {
-  intructor: IGetInstructorResponse;
+  intructor: IUpdateInstructorRequest;
   intructorUpdateForm: FormGroup;
   constructor(
     private activatedRoute: ActivatedRoute,

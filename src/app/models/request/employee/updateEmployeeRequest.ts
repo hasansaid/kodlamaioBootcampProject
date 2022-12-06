@@ -7,4 +7,5 @@ export interface IUpdateEmployeeRequest {
   nationalIdentity: number;
   dateOfBirth: string;
   position: string;
+  image: string;
 }

@@ -1,3 +1,4 @@
+import { IGetApplicantResponse } from './../../../models/response/applicant/getApplicantResponse';
 import { ActivatedRoute } from '@angular/router';
 import { IGetAllApplicantResponse } from './../../../models/response/applicant/getAllApplicantResponse';
 import { ApplicantService } from './../../../services/applicant/applicant.service';
@@ -9,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./applicant-detail.component.css'],
 })
 export class ApplicantDetailComponent implements OnInit {
-  applicant: IGetAllApplicantResponse;
+  applicant: IGetApplicantResponse;
   constructor(
     private applicantService: ApplicantService,
     private activatedRoute: ActivatedRoute

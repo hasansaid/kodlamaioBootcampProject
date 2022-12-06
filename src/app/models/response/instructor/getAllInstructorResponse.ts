@@ -5,4 +5,6 @@ export interface IGetAllInstructorResponse {
   email: string;
   password: string;
   companyName: string;
+  dateOfBirth: string;
+  image: string;
 }

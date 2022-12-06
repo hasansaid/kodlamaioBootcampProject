@@ -13,37 +13,44 @@
       <div class="col-md-6">
         <fieldset>
           <label for="name">Ad:</label>
-          <input formControlName="firstName" type="text" id="name" name="user_name" />
+          <input formControlName="firstName" type="text" id="name" name="user_name" placeholder="Aday Adı Giriniz.." />
         </fieldset>
         <fieldset>
           <label for="name">Doğum Tarihi:</label>
-          <input formControlName="dateOfBirth" type="text" id="name" name="user_name" />
+          <input formControlName="dateOfBirth" type="text" id="name" name="user_name"
+            placeholder="Aday Doğum Tarihi Giriniz.." />
         </fieldset>
         <fieldset>
           <label for="name">Email:</label>
-          <input formControlName="email" type="text" id="name" name="user_name" />
+          <input formControlName="email" type="text" id="name" name="user_name" placeholder="Aday Email Giriniz.." />
         </fieldset>
-
+        <fieldset>
+          <label for="name">Resim:</label>
+          <input formControlName="image" type="text" id="name" name="user_name"
+            placeholder="Aday Resim Url Giriniz.." />
+        </fieldset>
       </div>
       <div class="col-md-6">
         <fieldset>
           <label for="name">Soyad:</label>
-          <input formControlName="lastName" type="text" id="name" name="user_name" />
+          <input formControlName="lastName" type="text" id="name" name="user_name"
+            placeholder="Aday Soyadını Giriniz.." />
         </fieldset>
         <fieldset>
           <label for="name">TC Kimlik No:</label>
-          <input formControlName="nationalIdentity" type="text" id="name" name="user_name" />
+          <input formControlName="nationalIdentity" type="text" id="name" name="user_name"
+            placeholder="Aday TC Giriniz.." />
         </fieldset>
         <fieldset>
           <label for="name">Şifre:</label>
-          <input formControlName="password" type="text" id="name" name="user_name" />
+          <input formControlName="password" type="text" id="name" name="user_name" placeholder="Aday Şifre Giriniz.." />
         </fieldset>
-
+        <fieldset>
+          <label for="name" style="text-align: center;">Hakkında</label>
+          <textarea formControlName="about" type="text" id="name" name="user_name"></textarea>
+        </fieldset>
       </div>
-      <fieldset>
-        <label for="name" style="text-align: center;">Hakkında</label>
-        <textarea formControlName="about" type="text" id="name" name="user_name"></textarea>
-      </fieldset>
+
     </div>
     <div class="row">
       <div class="col-md-6">

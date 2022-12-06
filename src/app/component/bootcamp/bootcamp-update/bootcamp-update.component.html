@@ -9,11 +9,23 @@
 <body>
   <form [formGroup]="bootcampUpdateForm" *ngIf="bootcampUpdateForm" method="post" class="shadow mt-4 border">
     <h1>{{ bootcamp.name }} Düzenle</h1>
-    <fieldset>
-      <label for="name">Eğitmen Id:</label>
-      <input formControlName="instructorId" type="number" id="name" name="user_name"
-        placeholder="Eğitmen Id Giriniz.." />
-    </fieldset>
+    <div class="row ">
+      <div class="col-md-6">
+        <fieldset>
+          <label for="name">Eğitmen Id:</label>
+          <input formControlName="instructorId" type="number" id="name" name="user_name"
+            placeholder="Eğitmen Id Giriniz.." />
+        </fieldset>
+      </div>
+      <div class="col-md-6">
+        <fieldset>
+          <label for="name">Eğitmen:</label>
+          <input formControlName="instructorName" type="text" id="name" name="user_name" placeholder="" />
+        </fieldset>
+      </div>
+    </div>
+
+
     <fieldset>
       <label for="name">Bootcamp İsmi:</label>
       <input formControlName="name" type="text" id="name" name="user_name" placeholder="Bootcamp İsmini Giriniz.." />
