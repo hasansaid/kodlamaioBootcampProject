@@ -1,54 +1,47 @@
-<div style="width: 100% order-0">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="container mt-3 me-auto ms-auto">
-        <ul class="breadcrumb">
-          <li class="breadcrumb__item breadcrumb__item-firstChild">
-            <span class="breadcrumb__inner">
-              <span class="breadcrumb__title" routerLink="">Anasayfa</span>
-            </span>
-          </li>
-          <li class="breadcrumb__item">
-            <span class="breadcrumb__inner">
-              <span class="breadcrumb__title" routerLink="home-bootcamp"
-                >Bootcampler</span
-              >
-            </span>
-          </li>
-          <li class="breadcrumb__item">
-            <span class="breadcrumb__inner">
-              <span class="breadcrumb__title" routerLink="home-instructor"
-                >Eğitmenler</span
-              >
-            </span>
-          </li>
-          <li class="breadcrumb__item breadcrumb__item-lastChild">
-            <span class="breadcrumb__inner">
-              <span class="breadcrumb__title" routerLink="home-about"
-                >Hakkımızda</span
-              >
-            </span>
-          </li>
-          <li class="breadcrumb__item breadcrumb__item-lastChild">
-            <span class="breadcrumb__inner">
-              <span class="breadcrumb__title" routerLink="home-contact"
-                >İletişim</span
-              >
-            </span>
-          </li>
-          <li class="breadcrumb__item breadcrumb__item-lastChild">
-            <span class="breadcrumb__inner">
-              <span class="breadcrumb__title">Giriş Yap </span>
-            </span>
-          </li>
-        </ul>
-      </div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="container-fluid p-1 rounded">
+      <nav class="navbar navbar-expand-lg rounded-2">
+        <div class="container-fluid">
+          <a class="navbar-brand me-5" href="#">Bootcamp Project</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Anasayfa</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Bootcamp</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">Eğitmenler</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">Hakkımızda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">İletişim</a>
+              </li>
+            </ul>
+            <button class="btn btn-warning btn-md rounded-pill">
+              Giriş Yap
+            </button>
+          </div>
+        </div>
+      </nav>
     </div>
   </div>
-  <div class="row">
-    <div class="col-md-12 text-center"><router-outlet></router-outlet></div>
-  </div>
 </div>
-<div class="row">
-  <div class="col-md-12 text-center"><app-home-footer></app-home-footer></div>
-</div>
+<router-outlet></router-outlet>
