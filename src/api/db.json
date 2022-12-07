@@ -62,26 +62,26 @@
   ],
   "bootcamp": [
     {
-      "instructorId": "3",
+      "instructorId": "1",
       "name": "Frontend Bootcamp",
       "dateStart": "01/12/2022",
       "dateEnd": "15/02/2023",
       "state": 1,
       "about": "Angular ile frontend eğitimimiz başlamak üzere...",
       "image": "asdasd",
-      "instructorName": "Engin Demiroğ",
+      "instructorName": "Hasan Sertkaya",
       "id": 1
     },
     {
-      "instructorId": "3",
+      "instructorId": "2",
       "name": "Backend Bootcamp",
       "dateStart": "15/12/2022",
       "dateEnd": "15/03/2023",
       "state": 1,
       "about": "C# ile backend eğitimimiz başlamak üzere...",
-      "id": 2,
-      "instructorName": "Engin Demiroğ",
-      "image": ""
+      "image": "sds",
+      "instructorName": "Salih Yılmaz",
+      "id": 2
     },
     {
       "instructorId": 3,
@@ -89,10 +89,10 @@
       "dateStart": "30.11.2022",
       "dateEnd": "30.12.2022",
       "state": "1",
-      "id": 3,
       "about": "Java eğitimimiz başlamak üzere..",
+      "image": "resim",
       "instructorName": "Engin Demiroğ",
-      "image": ""
+      "id": 3
     },
     {
       "instructorId": 3,
@@ -100,10 +100,10 @@
       "dateStart": "30.11.2022",
       "dateEnd": "30.12.2022",
       "state": "1",
-      "id": 4,
       "about": "React ile frontend eğitimimiz başlamak üzere...",
+      "image": "resim",
       "instructorName": "Engin Demiroğ",
-      "image": ""
+      "id": 4
     }
   ],
   "application": [

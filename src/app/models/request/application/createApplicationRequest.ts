@@ -1,8 +1,9 @@
 export interface ICreateApplicationRequest {
-  applicantId: number;
-  bootcampId: number;
-  state: number;
-
+  userId: number;
   userName: string;
+
+  bootcampId: number;
   bootcampName: string;
+
+  state: number;
 }
