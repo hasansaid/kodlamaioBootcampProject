@@ -28,12 +28,12 @@
       <div class="container">
         <div class="row">
           <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="col">
+            <div class="col" *ngFor="let instructor of instructors">
               <div class="wrapper">
                 <div class="profile-card">
                   <div class="profile-header">
                     <img
-                      src="https://i.imgur.com/X2oObC4.png"
+                      src="https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://cdn.filestackcontent.com/qUyYtyzXTrOSH2M2ApBh"
                       class="rounded-5"
                       alt=""
                     />
@@ -41,131 +41,19 @@
                   <div class="profile-body">
                     <div class="author-img">
                       <img
-                        src="https://yt3.ggpht.com/ytc/AMLnZu-0ZFlPJSSrc3HL_kNOY5LtHysire2aNCP72z-H6w=s900-c-k-c0x00ffffff-no-rj"
+                        src="{{ instructor.image }}"
                         class="img-thumbnail"
                         alt=""
                       />
                     </div>
-                    <div class="name">Engin DEMİROĞ</div>
+                    <div class="name">
+                      {{ instructor.firstName }} {{ instructor.lastName }}
+                    </div>
                     <div class="intro">
                       <p>
-                        I started software development in high school. I have
-                        studied Management Information Systems
-                        (Undergraduate-Scholarship) and Medical Informatics
-                        (Master) in Başkent and METU
+                        {{ instructor.companyName }}
                       </p>
-                    </div>
-                    <div class="social-icon">
-                      <ul>
-                        <li>
-                          <a href="#">
-                            <i class="fab fa-linkedin"></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="fab fa-twitter"></i>
-                          </a>
-                        </li>
-
-                        <li>
-                          <a href="#">
-                            <i class="fab fa-instagram"></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="fab fa-google-plus-g"></i>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="wrapper">
-                <div class="profile-card">
-                  <div class="profile-header">
-                    <img
-                      src="https://i.imgur.com/X2oObC4.png"
-                      class="rounded-5"
-                      alt=""
-                    />
-                  </div>
-                  <div class="profile-body">
-                    <div class="author-img">
-                      <img
-                        src="https://yt3.ggpht.com/ytc/AMLnZu-0ZFlPJSSrc3HL_kNOY5LtHysire2aNCP72z-H6w=s900-c-k-c0x00ffffff-no-rj"
-                        class="img-thumbnail"
-                        alt=""
-                      />
-                    </div>
-                    <div class="name">Engin DEMİROĞ</div>
-                    <div class="intro">
-                      <p>
-                        I started software development in high school. I have
-                        studied Management Information Systems
-                        (Undergraduate-Scholarship) and Medical Informatics
-                        (Master) in Başkent and METU
-                      </p>
-                    </div>
-                    <div class="social-icon">
-                      <ul>
-                        <li>
-                          <a href="#">
-                            <i class="fab fa-linkedin"></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="fab fa-twitter"></i>
-                          </a>
-                        </li>
-
-                        <li>
-                          <a href="#">
-                            <i class="fab fa-instagram"></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="fab fa-google-plus-g"></i>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="wrapper">
-                <div class="profile-card">
-                  <div class="profile-header">
-                    <img
-                      src="https://i.imgur.com/X2oObC4.png"
-                      class="rounded-5"
-                      alt=""
-                    />
-                  </div>
-                  <div class="profile-body">
-                    <div class="author-img">
-                      <img
-                        src="https://yt3.ggpht.com/ytc/AMLnZu-0ZFlPJSSrc3HL_kNOY5LtHysire2aNCP72z-H6w=s900-c-k-c0x00ffffff-no-rj"
-                        class="img-thumbnail"
-                        alt=""
-                      />
-                    </div>
-                    <div class="name">Engin DEMİROĞ</div>
-                    <div class="intro">
-                      <p>
-                        I started software development in high school. I have
-                        studied Management Information Systems
-                        (Undergraduate-Scholarship) and Medical Informatics
-                        (Master) in Başkent and METU
-                      </p>
+                      <p>{{ instructor.email }}</p>
                     </div>
                     <div class="social-icon">
                       <ul>
