@@ -13,7 +13,20 @@
       "role": "roleApplicant",
       "token": "aa",
       "expiration": "aa",
-      "userId": 1
+      "userId": 1,
+      "state": 1
+    },
+    {
+      "firstName": "asdasd",
+      "lastName": "asdasd",
+      "email": "asdfsadf",
+      "password": "asdfas",
+      "nationalIdentity": "asdfasdf",
+      "dateOfBirth": "sdfgasdf",
+      "about": "1121312",
+      "image": "asdfas",
+      "state": 1,
+      "id": 2
     }
   ],
   "instructor": [
@@ -151,20 +164,11 @@
   ],
   "blacklist": [
     {
-      "id": 1,
-      "applicantId": 1,
-      "date": "30/11/2022",
-      "reason": "Aday bootcamp'e katılım göstermedimiacaba",
-      "token": "HRTRASD",
-      "expiration": "01/01/2023"
-    },
-    {
-      "applicantId": 2,
-      "date": "30.12.2022",
-      "reason": "Sebep Böyle",
-      "id": 3,
-      "token": "HRTRASD",
-      "expiration": "01/01/2023"
+      "applicantId": "",
+      "date": "asd",
+      "reason": "asd",
+      "applicantName": "undefined undefined",
+      "id": 1
     }
   ],
   "users": [

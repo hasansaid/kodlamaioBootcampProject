@@ -34,6 +34,10 @@ export class ApplicantListComponent implements OnInit {
   //   this.applicantService.deleteApplicant(applicant).subscribe();
   //   this.toastrService.error('Aday Silindi');
   // }
+
+  sendId(id: number) {
+    console.log(id, ' GELDİ');
+  }
   deleteApplicant(id: number) {
     const swalWithBootstrapButtons = Swal.mixin({
       customClass: {

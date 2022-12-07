@@ -13,7 +13,7 @@ export class BlacklistService {
 
   constructor(private httpClient: HttpClient) {}
 
-  GetAllBlackList(): Observable<IGetAllBlackListResponse[]> {
+  getAllBlackList(): Observable<IGetAllBlackListResponse[]> {
     return this.httpClient.get<IGetAllBlackListResponse[]>(this.apiUrl);
   }
 
@@ -31,5 +31,10 @@ export class BlacklistService {
   // }
   deleteBlackList(id: number) {
     return this.httpClient.delete(this.apiUrl + '/' + id);
+  }
+  removeApplicant(id: number) {
+    return this.httpClient.delete<IGetBlackListResponse>(
+      this.apiUrl + '/' + id
+    );
   }
 }

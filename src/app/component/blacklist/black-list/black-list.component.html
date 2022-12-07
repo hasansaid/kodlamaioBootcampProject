@@ -1,17 +1,11 @@
-<div class="bg-light mt-4 p-5 border shadow-lg rounded h-100 p-4">
+<!-- <div class="bg-light mt-4 p-5 border shadow-lg rounded h-100 p-4">
   <div class="mb-4">
     <div style="display: flex; justify-content: space-evenly; margin-top: 10px">
       <div>
         <h2>Kara Liste</h2>
       </div>
       <div>
-        <button
-          type="button"
-          class="btn btn-outline-success shadow m-2"
-          routerLink="blacklist-add"
-        >
-          Kara Listeye Ekle
-        </button>
+        
       </div>
     </div>
     <div class="table-responsive">
@@ -36,29 +30,19 @@
             <td style="text-align: center">{{ blacklist.date }}</td>
             <td style="text-align: center">{{ blacklist.reason }}</td>
             <td>
-              <button
-                type="button"
-                class="btn btn-outline-secondary shadow m-2"
-                routerLink="blacklist-detail/{{ blacklist.id }}"
-              >
+              <button type="button" class="btn btn-outline-secondary shadow m-2"
+                routerLink="blacklist-detail/{{ blacklist.id }}">
                 Detay
               </button>
             </td>
             <td>
-              <button
-                type="button"
-                class="btn btn-outline-warning shadow m-2"
-                routerLink="blacklist-update/{{ blacklist.id }}"
-              >
+              <button type="button" class="btn btn-outline-warning shadow m-2"
+                routerLink="blacklist-update/{{ blacklist.id }}">
                 Düzenle
               </button>
             </td>
             <td>
-              <button
-                type="button"
-                class="btn btn-outline-danger shadow m-2"
-                (click)="deleteBlackList(blacklist.id)"
-              >
+              <button type="button" class="btn btn-outline-danger shadow m-2" >
                 Sil
               </button>
             </td>
@@ -67,4 +51,23 @@
       </table>
     </div>
   </div>
-</div>
+</div> -->
+
+<thead>
+  <tr>
+    <th>Applicant</th>
+    <th>Date</th>
+    <th>Reason</th>
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor="let blacklist of blacklists">
+    <td>{{blacklist.applicantName}}</td>
+    <td>{{blacklist.date}}</td>
+    <td>{{blacklist.reason}}</td>
+    <td>
+      <button type="button" class="btn btn-outline-danger btn-sm ml-2"
+        (click)="removeApplicant(blacklist.id, blacklist.applicantId)">Kara Listeden Çıkar</button>
+    </td>
+  </tr>
+</tbody>

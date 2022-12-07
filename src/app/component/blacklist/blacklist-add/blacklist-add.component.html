@@ -1,4 +1,4 @@
-<html>
+<!-- <html>
 
 <head>
   <meta charset="utf-8" />
@@ -38,4 +38,13 @@
   </form>
 </body>
 
-</html>
+</html> -->
+
+<form class="form-sample" [formGroup]="blackListAddForm" *ngIf="blackListAddForm">
+  <div class="form-group">
+    <input type="text" formControlName="date">
+    <label for="reason">Reason</label>
+    <textarea class="form-control" id="reason" rows="4" formControlName="reason"></textarea>
+  </div>
+  <button type="button" class="btn btn-info" (click)="addBlackList()">Ekle</button>
+</form>

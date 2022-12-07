@@ -1,3 +1,7 @@
+import { ICreateApplicantRequest } from './../../../models/request/applicant/createApplicantRequest';
+import { ICreateBlackListRequest } from './../../../models/request/blackList/createBlackListRequest';
+import { ApplicantService } from 'src/app/services/applicant/applicant.service';
+import { ICreateApplicationRequest } from './../../../models/request/application/createApplicationRequest';
 import { BlacklistService } from './../../../services/blacklist/blacklist.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
@@ -8,6 +12,7 @@ import {
   Validators,
   FormControl,
 } from '@angular/forms';
+import { ThisReceiver } from '@angular/compiler';
 
 @Component({
   selector: 'app-blacklist-add',
@@ -16,23 +21,73 @@ import {
 })
 export class BlacklistAddComponent implements OnInit {
   blackListAddForm: FormGroup;
+  getApplicant: ICreateApplicantRequest;
+  id: number;
+  today: Date = new Date();
+  date: any =
+    this.today.getDate() +
+    '/' +
+    this.today.getMonth() +
+    '/' +
+    this.today.getFullYear();
+
   constructor(
     private formBuilder: FormBuilder,
     private activatedRoute: ActivatedRoute,
     private blacklistService: BlacklistService,
     private toastrService: ToastrService,
-    private router: Router
+    private router: Router,
+    private applicantService: ApplicantService
   ) {}
 
   ngOnInit(): void {
     this.createAddBlackListForm();
   }
+  getAplicantById(id: number) {
+    this.applicantService.getApplicant(id).subscribe((data) => {
+      this.getApplicant = data;
+    });
+  }
 
   createAddBlackListForm() {
     this.blackListAddForm = this.formBuilder.group({
-      applicantId: ['', Validators.required],
-      date: ['', Validators.required],
-      reason: ['', Validators.required],
+      applicantId: [''],
+      date: [''],
+      reason: [''],
+    });
+  }
+
+  addBlackList() {
+    if (this.blackListAddForm.valid) {
+      let blackListAddRequest: ICreateBlackListRequest = Object.assign(
+        {},
+        this.blackListAddForm.value
+      );
+      this.activatedRoute.params.subscribe((params) => {
+        blackListAddRequest.applicantId = params['id'];
+        this.id = params['id'];
+      });
+      this.applicantService
+        .getApplicant(blackListAddRequest.applicantId)
+        .subscribe((data) => {
+          blackListAddRequest.applicantName =
+            data.firstName + ' ' + data.lastName;
+
+          this.blacklistService
+            .addBlackList(blackListAddRequest)
+            .subscribe((data) => {
+              this.toastrService.success('Kara Listeye Eklendi', 'Başarılı');
+            });
+        });
+
+      this.updateApplicantState();
+    } else {
+      this.toastrService.error('Form Eksik', 'Hata');
+    }
+  }
+  updateApplicantState() {
+    this.applicantService.updateApplicantState(this.id, 0).subscribe((val) => {
+      this.toastrService.success('Aplicant updated');
     });
   }
 
