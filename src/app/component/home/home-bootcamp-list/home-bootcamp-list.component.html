@@ -16,6 +16,7 @@
             Teknoloji kariyerine ilk adım: Bootcamp
           </h1>
           <p class="display-6">Ücretsiz öğren, mezun ol, çalışmaya başla.</p>
+          <a href="home-bootcamp/#bootcampler"> Bootcampler</a>
         </div>
       </div>
     </div>
@@ -24,41 +25,46 @@
 
 <div class="container py-2">
   <h3 class="text-center display-2 mb-4">Başvuruya Açık Bootcampler</h3>
+
   <hr />
+  <a name="bootcampler">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col" *ngFor="let bootcamp of bootcamps">
+        <div class="card shadow-lg rounded-4 bootcampcard">
+          <img
+            src="https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://cdn.filestackcontent.com/ujZYJ3lwSOihtnbP9LsG"
+            class="card-img-top p-2 rounded-4"
+            alt="..."
+          />
+          <div class="card-body">
+            <a name="bootcampler">
+              <h5 class="card-title text-center">
+                {{ bootcamp.name }}
+              </h5>
+            </a>
 
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col" *ngFor="let bootcamp of bootcamps">
-      <div class="card shadow-lg rounded-4">
-        <img
-          src="https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://cdn.filestackcontent.com/ujZYJ3lwSOihtnbP9LsG"
-          class="card-img-top p-2 rounded-4"
-          alt="..."
-        />
-        <div class="card-body">
-          <h5 class="card-title text-center">
-            {{ bootcamp.name }}
-          </h5>
-          <p class="card-text">Eğitmen: {{ bootcamp.instructorName }}</p>
-          <p class="card-text">Detay: {{ bootcamp.about }}</p>
-          <p class="card-text">
-            <small class="text-muted"
-              >Başlangıç Tarihi {{ bootcamp.dateStart }}</small
-            >
-            <br />
-            <small class="text-muted"
-              >Bitiş Tarihi {{ bootcamp.dateEnd }}</small
-            >
+            <p class="card-text">Eğitmen: {{ bootcamp.instructorName }}</p>
+            <p class="card-text">Detay: {{ bootcamp.about }}</p>
+            <p class="card-text">
+              <small class="text-muted"
+                >Başlangıç Tarihi {{ bootcamp.dateStart }}</small
+              >
+              <br />
+              <small class="text-muted"
+                >Bitiş Tarihi {{ bootcamp.dateEnd }}</small
+              >
 
-            <button
-              class="btn btn-primary d-flex"
-              routerLink="/home-bootcamp-detail/{{ bootcamp.id }}"
-            >
-              Detay
-            </button>
-          </p>
+              <button
+                class="btn btn-primary d-flex"
+                routerLink="/home-bootcamp-detail/{{ bootcamp.id }}"
+              >
+                Detay
+              </button>
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </a>
 </div>
 <app-home-footer></app-home-footer>

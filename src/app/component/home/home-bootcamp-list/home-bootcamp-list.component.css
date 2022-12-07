@@ -7,6 +7,13 @@ body {
   text-rendering: optimizeLegibility;
   font-weight: initial;
 }
+.bootcampcard:hover {
+  transform: scale(1.1);
+  transition: all 0.9s;
+}
+.bootcampcard {
+  transition: all 0.9s;
+}
 
 .dark {
   background: #110f16;

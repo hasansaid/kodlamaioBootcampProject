@@ -1,7 +1,4 @@
-import { IGetAllBootcampResponse } from './../../../models/response/bootcamp/getAllBootcampResponse';
-import { ICreateInstructorRequest } from './../../../models/request/instructor/createInstructorRequest';
 import { InstructorService } from './../../../services/instructor/instructor.service';
-import { IGetInstructorResponse } from './../../../models/response/instructor/getInstructorResponse';
 import { BootcampService } from './../../../services/bootcamp/bootcamp.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
@@ -13,6 +10,7 @@ import {
   FormControl,
 } from '@angular/forms';
 import { ICreateBootcampRequest } from 'src/app/models/request/bootcamp/createBootcampRequest';
+import { IGetAllInstructorResponse } from 'src/app/models/response/instructor/getAllInstructorResponse';
 
 @Component({
   selector: 'app-bootcamp-add',
@@ -21,7 +19,7 @@ import { ICreateBootcampRequest } from 'src/app/models/request/bootcamp/createBo
 })
 export class BootcampAddComponent implements OnInit {
   bootcampAddForm: FormGroup;
-  instructors: IGetInstructorResponse[] = [];
+  instructors: IGetAllInstructorResponse[] = [];
   constructor(
     private formBuilder: FormBuilder,
     private activatedRoute: ActivatedRoute,
@@ -56,8 +54,7 @@ export class BootcampAddComponent implements OnInit {
     if (this.bootcampAddForm.valid) {
       let bootcampModel: ICreateBootcampRequest = Object.assign(
         {},
-        this.bootcampAddForm.value,
-        console.log('olur mu öyle')
+        this.bootcampAddForm.value
       );
       this.instructorService
         .getInstructor(bootcampModel.instructorId)

@@ -1,3 +1,4 @@
+import { ToastrService } from 'ngx-toastr';
 import { LoginEmployeeModel } from './../../../models/token/login-employee';
 import { ITokenModel } from './../../../models/token/tokenModel';
 import { LoginEmployeeService } from './../../../services/login-employee/login-employee.service';
@@ -17,7 +18,8 @@ export class EmployeeLoginComponent implements OnInit {
   constructor(
     private loginEmployeeService: LoginEmployeeService,
     private formBuilder: FormBuilder,
-    private router: Router
+    private router: Router,
+    private toastrService: ToastrService
   ) {}
 
   ngOnInit(): void {
@@ -37,12 +39,14 @@ export class EmployeeLoginComponent implements OnInit {
         .loginEmployee(this.loginEmployeeForm.value)
         .subscribe((data) => {
           if (data) {
-            alert('Giriş Başarılı');
+            this.toastrService.success('Giriş Başarılı');
             data[0].role == 'roleApplicant'
               ? this.router.navigate(['applicant'])
               : data[0].role == 'roleEmployee'
               ? this.router.navigate(['admin'])
               : this.router.navigate(['instructor']);
+            console.log(data);
+
             localStorage.setItem('token', data[0].token);
             localStorage.setItem('role', data[0].role);
           } else {

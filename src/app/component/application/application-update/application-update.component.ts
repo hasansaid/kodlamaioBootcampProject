@@ -1,3 +1,9 @@
+import { ICreateApplicationRequest } from './../../../models/request/application/createApplicationRequest';
+import { ICreateApplicantRequest } from './../../../models/request/applicant/createApplicantRequest';
+import { BootcampService } from './../../../services/bootcamp/bootcamp.service';
+import { ApplicantService } from './../../../services/applicant/applicant.service';
+import { IGetAllBootcampResponse } from './../../../models/response/bootcamp/getAllBootcampResponse';
+import { IGetAllApplicantResponse } from './../../../models/response/applicant/getAllApplicantResponse';
 import { IGetApplicationResponse } from './../../../models/response/application/getApplicationResponse';
 import { IUpdateApplicationRequest } from './../../../models/request/application/updateApplicationRequest';
 import { ApplicationService } from './../../../services/application/application.service';
@@ -19,16 +25,32 @@ import {
 export class ApplicationUpdateComponent implements OnInit {
   applicationUpdateForm: FormGroup;
   application: IUpdateApplicationRequest;
+  applicants: IGetAllApplicantResponse[] = [];
+  bootcamps: IGetAllBootcampResponse[] = [];
   constructor(
     private activatedRoute: ActivatedRoute,
     private formBuilder: FormBuilder,
     private applicationService: ApplicationService,
-    private toastrService: ToastrService
+    private toastrService: ToastrService,
+    private applicantService: ApplicantService,
+    private bootcampService: BootcampService
   ) {}
 
   ngOnInit(): void {
-    // this.getApplicationDataForm();
+    this.getApplicantAll();
+  }
+
+  getApplicantAll() {
+    this.applicantService
+      .getAllApplicant()
+      .subscribe((data) => (this.applicants = data));
     this.getByIdApplication();
+    this.getBootcampAll();
+  }
+  getBootcampAll() {
+    this.bootcampService
+      .getAllBootcamp()
+      .subscribe((data) => (this.bootcamps = data));
   }
 
   createApplicationUpdateForm() {
@@ -50,13 +72,42 @@ export class ApplicationUpdateComponent implements OnInit {
       this.getApplication(params['id']);
     });
   }
+  // updateApplication() {
+  //   this.applicationService
+  //     .updateApplication(
+  //       this.activatedRoute.snapshot.params['id'],
+  //       this.applicationUpdateForm.value
+  //     )
+  //     .subscribe();
+  //   this.toastrService.success('Başvuru Düzenlendi');
+  // }
+
   updateApplication() {
-    this.applicationService
-      .updateApplication(
-        this.activatedRoute.snapshot.params['id'],
+    if (this.applicationUpdateForm.valid) {
+      let application: ICreateApplicationRequest = Object.assign(
+        {},
         this.applicationUpdateForm.value
-      )
-      .subscribe();
-    this.toastrService.success('Başvuru Düzenlendi');
+      );
+      this.bootcampService
+        .getBootcamp(application.bootcampId)
+        .subscribe((data) => {
+          application.bootcampName = data.name;
+          this.applicantService
+            .getApplicant(application.userId)
+            .subscribe((data) => {
+              application.userName = data.firstName + ' ' + data.lastName;
+              this.applicationService
+                .updateApplication(
+                  this.activatedRoute.snapshot.params['id'],
+                  application
+                )
+                .subscribe((data) => {
+                  this.toastrService.success('Başvuru Bilgileri Güncellendi');
+                });
+            });
+        });
+    } else {
+      this.toastrService.error('Dikkat Form Eksik!!!');
+    }
   }
 }
