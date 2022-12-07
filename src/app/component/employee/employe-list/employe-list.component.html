@@ -4,7 +4,11 @@
       <h2>Çalışanlar Listesi</h2>
     </div>
     <div>
-      <button type="button" class="btn btn-outline-success shadow m-2" routerLink="employee-add">
+      <button
+        type="button"
+        class="btn btn-outline-success shadow m-2"
+        routerLink="employee-add"
+      >
         Çalışanlar Ekle
       </button>
     </div>
@@ -13,11 +17,11 @@
     <table class="table">
       <thead>
         <tr>
-          <th scope="col" style="text-align:center;">Id</th>
-          <th scope="col" style="text-align:center;">İsim</th>
-          <th scope="col" style="text-align:center;">Soyadı</th>
-          <th scope="col" style="text-align:center;">E-Mail</th>
-          <th scope="col" style="text-align:center;">Pozisyon</th>
+          <th scope="col" style="text-align: center">Id</th>
+          <th scope="col" style="text-align: center">İsim</th>
+          <th scope="col" style="text-align: center">Soyadı</th>
+          <th scope="col" style="text-align: center">E-Mail</th>
+          <th scope="col" style="text-align: center">Pozisyon</th>
           <th></th>
           <th></th>
           <th></th>
@@ -25,25 +29,35 @@
       </thead>
       <tbody>
         <tr *ngFor="let employee of employees">
-          <td style="text-align:center;">{{ employee.id }}</td>
-          <td style="text-align:center;">{{ employee.firstName }}</td>
-          <td style="text-align:center;">{{ employee.lastName }}</td>
-          <td style="text-align:center;">{{ employee.email }}</td>
-          <td style="text-align:center;">{{ employee.position }}</td>
+          <td style="text-align: center">{{ employee.id }}</td>
+          <td style="text-align: center">{{ employee.firstName }}</td>
+          <td style="text-align: center">{{ employee.lastName }}</td>
+          <td style="text-align: center">{{ employee.email }}</td>
+          <td style="text-align: center">{{ employee.position }}</td>
           <td>
-            <button type="button" class="btn btn-outline-secondary shadow m-1"
-              routerLink="employee-detail/{{ employee.id }}">
+            <button
+              type="button"
+              class="btn btn-outline-secondary shadow m-1"
+              routerLink="employee-detail/{{ employee.id }}"
+            >
               Detay
             </button>
           </td>
           <td>
-            <button type="button" class="btn btn-outline-warning shadow m-1"
-              routerLink="employee-update//{{ employee.id }}">
+            <button
+              type="button"
+              class="btn btn-outline-warning shadow m-1"
+              routerLink="employee-update//{{ employee.id }}"
+            >
               Düzenle
             </button>
           </td>
           <td>
-            <button type="button" class="btn btn-outline-danger shadow m-1" (click)="deleteEmployee(employee)">
+            <button
+              type="button"
+              class="btn btn-outline-danger shadow m-1"
+              (click)="deleteToEmployee(employee.id)"
+            >
               Sil
             </button>
           </td>

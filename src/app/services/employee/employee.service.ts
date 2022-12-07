@@ -24,6 +24,9 @@ export class EmployeeService {
   deleteEmployee(employee: IGetAllEmployeeResponse) {
     return this.httpClient.delete(this.apiUrl + '/' + employee.id);
   }
+  deleteEmp(id: number) {
+    return this.httpClient.delete(this.apiUrl + '/' + id);
+  }
   updateEmployee(id: number, employee: any) {
     return this.httpClient.put(this.apiUrl + '/' + id, employee);
   }

@@ -55,6 +55,7 @@ import { ApplicantBootcampComponent } from './component/userApplicant/applicant-
 import { ApplicantNotificationComponent } from './component/userApplicant/applicant-notification/applicant-notification.component';
 import { AdminSidebarComponent } from './component/admin/admin-sidebar/admin-sidebar/admin-sidebar.component';
 import { HomeBootcampDetailComponent } from './component/home/home-bootcamp-detail/home-bootcamp-detail/home-bootcamp-detail.component';
+
 @NgModule({
   declarations: [
     AppComponent,
