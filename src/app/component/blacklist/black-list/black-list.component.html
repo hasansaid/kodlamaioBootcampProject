@@ -5,13 +5,7 @@
         <h2>Kara Liste</h2>
       </div>
       <div>
-        <button
-          type="button"
-          class="btn btn-outline-success shadow m-2"
-          routerLink="blacklist-add"
-        >
-          Kara Listeye Ekle
-        </button>
+
       </div>
     </div>
     <div class="table-responsive">
@@ -19,7 +13,7 @@
         <thead>
           <tr>
             <th scope="col" style="text-align: center">Sıra Numarası</th>
-            <th scope="col" style="text-align: center">Aday Numarası</th>
+            <th scope="col" style="text-align: center">Aday </th>
             <th scope="col" style="text-align: center">Tarih</th>
             <th scope="col" style="text-align: center">
               Kara Listeye Alınma Sebebi
@@ -35,31 +29,22 @@
             <td style="text-align: center">{{ blacklist.applicantId }}</td>
             <td style="text-align: center">{{ blacklist.date }}</td>
             <td style="text-align: center">{{ blacklist.reason }}</td>
-            <td>
-              <button
-                type="button"
-                class="btn btn-outline-secondary shadow m-2"
-                routerLink="blacklist-detail/{{ blacklist.id }}"
-              >
+            <!-- <td>
+              <button type="button" class="btn btn-outline-secondary shadow m-2"
+                routerLink="blacklist-detail/{{ blacklist.id }}">
                 Detay
               </button>
-            </td>
-            <td>
-              <button
-                type="button"
-                class="btn btn-outline-warning shadow m-2"
-                routerLink="blacklist-update/{{ blacklist.id }}"
-              >
+            </td> -->
+            <!-- <td>
+              <button type="button" class="btn btn-outline-warning shadow m-2"
+                routerLink="blacklist-update/{{ blacklist.id }}">
                 Düzenle
               </button>
-            </td>
+            </td> -->
             <td>
-              <button
-                type="button"
-                class="btn btn-outline-danger shadow m-2"
-                (click)="deleteBlackList(blacklist.id)"
-              >
-                Sil
+              <button (click)="removeApplicant(blacklist.id, blacklist.applicantId)" type="button"
+                class="btn btn-outline-danger shadow m-2">
+                Kara Listeden Çıkar
               </button>
             </td>
           </tr>
@@ -68,3 +53,22 @@
     </div>
   </div>
 </div>
+
+<!-- <thead>
+  <tr>
+    <th>Applicant</th>
+    <th>Date</th>
+    <th>Reason</th>
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor="let blacklist of blacklists">
+    <td>{{blacklist.applicantName}}</td>
+    <td>{{blacklist.date}}</td>
+    <td>{{blacklist.reason}}</td>
+    <td>
+      <button type="button" class="btn btn-outline-danger btn-sm ml-2"
+        (click)="removeApplicant(blacklist.id, blacklist.applicantId)">Kara Listeden Çıkar</button>
+    </td>
+  </tr>
+</tbody> -->

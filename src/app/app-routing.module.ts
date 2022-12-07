@@ -135,7 +135,7 @@ const routes: Routes = [
         component: BlacklistDetailComponent,
       },
       {
-        path: 'admin-blacklist/blacklist-add',
+        path: 'admin-applicant/blacklist-add/:id',
         component: BlacklistAddComponent,
       },
       {

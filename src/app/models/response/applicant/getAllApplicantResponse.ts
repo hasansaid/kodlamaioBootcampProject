@@ -8,4 +8,5 @@ export interface IGetAllApplicantResponse {
   nationalIdentity: number;
   dateOfBirth: string;
   image: string;
+  state: number;
 }

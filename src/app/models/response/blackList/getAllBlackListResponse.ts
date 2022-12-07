@@ -3,4 +3,5 @@ export interface IGetAllBlackListResponse {
   applicantId: number;
   date: string;
   reason: string;
+  applicantName: string;
 }

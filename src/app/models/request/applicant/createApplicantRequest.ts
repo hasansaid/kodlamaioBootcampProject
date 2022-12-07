@@ -7,4 +7,5 @@ export interface ICreateApplicantRequest {
   dateOfBirth: string;
   about: string;
   image: string;
+  state: number;
 }

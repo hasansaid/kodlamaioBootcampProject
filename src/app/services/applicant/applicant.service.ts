@@ -14,7 +14,9 @@ export class ApplicantService {
   constructor(private httpClient: HttpClient) {}
 
   getAllApplicant(): Observable<IGetAllApplicantResponse[]> {
-    return this.httpClient.get<IGetAllApplicantResponse[]>(this.apiUrl);
+    return this.httpClient.get<IGetAllApplicantResponse[]>(
+      this.apiUrl + '?state=1'
+    );
   }
 
   getApplicant(id: number): Observable<IGetApplicantResponse> {
@@ -33,5 +35,14 @@ export class ApplicantService {
   // }
   deleteApplicant(id: number) {
     return this.httpClient.delete(this.apiUrl + '/' + id);
+  }
+  updateApplicantState(
+    id: number,
+    selectedState: number
+  ): Observable<ICreateApplicantRequest> {
+    return this.httpClient.patch<ICreateApplicantRequest>(
+      this.apiUrl + '/' + id,
+      { state: selectedState }
+    );
   }
 }
