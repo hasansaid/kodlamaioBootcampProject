@@ -10,23 +10,28 @@
   <form [formGroup]="applicationAddForm" method="post" class="shadow mt-4 border">
     <h1>Başvuru Ekle</h1>
 
+
     <fieldset>
-      <label for="name">Başvuru Id:</label>
-      <input formControlName="applicantId" type="number" id="name" name="user_name"
-        placeholder="applicantId Id Giriniz.." />
+      <label for="name">Başvuran İsmi:</label>
+      <select id="userId" formControlName="userId" class="form-select rounded-0">
+        <option type="number" [value]="null" disabled hidden></option>
+        <option type="number" *ngFor="let applicant of applicants" [value]="applicant.id">
+          {{ applicant.firstName }} {{ applicant.lastName }}
+        </option>
+      </select>
     </fieldset>
     <fieldset>
-      <label for="name">Bootcamp Id:</label>
-      <input formControlName="bootcampId" type="number" id="name" name="user_name"
-        placeholder="bootcampId Id Giriniz.." />
-    </fieldset>
-    <fieldset>
-      <label for="name">User Id:</label>
-      <input formControlName="userId" type="number" id="name" name="user_name" placeholder="User Id Giriniz.." />
+      <label for="name">Bootcamp İsmi:</label>
+      <select id="bootcampId" formControlName="bootcampId" class="form-select rounded-0">
+        <option type="number" [value]="null" disabled hidden></option>
+        <option type="number" *ngFor="let bootcamp of bootcamps" [value]="bootcamp.id">
+          {{ bootcamp.name }}
+        </option>
+      </select>
     </fieldset>
     <fieldset>
       <label for="name">State:</label>
-      <input formControlName="state" type="text" id="name" name="user_name" placeholder="1:Uygun - 2:Uygun Değil.." />
+      <input formControlName="state" type="number" id="name" name="user_name" placeholder="1:Uygun - 2:Uygun Değil.." />
     </fieldset>
 
     <div class="row">
