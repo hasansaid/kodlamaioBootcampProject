@@ -14,6 +14,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class ApplicationListComponent implements OnInit {
   applications: IGetAllApplicationResponse[] = [];
+  filterApplication: string;
 
   constructor(
     private applicationService: ApplicationService,

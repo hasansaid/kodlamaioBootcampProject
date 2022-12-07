@@ -13,6 +13,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class BlackListComponent implements OnInit {
   blacklists: IGetAllBlackListResponse[] = [];
+  filterBlacklist: string;
 
   constructor(
     private blacklistService: BlacklistService,
