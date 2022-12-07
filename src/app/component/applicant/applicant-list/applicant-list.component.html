@@ -5,7 +5,11 @@
         <h2>Adaylar Listesi</h2>
       </div>
       <div>
-        <button type="button" class="btn btn-outline-success shadow m-2" routerLink="applicant-add">
+        <button
+          type="button"
+          class="btn btn-outline-success shadow m-2"
+          routerLink="applicant-add"
+        >
           Aday Ekle
         </button>
       </div>
@@ -18,43 +22,64 @@
             <th scope="col" style="text-align: center">İsim</th>
             <!-- <th scope="col" style="text-align: center">Soyisim</th> -->
             <th scope="col" style="text-align: center">Email</th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
+            <th colspan="4">
+              <input
+                type="text"
+                placeholder="Aday arayın..."
+                class="form-control"
+                id="brandFilter"
+                [(ngModel)]="filterApplicant"
+              />
+            </th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let applicant of applicants">
+          <tr
+            *ngFor="
+              let applicant of applicants | applicantfilter : filterApplicant
+            "
+          >
             <td style="text-align: center">{{ applicant.id }}</td>
             <td style="text-align: center">{{ applicant.firstName }}</td>
             <!-- <td style="text-align: center">{{ applicant.lastName }}</td> -->
             <td style="text-align: center">{{ applicant.email }}</td>
 
             <td>
-              <button type="button" class="btn btn-outline-secondary shadow m-2"
-                routerLink="applicant-detail//{{ applicant.id }}">
+              <button
+                type="button"
+                class="btn btn-outline-secondary shadow m-2"
+                routerLink="applicant-detail//{{ applicant.id }}"
+              >
                 Detaya Git
               </button>
             </td>
             <td>
-              <button type="button" class="btn btn-outline-warning shadow m-2"
-                routerLink="applicant-update/{{ applicant.id }}">
+              <button
+                type="button"
+                class="btn btn-outline-warning shadow m-2"
+                routerLink="applicant-update/{{ applicant.id }}"
+              >
                 Düzenle
               </button>
             </td>
             <td>
-              <button (click)="deleteApplicant(applicant.id)" type="button" class="btn btn-outline-danger shadow m-2">
+              <button
+                (click)="deleteApplicant(applicant.id)"
+                type="button"
+                class="btn btn-outline-danger shadow m-2"
+              >
                 Aday Sil
               </button>
             </td>
             <td>
-              <button routerLink="blacklist-add/{{applicant.id}}" type="button"
-                class="btn btn-outline-secondary shadow m-2">
+              <button
+                routerLink="blacklist-add/{{ applicant.id }}"
+                type="button"
+                class="btn btn-outline-secondary shadow m-2"
+              >
                 Kara Liste ->
               </button>
             </td>
-
           </tr>
         </tbody>
       </table>

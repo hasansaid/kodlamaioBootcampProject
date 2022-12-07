@@ -12,6 +12,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class ApplicantListComponent implements OnInit {
   applicants: IGetAllApplicantResponse[] = [];
+  filterApplicant: string;
 
   constructor(
     private applicantService: ApplicantService,

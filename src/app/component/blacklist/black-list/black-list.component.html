@@ -4,27 +4,35 @@
       <div>
         <h2>Kara Liste</h2>
       </div>
-      <div>
-
-      </div>
+      <div></div>
     </div>
     <div class="table-responsive">
       <table class="table">
         <thead>
           <tr>
             <th scope="col" style="text-align: center">Sıra Numarası</th>
-            <th scope="col" style="text-align: center">Aday </th>
+            <th scope="col" style="text-align: center">Aday</th>
             <th scope="col" style="text-align: center">Tarih</th>
             <th scope="col" style="text-align: center">
               Kara Listeye Alınma Sebebi
             </th>
-            <th></th>
-            <th></th>
-            <th></th>
+            <th colspan="3">
+              <input
+                type="text"
+                placeholder="Kara Liste'de arayın..."
+                class="form-control"
+                id="brandFilter"
+                [(ngModel)]="filterBlacklist"
+              />
+            </th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let blacklist of blacklists">
+          <tr
+            *ngFor="
+              let blacklist of blacklists | blacklistfilter : filterBlacklist
+            "
+          >
             <td style="text-align: center">{{ blacklist.id }}</td>
             <td style="text-align: center">{{ blacklist.applicantId }}</td>
             <td style="text-align: center">{{ blacklist.date }}</td>
@@ -42,8 +50,11 @@
               </button>
             </td> -->
             <td>
-              <button (click)="removeApplicant(blacklist.id, blacklist.applicantId)" type="button"
-                class="btn btn-outline-danger shadow m-2">
+              <button
+                (click)="removeApplicant(blacklist.id, blacklist.applicantId)"
+                type="button"
+                class="btn btn-outline-danger shadow m-2"
+              >
                 Kara Listeden Çıkar
               </button>
             </td>
