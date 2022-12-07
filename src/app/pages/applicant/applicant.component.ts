@@ -1,4 +1,7 @@
+import { LoginEmployeeService } from './../../services/login-employee/login-employee.service';
+import { LoginApplicantService } from './../../services/login-applicant/login-applicant.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-applicant',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ApplicantComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private loginEmployeeService:LoginEmployeeService,
+    private router: Router
+  ) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+  logout() {
+    this.loginEmployeeService.logout();
+    this.router.navigate(['']);
   }
-
 }
+

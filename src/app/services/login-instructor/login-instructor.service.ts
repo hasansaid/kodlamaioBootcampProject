@@ -22,4 +22,7 @@ export class LoginInstructorService {
       return false;
     }
   }
+  logout() {
+    localStorage.clear();
+  }
 }

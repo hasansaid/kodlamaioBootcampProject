@@ -1,30 +1,44 @@
-<nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid">
-        <a class="navbar-brand">Eğitmen Sayfası</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="home-page" routerLink="instructor-page">Anasayfa</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="instructor-bootcamp">Bootcamp</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="instructor-applicant">Öğrenciler</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="">Çıkış Yap</a>
-                </li>
-            </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-        </div>
+
+<div class="row">
+    <div class="col-md-2 ms-5">
+
+        <div class="sidebar pe-4 pb-3 border rounded shadow-lg mt-4 ms-4" style="height: 90%">
+            <nav class="navbar">
+              <a routerLink="/applicant-page" class="navbar-brand mx-4 mb-3">
+                <h5 class="text-primary"><i class="fa fa-home me-2"></i>Eğitmen Paneli</h5>
+              </a>
+              <div class="d-flex align-items-center ms-4 mb-4">
+                <div class="position-relative">
+                  <img class="rounded-circle"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQihyZtmBuy7E75HPllahoZEVxR6FLbSMHwqr2lpV8&s" alt=""
+                    style="width: 40px; height: 40px" />
+                  <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
+                </div>
+                <div class="ms-3">
+                  <h6 class="mb-0">Jhon Doe</h6>
+                  <span>Aday</span>
+                </div>
+              </div>
+              <div class="navbar-nav w-100">
+                <a routerLink="instructor-page" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Eğitmen
+                  Sayfası</a>
+                <a routerLink="instructor-bootcamp" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Bootcamp</a>
+                <a routerLink="instructor-applicant" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Adaylar</a>
+           
+          
+          
+          
+                <div class="navbar-nav w-100">
+                  <a (click)="logout()" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Çıkış Yap</a>
+                </div>
+              </div>
+          
+            </nav>
+          </div>
+     
     </div>
-</nav>
-<router-outlet></router-outlet>
+  
+    <div class="col-md-8 ms-5 mb-5" style="height: 100%">
+      <router-outlet></router-outlet>
+    </div>
+  </div>

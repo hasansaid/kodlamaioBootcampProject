@@ -23,4 +23,7 @@ export class LoginApplicantService {
       return false;
     }
   }
+  logout() {
+    localStorage.clear();
+  }
 }
