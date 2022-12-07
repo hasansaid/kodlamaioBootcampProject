@@ -31,7 +31,10 @@ export class InstructorService {
   updateInstructor(id: number, instructor: IUpdateInstructorRequest) {
     return this.httpClient.put(this.apiUrl + '/' + id, instructor);
   }
-  deleteInstructor(employee: IGetAllInstructorResponse) {
-    return this.httpClient.delete(this.apiUrl + '/' + employee.id);
+  // deleteInstructor(employee: IGetAllInstructorResponse) {
+  //   return this.httpClient.delete(this.apiUrl + '/' + employee.id);
+  // }
+  deleteInstructor(id: number) {
+    return this.httpClient.delete(this.apiUrl + '/' + id);
   }
 }

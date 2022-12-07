@@ -25,7 +25,8 @@ export class BootcampService {
   updateBootcamp(id: number, bootcamp: any) {
     return this.httpClient.put(this.apiUrl + '/' + id, bootcamp);
   }
-  deleteBootcamp(bootcamp: IGetAllBootcampResponse) {
-    return this.httpClient.delete(this.apiUrl + '/' + bootcamp.id);
+
+  deletebootcamp(id: number) {
+    return this.httpClient.delete(this.apiUrl + '/' + id);
   }
 }

@@ -5,7 +5,11 @@
         <h2>Kara Liste</h2>
       </div>
       <div>
-        <button type="button" class="btn btn-outline-success shadow m-2" routerLink="blacklist-add">
+        <button
+          type="button"
+          class="btn btn-outline-success shadow m-2"
+          routerLink="blacklist-add"
+        >
           Kara Listeye Ekle
         </button>
       </div>
@@ -14,10 +18,12 @@
       <table class="table">
         <thead>
           <tr>
-            <th scope="col" style="text-align:center;">Sıra Numarası</th>
-            <th scope="col" style="text-align:center;">Aday Numarası</th>
-            <th scope="col" style="text-align:center;">Tarih</th>
-            <th scope="col" style="text-align:center;">Kara Listeye Alınma Sebebi</th>
+            <th scope="col" style="text-align: center">Sıra Numarası</th>
+            <th scope="col" style="text-align: center">Aday Numarası</th>
+            <th scope="col" style="text-align: center">Tarih</th>
+            <th scope="col" style="text-align: center">
+              Kara Listeye Alınma Sebebi
+            </th>
             <th></th>
             <th></th>
             <th></th>
@@ -25,24 +31,34 @@
         </thead>
         <tbody>
           <tr *ngFor="let blacklist of blacklists">
-            <td style="text-align:center;">{{ blacklist.id }}</td>
-            <td style="text-align:center;">{{ blacklist.applicantId }}</td>
-            <td style="text-align:center;">{{ blacklist.date }}</td>
-            <td style="text-align:center;">{{ blacklist.reason }}</td>
+            <td style="text-align: center">{{ blacklist.id }}</td>
+            <td style="text-align: center">{{ blacklist.applicantId }}</td>
+            <td style="text-align: center">{{ blacklist.date }}</td>
+            <td style="text-align: center">{{ blacklist.reason }}</td>
             <td>
-              <button type="button" class="btn btn-outline-secondary shadow m-2"
-                routerLink="blacklist-detail/{{ blacklist.id }}">
+              <button
+                type="button"
+                class="btn btn-outline-secondary shadow m-2"
+                routerLink="blacklist-detail/{{ blacklist.id }}"
+              >
                 Detay
               </button>
             </td>
             <td>
-              <button type="button" class="btn btn-outline-warning shadow m-2"
-                routerLink="blacklist-update/{{ blacklist.id }}">
+              <button
+                type="button"
+                class="btn btn-outline-warning shadow m-2"
+                routerLink="blacklist-update/{{ blacklist.id }}"
+              >
                 Düzenle
               </button>
             </td>
             <td>
-              <button type="button" class="btn btn-outline-danger shadow m-2" (click)="deleteBlackList(blacklist)">
+              <button
+                type="button"
+                class="btn btn-outline-danger shadow m-2"
+                (click)="deleteBlackList(blacklist.id)"
+              >
                 Sil
               </button>
             </td>

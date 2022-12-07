@@ -28,7 +28,10 @@ export class ApplicantService {
   updateApplicant(id: number, applicant: any) {
     return this.httpClient.put(this.apiUrl + '/' + id, applicant);
   }
-  deleteApplicant(applicant: IGetAllApplicantResponse) {
-    return this.httpClient.delete(this.apiUrl + '/' + applicant.id);
+  // deleteApplicant(applicant: IGetAllApplicantResponse) {
+  //   return this.httpClient.delete(this.apiUrl + '/' + applicant.id);
+  // }
+  deleteApplicant(id: number) {
+    return this.httpClient.delete(this.apiUrl + '/' + id);
   }
 }

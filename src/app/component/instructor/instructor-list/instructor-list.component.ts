@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2';
 import { ToastrService } from 'ngx-toastr';
 import { ActivatedRoute, Router } from '@angular/router';
 import { InstructorService } from './../../../services/instructor/instructor.service';
@@ -27,10 +28,49 @@ export class InstructorListComponent implements OnInit {
       .getAllInstructor()
       .subscribe((data) => (this.instructors = data));
   }
-  deleteInsturctor(employee: IGetAllInstructorResponse) {
-    this.instructors = this.instructors.filter((a) => a !== employee);
-    this.instructorService.deleteInstructor(employee).subscribe();
-    this.toastrService.error('Çalışan Silme Başarılı');
-    this.router.navigate(['/admin/admin-instructor']);
+  // deleteInsturctor(employee: IGetAllInstructorResponse) {
+  //   this.instructors = this.instructors.filter((a) => a !== employee);
+  //   this.instructorService.deleteInstructor(employee).subscribe();
+  //   this.toastrService.error('Çalışan Silme Başarılı');
+  //   this.router.navigate(['/admin/admin-instructor']);
+  // }
+  deleteInstructor(id: number) {
+    const swalWithBootstrapButtons = Swal.mixin({
+      customClass: {
+        confirmButton: 'btn bg-gradient-info active ms-3',
+        cancelButton: 'btn bg-gradient-primary active',
+      },
+      buttonsStyling: false,
+    });
+    swalWithBootstrapButtons
+      .fire({
+        title: 'Emin misiniz ?',
+        text: 'Bu işlem geri alınamaz',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Evet',
+        cancelButtonText: 'Hayır',
+        reverseButtons: true,
+      })
+      .then((result) => {
+        if (result.isConfirmed) {
+          this.instructorService.deleteInstructor(id).subscribe(() => {
+            swalWithBootstrapButtons.fire(
+              'Silindi',
+              'İstediğiniz veri silme işlemi tamamlandı.',
+              'success'
+            );
+          }),
+            setTimeout(() => {
+              window.location.reload();
+            }, 1000);
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+          swalWithBootstrapButtons.fire(
+            'İptal edildi',
+            'Veriniz hala Güvende',
+            'error'
+          );
+        }
+      });
   }
 }

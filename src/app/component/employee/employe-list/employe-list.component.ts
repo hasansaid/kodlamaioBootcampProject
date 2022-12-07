@@ -68,7 +68,7 @@ export class EmployeListComponent implements OnInit {
           }),
             setTimeout(() => {
               window.location.reload();
-            }, 0);
+            }, 1000);
         } else if (result.dismiss === Swal.DismissReason.cancel) {
           swalWithBootstrapButtons.fire(
             'İptal edildi',

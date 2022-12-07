@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2';
 import { Observable } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
 import { ApplicationService } from './../../../services/application/application.service';
@@ -29,9 +30,48 @@ export class ApplicationListComponent implements OnInit {
       .getAllApplication()
       .subscribe((data) => (this.applications = data));
   }
-  deleteApplication(applications: IGetAllApplicationResponse) {
-    this.applications = this.applications.filter((a) => a !== applications);
-    this.applicationService.deleteApplication(applications).subscribe();
-    this.toastrService.error('Başvuru Silindi');
+  // deleteApplication(applications: IGetAllApplicationResponse) {
+  //   this.applications = this.applications.filter((a) => a !== applications);
+  //   this.applicationService.deleteApplication(applications).subscribe();
+  //   this.toastrService.error('Başvuru Silindi');
+  // }
+  deleteApplication(id: number) {
+    const swalWithBootstrapButtons = Swal.mixin({
+      customClass: {
+        confirmButton: 'btn bg-gradient-info active ms-3',
+        cancelButton: 'btn bg-gradient-primary active',
+      },
+      buttonsStyling: false,
+    });
+    swalWithBootstrapButtons
+      .fire({
+        title: 'Emin misiniz ?',
+        text: 'Bu işlem geri alınamaz',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Evet',
+        cancelButtonText: 'Hayır',
+        reverseButtons: true,
+      })
+      .then((result) => {
+        if (result.isConfirmed) {
+          this.applicationService.deleteApplication(id).subscribe(() => {
+            swalWithBootstrapButtons.fire(
+              'Silindi',
+              'İstediğiniz veri silme işlemi tamamlandı',
+              'success'
+            );
+          }),
+            setTimeout(() => {
+              window.location.reload();
+            }, 1000);
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+          swalWithBootstrapButtons.fire(
+            'İptal edildi',
+            'Veriniz hala Güvende',
+            'error'
+          );
+        }
+      });
   }
 }

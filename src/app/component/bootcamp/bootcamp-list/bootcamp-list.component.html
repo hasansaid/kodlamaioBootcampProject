@@ -4,7 +4,11 @@
       <h2>Bootcamp Listesi</h2>
     </div>
     <div>
-      <button type="button" class="btn btn-outline-success m-2 shadow" routerLink="bootcamp-add">
+      <button
+        type="button"
+        class="btn btn-outline-success m-2 shadow"
+        routerLink="bootcamp-add"
+      >
         Bootcamp Ekle
       </button>
     </div>
@@ -13,12 +17,12 @@
     <table class="table">
       <thead>
         <tr>
-          <th scope="col" style="text-align:center;">Id</th>
-          <th scope="col" style="text-align:center;">Eğitmen</th>
-          <th scope="col" style="text-align:center;">İsim</th>
-          <th scope="col" style="text-align:center;">Başlangıç Tarihi</th>
-          <th scope="col" style="text-align:center;">Bitiş Tarihi</th>
-          <th scope="col" style="text-align:center;">Durumu</th>
+          <th scope="col" style="text-align: center">Id</th>
+          <th scope="col" style="text-align: center">Eğitmen</th>
+          <th scope="col" style="text-align: center">İsim</th>
+          <th scope="col" style="text-align: center">Başlangıç Tarihi</th>
+          <th scope="col" style="text-align: center">Bitiş Tarihi</th>
+          <th scope="col" style="text-align: center">Durumu</th>
           <th></th>
           <th></th>
           <th></th>
@@ -26,27 +30,37 @@
       </thead>
       <tbody>
         <tr *ngFor="let bootcamp of bootcamps">
-          <td style="text-align:center;">{{ bootcamp.id }}</td>
-          <td style="text-align:center;">{{ bootcamp.instructorName }}</td>
-          <td style="text-align:center;">{{ bootcamp.name }}</td>
-          <td style="text-align:center;">{{ bootcamp.dateStart }}</td>
-          <td style="text-align:center;">{{ bootcamp.dateEnd }}</td>
-          <td style="text-align:center;">{{ bootcamp.state }}</td>
+          <td style="text-align: center">{{ bootcamp.id }}</td>
+          <td style="text-align: center">{{ bootcamp.instructorName }}</td>
+          <td style="text-align: center">{{ bootcamp.name }}</td>
+          <td style="text-align: center">{{ bootcamp.dateStart }}</td>
+          <td style="text-align: center">{{ bootcamp.dateEnd }}</td>
+          <td style="text-align: center">{{ bootcamp.state }}</td>
 
           <td>
-            <button type="button" class="btn btn-outline-secondary m-2 shadow"
-              routerLink="bootcamp-detail/{{ bootcamp.id }}">
+            <button
+              type="button"
+              class="btn btn-outline-secondary m-2 shadow"
+              routerLink="bootcamp-detail/{{ bootcamp.id }}"
+            >
               Detay
             </button>
           </td>
           <td>
-            <button type="button" class="btn btn-outline-warning m-2 shadow"
-              routerLink="bootcamp-update/{{ bootcamp.id }}">
+            <button
+              type="button"
+              class="btn btn-outline-warning m-2 shadow"
+              routerLink="bootcamp-update/{{ bootcamp.id }}"
+            >
               Düzenle
             </button>
           </td>
           <td>
-            <button type="button" class="btn btn-outline-danger m-2 shadow" (click)="deleteBootcamp(bootcamp)">
+            <button
+              type="button"
+              class="btn btn-outline-danger m-2 shadow"
+              (click)="deleteBootcamp(bootcamp.id)"
+            >
               Sil
             </button>
           </td>
