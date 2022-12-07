@@ -51,9 +51,8 @@ export class BlacklistAddComponent implements OnInit {
 
   createAddBlackListForm() {
     this.blackListAddForm = this.formBuilder.group({
-      applicantId: [''],
-      date: [''],
-      reason: [''],
+      date: [this.date],
+      reason: ['', Validators.required],
     });
   }
 
@@ -77,6 +76,7 @@ export class BlacklistAddComponent implements OnInit {
             .addBlackList(blackListAddRequest)
             .subscribe((data) => {
               this.toastrService.success('Kara Listeye Eklendi', 'Başarılı');
+              this.router.navigate(['admin/admin-blacklist']);
             });
         });
 

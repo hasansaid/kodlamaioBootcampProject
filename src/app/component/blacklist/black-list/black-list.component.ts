@@ -41,10 +41,9 @@ export class BlackListComponent implements OnInit {
 
   removeApplicant(id: number, applicantId: number) {
     this.blacklistService.removeApplicant(id).subscribe((response) => {
-      this.toastrService.warning('Aday Silindi');
       this.applicantService.updateApplicantState(applicantId, 1).subscribe();
+      this.router.navigate(['admin/admin-applicant']);
       this.toastrService.success('Aday Kaldırıldı');
-      this.router.navigate(['admin-applicant']);
     });
   }
 

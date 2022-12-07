@@ -17,16 +17,36 @@
       "state": 1
     },
     {
-      "firstName": "asdasd",
-      "lastName": "asdasd",
-      "email": "asdfsadf",
-      "password": "asdfas",
-      "nationalIdentity": "asdfasdf",
-      "dateOfBirth": "sdfgasdf",
-      "about": "1121312",
-      "image": "asdfas",
-      "state": 1,
-      "id": 2
+      "id": 2,
+      "firstName": "ali",
+      "lastName": "Meydanlı",
+      "email": "meydanliugur@gmail.com",
+      "password": "147852",
+      "about": "Artvin Çoruh Üniversitesinden 2016 yılında mezun oldum. Frontend Developer. ",
+      "nationalIdentity": 87525696514,
+      "dateOfBirth": "25/10/1995",
+      "image": "https://png.pngtree.com/png-vector/20191110/ourlarge/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg",
+      "role": "roleApplicant",
+      "token": "aa",
+      "expiration": "aa",
+      "userId": 1,
+      "state": 1
+    },
+    {
+      "id": 3,
+      "firstName": "enes",
+      "lastName": "Meydanlı",
+      "email": "meydanliugur@gmail.com",
+      "password": "147852",
+      "about": "Artvin Çoruh Üniversitesinden 2016 yılında mezun oldum. Frontend Developer. ",
+      "nationalIdentity": 87525696514,
+      "dateOfBirth": "25/10/1995",
+      "image": "https://png.pngtree.com/png-vector/20191110/ourlarge/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg",
+      "role": "roleApplicant",
+      "token": "aa",
+      "expiration": "aa",
+      "userId": 1,
+      "state": 1
     }
   ],
   "instructor": [
@@ -162,15 +182,7 @@
       "bootcampName": "Backend Bootcamp"
     }
   ],
-  "blacklist": [
-    {
-      "applicantId": "",
-      "date": "asd",
-      "reason": "asd",
-      "applicantName": "undefined undefined",
-      "id": 1
-    }
-  ],
+  "blacklist": [],
   "users": [
     {
       "id": 1,

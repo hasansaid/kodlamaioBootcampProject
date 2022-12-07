@@ -1,4 +1,4 @@
-<!-- <html>
+<html>
 
 <head>
   <meta charset="utf-8" />
@@ -7,16 +7,12 @@
 </head>
 
 <body>
-  <form [formGroup]="blackListAddForm" method="post" class="shadow mt-4 border">
+  <form *ngIf="blackListAddForm" [formGroup]="blackListAddForm" method="post" class="shadow mt-4 border">
     <h1>Kara Listeye Ekle</h1>
 
+
     <fieldset>
-      <label for="name">Eklenen Aday Id:</label>
-      <input formControlName="applicantId" type="text" id="name" name="user_name" />
-    </fieldset>
-    <fieldset>
-      <label for="name">Tarih:</label>
-      <input formControlName="date" type="text" id="name" name="user_name" />
+      <label for="name">Kara Listeye Eklenme Tarihi: {{date}} </label>
     </fieldset>
     <fieldset>
       <label for="name">Eklenme Sebebi:</label>
@@ -25,12 +21,12 @@
 
     <div class="row">
       <div class="col-md-6">
-        <button class="button" routerLink="/admin/admin-blacklist" type="submit">
+        <button class="button" routerLink="/admin/admin-applicant" type="submit">
           Geri Dön
         </button>
       </div>
       <div class="col-md-6">
-        <button class="buttonA" (click)="add()" type="submit">
+        <button class="buttonA" (click)="addBlackList()" type="submit">
           Kara Listeye Ekle
         </button>
       </div>
@@ -38,13 +34,13 @@
   </form>
 </body>
 
-</html> -->
+</html>
 
-<form class="form-sample" [formGroup]="blackListAddForm" *ngIf="blackListAddForm">
+<!-- <form class="form-sample" [formGroup]="blackListAddForm" >
   <div class="form-group">
     <input type="text" formControlName="date">
     <label for="reason">Reason</label>
     <textarea class="form-control" id="reason" rows="4" formControlName="reason"></textarea>
   </div>
-  <button type="button" class="btn btn-info" (click)="addBlackList()">Ekle</button>
-</form>
+  <button type="button" class="btn btn-info" >Ekle</button>
+</form> -->
