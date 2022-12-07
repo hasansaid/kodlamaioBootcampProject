@@ -8,11 +8,13 @@ import { Injectable } from '@angular/core';
 })
 export class LoginEmployeeService {
   apiUrl: string = 'http://localhost:3000/employee';
+  isLogin = false;
+  roleAs: string;
   constructor(private httpClient: HttpClient) {}
 
   loginEmployee(user: LoginEmployeeModel) {
     return this.httpClient.get<ITokenModel[]>(
-      this.apiUrl + '/?email=' + user.email + '&password=' + user.password
+      this.apiUrl + '?email=' + user.email + '&password=' + user.password
     );
   }
 
@@ -22,6 +24,17 @@ export class LoginEmployeeService {
     } else {
       return false;
     }
+  }
+  roleLogin(value: string) {
+    this.isLogin = true;
+    this.roleAs = value;
+    localStorage.setItem('role', this.roleAs);
+    return { success: this.isLogin, role: this.roleAs };
+  }
+
+  getRole() {
+    this.roleAs = localStorage.getItem('role');
+    return this.roleAs;
   }
 
   logout() {

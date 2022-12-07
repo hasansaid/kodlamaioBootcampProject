@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 export class EmployeeLoginComponent implements OnInit {
   loginEmployeeForm: FormGroup;
   tokenModel: ITokenModel;
+  role: ITokenModel;
   constructor(
     private loginEmployeeService: LoginEmployeeService,
     private formBuilder: FormBuilder,
@@ -29,21 +30,43 @@ export class EmployeeLoginComponent implements OnInit {
       password: ['', Validators.required],
     });
   }
+
   loginEmployee() {
     if (this.loginEmployeeForm.valid) {
-      let loginModel: LoginEmployeeModel = this.loginEmployeeForm.value;
-      this.loginEmployeeService.loginEmployee(loginModel).subscribe((data) => {
-        if (data.length > 0) {
-          this.tokenModel = data[0];
-          localStorage.setItem('token', this.tokenModel.token);
-          this.router.navigate(['admin']);
-          alert('Giriş Başarılı');
-        } else {
-          alert('Başarısız');
-        }
-      });
+      this.loginEmployeeService
+        .loginEmployee(this.loginEmployeeForm.value)
+        .subscribe((data) => {
+          if (data) {
+            alert('Giriş Başarılı');
+            data[0].role == 'roleApplicant'
+              ? this.router.navigate(['applicant'])
+              : data[0].role == 'roleEmployee'
+              ? this.router.navigate(['admin'])
+              : this.router.navigate(['instructor']);
+            localStorage.setItem('token', data[0].token);
+            localStorage.setItem('role', data[0].role);
+          } else {
+            alert('Giriş Başarısız');
+          }
+        });
     }
   }
+
+  // loginEmployee() {
+  //   if (this.loginEmployeeForm.valid) {
+  //     let loginModel: LoginEmployeeModel = this.loginEmployeeForm.value;
+  //     this.loginEmployeeService.loginEmployee(loginModel).subscribe((data) => {
+  //       if (data.length > 0) {
+  //         this.tokenModel = data[0];
+  //         localStorage.setItem('token', this.tokenModel.token);
+  //         this.router.navigate(['admin']);
+  //         alert('Giriş Başarılı');
+  //       } else {
+  //         alert('Başarısız');
+  //       }
+  //     });
+  //   }
+  // }
 }
 // this.loginEmployeeService
 // .loginEmployee(this.loginEmployeeForm.value)

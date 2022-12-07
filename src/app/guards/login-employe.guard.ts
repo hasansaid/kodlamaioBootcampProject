@@ -13,6 +13,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class LoginEmployeGuard implements CanActivate {
+  userRoleIn = '';
   constructor(
     private loginEmployeeService: LoginEmployeeService,
     private router: Router
@@ -26,13 +27,28 @@ export class LoginEmployeGuard implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    let isAuthenticated = this.loginEmployeeService.isAuthenticated();
-    if (isAuthenticated == true) {
+    let url: string = state.url;
+    return this.chechUserLogin(route, url);
+  }
+
+  chechUserLogin(route: ActivatedRouteSnapshot, url: any): boolean {
+    if (this.loginEmployeeService.isAuthenticated()) {
+      const userRole = this.loginEmployeeService.getRole();
+      this.userRoleIn = userRole;
+      if (route.data['role'] && route.data['role'].indexOf(userRole) === -1) {
+        return false;
+      }
       return true;
-    } else {
-      this.router.navigate(['login']);
-      console.log('Sisteme Giriş Yapınız');
-      return false;
     }
+    return false;
   }
 }
+
+// let isAuthenticated = this.loginEmployeeService.isAuthenticated();
+// if (isAuthenticated == true) {
+//   return true;
+// } else {
+//   this.router.navigate(['login']);
+//   console.log('Sisteme Giriş Yapınız');
+//   return false;
+// }

@@ -179,6 +179,9 @@ const routes: Routes = [
         component: EmployeeUpdateComponent,
       },
     ],
+    data: {
+      role: 'roleEmployee',
+    },
   },
 
   {
@@ -190,6 +193,9 @@ const routes: Routes = [
       { path: 'instructor-bootcamp', component: InstructorBootcampComponent },
       { path: 'instructor-applicant', component: InstructorApplicantComponent },
     ],
+    data: {
+      role: 'roleInstructor',
+    },
   },
 
   {
@@ -204,6 +210,9 @@ const routes: Routes = [
         component: ApplicantNotificationComponent,
       },
     ],
+    data: {
+      role: 'roleApplicant',
+    },
   },
   {
     path: 'employee-login',

@@ -9,31 +9,8 @@
       "about": "Artvin Çoruh Üniversitesinden 2016 yılında mezun oldum. Frontend Developer. ",
       "nationalIdentity": 87525696514,
       "dateOfBirth": "25/10/1995",
-      "image": "https://png.pngtree.com/png-vector/20191110/ourlarge/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg"
-    },
-    {
-      "id": 2,
-      "firstName": "Seyfettin",
-      "lastName": "Turan",
-      "email": "turanseyfo@gmail.com",
-      "password": "123",
-      "about": "Bartın Üniversitesinden 2021 yılında mezun oldum. Frontend Developer. ",
-      "nationalIdentity": 87525696514,
-      "dateOfBirth": "25/10/1995",
-      "token": "HRTRASD",
-      "expiration": "01/01/2023",
-      "image": ""
-    },
-    {
-      "firstName": "asdas",
-      "lastName": "asdas",
-      "email": "asdasd",
-      "password": "asdas",
-      "nationalIdentity": "asdasdas",
-      "dateOfBirth": "sdasd",
-      "about": "asdasd",
-      "image": "C:\\fakepath\\ben.jfif",
-      "id": 3
+      "image": "https://png.pngtree.com/png-vector/20191110/ourlarge/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg",
+      "role": "roleApplicant"
     }
   ],
   "instructor": [
@@ -44,10 +21,9 @@
       "password": "123",
       "companyName": "kodlamaio",
       "id": 1,
-      "token": "ASDASD",
-      "expiration": "01/01/2023",
       "image": "",
-      "dateOfBirth": "19/07/1991"
+      "dateOfBirth": "19/07/1991",
+      "role": "roleInstructor"
     },
     {
       "firstName": "Salih",
@@ -58,7 +34,8 @@
       "token": "HRTRASD",
       "expiration": "01/01/2023",
       "image": "",
-      "dateOfBirth": "19/07/1991"
+      "dateOfBirth": "19/07/1991",
+      "role": "roleInstructor"
     },
     {
       "firstName": "Engin",
@@ -69,7 +46,8 @@
       "token": "ASLKDASKLD",
       "expiration": "01/01/2023",
       "image": "",
-      "dateOfBirth": "19/07/1991"
+      "dateOfBirth": "19/07/1991",
+      "role": "roleInstructor"
     }
   ],
   "employee": [
@@ -83,7 +61,8 @@
       "dateOfBirth": "19/07/1991",
       "position": "Müdür",
       "token": "MMMUUDDDRRR",
-      "image": ""
+      "image": "",
+      "role": "roleEmployee"
     }
   ],
   "bootcamp": [
