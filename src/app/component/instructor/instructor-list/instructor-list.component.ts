@@ -12,6 +12,7 @@ import { IGetAllInstructorResponse } from 'src/app/models/response/instructor/ge
 })
 export class InstructorListComponent implements OnInit {
   instructors: IGetAllInstructorResponse[] = [];
+  filterInstructor: string;
   constructor(
     private instructorService: InstructorService,
     private activatedRoute: ActivatedRoute,

@@ -33,7 +33,7 @@ img {
 }
 
 .profile-card .profile-body .author-img {
-  margin-top: -20px;
+  margin-top: -50px;
   margin-bottom: 20px;
 }
 .profile-card .profile-body .author-img img {
@@ -85,4 +85,10 @@ img {
 .social-icon ul li a i:hover,
 .social-icon ul li a:hover i {
   color: var(--white);
+}
+.hov:hover {
+  transform: scale(1.1);
+}
+.hov {
+  transition: all 0.9s;
 }

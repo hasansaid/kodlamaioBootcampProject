@@ -23,13 +23,20 @@
           <th scope="col" style="text-align: center">Başlangıç Tarihi</th>
           <th scope="col" style="text-align: center">Bitiş Tarihi</th>
           <th scope="col" style="text-align: center">Durumu</th>
-          <th></th>
-          <th></th>
-          <th></th>
+
+          <th colspan="3">
+            <input
+              type="text"
+              placeholder="Bootcamp arayın..."
+              class="form-control"
+              id="brandFilter"
+              [(ngModel)]="filterText"
+            />
+          </th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let bootcamp of bootcamps">
+        <tr *ngFor="let bootcamp of bootcamps | bootcampfilter : filterText">
           <td style="text-align: center">{{ bootcamp.id }}</td>
           <td style="text-align: center">{{ bootcamp.instructorName }}</td>
           <td style="text-align: center">{{ bootcamp.name }}</td>

@@ -55,6 +55,12 @@ import { ApplicantBootcampComponent } from './component/userApplicant/applicant-
 import { ApplicantNotificationComponent } from './component/userApplicant/applicant-notification/applicant-notification.component';
 import { AdminSidebarComponent } from './component/admin/admin-sidebar/admin-sidebar/admin-sidebar.component';
 import { HomeBootcampDetailComponent } from './component/home/home-bootcamp-detail/home-bootcamp-detail/home-bootcamp-detail.component';
+import { BootcampfilterPipe } from './pipes/bootcampfilter.pipe';
+import { InstructorfilterPipe } from './pipes/instructorfilter.pipe';
+import { EmployeefilterPipe } from './pipes/employeefilter.pipe';
+import { BlacklistfilterPipe } from './pipes/blacklistfilter.pipe';
+import { ApplicationfilterPipe } from './pipes/applicationfilter.pipe';
+import { ApplicantfilterPipe } from './pipes/applicantfilter.pipe';
 
 @NgModule({
   declarations: [
@@ -106,6 +112,12 @@ import { HomeBootcampDetailComponent } from './component/home/home-bootcamp-deta
     ApplicantNotificationComponent,
     AdminSidebarComponent,
     HomeBootcampDetailComponent,
+    BootcampfilterPipe,
+    InstructorfilterPipe,
+    EmployeefilterPipe,
+    BlacklistfilterPipe,
+    ApplicationfilterPipe,
+    ApplicantfilterPipe,
   ],
   imports: [
     BrowserModule,

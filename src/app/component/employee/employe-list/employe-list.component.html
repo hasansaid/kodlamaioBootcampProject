@@ -22,13 +22,22 @@
           <th scope="col" style="text-align: center">Soyadı</th>
           <th scope="col" style="text-align: center">E-Mail</th>
           <th scope="col" style="text-align: center">Pozisyon</th>
-          <th></th>
-          <th></th>
-          <th></th>
+          <th colspan="3">
+            <input
+              type="text"
+              placeholder="Çalışan Arayın..."
+              class="form-control"
+              [(ngModel)]="filterTextEmployee"
+            />
+          </th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let employee of employees">
+        <tr
+          *ngFor="
+            let employee of employees | employeefilter : filterTextEmployee
+          "
+        >
           <td style="text-align: center">{{ employee.id }}</td>
           <td style="text-align: center">{{ employee.firstName }}</td>
           <td style="text-align: center">{{ employee.lastName }}</td>

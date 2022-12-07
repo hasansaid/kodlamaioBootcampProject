@@ -24,13 +24,24 @@
             <th scope="col" style="text-align: center">Email</th>
             <th scope="col" style="text-align: center">Password</th>
             <th scope="col" style="text-align: center">CompanyName</th>
-            <th></th>
-            <th></th>
-            <th></th>
+            <th colspan="3">
+              <input
+                type="text"
+                placeholder="Bootcamp arayın..."
+                class="form-control"
+                id="brandFilter"
+                [(ngModel)]="filterInstructor"
+              />
+            </th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let instructor of instructors">
+          <tr
+            *ngFor="
+              let instructor of instructors
+                | instructorfilter : filterInstructor
+            "
+          >
             <td style="text-align: center">{{ instructor.id }}</td>
             <td style="text-align: center">{{ instructor.firstName }}</td>
             <td style="text-align: center">{{ instructor.lastName }}</td>

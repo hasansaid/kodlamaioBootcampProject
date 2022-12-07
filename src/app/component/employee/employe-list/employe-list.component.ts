@@ -15,6 +15,7 @@ import Swal from 'sweetalert2';
 export class EmployeListComponent implements OnInit {
   modalRef?: BsModalRef;
   employees: IGetAllEmployeeResponse[] = [];
+  filterTextEmployee: string;
   constructor(
     private employeeService: EmployeeService,
     private activatedRoute: ActivatedRoute,

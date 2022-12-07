@@ -1,11 +1,3 @@
-.nav-item:hover,
-.active {
-  border-bottom: 2px solid black;
-  cursor: pointer;
-}
-.asd {
-  z-index: 999;
-}
 * {
   margin: 0;
 }

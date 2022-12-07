@@ -12,6 +12,7 @@ import Swal from 'sweetalert2';
 })
 export class BootcampListComponent implements OnInit {
   bootcamps: IGetAllBootcampResponse[] = [];
+  filterText: string;
 
   constructor(
     private bootcampService: BootcampService,
