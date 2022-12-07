@@ -45,6 +45,8 @@ export class EmployeeLoginComponent implements OnInit {
               : data[0].role == 'roleEmployee'
               ? this.router.navigate(['admin'])
               : this.router.navigate(['instructor']);
+            console.log(data);
+
             localStorage.setItem('token', data[0].token);
             localStorage.setItem('role', data[0].role);
           } else {

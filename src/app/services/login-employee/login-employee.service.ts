@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class LoginEmployeeService {
-  apiUrl: string = 'http://localhost:3000/employee';
+  apiUrl: string = 'http://localhost:3000/users';
   isLogin = false;
   roleAs: string;
   constructor(private httpClient: HttpClient) {}
