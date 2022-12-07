@@ -38,6 +38,6 @@ export class LoginEmployeeService {
   }
 
   logout() {
-    localStorage.removeItem('token');
+    localStorage.clear();
   }
 }

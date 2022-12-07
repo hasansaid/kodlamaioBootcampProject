@@ -133,12 +133,12 @@
       "bootcampName": "Java Bootcamp"
     },
     {
-      "userId": 2,
+      "userId": "1",
       "bootcampId": 1,
       "state": 1,
-      "id": 2,
-      "userName": "Seyfettin Turan",
-      "bootcampName": "FrontEnd Bootcamp"
+      "bootcampName": "Frontend Bootcamp",
+      "userName": "Uğur Meydanlı",
+      "id": 2
     },
     {
       "userId": 3,
