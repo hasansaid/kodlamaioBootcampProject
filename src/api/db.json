@@ -20,8 +20,8 @@
       "id": 2,
       "firstName": "ali",
       "lastName": "Meydanlı",
-      "email": "meydanliugur@gmail.com",
-      "password": "147852",
+      "email": "ali@gmail.com",
+      "password": "123",
       "about": "Artvin Çoruh Üniversitesinden 2016 yılında mezun oldum. Frontend Developer. ",
       "nationalIdentity": 87525696514,
       "dateOfBirth": "25/10/1995",
@@ -29,7 +29,7 @@
       "role": "roleApplicant",
       "token": "aa",
       "expiration": "aa",
-      "userId": 1,
+      "userId": 6,
       "state": 1
     },
     {
@@ -158,22 +158,6 @@
   ],
   "application": [
     {
-      "bootcampId": 1,
-      "bootcampName": "Frontend Bootcamp",
-      "userName": "Hasan Sertkaya",
-      "state": 1,
-      "userId": "2",
-      "id": 1
-    },
-    {
-      "bootcampId": 1,
-      "bootcampName": "Frontend Bootcamp",
-      "userName": "Hasan Sertkaya",
-      "state": 1,
-      "userId": "2",
-      "id": 2
-    },
-    {
       "bootcampId": 2,
       "bootcampName": "Backend Bootcamp",
       "userName": "Salih Yılmaz",
@@ -202,7 +186,7 @@
       "bootcampName": "Frontend Bootcamp",
       "userName": "Hasan Sertkaya",
       "state": 1,
-      "userId": "1",
+      "userId": "6",
       "id": 6
     }
   ],
@@ -257,6 +241,16 @@
       "expiration": "aa",
       "token": "aa",
       "role": "roleEmployee"
+    },
+    {
+      "id": 6,
+      "name": "ali",
+      "lastName": "Meydanlı",
+      "email": "ali@gmail.com",
+      "password": "123",
+      "expiration": "aa",
+      "token": "aa",
+      "role": "roleApplicant"
     }
   ]
 }
