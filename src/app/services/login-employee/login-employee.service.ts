@@ -10,6 +10,7 @@ export class LoginEmployeeService {
   apiUrl: string = 'http://localhost:3000/users';
   isLogin = false;
   roleAs: string;
+  idAs: string;
   constructor(private httpClient: HttpClient) {}
 
   loginEmployee(user: LoginEmployeeModel) {
@@ -35,6 +36,10 @@ export class LoginEmployeeService {
   getRole() {
     this.roleAs = localStorage.getItem('role');
     return this.roleAs;
+  }
+  getUserId() {
+    this.idAs = localStorage.getItem('userId');
+    return this.idAs;
   }
 
   logout() {

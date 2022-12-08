@@ -1,1 +1,63 @@
-<p>applicant-notification works!</p>
+<div class="row">
+    <!-- <div class="col-md-6">
+        <div class="bg-light rounded border p-5 shadow-lg mt-4" style="height: 100%">
+            <div style="display: flex; justify-content: space-evenly; margin-top: 10px">
+                <div>
+                    <h2>Duyurular</h2>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col" style="text-align: center">Önemli!!</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="color: red; text-align: center">Frontend bootcamp başvuru bitişine az kaldı.</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div> -->
+    <div class="col-md-12">
+        <div class="bg-light rounded border p-5 shadow-lg mt-4" style="height: 100%">
+            <div style="display: flex; justify-content: space-evenly; margin-top: 10px">
+                <div>
+                    <h2>Başvuru Listesi</h2>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col" style="text-align: center">Başvurulan Bootcamp</th>
+                            <th scope="col" style="text-align: center">Eğitmen</th>
+                            <th scope="col" style="text-align: center">Başvuru Sonucu</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let application of applications">
+                            <!-- <td style="text-align: center">{{application.id}}</td> -->
+                            <td style="text-align: center">{{application.bootcampName}}</td>
+                            <td style="text-align: center">{{application.userName}}</td>
+                            <td style="text-align: center">{{application.state==1?"Sonuçlandırılmadı":"Reddedildi"}}
+                            </td>
+                            <td>
+                                <button (click)="delete(application.id)" type="button"
+                                    class="btn btn-outline-danger m-2 shadow">
+                                    Başvuruyu İptal Et
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

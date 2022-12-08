@@ -19,6 +19,11 @@ export class ApplicationService {
   getAllApplication(): Observable<IGetAllApplicationResponse[]> {
     return this.httpClient.get<IGetAllApplicationResponse[]>(this.apiUrl);
   }
+  getId(id: string) {
+    return this.httpClient.get<IGetAllApplicationResponse[]>(
+      this.apiUrl + '?userId=' + id
+    );
+  }
 
   getApplication(id: number): Observable<IGetApplicationResponse> {
     return this.httpClient.get<IGetApplicationResponse>(this.apiUrl + '/' + id);

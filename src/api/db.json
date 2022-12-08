@@ -108,17 +108,6 @@
       "image": "",
       "role": "roleEmployee",
       "userId": 5
-    },
-    {
-      "firstName": "asda",
-      "lastName": "asda",
-      "email": "asdas",
-      "password": "dasda",
-      "nationalIdentity": "asdasd",
-      "dateOfBirth": "sdasd",
-      "position": "dasdasda",
-      "image": "asdas",
-      "id": 2
     }
   ],
   "bootcamp": [
@@ -149,7 +138,7 @@
       "name": "Java Bootcamp",
       "dateStart": "30.11.2022",
       "dateEnd": "30.12.2022",
-      "state": "1",
+      "state": "2",
       "about": "Java eğitimimiz başlamak üzere..",
       "image": "resim",
       "instructorName": "Engin Demiroğ",
@@ -169,28 +158,52 @@
   ],
   "application": [
     {
-      "userId": 1,
-      "bootcampId": 3,
-      "state": 2,
-      "id": 1,
-      "userName": "Uğur Meydanlı",
-      "bootcampName": "Java Bootcamp"
+      "bootcampId": 1,
+      "bootcampName": "Frontend Bootcamp",
+      "userName": "Hasan Sertkaya",
+      "state": 1,
+      "userId": "2",
+      "id": 1
     },
     {
-      "userId": "1",
       "bootcampId": 1,
-      "state": 1,
       "bootcampName": "Frontend Bootcamp",
-      "userName": "Uğur Meydanlı",
+      "userName": "Hasan Sertkaya",
+      "state": 1,
+      "userId": "2",
       "id": 2
     },
     {
-      "userId": 3,
       "bootcampId": 2,
+      "bootcampName": "Backend Bootcamp",
+      "userName": "Salih Yılmaz",
       "state": 1,
-      "id": 3,
-      "userName": "Seyfettin Turan",
-      "bootcampName": "Backend Bootcamp"
+      "userId": "1",
+      "id": 3
+    },
+    {
+      "bootcampId": 4,
+      "bootcampName": "Frontend Bootcamp",
+      "userName": "Engin Demiroğ",
+      "state": 1,
+      "userId": "1",
+      "id": 4
+    },
+    {
+      "bootcampId": 1,
+      "bootcampName": "Frontend Bootcamp",
+      "userName": "Hasan Sertkaya",
+      "state": 1,
+      "userId": "1",
+      "id": 5
+    },
+    {
+      "bootcampId": 1,
+      "bootcampName": "Frontend Bootcamp",
+      "userName": "Hasan Sertkaya",
+      "state": 1,
+      "userId": "1",
+      "id": 6
     }
   ],
   "blacklist": [],

@@ -1,1 +1,38 @@
-<p>applicant-bootcamp works!</p>
+<div class="bg-light rounded border p-5 shadow-lg mt-4" style="height: 100%">
+    <div style="display: flex; justify-content: space-evenly; margin-top: 10px">
+        <div>
+            <h2>Bootcamp Listesi</h2>
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col" style="text-align: center">Bootcamp Numara</th>
+                    <th scope="col" style="text-align: center">Eğitmen</th>
+                    <th scope="col" style="text-align: center">İsim</th>
+                    <th scope="col" style="text-align: center">Başlangıç Tarihi</th>
+                    <th scope="col" style="text-align: center">Bitiş Tarihi</th>
+                    <th scope="col" style="text-align: center">Durumu</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let bootcamp of bootcamps">
+                    <td style="text-align: center">{{ bootcamp.id }}</td>
+                    <td style="text-align: center">{{ bootcamp.instructorName }}</td>
+                    <td style="text-align: center">{{ bootcamp.name }}</td>
+                    <td style="text-align: center">{{ bootcamp.dateStart }}</td>
+                    <td style="text-align: center">{{ bootcamp.dateEnd }}</td>
+                    <td style="text-align: center">{{bootcamp.state==1?"Aktif":"Aktif Değil"}} </td>
+                    <td>
+                        <button *ngIf="bootcamp.state==1" type="button" class="btn btn-outline-success m-2 shadow"
+                            (click)="add(bootcamp)">
+                            Başvur
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
