@@ -1,3 +1,4 @@
+import { IGetAllApplicationResponse } from './../../../models/response/application/getAllApplicationResponse';
 import { ApplicantService } from './../../../services/applicant/applicant.service';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
@@ -12,6 +13,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./applicant-bootcamp.component.css'],
 })
 export class ApplicantBootcampComponent implements OnInit {
+  controls: IGetAllApplicationResponse[] = [];
+
   bootcamps: IGetAllBootcampResponse[] = [];
   setBootcmap: IGetAllBootcampResponse;
   constructor(
@@ -45,7 +48,15 @@ export class ApplicantBootcampComponent implements OnInit {
     bootcampData.userName = this.setBootcmap.instructorName;
     bootcampData.state = 1;
     bootcampData.userId = localStorage.getItem('userId');
-
     this.applicationService.addApplication(bootcampData).subscribe();
+    // this.applicationService.getAllApplication().subscribe((data) => {
+    //   for (let i of data) {
+    //     if (i.userId) {
+
+    //       console.log(i.userId, 'merebaaa');
+    //     }
+    //   }
+    //   console.log('gelmiycem amq ');
+    // });
   }
 }
