@@ -50,6 +50,7 @@ export class EmployeeLoginComponent implements OnInit {
             localStorage.setItem('token', data[0].token);
             localStorage.setItem('role', data[0].role);
             localStorage.setItem('userId', data[0].id);
+            localStorage.setItem('instructorId', data[0].instructorId);
           } else {
             alert('Giriş Başarısız');
           }

@@ -3,4 +3,5 @@ export interface ITokenModel {
   expiration: string;
   role: string;
   id: string;
+  instructorId: string;
 }

@@ -11,6 +11,7 @@ export class LoginEmployeeService {
   isLogin = false;
   roleAs: string;
   idAs: string;
+  instructorIdAs: string;
   constructor(private httpClient: HttpClient) {}
 
   loginEmployee(user: LoginEmployeeModel) {
@@ -44,5 +45,10 @@ export class LoginEmployeeService {
 
   logout() {
     localStorage.clear();
+  }
+
+  getInstructorId() {
+    this.instructorIdAs = localStorage.getItem('instructorId');
+    return this.instructorIdAs;
   }
 }

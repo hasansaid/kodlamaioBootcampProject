@@ -19,6 +19,11 @@ export class BootcampService {
   getBootcamp(id: number): Observable<IGetBootcampResponse> {
     return this.httpClient.get<IGetBootcampResponse>(this.apiUrl + '/' + id);
   }
+  getInstructorBootcamp(id: string) {
+    return this.httpClient.get<IGetAllBootcampResponse[]>(
+      this.apiUrl + '?instructorId=' + id
+    );
+  }
   addBootcamp(bootcamp: ICreateBootcampRequest) {
     return this.httpClient.post(this.apiUrl, bootcamp);
   }

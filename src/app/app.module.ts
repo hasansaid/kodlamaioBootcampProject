@@ -61,6 +61,7 @@ import { EmployeefilterPipe } from './pipes/employeefilter.pipe';
 import { BlacklistfilterPipe } from './pipes/blacklistfilter.pipe';
 import { ApplicationfilterPipe } from './pipes/applicationfilter.pipe';
 import { ApplicantfilterPipe } from './pipes/applicantfilter.pipe';
+import { RegisterComponent } from './component/register/register.component';
 
 @NgModule({
   declarations: [
@@ -118,6 +119,7 @@ import { ApplicantfilterPipe } from './pipes/applicantfilter.pipe';
     BlacklistfilterPipe,
     ApplicationfilterPipe,
     ApplicantfilterPipe,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,

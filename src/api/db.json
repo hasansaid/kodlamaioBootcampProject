@@ -51,32 +51,24 @@
   ],
   "instructor": [
     {
-      "firstName": "Hasan",
-      "lastName": "Sertkaya",
+      "firstName": "Enes",
+      "lastName": "MALİK",
       "dateOfBirth": "19/07/1991",
-      "email": "sertkaya@gmail.com",
+      "email": "enes@gmail.com",
       "password": "123",
-      "companyName": "kodlamaio",
-      "image": "https://avatars.githubusercontent.com/u/64565872?v=4",
-      "id": 1,
-      "token": "aa",
-      "expiration": "aa",
-      "role": "roleInstructor",
-      "userId": 2
+      "companyName": "CASGEM",
+      "image": "https://i.ibb.co/N7y00pZ/bfc5bf4f-284f-42f2-a4fe-b6505576a55b.jpg",
+      "id": 1
     },
     {
-      "firstName": "Veli",
-      "lastName": "Yılmaz",
+      "firstName": "Serhat",
+      "lastName": "TAŞÇI",
       "dateOfBirth": "19/07/1991",
-      "email": "veli@gmail.com",
-      "password": null,
+      "email": "serhattasci@gmail.com",
+      "password": "123123",
       "companyName": "kodlama.io",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS809om5oOncGZdmEs22Po_ZusPXsUnUEa5ZA&usqp=CAU",
-      "id": 2,
-      "token": "aa",
-      "expiration": "aa",
-      "role": "roleInstructor",
-      "userId": 3
+      "image": "https://i.ibb.co/vvPg5dR/f27f45c7-cb00-408c-b716-4c09312c04f4.jpg",
+      "id": 2
     },
     {
       "firstName": "Engin",
@@ -91,6 +83,17 @@
       "expiration": "aa",
       "role": "roleInstructor",
       "userId": 4
+    },
+    {
+      "firstName": "İsmail",
+      "lastName": "KARAKAYA",
+      "dateOfBirth": "01.01.1990",
+      "email": "ismailkarakaya@gmail.com",
+      "password": "123",
+      "companyName": "CASGEM",
+      "nationalIdentity": "12345678911",
+      "image": "https://i.ibb.co/m8GmMZ5/3a3b7789-46d1-472f-ae39-f7eef7c6132e.jpg",
+      "id": 4
     }
   ],
   "employee": [
@@ -118,7 +121,7 @@
       "dateEnd": "15/02/2023",
       "state": 1,
       "about": "Angular ile frontend eğitimimiz başlamak üzere...",
-      "image": "asdasd",
+      "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/Zk7d1MdoSJ6cEShVbfd0",
       "instructorName": "Hasan Sertkaya",
       "id": 1
     },
@@ -129,8 +132,8 @@
       "dateEnd": "15/03/2023",
       "state": 1,
       "about": "C# ile backend eğitimimiz başlamak üzere...",
-      "image": "sds",
-      "instructorName": "Salih Yılmaz",
+      "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/qi4s19xSKCmtaaRUqUFI",
+      "instructorName": "Veli Yılmaz",
       "id": 2
     },
     {
@@ -140,7 +143,7 @@
       "dateEnd": "30.12.2022",
       "state": "2",
       "about": "Java eğitimimiz başlamak üzere..",
-      "image": "resim",
+      "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://cdn.filestackcontent.com/qUyYtyzXTrOSH2M2ApBh",
       "instructorName": "Engin Demiroğ",
       "id": 3
     },
@@ -151,7 +154,7 @@
       "dateEnd": "30.12.2022",
       "state": "1",
       "about": "React ile frontend eğitimimiz başlamak üzere...",
-      "image": "resim",
+      "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/BBLmG3XFTtm8XBTrzg4v",
       "instructorName": "Engin Demiroğ",
       "id": 4
     }
@@ -194,7 +197,8 @@
       "password": "123",
       "expiration": "aa",
       "token": "aa",
-      "role": "roleInstructor"
+      "role": "roleInstructor",
+      "instructorId": "1"
     },
     {
       "id": 3,
@@ -204,7 +208,8 @@
       "password": "123",
       "expiration": "aa",
       "token": "aa",
-      "role": "roleInstructor"
+      "role": "roleInstructor",
+      "instructorId": "2"
     },
     {
       "id": 4,
@@ -214,7 +219,8 @@
       "password": "123",
       "expiration": "aa",
       "token": "aa",
-      "role": "roleInstructor"
+      "role": "roleInstructor",
+      "instructorId": "3"
     },
     {
       "id": 5,
@@ -235,6 +241,16 @@
       "expiration": "aa",
       "token": "aa",
       "role": "roleApplicant"
+    },
+    {
+      "id": 7,
+      "name": "asda",
+      "lastName": "asda",
+      "email": "asdasd",
+      "password": "123",
+      "role": "roleApplicant",
+      "token": "aa",
+      "expiration": "20.10.2022"
     }
   ]
 }
