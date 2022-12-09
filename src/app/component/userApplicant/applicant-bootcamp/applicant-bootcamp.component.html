@@ -1,38 +1,33 @@
-<div class="bg-light rounded border p-5 shadow-lg mt-4" style="height: 100%">
-    <div style="display: flex; justify-content: space-evenly; margin-top: 10px">
-        <div>
-            <h2>Bootcamp Listesi</h2>
-        </div>
-    </div>
-    <div class="table-responsive">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col" style="text-align: center">Bootcamp Numara</th>
-                    <th scope="col" style="text-align: center">Eğitmen</th>
-                    <th scope="col" style="text-align: center">İsim</th>
-                    <th scope="col" style="text-align: center">Başlangıç Tarihi</th>
-                    <th scope="col" style="text-align: center">Bitiş Tarihi</th>
-                    <th scope="col" style="text-align: center">Durumu</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let bootcamp of bootcamps">
-                    <td style="text-align: center">{{ bootcamp.id }}</td>
-                    <td style="text-align: center">{{ bootcamp.instructorName }}</td>
-                    <td style="text-align: center">{{ bootcamp.name }}</td>
-                    <td style="text-align: center">{{ bootcamp.dateStart }}</td>
-                    <td style="text-align: center">{{ bootcamp.dateEnd }}</td>
-                    <td style="text-align: center">{{bootcamp.state==1?"Aktif":"Aktif Değil"}} </td>
-                    <td>
-                        <button *ngIf="bootcamp.state==1" type="button" class="btn btn-outline-success m-2 shadow"
+<br>
+<a name="bootcampler">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col" *ngFor="let bootcamp of bootcamps">
+            <div class="card shadow-lg rounded-4 bootcampcard">
+                <img src="{{bootcamp.image}}" class="card-img-top p-2 rounded-4" alt="..." />
+                <div class="card-body">
+                    <a name="bootcampler">
+                        <h5 class="card-title text-center">
+                            {{ bootcamp.name }}
+                        </h5>
+                    </a>
+
+                    <p class="card-text">Eğitmen: {{ bootcamp.instructorName }}</p>
+                    <p class="card-text">Detay: {{ bootcamp.about }}</p>
+                    <p class="card-text">
+                        <small class="text-muted">Başlangıç Tarihi {{ bootcamp.dateStart }}</small>
+                        <br />
+                        <small class="text-muted">Bitiş Tarihi {{ bootcamp.dateEnd }}</small>
+                        <br>
+                        <small class="text-muted" style=" text-align: center">Başvuru
+                            Durumu: {{bootcamp.state==1?"Aktif":"Aktif Değil"}}
+                        </small>
+                        <button *ngIf="bootcamp.state==1" type="button" class="btn btn-outline-success m-2 shadow ms-5"
                             (click)="add(bootcamp)">
                             Başvur
                         </button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+</a>

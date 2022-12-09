@@ -1,1 +1,26 @@
-<p>instructor-bootcamp works!</p>
+<br>
+<a name="bootcampler">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col" *ngFor="let bootcamp of bootcamps">
+            <div class="card shadow-lg rounded-4 bootcampcard">
+                <img src="https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://cdn.filestackcontent.com/ujZYJ3lwSOihtnbP9LsG"
+                    class="card-img-top p-2 rounded-4" alt="..." />
+                <div class="card-body">
+                    <a name="bootcampler">
+                        <h5 class="card-title text-center">
+                            {{ bootcamp.name }}
+                        </h5>
+                    </a>
+
+                    <p class="card-text">Eğitmen: {{ bootcamp.instructorName }}</p>
+                    <p class="card-text">Detay: {{ bootcamp.about }}</p>
+                    <p class="card-text">
+                        <small class="text-muted">Başlangıç Tarihi {{ bootcamp.dateStart }}</small>
+                        <br />
+                        <small class="text-muted">Bitiş Tarihi {{ bootcamp.dateEnd }}</small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</a>
