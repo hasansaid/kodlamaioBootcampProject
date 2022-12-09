@@ -207,7 +207,7 @@ const routes: Routes = [
     path: 'applicant',
     component: ApplicantComponent,
     children: [
-      { path: '', component: ApplicantPageComponent },
+      { path: '', component: ApplicantBootcampComponent },
       { path: 'applicant-page', component: ApplicantPageComponent },
       { path: 'applicant-bootcamp', component: ApplicantBootcampComponent },
       {
