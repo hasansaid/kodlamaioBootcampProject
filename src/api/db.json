@@ -235,6 +235,16 @@
       "expiration": "aa",
       "token": "aa",
       "role": "roleApplicant"
+    },
+    {
+      "id": 7,
+      "name": "asda",
+      "lastName": "asda",
+      "email": "asdasd",
+      "password": "123",
+      "role": "roleApplicant",
+      "token": "aa",
+      "expiration": "20.10.2022"
     }
   ]
 }

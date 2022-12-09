@@ -1,3 +1,4 @@
+import { RegisterComponent } from './component/register/register.component';
 import { HomeBootcampDetailComponent } from './component/home/home-bootcamp-detail/home-bootcamp-detail/home-bootcamp-detail.component';
 import { LoginApplicantGuard } from './guards/applicantGuard/login-applicant.guard';
 import { ApplicantNotificationComponent } from './component/userApplicant/applicant-notification/applicant-notification.component';
@@ -59,6 +60,7 @@ const routes: Routes = [
       { path: 'home-about', component: HomeAboutComponent },
       { path: 'home-contact', component: HomeContactComponent },
       { path: 'home-login-employee', component: EmployeeLoginComponent },
+      { path: 'home-register', component: RegisterComponent },
       { path: 'home-login-instructor', component: InstructorLoginComponent },
       {
         path: 'home-login-employee/home-login-instructor',

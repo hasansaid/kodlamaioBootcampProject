@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="left">
+    <div class="header">
+      <h2 class="animation a1">Giriş Ekranı</h2>
+      <h4 class="animation a2">Kullanıcı Adı ve Şifrenizi Yazınız</h4>
+    </div>
+    <div class="form">
+      <form class="login" [formGroup]="registerForm">
+        <input
+          type="text"
+          formControlName="name"
+          class="form-field animation a3"
+          placeholder="Adınız"
+        />
+        <input
+          type="text"
+          formControlName="lastName"
+          class="form-field animation a3"
+          placeholder="Soyadınız"
+        />
+        <input
+          type="email"
+          formControlName="email"
+          class="form-field animation a3"
+          placeholder="Email Adresiniz"
+        />
+        <input
+          type="password"
+          formControlName="password"
+          class="form-field animation a4"
+          placeholder="Şifreniz"
+        />
+      </form>
+      <button class="animation a6" style="width: 230px" (click)="add()">
+        GİRİŞ YAP
+      </button>
+    </div>
+  </div>
+  <div class="right"></div>
+</div>
