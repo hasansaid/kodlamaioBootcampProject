@@ -190,7 +190,7 @@ const routes: Routes = [
     path: 'instructor',
     component: InstructorComponent,
     children: [
-      { path: '', component: InstructorPageComponent },
+      { path: '', component: InstructorBootcampComponent },
       { path: 'instructor-page', component: InstructorPageComponent },
       {
         path: 'instructor-bootcamp',

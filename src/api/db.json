@@ -160,6 +160,17 @@
       "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/BBLmG3XFTtm8XBTrzg4v",
       "instructorName": "Engin Demiroğ",
       "id": 4
+    },
+    {
+      "instructorId": "3",
+      "name": "ASP.NET MVC Bootcamp",
+      "dateStart": "15/12/2022",
+      "dateEnd": "15/02/2023",
+      "state": 1,
+      "instructorName": "Engin Demiroğ",
+      "about": "C# ile ASP.NET MVC Bootcamp'imiz ÇASGEM'de eğitim yüzyüze gerçekleşecektir.",
+      "image": "https://i.dlpng.com/static/png/7199310_preview.png",
+      "id": 5
     }
   ],
   "application": [
