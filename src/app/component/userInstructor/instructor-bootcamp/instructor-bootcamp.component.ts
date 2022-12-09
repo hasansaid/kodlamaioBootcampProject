@@ -23,4 +23,7 @@ export class InstructorBootcampComponent implements OnInit {
       .getInstructorBootcamp(id)
       .subscribe((data) => (this.bootcamps = data));
   }
+  delete(id: number) {
+    this.bootcampService.deletebootcamp(id).subscribe();
+  }
 }

@@ -3,8 +3,7 @@
     <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col" *ngFor="let bootcamp of bootcamps">
             <div class="card shadow-lg rounded-4 bootcampcard">
-                <img src="https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://cdn.filestackcontent.com/ujZYJ3lwSOihtnbP9LsG"
-                    class="card-img-top p-2 rounded-4" alt="..." />
+                <img style="height: 200px;" src="{{bootcamp.image}}" class="card-img-top p-2 rounded-4" alt="..." />
                 <div class="card-body">
                     <a name="bootcampler">
                         <h5 class="card-title text-center">
@@ -19,6 +18,9 @@
                         <br />
                         <small class="text-muted">Bitiş Tarihi {{ bootcamp.dateEnd }}</small>
                     </p>
+                    <button class="btn btn-outline-danger shadow m-2" (click)="delete(bootcamp.id)" type="submit">
+                        Eğitimi Kaldır
+                    </button>
                 </div>
             </div>
         </div>

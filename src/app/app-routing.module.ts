@@ -190,7 +190,7 @@ const routes: Routes = [
     path: 'instructor',
     component: InstructorComponent,
     children: [
-      { path: '', component: InstructorPageComponent },
+      { path: '', component: InstructorBootcampComponent },
       { path: 'instructor-page', component: InstructorPageComponent },
       {
         path: 'instructor-bootcamp',
@@ -207,7 +207,7 @@ const routes: Routes = [
     path: 'applicant',
     component: ApplicantComponent,
     children: [
-      { path: '', component: ApplicantPageComponent },
+      { path: '', component: ApplicantBootcampComponent },
       { path: 'applicant-page', component: ApplicantPageComponent },
       { path: 'applicant-bootcamp', component: ApplicantBootcampComponent },
       {
