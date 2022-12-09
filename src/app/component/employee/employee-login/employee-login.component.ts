@@ -38,7 +38,7 @@ export class EmployeeLoginComponent implements OnInit {
       this.loginEmployeeService
         .loginEmployee(this.loginEmployeeForm.value)
         .subscribe((data) => {
-          if (data) {
+          if (data == this.loginEmployeeForm.value) {
             this.toastrService.success('Giriş Başarılı');
             data[0].role == 'roleApplicant'
               ? this.router.navigate(['applicant'])
@@ -52,7 +52,7 @@ export class EmployeeLoginComponent implements OnInit {
             localStorage.setItem('userId', data[0].id);
             localStorage.setItem('instructorId', data[0].instructorId);
           } else {
-            alert('Giriş Başarısız');
+            this.toastrService.warning('Kullanıcı Adı Veya Şifreniz Hatalı');
           }
         });
     }
