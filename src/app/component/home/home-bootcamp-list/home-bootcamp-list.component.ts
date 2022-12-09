@@ -22,7 +22,7 @@ export class HomeBootcampListComponent implements OnInit {
 
   getAllBootcampList() {
     this.bootcampService
-      .getAllBootcamp()
+      .getStateBootcamp()
       .subscribe((data) => (this.bootcamps = data));
   }
 }
