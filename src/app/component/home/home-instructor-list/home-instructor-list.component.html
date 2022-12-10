@@ -1,12 +1,9 @@
 <div class="row">
   <div class="col-md-12">
-    <div
-      class="container shadow rounded-5 p-5 mt-5 mb-5"
-      style="
+    <div class="container shadow rounded-5 p-5 mt-5 mb-5" style="
         background-image: linear-gradient(126deg, #e9e9ff, #e2e7eb);
         height: 596px;
-      "
-    >
+      ">
       <div class="row">
         <div class="col-md-6">
           <h1 class="display-2 mb-5 text-center">Bootcamp Eğitimcilerimiz</h1>
@@ -16,11 +13,8 @@
           </p>
         </div>
         <div class="col-12 col-md-12 col-lg-6">
-          <img
-            src="https://yazilimkursuankara.com/images/anasayfa_slayt/cizim_tasarim_kurslari.png"
-            class="img-fluid response"
-            alt=""
-          />
+          <img src="https://yazilimkursuankara.com/images/anasayfa_slayt/cizim_tasarim_kurslari.png"
+            class="img-fluid response" alt="" />
         </div>
       </div>
     </div>
@@ -31,26 +25,18 @@
     <section>
       <div class="container">
         <div class="row">
-          <div
-            class="row row-cols-1 row-cols-md-2 row-cols-xl-4 row-cols-lg-3 g-4"
-          >
+          <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 row-cols-lg-3 g-4">
             <div class="col" *ngFor="let instructor of instructors">
               <div class="wrapper" style="height: 550px">
                 <div class="profile-card hov" style="width: 300px">
                   <div class="profile-header">
                     <img
-                      src="https://www.casgem.gov.tr/Uploads/Pages/sayfa/OFSIA73841/dosya-22072022093551-9D0sK.png"
-                      class="rounded-5 p-4 img-fluid"
-                      alt=""
-                    />
+                      src="https://www.acm.org/binaries/content/gallery/acm/ctas/public-policy/tpc-joint-statement-design-algorithmic-systems.jpg/tpc-joint-statement-design-algorithmic-systems.jpg/acm%3Adesktopcta"
+                      class="rounded-5 p-4 img-fluid" alt="" />
                   </div>
                   <div class="profile-body">
                     <div class="author-img">
-                      <img
-                        src="{{ instructor.image }}"
-                        class="img-thumbnail img-fluid"
-                        alt=""
-                      />
+                      <img src="{{ instructor.image }}" class="img-thumbnail img-fluid" alt="" />
                     </div>
                     <div class="name">
                       {{ instructor.firstName }} {{ instructor.lastName }}
