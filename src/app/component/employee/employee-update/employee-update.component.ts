@@ -9,6 +9,7 @@ import {
   FormControl,
   Validators,
 } from '@angular/forms';
+import { ICreateEmployeeRequest } from 'src/app/models/request/employee/createEmployeeRequest';
 @Component({
   selector: 'app-employee-update',
   templateUrl: './employee-update.component.html',
@@ -56,13 +57,43 @@ export class EmployeeUpdateComponent implements OnInit {
     });
   }
 
-  updateEmployee() {
-    this.employeeService
+   updateEmployee() {
+     this.employeeService
       .updateEmployee(
-        this.activatedRoute.snapshot.params['id'],
+         this.activatedRoute.snapshot.params['id'],
         this.employeeUpdateForm.value
-      )
-      .subscribe();
-    this.toastrService.success('Düzenleme Başarılı');
-  }
+       )
+     .subscribe();
+     this.toastrService.success('Güncellemeniz Gerçekleşmiştir');
+   }
+  
 }
+  
+
+    
+  
+
+
+
+//   updateBootcamp() {
+//     if (this.employeeUpdateForm.valid) {
+//       let bootcamp: ICreateEmployeeRequest = Object.assign(
+//         {},
+//         this.employeeUpdateForm.value
+//       );
+//       this.instructorService
+//         .getInstructor(bootcamp.instructorId)
+//         .subscribe((data) => {
+//           bootcamp.instructorName = data.firstName + ' ' + data.lastName;
+
+//           this.bootcampService
+//             .updateBootcamp(this.activatedRoute.snapshot.params['id'], bootcamp)
+//             .subscribe(() => {
+//               this.toastrService.success('Bootcamp Bilgileri Güncellendi');
+//             });
+//         });
+//     } else {
+//       this.toastrService.error('Dikkat Form Eksik!!!');
+//     }
+//   }
+// 
