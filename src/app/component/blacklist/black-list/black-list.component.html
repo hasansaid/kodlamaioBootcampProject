@@ -37,18 +37,7 @@
             <td style="text-align: center">{{ blacklist.applicantId }}</td>
             <td style="text-align: center">{{ blacklist.date }}</td>
             <td style="text-align: center">{{ blacklist.reason }}</td>
-            <!-- <td>
-              <button type="button" class="btn btn-outline-secondary shadow m-2"
-                routerLink="blacklist-detail/{{ blacklist.id }}">
-                Detay
-              </button>
-            </td> -->
-            <!-- <td>
-              <button type="button" class="btn btn-outline-warning shadow m-2"
-                routerLink="blacklist-update/{{ blacklist.id }}">
-                Düzenle
-              </button>
-            </td> -->
+    
             <td>
               <button
                 (click)="removeApplicant(blacklist.id, blacklist.applicantId)"
@@ -65,21 +54,4 @@
   </div>
 </div>
 
-<!-- <thead>
-  <tr>
-    <th>Applicant</th>
-    <th>Date</th>
-    <th>Reason</th>
-  </tr>
-</thead>
-<tbody>
-  <tr *ngFor="let blacklist of blacklists">
-    <td>{{blacklist.applicantName}}</td>
-    <td>{{blacklist.date}}</td>
-    <td>{{blacklist.reason}}</td>
-    <td>
-      <button type="button" class="btn btn-outline-danger btn-sm ml-2"
-        (click)="removeApplicant(blacklist.id, blacklist.applicantId)">Kara Listeden Çıkar</button>
-    </td>
-  </tr>
-</tbody> -->
+

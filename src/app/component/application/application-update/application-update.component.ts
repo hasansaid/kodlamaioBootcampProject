@@ -72,15 +72,7 @@ export class ApplicationUpdateComponent implements OnInit {
       this.getApplication(params['id']);
     });
   }
-  // updateApplication() {
-  //   this.applicationService
-  //     .updateApplication(
-  //       this.activatedRoute.snapshot.params['id'],
-  //       this.applicationUpdateForm.value
-  //     )
-  //     .subscribe();
-  //   this.toastrService.success('Başvuru Düzenlendi');
-  // }
+  
 
   updateApplication() {
     if (this.applicationUpdateForm.valid) {
@@ -102,7 +94,7 @@ export class ApplicationUpdateComponent implements OnInit {
                   application
                 )
                 .subscribe((data) => {
-                  this.toastrService.success('Başvuru Bilgileri Güncellendi');
+                  this.toastrService.success('Güncellemeniz Gerçekleşmiştir');
                 });
             });
         });
