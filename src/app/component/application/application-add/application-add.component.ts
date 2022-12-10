@@ -54,6 +54,9 @@ export class ApplicationAddComponent implements OnInit {
       userId: ['', Validators.required],
       bootcampId: ['', Validators.required],
       state: ['', Validators.required],
+      applyname: ['', Validators.required],
+      userName: ['', Validators.required],
+      bootcampName: ['', Validators.required],
     });
   }
 

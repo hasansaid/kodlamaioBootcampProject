@@ -18,18 +18,26 @@
               <table class="table">
                 <thead>
                   <tr>
+                    
                     <th scope="col">Başvuru Id</th>
-                    <th scope="col">Kullanıcı Id</th>
                     <th scope="col">Bootcamp Id</th>
-                    <th scope="col">Uygunluk Durumu</th>
+                    <th scope="col">Bootcamp İsmi</th>
+                    <th scope="col">Eğitmen İsmi</th>
+                    <th scope="col">Başvuran</th>
                   </tr>
+                
                 </thead>
                 <tbody>
                   <tr>
                     <td>{{ application.id }}</td>
-                    <td>{{ application.userId }}</td>
+                    <!-- <td>{{ application.userId }}</td> -->
                     <td>{{ application.bootcampId }}</td>
-                    <td>{{ application.state }}</td>
+                    <td>{{ application.bootcampName}}</td>
+
+                    <td>{{ application.userName }}</td>
+                    <td>{{ application.applyName }}</td>
+
+                    
                   </tr>
                 </tbody>
               </table>
