@@ -13,5 +13,8 @@ export class HomeContactComponent implements OnInit {
 
   formSend() {
     this.toastrService.success('Mesajınız Başarıyla Gönderilmiştir.');
+    setTimeout(() => {
+      window.location.reload();
+    }, 1000);
   }
 }
