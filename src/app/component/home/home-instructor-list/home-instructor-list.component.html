@@ -15,9 +15,10 @@
             katılabilirsiniz.
           </p>
         </div>
-        <div class="col-md-6">
+        <div class="col-12 col-md-12 col-lg-6">
           <img
             src="https://yazilimkursuankara.com/images/anasayfa_slayt/cizim_tasarim_kurslari.png"
+            class="img-fluid response"
             alt=""
           />
         </div>
@@ -30,14 +31,16 @@
     <section>
       <div class="container">
         <div class="row">
-          <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div
+            class="row row-cols-1 row-cols-md-2 row-cols-xl-4 row-cols-lg-3 g-4"
+          >
             <div class="col" *ngFor="let instructor of instructors">
               <div class="wrapper" style="height: 550px">
-                <div class="profile-card hov">
+                <div class="profile-card hov" style="width: 300px">
                   <div class="profile-header">
                     <img
                       src="https://www.casgem.gov.tr/Uploads/Pages/sayfa/OFSIA73841/dosya-22072022093551-9D0sK.png"
-                      class="rounded-5 p-4"
+                      class="rounded-5 p-4 img-fluid"
                       alt=""
                     />
                   </div>
@@ -45,7 +48,7 @@
                     <div class="author-img">
                       <img
                         src="{{ instructor.image }}"
-                        class="img-thumbnail"
+                        class="img-thumbnail img-fluid"
                         alt=""
                       />
                     </div>
