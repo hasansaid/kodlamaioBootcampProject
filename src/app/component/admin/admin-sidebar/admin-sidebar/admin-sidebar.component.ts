@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin-sidebar.component.css'],
 })
 export class AdminSidebarComponent implements OnInit {
+  name = localStorage.getItem('fullname');
   constructor(
     private loginEmployeeService: LoginEmployeeService,
     private router: Router

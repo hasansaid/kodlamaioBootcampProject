@@ -12,6 +12,7 @@ export class LoginEmployeeService {
   roleAs: string;
   idAs: string;
   instructorIdAs: string;
+  fullnameAs: string;
   constructor(private httpClient: HttpClient) {}
 
   loginEmployee(user: LoginEmployeeModel) {
@@ -41,6 +42,10 @@ export class LoginEmployeeService {
   getUserId() {
     this.idAs = localStorage.getItem('userId');
     return this.idAs;
+  }
+  getfullname() {
+    this.fullnameAs = localStorage.getItem('fullname');
+    return this.fullnameAs;
   }
 
   logout() {
