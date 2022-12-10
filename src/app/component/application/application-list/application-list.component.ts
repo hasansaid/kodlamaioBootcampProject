@@ -68,8 +68,8 @@ export class ApplicationListComponent implements OnInit {
             }, 1000);
         } else if (result.dismiss === Swal.DismissReason.cancel) {
           swalWithBootstrapButtons.fire(
-            'İptal edildi',
-            'Veriniz hala Güvende',
+            'İptal Edildi',
+            'Veriniz hala Güvendedir',
             'error'
           );
         }
