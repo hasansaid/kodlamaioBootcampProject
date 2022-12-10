@@ -50,6 +50,7 @@ export class BlacklistUpdateComponent implements OnInit {
   }
 
   updateBlackList() {
+    if(this.blackListUpdateForm.valid){
     this.blacklistService
       .updateBlackList(
         this.activatedRoute.snapshot.params['id'],
@@ -57,5 +58,10 @@ export class BlacklistUpdateComponent implements OnInit {
       )
       .subscribe();
       this.toastrService.success('Güncellemeniz Gerçekleşmiştir');
+    }else{
+      this.toastrService.error('Dikkat Form Eksik!!!');
+    }
   }
+
+  
 }
