@@ -48,6 +48,7 @@ export class ApplicantBootcampComponent implements OnInit {
     bootcampData.userName = this.setBootcmap.instructorName;
     bootcampData.state = 1;
     bootcampData.userId = localStorage.getItem('userId');
+    bootcampData.applyName = localStorage.getItem('fullname');
     this.applicationService.addApplication(bootcampData).subscribe();
     // this.applicationService.getAllApplication().subscribe((data) => {
     //   for (let i of data) {

@@ -4,4 +4,5 @@ export interface ITokenModel {
   role: string;
   id: string;
   instructorId: string;
+  fullname: string;
 }
