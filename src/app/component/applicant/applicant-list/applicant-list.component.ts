@@ -22,7 +22,7 @@ export class ApplicantListComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe((params) => this.getAllApplicant());
+    this.getAllApplicant();
   }
 
   getAllApplicant() {

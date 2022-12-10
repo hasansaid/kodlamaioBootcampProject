@@ -31,7 +31,7 @@ export class ApplicantUpdateComponent implements OnInit {
 
   createApplicantUpdateForm() {
     this.applicantUpdateForm = this.formBuilder.group({
-      id: [this.applicant.id, Validators.required],
+      // id: [this.applicant.id, Validators.required],
       firstName: [this.applicant.firstName, Validators.required],
       lastName: [this.applicant.lastName, Validators.required],
       email: [this.applicant.email, Validators.required],
@@ -40,6 +40,7 @@ export class ApplicantUpdateComponent implements OnInit {
       nationalIdentity: [this.applicant.nationalIdentity, Validators.required],
       dateOfBirth: [this.applicant.dateOfBirth, Validators.required],
       image: [this.applicant.image, Validators.required],
+      state: [1],
     });
   }
 
@@ -55,20 +56,16 @@ export class ApplicantUpdateComponent implements OnInit {
     });
   }
   updateApplicant() {
-    if(this.applicantUpdateForm.valid){
-    this.applicantService
-      .updateApplicant(
-        this.activatedRoute.snapshot.params['id'],
-        this.applicantUpdateForm.value
-      )
-      .subscribe();
-    this.toastrService.success('Düzenleme Başarılı');
-  }else{
-    this.toastrService.error('Dikkat Form Eksik!!!');
-
-   }
+    if (this.applicantUpdateForm.valid) {
+      this.applicantService
+        .updateApplicant(
+          this.activatedRoute.snapshot.params['id'],
+          this.applicantUpdateForm.value
+        )
+        .subscribe();
+      this.toastrService.success('Düzenleme Başarılı');
+    } else {
+      this.toastrService.error('Dikkat Form Eksik!!!');
+    }
   }
-
-  
 }
-  
