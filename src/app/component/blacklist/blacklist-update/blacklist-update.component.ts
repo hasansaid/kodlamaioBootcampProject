@@ -56,6 +56,6 @@ export class BlacklistUpdateComponent implements OnInit {
         this.blackListUpdateForm.value
       )
       .subscribe();
-      this.toastrService.success('Kara Liste Güncelleme Başarılı');
+      this.toastrService.success('Güncellemeniz Gerçekleşmiştir');
   }
 }

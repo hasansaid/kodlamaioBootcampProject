@@ -77,7 +77,7 @@ export class BootcampUpdateComponent implements OnInit {
           this.bootcampService
             .updateBootcamp(this.activatedRoute.snapshot.params['id'], bootcamp)
             .subscribe(() => {
-              this.toastrService.success('Bootcamp Bilgileri Güncellendi');
+              this.toastrService.success('Güncellemeniz Gerçekleşmiştir');
             });
         });
     } else {
