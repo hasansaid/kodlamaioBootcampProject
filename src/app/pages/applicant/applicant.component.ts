@@ -6,12 +6,12 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-applicant',
   templateUrl: './applicant.component.html',
-  styleUrls: ['./applicant.component.css']
+  styleUrls: ['./applicant.component.css'],
 })
 export class ApplicantComponent implements OnInit {
-
+  name = localStorage.getItem('fullname');
   constructor(
-    private loginEmployeeService:LoginEmployeeService,
+    private loginEmployeeService: LoginEmployeeService,
     private router: Router
   ) {}
 
@@ -21,4 +21,3 @@ export class ApplicantComponent implements OnInit {
     this.router.navigate(['']);
   }
 }
-

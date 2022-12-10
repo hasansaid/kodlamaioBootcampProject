@@ -38,21 +38,23 @@ export class EmployeeLoginComponent implements OnInit {
       this.loginEmployeeService
         .loginEmployee(this.loginEmployeeForm.value)
         .subscribe((data) => {
-          if (data) {
+          if (data.length > 0) {
             this.toastrService.success('Giriş Başarılı');
+
             data[0].role == 'roleApplicant'
               ? this.router.navigate(['applicant'])
               : data[0].role == 'roleEmployee'
               ? this.router.navigate(['admin'])
               : this.router.navigate(['instructor']);
-            console.log(data);
 
             localStorage.setItem('token', data[0].token);
             localStorage.setItem('role', data[0].role);
             localStorage.setItem('userId', data[0].id);
             localStorage.setItem('instructorId', data[0].instructorId);
+            localStorage.setItem('fullname', data[0].fullname);
+          } else {
+            this.toastrService.warning('Kullanıcı Adı Veya Şifreniz Hatalı');
           }
-          this.toastrService.warning('Kullanıcı Adı Veya Şifreniz Hatalı');
         });
     }
   }

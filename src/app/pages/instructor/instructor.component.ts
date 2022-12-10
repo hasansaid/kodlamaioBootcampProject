@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./instructor.component.css'],
 })
 export class InstructorComponent implements OnInit {
+  name = localStorage.getItem('fullname');
   constructor(
     private loginEmployeeService: LoginEmployeeService,
     private router: Router

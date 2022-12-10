@@ -28,6 +28,11 @@ export class ApplicantBootcampComponent implements OnInit {
   ngOnInit(): void {
     this.getBootcamps();
   }
+  getControl() {
+    this.applicationService
+      .getAllApplication()
+      .subscribe((data) => (this.controls = data));
+  }
 
   getBootcamps() {
     this.bootcampService
@@ -48,15 +53,19 @@ export class ApplicantBootcampComponent implements OnInit {
     bootcampData.userName = this.setBootcmap.instructorName;
     bootcampData.state = 1;
     bootcampData.userId = localStorage.getItem('userId');
-    this.applicationService.addApplication(bootcampData).subscribe();
-    // this.applicationService.getAllApplication().subscribe((data) => {
-    //   for (let i of data) {
-    //     if (i.userId) {
+    bootcampData.applyName = localStorage.getItem('fullname');
+    let con = true;
+    // console.log(con);
 
-    //       console.log(i.userId, 'merebaaa');
-    //     }
-    //   }
-    //   console.log('gelmiycem amq ');
-    // });
+    for (let i of this.controls) {
+      if (bootcampData.userId == i.userId) {
+        con = false;
+      }
+    }
+    if (con) {
+      this.applicationService.addApplication(bootcampData).subscribe();
+    }
   }
 }
+//   this.applicationService.addApplication(bootcampData).subscribe();
+// serviste sorgu şeklinde

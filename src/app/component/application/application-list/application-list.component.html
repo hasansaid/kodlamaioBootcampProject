@@ -5,11 +5,7 @@
         <h2 style="margin-left:170px;">Başvurular Listesi</h2>
       </div>
       <div>
-        <button
-          type="button"
-          class="btn btn-outline-success shadow m-2"
-          routerLink="application-add"
-        >
+        <button type="button" class="btn btn-outline-success shadow m-2" routerLink="application-add">
           Başvuru Ekle
         </button>
       </div>
@@ -18,57 +14,43 @@
       <table class="table">
         <thead>
           <tr>
-            <th scope="col" style="text-align: center">Başvuru Id</th>
+            <!-- <th scope="col" style="text-align: center">Başvuru Id</th> -->
             <th scope="col" style="text-align: center">Başvuran</th>
+            <th scope="col" style="text-align: center">Eğitmen</th>
             <th scope="col" style="text-align: center">Bootcamp</th>
-            <th scope="col" style="text-align: center">State</th>
+            <!-- <th scope="col" style="text-align: center">State</th> -->
             <th colspan="3">
-              <input
-                type="text"
-                placeholder="Başvuru arayın.."
-                class="form-control"
-                id="brandFilter"
-                [(ngModel)]="filterApplication"
-              />
+              <input type="text" placeholder="Başvuru arayın.." class="form-control" id="brandFilter"
+                [(ngModel)]="filterApplication" />
             </th>
           </tr>
         </thead>
         <tbody>
-          <tr
-            *ngFor="
+          <tr *ngFor="
               let application of applications
                 | applicationfilter : filterApplication
-            "
-          >
-            <td style="text-align: center">{{ application.id }}</td>
+            ">
+            <!-- <td style="text-align: center">{{ application.id }}</td> -->
+            <td style="text-align: center">{{application.applyName}}</td>
             <td style="text-align: center">{{ application.userName }}</td>
             <td style="text-align: center">{{ application.bootcampName }}</td>
-            <td style="text-align: center">{{ application.state }}</td>
+            <!-- <td style="text-align: center">{{ application.state }}</td> -->
 
             <td>
-              <button
-                type="button"
-                class="btn btn-outline-secondary shadow m-2"
-                routerLink="application-detail/{{ application.id }}"
-              >
+              <button type="button" class="btn btn-outline-secondary shadow m-2"
+                routerLink="application-detail/{{ application.id }}">
                 Detaya Git
               </button>
             </td>
             <td>
-              <button
-                type="button"
-                class="btn btn-outline-warning shadow m-2"
-                routerLink="application-update/{{ application.id }}"
-              >
+              <button type="button" class="btn btn-outline-warning shadow m-2"
+                routerLink="application-update/{{ application.id }}">
                 Düzenle
               </button>
             </td>
             <td>
-              <button
-                type="button"
-                class="btn btn-outline-danger shadow m-2"
-                (click)="deleteApplication(application.id)"
-              >
+              <button type="button" class="btn btn-outline-danger shadow m-2"
+                (click)="deleteApplication(application.id)">
                 Başvuru Sil
               </button>
             </td>

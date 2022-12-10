@@ -34,11 +34,25 @@
       <input formControlName="state" type="number" id="name" name="user_name" placeholder="1:Uygun - 2:Uygun Değil.." />
     </fieldset>
 
+    <fieldset>
+      <label for="name">Başvuran:</label>
+      <input formControlName="applyName" type="text" id="name" name="user_name" placeholder="Başvuran.." />
+    </fieldset>
+    <fieldset>
+      <label for="name">a:</label>
+      <input formControlName="userName" type="text" id="name" name="user_name" placeholder="userName.." />
+    </fieldset>
+    <fieldset>
+      <label for="name">Bootcamp Adı:</label>
+      <input formControlName=" bootcampName" type="text" id="name" name="user_name" placeholder="Bootcamp Adı.." />
+    </fieldset>
+
     <div class="row">
       <div class="col-md-6">
         <button class="button" routerLink="/admin/admin-application" type="submit">
           Geri Dön
         </button>
+
       </div>
       <div class="col-md-6">
         <button class="buttonA" (click)="add()" type="submit">
