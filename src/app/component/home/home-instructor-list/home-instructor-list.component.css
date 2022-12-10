@@ -92,3 +92,18 @@ img {
 .hov {
   transition: all 0.9s;
 }
+@media only screen and (max-width: 500px) {
+  .response {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .response {
+    display: none;
+  }
+}
+@media only screen and (max-width: 980px) {
+  .response {
+    display: none;
+  }
+}
