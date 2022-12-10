@@ -54,25 +54,25 @@ export class ApplicationListComponent implements OnInit {
         cancelButtonText: 'Hayır',
         reverseButtons: true,
       })
-      .then((result) => {
-        if (result.isConfirmed) {
-          this.applicationService.deleteApplication(id).subscribe(() => {
-            swalWithBootstrapButtons.fire(
-              'Silindi',
-              'İstediğiniz veri silme işlemi tamamlandı',
-              'success'
-            );
-          }),
-            setTimeout(() => {
-              window.location.reload();
-            }, 1000);
-        } else if (result.dismiss === Swal.DismissReason.cancel) {
-          swalWithBootstrapButtons.fire(
-            'İptal edildi',
-            'Veriniz hala Güvende',
-            'error'
-          );
-        }
-      });
+      // .then((result) => {
+      //   if (result.isConfirmed) {
+      //     this.applicationService.deleteApplication(id).subscribe(() => {
+      //       swalWithBootstrapButtons.fire(
+      //         'Silindi',
+      //         'İstediğiniz veri silme işlemi tamamlandı',
+      //         'success'
+      //       );
+      //     }),
+      //       setTimeout(() => {
+      //         window.location.reload();
+      //       }, 1000);
+      //   } else if (result.dismiss === Swal.DismissReason.cancel) {
+      //     swalWithBootstrapButtons.fire(
+      //       'İptal edildi',
+      //       'Veriniz hala Güvende',
+      //       'error'
+      //     );
+      //   }
+      // });
   }
 }
