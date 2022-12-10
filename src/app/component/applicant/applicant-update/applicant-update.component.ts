@@ -55,6 +55,7 @@ export class ApplicantUpdateComponent implements OnInit {
     });
   }
   updateApplicant() {
+    if(this.applicantUpdateForm.valid){
     this.applicantService
       .updateApplicant(
         this.activatedRoute.snapshot.params['id'],
@@ -62,5 +63,12 @@ export class ApplicantUpdateComponent implements OnInit {
       )
       .subscribe();
     this.toastrService.success('Düzenleme Başarılı');
+  }else{
+    this.toastrService.error('Dikkat Form Eksik!!!');
+
+   }
   }
+
+  
 }
+  
