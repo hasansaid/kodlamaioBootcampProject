@@ -2,7 +2,7 @@
 Çalışma ve Sosyal Güvenlik Eğitim Araştırma Merkezi bünyesinde yapılan Frontend Bootcamp programına eğitmenlik yapan Engin DEMİROĞ hocamızın bizden istediği bitirme projesi olarak kodlamaioBootcampProject projesini hayata geçirdik. Bu proje Angular ile ilk projemizdir.
 
 ## Proje Geliştiricileri
-<a href="https://github.com/hasansaid"> Hasan Said SERTKAYA </a> -  <a href="https://github.com/ugur08">Uğur MEYDANLI</a> - <a href="https://github.com/hasansaid">Enes KARACA - <a href="https://github.com/seyfettinturan"> Seyfettin TURAN</a>
+<a href="https://github.com/hasansaid"> Hasan Said SERTKAYA </a> -  <a href="https://github.com/ugur08">Uğur MEYDANLI</a> - <a href="https://github.com/karacaeness">Enes KARACA - <a href="https://github.com/seyfettinturan"> Seyfettin TURAN</a>
 
 ## Proje Hakkında
 Senaryo: kodlamaio isimli şirket bootcamp eğitimleri düzenlemektedir. Bunun üzerine bizden yöneticilerin, eğitmenlerin ve bootcamplere başvurabilen adayların olduğu aynı zamanda yöneticilerin tüm verileri güncelleyebilmesi, silebilmesi ve yeni veri ekleyebilmesi istemiştir. Eğitmenlerin kendi bootcamplerini yönetebileceği, adayların ise bootcamplere başvurabileceği özel bir sayfa ve başvurularını yönetebileceği sayfa olacaktır.
