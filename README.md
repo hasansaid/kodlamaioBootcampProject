@@ -1,27 +1,20 @@
-# KodlamaioBootcampProject
+# kodlamaioBootcampProject
+Çalışma ve Sosyal Güvenlik Eğitim Araştırma Merkezi bünyesinde yapılan Frontend Bootcamp programına eğitmenlik yapan <a href="https://www.instagram.com/engindemirog/"> Engin DEMİROĞ </a> hocamızın bizden istediği bitirme projesi olarak kodlamaioBootcampProject projesini hayata geçirdik. Bu proje Angular ile ilk projemizdir.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.9.
+## Proje Geliştiricileri
+<a href="https://github.com/hasansaid"> Hasan Said SERTKAYA </a> -  <a href="https://github.com/ugur08">Uğur MEYDANLI</a> - <a href="https://github.com/karacaeness">Enes KARACA </a> - <a href="https://github.com/seyfettinturan"> Seyfettin TURAN</a>
 
-## Development server
+## Proje Hakkında
+Senaryo: kodlamaio isimli şirket bootcamp eğitimleri düzenlemektedir. Bunun üzerine bizden yöneticilerin, eğitmenlerin ve bootcamplere başvurabilen adayların olduğu aynı zamanda yöneticilerin tüm verileri güncelleyebilmesi, silebilmesi ve yeni veri ekleyebilmesi istemiştir. Eğitmenlerin kendi bootcamplerini yönetebileceği, adayların ise bootcamplere başvurabileceği özel bir sayfa ve başvurularını yönetebileceği sayfa olacaktır.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Kullanılan Teknolojiler
+Angular - TypeScript - JavaScript - HTML - Css - Bootstrap 5 
 
-## Code scaffolding
+## Anasayfa
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![anasayfa](https://github.com/hasansaid/kodlamaioBootcampProject/blob/master/5dd731efde7c10d561daac32cac85cc550b64879.gif)
 
-## Build
+## Admin Sayfası
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
