@@ -36,45 +36,43 @@ export class ApplicationListComponent implements OnInit {
   //   this.applicationService.deleteApplication(applications).subscribe();
   //   this.toastrService.error('Başvuru Silindi');
   // }
-
-  
-  // deleteApplication(id: number) {
-  //   const swalWithBootstrapButtons = Swal.mixin({
-  //     customClass: {
-  //       confirmButton: 'btn bg-gradient-info active ms-3',
-  //       cancelButton: 'btn bg-gradient-primary active',
-  //     },
-  //     buttonsStyling: false,
-  //   });
-  //   swalWithBootstrapButtons
-  //     .fire({
-  //       title: 'Emin misiniz ?',
-  //       text: 'Bu işlem geri alınamaz',
-  //       icon: 'warning',
-  //       showCancelButton: true,
-  //       confirmButtonText: 'Evet',
-  //       cancelButtonText: 'Hayır',
-  //       reverseButtons: true,
-  //     })
-  //     .then((result) => {
-  //       if (result.isConfirmed) {
-  //         this.applicationService.deleteApplication(id).subscribe(() => {
-  //           swalWithBootstrapButtons.fire(
-  //             'Silindi',
-  //             'İstediğiniz veri silme işlemi tamamlandı',
-  //             'success'
-  //           );
-  //         }),
-  //           setTimeout(() => {
-  //             window.location.reload();
-  //           }, 1000);
-  //       } else if (result.dismiss === Swal.DismissReason.cancel) {
-  //         swalWithBootstrapButtons.fire(
-  //           'İptal Edildi',
-  //           'Veriniz hala Güvendedir',
-  //           'error'
-  //         );
-  //       }
-  //     });
-  // }
+  deleteApplication(id: number) {
+    const swalWithBootstrapButtons = Swal.mixin({
+      customClass: {
+        confirmButton: 'btn bg-gradient-info active ms-3',
+        cancelButton: 'btn bg-gradient-primary active',
+      },
+      buttonsStyling: false,
+    });
+    swalWithBootstrapButtons
+      .fire({
+        title: 'Emin misiniz ?',
+        text: 'Bu işlem geri alınamaz!!',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Evet',
+        cancelButtonText: 'Hayır',
+        reverseButtons: true,
+      })
+      .then((result) => {
+        if (result.isConfirmed) {
+          this.applicationService.deleteApplication(id).subscribe(() => {
+            swalWithBootstrapButtons.fire(
+              'Silindi',
+              'İstediğiniz veri silme işlemi tamamlandı',
+              'success'
+            );
+          }),
+            setTimeout(() => {
+              window.location.reload();
+            }, 1000);
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+          swalWithBootstrapButtons.fire(
+            'İptal Edildi',
+            'Veriniz hala Güvendedir',
+            'error'
+          );
+        }
+      });
+  }
 }

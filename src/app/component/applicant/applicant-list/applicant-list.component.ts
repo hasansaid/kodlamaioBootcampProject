@@ -50,7 +50,7 @@ export class ApplicantListComponent implements OnInit {
     swalWithBootstrapButtons
       .fire({
         title: 'Emin misiniz ?',
-        text: 'Bu işlem geri alınamaz',
+        text: 'Bu işlem geri alınamaz!!',
         icon: 'warning',
         showCancelButton: true,
         confirmButtonText: 'Evet',
