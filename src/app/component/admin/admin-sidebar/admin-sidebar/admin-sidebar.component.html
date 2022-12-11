@@ -1,32 +1,57 @@
-<div class="sidebar border rounded shadow-lg mt-4 ms-4" style="height: 90%">
+<div
+  class="sidebar border rounded-5 shadow-lg mt-4 ms-4 asd"
+  style="height: 90%"
+>
   <nav class="navbar">
     <a routerLink="/admin/admin-page" class="navbar-brand mx-4 mb-3">
       <h5 class="text-primary"><i class="fa fa-home me-2"></i>Admin Paneli</h5>
     </a>
+
     <div class="d-flex align-items-center ms-4 mb-4">
       <div class="position-relative">
-        <img class="rounded-circle"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQihyZtmBuy7E75HPllahoZEVxR6FLbSMHwqr2lpV8&s" alt=""
-          style="width: 40px; height: 40px" />
-        <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0"></div>
+        <img
+          class="rounded-circle"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQihyZtmBuy7E75HPllahoZEVxR6FLbSMHwqr2lpV8&s"
+          alt=""
+          style="width: 40px; height: 40px"
+        />
+        <div
+          class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0"
+        ></div>
       </div>
       <div class="ms-3">
-        <h6 class="mb-0"> {{name}}</h6>
+        <h6 class="mb-0">{{ name }}</h6>
         <span>Admin</span>
       </div>
     </div>
     <div class="navbar-nav w-100">
-      <a routerLink="admin-page" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>Admin Sayfası</a>
+      <a routerLink="admin-page" class="nav-item nav-link"
+        ><i class="fa fa-tachometer-alt me-2"></i>Admin Sayfası</a
+      >
 
-      <a routerLink="admin-applicant" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Adaylar</a>
-      <a routerLink="admin-instructor" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Eğitmenler</a>
-      <a routerLink="admin-employee" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Çalışanlar</a>
-      <a routerLink="admin-bootcamp" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Bootcamp</a>
-      <a routerLink="admin-application" class="nav-item nav-link"><i class="far fa-file-alt me-2"></i>Başvurular</a>
-      <a routerLink="admin-blacklist" class="nav-item nav-link"><i class="fa fa-laptop me-2"></i>Kara Liste</a>
+      <a routerLink="admin-applicant" class="nav-item nav-link"
+        ><i class="fa fa-th me-2"></i>Adaylar</a
+      >
+      <a routerLink="admin-instructor" class="nav-item nav-link"
+        ><i class="fa fa-keyboard me-2"></i>Eğitmenler</a
+      >
+      <a routerLink="admin-employee" class="nav-item nav-link"
+        ><i class="fa fa-table me-2"></i>Çalışanlar</a
+      >
+      <a routerLink="admin-bootcamp" class="nav-item nav-link"
+        ><i class="fa fa-chart-bar me-2"></i>Bootcamp</a
+      >
+      <a routerLink="admin-application" class="nav-item nav-link"
+        ><i class="far fa-file-alt me-2"></i>Başvurular</a
+      >
+      <a routerLink="admin-blacklist" class="nav-item nav-link"
+        ><i class="fa fa-laptop me-2"></i>Kara Liste</a
+      >
 
       <div class="navbar-nav w-100 mt-5">
-        <a (click)="logout()" class="nav-item nav-link"><i class="fa fa-bars me-2"></i>Çıkış Yap</a>
+        <a (click)="logout()" class="nav-item nav-link"
+          ><i class="fa fa-bars me-2"></i>Çıkış Yap</a
+        >
       </div>
     </div>
   </nav>

@@ -1,0 +1,8 @@
+.responsive {
+  display: none;
+}
+@media (max-width: 450px) {
+  .responsive {
+    display: flex;
+  }
+}

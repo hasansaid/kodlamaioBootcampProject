@@ -1,17 +1,16 @@
-<br><br><br><br><br>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<app-responsivenavbar></app-responsivenavbar>
 
-<div class="section_our_solution">
+<br /><br /><br /><br /><br />
+
+<div class="section_our_solution responsiveDetail ms-5">
   <div class="row">
-    <div class="col-lg-12 col-md-12 col-sm-12" style="width:600px; float: left;">
+    <div class="col ms-5">
       <div class="our_solution_category">
         <div class="solution_cards_box">
-          <div class="solution_card">
+          <div class="solution_card responsiveDetail">
             <div class="hover_color_bubble"></div>
             <div class="so_top_icon">
-              <img src="{{applicant.image}}" class="w-100" />
-
-
+              <img src="{{ applicant.image }}" class="w-100" />
             </div>
             <div class="solu_title">
               <h3>{{ applicant.firstName }} {{ applicant.lastName }}</h3>
@@ -20,30 +19,44 @@
               <table class="table">
                 <thead>
                   <tr>
-                    <th scope="col" style="text-align:center;">Aday Numarası</th>
-                    <th scope="col" style="text-align:center;">İsim</th>
-                    <th scope="col" style="text-align:center;">Soyisim</th>
-                    <th scope="col" style="text-align:center;">Email</th>
-                    <th scope="col" style="text-align:center;">Şifre</th>
-                    <th scope="col" style="text-align:center;">TC No</th>
-                    <th scope="col" style="text-align:center;">D-Tarihi</th>
-                    <th scope="col" style="text-align:center;">Hakkında</th>
+                    <th scope="col" style="text-align: center">
+                      Aday Numarası
+                    </th>
+                    <th scope="col" style="text-align: center">İsim</th>
+                    <th scope="col" style="text-align: center">Soyisim</th>
+                    <th scope="col" style="text-align: center">Email</th>
+                    <th scope="col" style="text-align: center">Şifre</th>
+                    <th scope="col" style="text-align: center">TC No</th>
+                    <th scope="col" style="text-align: center">D-Tarihi</th>
+                    <th scope="col" style="text-align: center">Hakkında</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td style="text-align:center;">{{ applicant.id }}</td>
-                    <td style="text-align:center;">{{ applicant.firstName }}</td>
-                    <td style="text-align:center;">{{ applicant.lastName }}</td>
-                    <td style="text-align:center;">{{ applicant.email }}</td>
-                    <td style="text-align:center;">{{ applicant.password }}</td>
-                    <td style="text-align:center;">{{ applicant.nationalIdentity }}</td>
-                    <td style="text-align:center;">{{ applicant.dateOfBirth }}</td>
-                    <td style="text-align:center;">{{ applicant.about }}</td>
+                    <td style="text-align: center">{{ applicant.id }}</td>
+                    <td style="text-align: center">
+                      {{ applicant.firstName }}
+                    </td>
+                    <td style="text-align: center">{{ applicant.lastName }}</td>
+                    <td style="text-align: center">{{ applicant.email }}</td>
+                    <td style="text-align: center">{{ applicant.password }}</td>
+                    <td style="text-align: center">
+                      {{ applicant.nationalIdentity }}
+                    </td>
+                    <td style="text-align: center">
+                      {{ applicant.dateOfBirth }}
+                    </td>
+                    <td style="text-align: center">{{ applicant.about }}</td>
                   </tr>
                 </tbody>
               </table>
-              <button type="button" routerLink="/admin/admin-applicant" class="read_more_btn">Geri Dön</button>
+              <button
+                type="button"
+                routerLink="/admin/admin-applicant"
+                class="read_more_btn"
+              >
+                Geri Dön
+              </button>
             </div>
           </div>
         </div>

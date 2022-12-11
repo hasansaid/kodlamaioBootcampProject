@@ -66,9 +66,6 @@
   color: #309df0;
 }
 
-.solution_card .so_top_icon {
-}
-
 .solution_card .solu_title h3 {
   color: #212121;
   font-size: 1.3rem;
@@ -101,8 +98,6 @@
   margin-bottom: 1rem;
   font-size: 2.5rem;
 }
-.our_solution_content p {
-}
 
 .hover_color_bubble {
   position: absolute;
@@ -127,7 +122,7 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  
+
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -169,5 +164,24 @@
   .our_solution_category {
     width: 50%;
     margin: 0 auto;
+  }
+}
+@media (max-width: 450px) {
+  .responsiveDetail {
+    padding: 0 !important ;
+    margin-left: -100px !important;
+    width: 100% !important;
+  }
+  table {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 5px;
+  }
+}
+@media (max-width: 820px) {
+  .solution_card {
+    width: 520px !important;
+    margin-left: 50px !important;
+    font-size: 8px;
   }
 }

@@ -62,6 +62,7 @@ import { BlacklistfilterPipe } from './pipes/blacklistfilter.pipe';
 import { ApplicationfilterPipe } from './pipes/applicationfilter.pipe';
 import { ApplicantfilterPipe } from './pipes/applicantfilter.pipe';
 import { RegisterComponent } from './component/register/register.component';
+import { ResponsivenavbarComponent } from './component/admin/admin-response-navbar/responsivenavbar/responsivenavbar.component';
 
 @NgModule({
   declarations: [
@@ -120,6 +121,7 @@ import { RegisterComponent } from './component/register/register.component';
     ApplicationfilterPipe,
     ApplicantfilterPipe,
     RegisterComponent,
+    ResponsivenavbarComponent,
   ],
   imports: [
     BrowserModule,

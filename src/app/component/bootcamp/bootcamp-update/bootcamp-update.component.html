@@ -1,79 +1,124 @@
+<app-responsivenavbar></app-responsivenavbar>
+
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootcamp Güncelle</title>
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bootcamp Güncelle</title>
-</head>
-
-<body>
-  <form [formGroup]="bootcampUpdateForm" *ngIf="bootcampUpdateForm" method="post" class="shadow mt-4 border">
-    <h1>{{ bootcamp.name }} Düzenle</h1>
-    <div class="row ">
-      <div class="col-md-6">
-        <fieldset>
-          <label for="name">Bootcamp İsmi</label>
-          <input formControlName="name" type="text" id="name" name="user_name" />
-        </fieldset>
-
+  <body>
+    <form
+      [formGroup]="bootcampUpdateForm"
+      *ngIf="bootcampUpdateForm"
+      method="post"
+      class="shadow mt-4 border ms-5 rounded-5"
+    >
+      <h1>{{ bootcamp.name }} Düzenle</h1>
+      <div class="row">
+        <div class="col-md-6">
+          <fieldset>
+            <label for="name">Bootcamp İsmi</label>
+            <input
+              formControlName="name"
+              type="text"
+              id="name"
+              name="user_name"
+            />
+          </fieldset>
+        </div>
+        <div class="col-md-6">
+          <fieldset>
+            <label for="name">Eğitmen</label>
+            <select
+              id="instructorId"
+              formControlName="instructorId"
+              class="form-select rounded-0"
+            >
+              <option
+                *ngFor="let instructor of instructors"
+                [value]="instructor.id"
+              >
+                {{ instructor.firstName }} {{ instructor.lastName }}
+              </option>
+            </select>
+          </fieldset>
+        </div>
       </div>
-      <div class="col-md-6">
+
+      <div class="row">
+        <div class="col-md-6">
+          <fieldset>
+            <label for="name">Bootcamp Başlangıç Tarih</label>
+            <input
+              formControlName="dateStart"
+              type="text"
+              id="name"
+              name="user_name"
+            />
+          </fieldset>
+          <fieldset>
+            <label for="name">Uygunluk Durumu</label>
+            <input
+              formControlName="state"
+              type="number"
+              id="name"
+              name="user_name"
+            />
+          </fieldset>
+        </div>
+        <div class="col-md-6">
+          <fieldset>
+            <label for="name">Bootcamp Bitiş Tarih</label>
+            <input
+              formControlName="dateEnd"
+              type="text"
+              id="name"
+              name="user_name"
+            />
+          </fieldset>
+          <fieldset>
+            <label for="name">Bootcamp Resim</label>
+            <input
+              formControlName="image"
+              type="text"
+              id="name"
+              name="user_name"
+            />
+          </fieldset>
+        </div>
         <fieldset>
-          <label for="name">Eğitmen</label>
-          <select id="instructorId" formControlName="instructorId" class="form-select rounded-0">
-            <option *ngFor="let instructor of instructors" [value]="instructor.id"> {{ instructor.firstName }} {{
-              instructor.lastName }}
-            </option>
-          </select>
+          <label for="name">Bootcamp Hakkında</label>
+          <input
+            formControlName="about"
+            type="text"
+            id="name"
+            name="user_name"
+          />
         </fieldset>
       </div>
-    </div>
 
-
-
-
-    <div class="row">
-      <div class="col-md-6">
-        <fieldset>
-          <label for="name">Bootcamp Başlangıç Tarih</label>
-          <input formControlName="dateStart" type="text" id="name" name="user_name" />
-        </fieldset>
-        <fieldset>
-          <label for="name">Uygunluk Durumu</label>
-          <input formControlName="state" type="number" id="name" name="user_name" />
-        </fieldset>
+      <div class="row">
+        <div class="col-md-6">
+          <button
+            class="button"
+            routerLink="/admin/admin-bootcamp"
+            type="submit"
+          >
+            Geri Dön
+          </button>
+        </div>
+        <div class="col-md-6">
+          <button
+            class="buttonA"
+            (click)="updateBootcamp()"
+            routerLink="/admin/admin-bootcamp"
+            type="submit"
+          >
+            Düzenle
+          </button>
+        </div>
       </div>
-      <div class="col-md-6">
-        <fieldset>
-          <label for="name">Bootcamp Bitiş Tarih</label>
-          <input formControlName="dateEnd" type="text" id="name" name="user_name" />
-        </fieldset>
-        <fieldset>
-          <label for="name">Bootcamp Resim</label>
-          <input formControlName="image" type="text" id="name" name="user_name" />
-        </fieldset>
-      </div>
-      <fieldset>
-        <label for="name">Bootcamp Hakkında</label>
-        <input formControlName="about" type="text" id="name" name="user_name" />
-      </fieldset>
-    </div>
-
-
-
-    <div class="row">
-      <div class="col-md-6">
-        <button class="button" routerLink="/admin/admin-bootcamp" type="submit">
-          Geri Dön
-        </button>
-      </div>
-      <div class="col-md-6">
-        <button class="buttonA" (click)="updateBootcamp()" routerLink="/admin/admin-bootcamp" type="submit">
-          Düzenle
-        </button>
-      </div>
-    </div>
-  </form>
-</body>
-
+    </form>
+  </body>
 </html>

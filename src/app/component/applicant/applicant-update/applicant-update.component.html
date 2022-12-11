@@ -1,69 +1,119 @@
+<app-responsivenavbar></app-responsivenavbar>
+
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aday Güncelle</title>
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aday Güncelle</title>
-</head>
+  <body class="responsiveAdd">
+    <form
+      [formGroup]="applicantUpdateForm"
+      method="post"
+      class="shadow mt-4 ms-5 border rounded-5"
+    >
+      <h1>{{ applicant.firstName }} {{ applicant.lastName }}</h1>
+      <div class="row">
+        <div class="col-md-6">
+          <fieldset>
+            <label for="name">Ad:</label>
+            <input
+              formControlName="firstName"
+              type="text"
+              id="name"
+              name="user_name"
+            />
+          </fieldset>
 
-<body>
-  <form [formGroup]="applicantUpdateForm" method="post" class="shadow mt-4 border">
-    <h1>{{ applicant.firstName }} {{ applicant.lastName }} </h1>
-    <div class="row">
-      <div class="col-md-6">
-
-        <fieldset>
-          <label for="name">Ad:</label>
-          <input formControlName="firstName" type="text" id="name" name="user_name" />
-        </fieldset>
-
-        <fieldset>
-          <label for="name">Email:</label>
-          <input formControlName="email" type="text" id="name" name="user_name" />
-        </fieldset>
-        <fieldset>
-          <label for="name">Doğum Tarihi:</label>
-          <input formControlName="dateOfBirth" type="text" id="name" name="user_name" />
-        </fieldset>
-        <fieldset>
-          <label for="name">Resim:</label>
-          <input formControlName="image" type="text" id="name" name="user_name" />
-        </fieldset>
+          <fieldset>
+            <label for="name">Email:</label>
+            <input
+              formControlName="email"
+              type="text"
+              id="name"
+              name="user_name"
+            />
+          </fieldset>
+          <fieldset>
+            <label for="name">Doğum Tarihi:</label>
+            <input
+              formControlName="dateOfBirth"
+              type="text"
+              id="name"
+              name="user_name"
+            />
+          </fieldset>
+          <fieldset>
+            <label for="name">Resim:</label>
+            <input
+              formControlName="image"
+              type="text"
+              id="name"
+              name="user_name"
+            />
+          </fieldset>
+        </div>
+        <div class="col-md-6">
+          <fieldset>
+            <label for="name">Soyad:</label>
+            <input
+              formControlName="lastName"
+              type="text"
+              id="name"
+              name="user_name"
+            />
+          </fieldset>
+          <fieldset>
+            <label for="name">Şifre:</label>
+            <input
+              formControlName="password"
+              type="text"
+              id="name"
+              name="user_name"
+            />
+          </fieldset>
+          <fieldset>
+            <label for="name">TC Kimlik No:</label>
+            <input
+              formControlName="nationalIdentity"
+              type="text"
+              id="name"
+              name="user_name"
+            />
+          </fieldset>
+          <fieldset>
+            <label for="name">Hakkında:</label>
+            <textarea
+              formControlName="about"
+              type="text"
+              id="name"
+              name="user_name"
+            ></textarea>
+          </fieldset>
+        </div>
       </div>
-      <div class="col-md-6">
-        <fieldset>
-          <label for="name">Soyad:</label>
-          <input formControlName="lastName" type="text" id="name" name="user_name" />
-        </fieldset>
-        <fieldset>
-          <label for="name">Şifre:</label>
-          <input formControlName="password" type="text" id="name" name="user_name" />
-        </fieldset>
-        <fieldset>
-          <label for="name">TC Kimlik No:</label>
-          <input formControlName="nationalIdentity" type="text" id="name" name="user_name" />
-        </fieldset>
-        <fieldset>
-          <label for="name">Hakkında:</label>
-          <textarea formControlName="about" type="text" id="name" name="user_name"></textarea>
-        </fieldset>
-
+      <div class="row">
+        <div class="col-md-6">
+          <button
+            class="button"
+            routerLink="/admin/admin-applicant"
+            type="submit"
+          >
+            Geri Dön
+          </button>
+        </div>
+        <div class="col-md-6">
+          <button
+            class="buttonA"
+            (click)="updateApplicant()"
+            routerLink="/admin/admin-applicant"
+            type="submit"
+          >
+            Düzenle
+          </button>
+        </div>
       </div>
-
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <button class="button" routerLink="/admin/admin-applicant" type="submit">
-          Geri Dön
-        </button>
-      </div>
-      <div class="col-md-6">
-        <button class="buttonA" (click)="updateApplicant()" routerLink="/admin/admin-applicant" type="submit">
-          Düzenle
-        </button>
-      </div>
-    </div>
-  </form>
-</body>
-
+    </form>
+  </body>
 </html>

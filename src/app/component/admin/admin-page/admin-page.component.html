@@ -1,60 +1,69 @@
-<div class="row mt-4">
-  <div class="col-md-12">
-    <div
-      id="carouselExampleFade"
-      class="carousel slide carousel-fade"
-      data-bs-ride="carousel"
+<nav class="navbar navbar-expand-lg navbar-light bg-light responsive">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
     >
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img
-            src="https://www.casgem.gov.tr/Uploads/Pages/sayfa/OFSIA73841/dosya-22072022093551-9D0sK.png"
-            class="d-block w-100 img-thumbnail"
-            style="height: 300px; width: 1000px"
-            alt="..."
-          />
-        </div>
-        <div class="carousel-item">
-          <img
-            src="https://www.casgem.gov.tr/Uploads/Pages/sayfa/967/sosyal-tesislerimiz-gckch-lg.jpg"
-            class="d-block w-100 img-thumbnail"
-            style="height: 300px; width: 1000px"
-            alt="..."
-          />
-        </div>
-        <div class="carousel-item">
-          <img
-            src="http://www.odaajans.com/userfiles/image/Gallery/casgem-ile-ab-projesi/casgem-ile-ab.jpg"
-            class="d-block w-100 img-thumbnail"
-            style="width: 1000; height: 300px"
-            alt="..."
-          />
-        </div>
-      </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExampleFade"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExampleFade"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            routerLink="/admin/admin-page"
+            ><i class="fa fa-tachometer-alt me-2"></i>Admin Sayfası</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/admin/admin-applicant"
+            ><i class="fa fa-th me-2"></i>Adaylar</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/admin/admin-instructor"
+            ><i class="fa fa-keyboard me-2"></i>Eğitmenler</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/admin/admin-employee"
+            ><i class="fa fa-table me-2"></i>Çalışanlar</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/admin/admin-bootcamp"
+            ><i class="fa fa-chart-bar me-2"></i>Bootcampler</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="admin/admin-application"
+            ><i class="far fa-file-alt me-2"></i>Başvurular</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/admin/admin-blacklist"
+            ><i class="fa fa-laptop me-2"></i>Kara Liste</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" (click)="logout()"
+            ><i class="fa fa-bars me-2"></i>Çıkış Yap</a
+          >
+        </li>
+      </ul>
     </div>
   </div>
-</div>
+</nav>
 
-<div class="row">
-  <div class="col-md-4 mt-4">
+<div class="row row-cols-xl-3 row-cols-md-2 row-cols-sm-1 asd">
+  <div class="col mt-4">
     <a class="card2 shadow-lg rounded-5" routerLink="/admin/admin-applicant">
       <h3>Toplam Aday Sayısı</h3>
       <p class="small" style="text-align: center">
@@ -70,7 +79,7 @@
     </a>
   </div>
 
-  <div class="col-md-4 mt-4">
+  <div class="col mt-4">
     <a class="card2 shadow-lg rounded-5" routerLink="/admin/admin-instructor">
       <h3>Toplam Eğitmen Sayısı</h3>
       <p class="small" style="text-align: center">
@@ -84,7 +93,7 @@
       </div>
     </a>
   </div>
-  <div class="col-md-4 mt-4">
+  <div class="col mt-4">
     <a class="card2 shadow-lg rounded-5" routerLink="/admin/admin-employee">
       <h3>Toplam Çalışanlar Sayısı</h3>
       <p class="small" style="text-align: center">
@@ -100,8 +109,8 @@
   </div>
 </div>
 
-<div class="row">
-  <div class="col-md-4 mt-4">
+<div class="row row-cols-xl-3 row-cols-md-2 row-cols-sm-1 asd">
+  <div class="col mt-4">
     <a class="card2 shadow-lg rounded-5" routerLink="/admin/admin-bootcamp">
       <h3>Toplam Bootcamp Sayısı</h3>
       <p class="small" style="text-align: center">
@@ -115,7 +124,7 @@
       </div>
     </a>
   </div>
-  <div class="col-md-4 mt-4">
+  <div class="col mt-4">
     <a class="card2 shadow-lg rounded-5" routerLink="/admin/admin-application">
       <h3>Toplam Başvurular Sayısı</h3>
       <p class="small" style="text-align: center">
@@ -129,7 +138,7 @@
       </div>
     </a>
   </div>
-  <div class="col-md-4 mt-4">
+  <div class="col mt-4">
     <a class="card2 shadow-lg rounded-5" routerLink="/admin/admin-blacklist">
       <h3>Toplam Kara Liste Sayısı</h3>
       <p class="small" style="text-align: center">

@@ -5,3 +5,16 @@
 .bootcampcard {
   transition: all 0.9s;
 }
+@media (max-width: 1200px) {
+  .responsive {
+    display: none;
+  }
+  .responsiveBody {
+    height: 350px !important;
+  }
+}
+@media (max-width: 768px) {
+  .responsiveBody {
+    height: 450px !important;
+  }
+}

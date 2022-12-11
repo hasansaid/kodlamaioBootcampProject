@@ -1,84 +1,128 @@
-
+<app-responsivenavbar></app-responsivenavbar>
 
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootcamp Ekle</title>
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bootcamp Ekle</title>
-</head>
-
-<body>
-  <form [formGroup]="bootcampAddForm" method="post" class="shadow mt-4 border">
-    <h1>Bootcamp Ekle</h1>
-    <div class="row">
-      <div class="col-md-6">
-
-        <fieldset>
-          <label for="name">Eğitmen Seç</label>
-          <select id="instructorId" formControlName="instructorId" class="form-select rounded-0">
-            <option type="number" [value]="null" disabled hidden></option>
-            <option type="number" *ngFor="let instructor of instructors" [value]="instructor.id">
-              {{ instructor.firstName }} {{ instructor.lastName }}
-            </option>
-          </select>
-        </fieldset>
+  <body>
+    <form
+      [formGroup]="bootcampAddForm"
+      method="post"
+      class="shadow mt-4 ms-5 rounded-5 border"
+    >
+      <h1>Bootcamp Ekle</h1>
+      <div class="row">
+        <div class="col-md-6">
+          <fieldset>
+            <label for="name">Eğitmen Seç</label>
+            <select
+              id="instructorId"
+              formControlName="instructorId"
+              class="form-select rounded-0"
+            >
+              <option type="number" [value]="null" disabled hidden></option>
+              <option
+                type="number"
+                *ngFor="let instructor of instructors"
+                [value]="instructor.id"
+              >
+                {{ instructor.firstName }} {{ instructor.lastName }}
+              </option>
+            </select>
+          </fieldset>
+        </div>
+        <div class="col-md-6">
+          <fieldset>
+            <label for="name">Bootcamp İsmi</label>
+            <input
+              formControlName="name"
+              type="text"
+              id="name"
+              name="user_name"
+              placeholder="Bootcamp İsmini Giriniz.."
+            />
+          </fieldset>
+        </div>
       </div>
-      <div class="col-md-6">
-        <fieldset>
-          <label for="name">Bootcamp İsmi</label>
-          <input formControlName="name" type="text" id="name" name="user_name"
-            placeholder="Bootcamp İsmini Giriniz.." />
-        </fieldset>
+
+      <fieldset>
+        <label for="name">Bootcamp Hakkında</label>
+        <input
+          formControlName="about"
+          type="text"
+          id="name"
+          name="user_name"
+          placeholder="Bootcamp Hakkında Bilgi Giriniz.."
+        />
+      </fieldset>
+
+      <div class="row">
+        <div class="col-md-6">
+          <fieldset>
+            <label for="name">Bootcamp Başlangıç Tarihi</label>
+            <input
+              formControlName="dateStart"
+              type="text"
+              id="name"
+              name="user_name"
+              placeholder="Bootcamp Başlangıç Tarihi Giriniz.."
+            />
+          </fieldset>
+        </div>
+        <div class="col-md-6">
+          <fieldset>
+            <label for="name">Bootcamp Bitiş Tarih</label>
+            <input
+              formControlName="dateEnd"
+              type="text"
+              id="name"
+              name="user_name"
+              placeholder="Bootcamp Bitiş Tarihi Giriniz.."
+            />
+          </fieldset>
+        </div>
       </div>
-    </div>
 
+      <fieldset>
+        <label for="name">Uygunluk Durumu</label>
+        <input
+          formControlName="state"
+          type="number"
+          id="name"
+          name="user_name"
+          placeholder="1:Uygun - 2:Uygun Değil.."
+        />
+      </fieldset>
 
-    <fieldset>
-      <label for="name">Bootcamp Hakkında</label>
-      <input formControlName="about" type="text" id="name" name="user_name"
-        placeholder="Bootcamp Hakkında Bilgi Giriniz.." />
-    </fieldset>
-
-    <div class="row">
-      <div class="col-md-6">
-        <fieldset>
-          <label for="name">Bootcamp Başlangıç Tarihi</label>
-          <input formControlName="dateStart" type="text" id="name" name="user_name"
-            placeholder="Bootcamp Başlangıç Tarihi Giriniz.." />
-        </fieldset>
+      <fieldset>
+        <label for="name">Resim</label>
+        <input
+          formControlName="image"
+          type="text"
+          id="name"
+          name="user_name"
+          placeholder="Url.."
+        />
+      </fieldset>
+      <div class="row">
+        <div class="col-md-6">
+          <button
+            class="button"
+            routerLink="/admin/admin-bootcamp"
+            type="submit"
+          >
+            Geri Dön
+          </button>
+        </div>
+        <div class="col-md-6">
+          <button class="buttonA" (click)="add()" type="submit">
+            Bootcamp Ekle
+          </button>
+        </div>
       </div>
-      <div class="col-md-6">
-        <fieldset>
-          <label for="name">Bootcamp Bitiş Tarih</label>
-          <input formControlName="dateEnd" type="text" id="name" name="user_name"
-            placeholder="Bootcamp Bitiş Tarihi Giriniz.." />
-        </fieldset>
-      </div>
-    </div>
-
-    <fieldset>
-      <label for="name">Uygunluk Durumu</label>
-      <input formControlName="state" type="number" id="name" name="user_name" placeholder="1:Uygun - 2:Uygun Değil.." />
-    </fieldset>
-
-    <fieldset>
-      <label for="name">Resim</label>
-      <input formControlName="image" type="text" id="name" name="user_name" placeholder="Url.." />
-    </fieldset>
-    <div class="row">
-      <div class="col-md-6">
-        <button class="button" routerLink="/admin/admin-bootcamp" type="submit">
-          Geri Dön
-        </button>
-      </div>
-      <div class="col-md-6">
-        <button class="buttonA" (click)="add()" type="submit">
-          Bootcamp Ekle
-        </button>
-      </div>
-    </div>
-  </form>
-</body>
-
+    </form>
+  </body>
 </html>

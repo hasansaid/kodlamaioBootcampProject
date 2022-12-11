@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+import { LoginEmployeeService } from './../../../services/login-employee/login-employee.service';
 import { BlacklistService } from './../../../services/blacklist/blacklist.service';
 import { ApplicationService } from './../../../services/application/application.service';
 import { ApplicantService } from './../../../services/applicant/applicant.service';
@@ -32,7 +34,9 @@ export class AdminPageComponent implements OnInit {
     private applicantService: ApplicantService,
     private bootcampService: BootcampService,
     private applicationService: ApplicationService,
-    private blacklistService: BlacklistService
+    private blacklistService: BlacklistService,
+    private loginEmployeeService: LoginEmployeeService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -76,5 +80,9 @@ export class AdminPageComponent implements OnInit {
     this.blacklistService
       .getAllBlackList()
       .subscribe((data) => (this.blacklists = data));
+  }
+  logout() {
+    this.loginEmployeeService.logout();
+    this.router.navigate(['']);
   }
 }

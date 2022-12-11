@@ -1,3 +1,18 @@
 * {
   overflow: hidden;
 }
+@media (max-width: 700px) {
+  .asd {
+    width: 200px;
+  }
+}
+@media (max-width: 450px) {
+  .asd {
+    display: none;
+  }
+}
+@media (max-width: 828px) {
+  .asd {
+    height: 90% !important;
+  }
+}

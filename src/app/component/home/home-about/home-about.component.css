@@ -92,3 +92,17 @@ img {
 .social-icon ul li a:hover i {
   color: var(--white);
 }
+@media (max-width: 1200px) {
+  .responsive {
+    height: 1100px !important;
+  }
+}
+@media (max-width: 1300px) {
+  .wrapper {
+    height: 550px !important;
+  }
+}
+@media (min-width: 1285px) {
+}
+@media (max-width: 1285px) {
+}

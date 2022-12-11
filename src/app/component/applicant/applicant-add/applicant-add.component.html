@@ -1,71 +1,121 @@
+<app-responsivenavbar></app-responsivenavbar>
+
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aday Ekle</title>
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aday Ekle</title>
-</head>
-
-<body>
-  <form [formGroup]="applicantForm" method="post" class="shadow mt-4 border">
-    <h1>Aday Ekle</h1>
-    <div class="row">
-      <div class="col-md-6">
-        <fieldset>
-          <label for="name">Ad:</label>
-          <input formControlName="firstName" type="text" id="name" name="user_name" placeholder="Aday Adı Giriniz.." />
-        </fieldset>
-        <fieldset>
-          <label for="name">Doğum Tarihi:</label>
-          <input formControlName="dateOfBirth" type="text" id="name" name="user_name"
-            placeholder="Aday Doğum Tarihi Giriniz.." />
-        </fieldset>
-        <fieldset>
-          <label for="name">Email:</label>
-          <input formControlName="email" type="text" id="name" name="user_name" placeholder="Aday Email Giriniz.." />
-        </fieldset>
-        <fieldset>
-          <label for="name">Resim:</label>
-          <input formControlName="image" type="text" id="name" name="user_name"
-            placeholder="Aday Resim Url Giriniz.." />
-        </fieldset>
+  <body class="ms-5 responsiveAdd">
+    <form
+      [formGroup]="applicantForm"
+      method="post"
+      class="shadow mt-4 rounded-5 border"
+    >
+      <h1>Aday Ekle</h1>
+      <div class="row">
+        <div class="col-md-6">
+          <fieldset>
+            <label for="name">Ad:</label>
+            <input
+              formControlName="firstName"
+              type="text"
+              id="name"
+              name="user_name"
+              placeholder="Aday Adı Giriniz.."
+            />
+          </fieldset>
+          <fieldset>
+            <label for="name">Doğum Tarihi:</label>
+            <input
+              formControlName="dateOfBirth"
+              type="text"
+              id="name"
+              name="user_name"
+              placeholder="Aday Doğum Tarihi Giriniz.."
+            />
+          </fieldset>
+          <fieldset>
+            <label for="name">Email:</label>
+            <input
+              formControlName="email"
+              type="text"
+              id="name"
+              name="user_name"
+              placeholder="Aday Email Giriniz.."
+            />
+          </fieldset>
+          <fieldset>
+            <label for="name">Resim:</label>
+            <input
+              formControlName="image"
+              type="text"
+              id="name"
+              name="user_name"
+              placeholder="Aday Resim Url Giriniz.."
+            />
+          </fieldset>
+        </div>
+        <div class="col-md-6">
+          <fieldset>
+            <label for="name">Soyad:</label>
+            <input
+              formControlName="lastName"
+              type="text"
+              id="name"
+              name="user_name"
+              placeholder="Aday Soyadını Giriniz.."
+            />
+          </fieldset>
+          <fieldset>
+            <label for="name">TC Kimlik No:</label>
+            <input
+              formControlName="nationalIdentity"
+              type="text"
+              id="name"
+              name="user_name"
+              placeholder="Aday TC Giriniz.."
+            />
+          </fieldset>
+          <fieldset>
+            <label for="name">Şifre:</label>
+            <input
+              formControlName="password"
+              type="text"
+              id="name"
+              name="user_name"
+              placeholder="Aday Şifre Giriniz.."
+            />
+          </fieldset>
+          <fieldset>
+            <label for="name">Hakkında:</label>
+            <textarea
+              formControlName="about"
+              type="text"
+              id="name"
+              name="user_name"
+              placeholder="Aday Hakkında Ek Bilgi Giriniz.."
+            ></textarea>
+          </fieldset>
+        </div>
       </div>
-      <div class="col-md-6">
-        <fieldset>
-          <label for="name">Soyad:</label>
-          <input formControlName="lastName" type="text" id="name" name="user_name"
-            placeholder="Aday Soyadını Giriniz.." />
-        </fieldset>
-        <fieldset>
-          <label for="name">TC Kimlik No:</label>
-          <input formControlName="nationalIdentity" type="text" id="name" name="user_name"
-            placeholder="Aday TC Giriniz.." />
-        </fieldset>
-        <fieldset>
-          <label for="name">Şifre:</label>
-          <input formControlName="password" type="text" id="name" name="user_name" placeholder="Aday Şifre Giriniz.." />
-        </fieldset>
-        <fieldset>
-          <label for="name">Hakkında:</label>
-          <textarea formControlName="about" type="text" id="name" name="user_name"
-            placeholder="Aday Hakkında Ek Bilgi Giriniz.."></textarea>
-        </fieldset>
+      <div class="row">
+        <div class="col-md-6">
+          <button
+            class="button"
+            routerLink="/admin/admin-applicant"
+            type="submit"
+          >
+            Geri Dön
+          </button>
+        </div>
+        <div class="col-md-6">
+          <button class="buttonA" (click)="add()" type="submit">
+            Aday Ekle
+          </button>
+        </div>
       </div>
-
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <button class="button" routerLink="/admin/admin-applicant" type="submit">
-          Geri Dön
-        </button>
-      </div>
-      <div class="col-md-6">
-        <button class="buttonA" (click)="add()" type="submit">
-          Aday Ekle
-        </button>
-      </div>
-    </div>
-  </form>
-</body>
-
+    </form>
+  </body>
 </html>

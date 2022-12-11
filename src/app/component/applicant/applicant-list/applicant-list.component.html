@@ -1,4 +1,7 @@
-<div class="bg-light shadow-lg mt-4 border p-5 rounded h-100 p-4">
+<app-responsivenavbar></app-responsivenavbar>
+<div
+  class="bg-light shadow-lg mt-4 border p-5 ms-5 rounded-5 h-100 w-100 responsiveTable p-4"
+>
   <div class="mb-4">
     <div style="display: flex; justify-content: space-evenly; margin-top: 10px">
       <div>
@@ -18,7 +21,9 @@
       <table class="table">
         <thead>
           <tr>
-            <th scope="col" style="text-align: center">Aday Numarası</th>
+            <th id="res" scope="col" style="text-align: center">
+              Aday Numarası
+            </th>
             <th scope="col" style="text-align: center">İsim</th>
             <!-- <th scope="col" style="text-align: center">Soyisim</th> -->
             <th scope="col" style="text-align: center">E-mail</th>
@@ -39,7 +44,7 @@
               let applicant of applicants | applicantfilter : filterApplicant
             "
           >
-            <td style="text-align: center">{{ applicant.id }}</td>
+            <td id="res" style="text-align: center">{{ applicant.id }}</td>
             <td style="text-align: center">{{ applicant.firstName }}</td>
             <!-- <td style="text-align: center">{{ applicant.lastName }}</td> -->
             <td style="text-align: center">{{ applicant.email }}</td>

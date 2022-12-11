@@ -347,3 +347,22 @@ p.small {
 .card4:hover .go-arrow {
   opacity: 1;
 }
+.responsive {
+  display: none;
+}
+@media (max-width: 770px) {
+  .asd {
+    margin-left: 170px;
+    width: 200px;
+  }
+}
+@media (min-width: 770px) {
+  .asd {
+    margin-left: 50px;
+  }
+}
+@media (max-width: 450px) {
+  .responsive {
+    display: flex;
+  }
+}

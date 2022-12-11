@@ -1,16 +1,23 @@
-<br><br><br><br><br>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<app-responsivenavbar></app-responsivenavbar>
 
-<div class="section_our_solution">
+<br /><br /><br /><br /><br />
+<link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+/>
+
+<div class="section_our_solution ms-5">
   <div class="row">
-    <div class="col-lg-12 col-md-12 col-sm-12" style="width:600px; float: left;">
+    <div
+      class="col-lg-12 col-md-12 ms-5 col-sm-12"
+      style="width: 600px; float: left"
+    >
       <div class="our_solution_category">
         <div class="solution_cards_box">
           <div class="solution_card">
             <div class="hover_color_bubble"></div>
             <div class="so_top_icon">
-              <img src="{{bootcamp.image}}" class="w-100" />
-              
+              <img src="{{ bootcamp.image }}" class="w-100" />
             </div>
             <div class="solu_title">
               <h3>Bootcamp</h3>
@@ -35,12 +42,16 @@
                     <td>{{ bootcamp.dateStart }}</td>
                     <td>{{ bootcamp.dateEnd }}</td>
                     <td>{{ bootcamp.state }}</td>
-                    
-                   
                   </tr>
                 </tbody>
               </table>
-              <button type="button" routerLink="/admin/admin-bootcamp" class="read_more_btn">Geri Dön</button>
+              <button
+                type="button"
+                routerLink="/admin/admin-bootcamp"
+                class="read_more_btn"
+              >
+                Geri Dön
+              </button>
             </div>
           </div>
         </div>

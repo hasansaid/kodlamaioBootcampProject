@@ -1,39 +1,52 @@
+<app-responsivenavbar></app-responsivenavbar>
+
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kara Listeye Ekle</title>
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kara Listeye Ekle</title>
-</head>
+  <body class="responsiveAdd">
+    <form
+      *ngIf="blackListAddForm"
+      [formGroup]="blackListAddForm"
+      method="post"
+      class="shadow mt-4 border rounded-5"
+    >
+      <h1>Kara Listeye Ekle</h1>
 
-<body>
-  <form *ngIf="blackListAddForm" [formGroup]="blackListAddForm" method="post" class="shadow mt-4 border">
-    <h1>Kara Listeye Ekle</h1>
+      <fieldset>
+        <label for="name">Kara Listeye Eklenme Tarihi: {{ date }} </label>
+      </fieldset>
+      <fieldset>
+        <label for="name">Eklenme Sebebi:</label>
+        <input
+          formControlName="reason"
+          type="text"
+          id="name"
+          name="user_name"
+        />
+      </fieldset>
 
-
-    <fieldset>
-      <label for="name">Kara Listeye Eklenme Tarihi: {{date}} </label>
-    </fieldset>
-    <fieldset>
-      <label for="name">Eklenme Sebebi:</label>
-      <input formControlName="reason" type="text" id="name" name="user_name" />
-    </fieldset>
-
-    <div class="row">
-      <div class="col-md-6">
-        <button class="button" routerLink="/admin/admin-applicant" type="submit">
-          Geri Dön
-        </button>
+      <div class="row">
+        <div class="col-md-6">
+          <button
+            class="button"
+            routerLink="/admin/admin-applicant"
+            type="submit"
+          >
+            Geri Dön
+          </button>
+        </div>
+        <div class="col-md-6">
+          <button class="buttonA" (click)="addBlackList()" type="submit">
+            Kara Listeye Ekle
+          </button>
+        </div>
       </div>
-      <div class="col-md-6">
-        <button class="buttonA" (click)="addBlackList()" type="submit">
-          Kara Listeye Ekle
-        </button>
-      </div>
-    </div>
-  </form>
-</body>
-
+    </form>
+  </body>
 </html>
 
 <!-- <form class="form-sample" [formGroup]="blackListAddForm" >

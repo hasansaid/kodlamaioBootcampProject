@@ -1,38 +1,61 @@
-
-
+<app-responsivenavbar></app-responsivenavbar>
 
 <div class="login-box">
   <h2>Eğitmen Giriş Ekranı</h2>
 
-  <div  class="egitmen_1" routerLink="home-login-employee" ><img src="https://img.icons8.com/office/512/collaborator-male--v1.png" style="width:90px; height:80px; margin-bottom: 20px; float:left; margin-left:35px;margin-right:10px;">
+  <div class="egitmen_1" routerLink="home-login-employee">
+    <img
+      src="https://img.icons8.com/office/512/collaborator-male--v1.png"
+      style="
+        width: 90px;
+        height: 80px;
+        margin-bottom: 20px;
+        float: left;
+        margin-left: 35px;
+        margin-right: 10px;
+      "
+    />
   </div>
 
-  <div class="egitmen_1" routerLink="home-login-applicant"><img src="https://img.icons8.com/office/512/manager.png" style="width:90px; height:80px; margin-bottom: 20px; float:left; margin-right:10px;">
+  <div class="egitmen_1" routerLink="home-login-applicant">
+    <img
+      src="https://img.icons8.com/office/512/manager.png"
+      style="
+        width: 90px;
+        height: 80px;
+        margin-bottom: 20px;
+        float: left;
+        margin-right: 10px;
+      "
+    />
   </div>
 
-  <div class="egitmen_1" ><img src="https://img.icons8.com/color/512/user-group-woman-woman.png" style="width:90px; height:87px; margin-bottom: 20px; ">
+  <div class="egitmen_1">
+    <img
+      src="https://img.icons8.com/color/512/user-group-woman-woman.png"
+      style="width: 90px; height: 87px; margin-bottom: 20px"
+    />
   </div>
 
   <form class="login" [formGroup]="loginInstructorForm">
     <div class="user-box">
-      <input type="text" name="" required="" formControlName="email">
+      <input type="text" name="" required="" formControlName="email" />
       <label>E-Mail</label>
     </div>
     <div class="user-box">
-      <input type="password" name="" required="" formControlName="password">
+      <input type="password" name="" required="" formControlName="password" />
       <label>Password</label>
     </div>
 
-    <div class="giris" style= "text-align: center; ">
-    <a (click)="loginInstructor()">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      Giriş
-    </a>
-  </div>
-    
+    <div class="giris" style="text-align: center">
+      <a (click)="loginInstructor()">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Giriş
+      </a>
+    </div>
   </form>
 </div>
 <router-outlet></router-outlet>
