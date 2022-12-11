@@ -63,7 +63,7 @@ export class ApplicantUpdateComponent implements OnInit {
           this.applicantUpdateForm.value
         )
         .subscribe();
-      this.toastrService.success('Düzenleme Başarılı');
+      this.toastrService.success('Güncellemeniz Gerçekleşmiştir');
     } else {
       this.toastrService.error('Dikkat Form Eksik!!!');
     }
