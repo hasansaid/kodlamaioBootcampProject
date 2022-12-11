@@ -1,19 +1,12 @@
 <app-responsivenavbar></app-responsivenavbar>
 
-<div
-  class="bg-light rounded border p-5 shadow-lg mt-4 ms-5 rounded-5"
-  style="height: 100%"
->
+<div class="bg-light rounded border p-5 shadow-lg mt-4 ms-5 rounded-5" style="height: 100%">
   <div style="display: flex; justify-content: space-evenly; margin-top: 10px">
     <div>
       <h2 style="margin-left: 170px">Bootcamp Listesi</h2>
     </div>
     <div>
-      <button
-        type="button"
-        class="btn btn-outline-success m-2 shadow"
-        routerLink="bootcamp-add"
-      >
+      <button type="button" class="btn btn-outline-success m-2 shadow" routerLink="bootcamp-add">
         Bootcamp Ekle
       </button>
     </div>
@@ -24,19 +17,14 @@
         <tr>
           <th scope="col" style="text-align: center">Id</th>
           <th scope="col" style="text-align: center">Eğitmen</th>
-          <th scope="col" style="text-align: center">İsim</th>
+          <th scope="col" style="text-align: center">Bootcamp İsmi</th>
           <th scope="col" style="text-align: center">Başlangıç Tarihi</th>
-          <th scope="col" style="text-align: center">Bitiş Tarihi</th>
+          <!-- <th scope="col" style="text-align: center">Bitiş Tarihi</th> -->
           <th scope="col" style="text-align: center">Durumu</th>
 
           <th colspan="3">
-            <input
-              type="text"
-              placeholder="Bootcamp arayın..."
-              class="form-control"
-              id="brandFilter"
-              [(ngModel)]="filterText"
-            />
+            <input type="text" placeholder="Bootcamp arayın..." class="form-control" id="brandFilter"
+              [(ngModel)]="filterText" />
           </th>
         </tr>
       </thead>
@@ -46,33 +34,23 @@
           <td style="text-align: center">{{ bootcamp.instructorName }}</td>
           <td style="text-align: center">{{ bootcamp.name }}</td>
           <td style="text-align: center">{{ bootcamp.dateStart }}</td>
-          <td style="text-align: center">{{ bootcamp.dateEnd }}</td>
+          <!-- <td style="text-align: center">{{ bootcamp.dateEnd }}</td> -->
           <td style="text-align: center">{{ bootcamp.state }}</td>
 
           <td>
-            <button
-              type="button"
-              class="btn btn-outline-secondary m-2 shadow"
-              routerLink="bootcamp-detail/{{ bootcamp.id }}"
-            >
+            <button type="button" class="btn btn-outline-secondary m-2 shadow"
+              routerLink="bootcamp-detail/{{ bootcamp.id }}">
               Detay
             </button>
           </td>
           <td>
-            <button
-              type="button"
-              class="btn btn-outline-warning m-2 shadow"
-              routerLink="bootcamp-update/{{ bootcamp.id }}"
-            >
+            <button type="button" class="btn btn-outline-warning m-2 shadow"
+              routerLink="bootcamp-update/{{ bootcamp.id }}">
               Düzenle
             </button>
           </td>
           <td>
-            <button
-              type="button"
-              class="btn btn-outline-danger m-2 shadow"
-              (click)="deleteBootcamp(bootcamp.id)"
-            >
+            <button type="button" class="btn btn-outline-danger m-2 shadow" (click)="deleteBootcamp(bootcamp.id)">
               Sil
             </button>
           </td>
