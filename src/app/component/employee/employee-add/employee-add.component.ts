@@ -40,15 +40,15 @@ export class EmployeeAddComponent implements OnInit {
       image: ['', Validators.required],
     });
   }
-  add() {
-    if (this.employeeAddForm.valid) {
-      let employeeModel = Object.assign({}, this.employeeAddForm.value);
-      this.employeeService.addEmployee(employeeModel).subscribe((data) => {
-        this.toastrService.success('Çalışan Ekleme Başarılı');
-        this.router.navigate(['/admin/admin-employee']);
-      });
-    } else {
-      this.toastrService.warning('Form Eksik!!!');
-    }
-  }
+  // add() {
+  //   if (this.employeeAddForm.valid) {
+  //     let employeeModel = Object.assign({}, this.employeeAddForm.value);
+  //     this.employeeService.addEmployee(employeeModel).subscribe((data) => {
+  //       this.toastrService.success('Çalışan Ekleme Başarılı');
+  //       this.router.navigate(['/admin/admin-employee']);
+  //     });
+  //   } else {
+  //     this.toastrService.warning('Form Eksik!!!');
+  //   }
+  // }
 }

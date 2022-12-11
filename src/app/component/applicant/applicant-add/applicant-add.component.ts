@@ -42,15 +42,15 @@ export class ApplicantAddComponent implements OnInit {
     });
   }
 
-  add() {
-    if (this.applicantForm.valid) {
-      let applicantModel = Object.assign({}, this.applicantForm.value);
-      this.applicantService.addApplicant(applicantModel).subscribe((data) => {
-        this.toastrService.success('Aday Ekleme Başarılı');
-        this.router.navigate(['/admin/admin-applicant']);
-      });
-    } else {
-      this.toastrService.warning('Form Eksik!!!');
-    }
-  }
+  // add() {
+  //   if (this.applicantForm.valid) {
+  //     let applicantModel = Object.assign({}, this.applicantForm.value);
+  //     this.applicantService.addApplicant(applicantModel).subscribe((data) => {
+  //       this.toastrService.success('Aday Ekleme Başarılı');
+  //       this.router.navigate(['/admin/admin-applicant']);
+  //     });
+  //   } else {
+  //     this.toastrService.warning('Form Eksik!!!');
+  //   }
+  // }
 }

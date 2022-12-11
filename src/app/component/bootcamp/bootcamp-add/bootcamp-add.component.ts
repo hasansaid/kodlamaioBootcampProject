@@ -51,24 +51,24 @@ export class BootcampAddComponent implements OnInit {
       about: ['', Validators.required],
     });
   }
-  add() {
-    if (this.bootcampAddForm.valid) {
-      let bootcampModel: ICreateBootcampRequest = Object.assign(
-        {},
-        this.bootcampAddForm.value
-      );
-      this.instructorService
-        .getInstructor(bootcampModel.instructorId)
-        .subscribe((data) => {
-          bootcampModel.instructorName = data.firstName + ' ' + data.lastName;
-          this.bootcampService.addBootcamp(bootcampModel).subscribe((data) => {
-            this.toastrService.success('Bootcamp Ekleme Başarılı');
-            this.router.navigate(['/admin/admin-bootcamp']);
-            console.log(data);
-          });
-        });
-    } else {
-      this.toastrService.warning('Form Eksik!!!');
-    }
-  }
+  // add() {
+  //   if (this.bootcampAddForm.valid) {
+  //     let bootcampModel: ICreateBootcampRequest = Object.assign(
+  //       {},
+  //       this.bootcampAddForm.value
+  //     );
+  //     this.instructorService
+  //       .getInstructor(bootcampModel.instructorId)
+  //       .subscribe((data) => {
+  //         bootcampModel.instructorName = data.firstName + ' ' + data.lastName;
+  //         this.bootcampService.addBootcamp(bootcampModel).subscribe((data) => {
+  //           this.toastrService.success('Bootcamp Ekleme Başarılı');
+  //           this.router.navigate(['/admin/admin-bootcamp']);
+  //           console.log(data);
+  //         });
+  //       });
+  //   } else {
+  //     this.toastrService.warning('Form Eksik!!!');
+  //   }
+  // }
 }
