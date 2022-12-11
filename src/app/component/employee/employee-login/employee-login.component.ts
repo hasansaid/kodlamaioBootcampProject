@@ -55,7 +55,7 @@ export class EmployeeLoginComponent implements OnInit {
             localStorage.setItem('lastName', data[0].lastName);
             localStorage.setItem('image', data[0].image);
           } else {
-            this.toastrService.warning('Kullanıcı Adı Veya Şifreniz Hatalı');
+            this.toastrService.warning('Kullanıcı Adı Veya Şifreniz Hatalı!!');
           }
         });
     }
