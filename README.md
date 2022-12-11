@@ -16,5 +16,6 @@ Angular - TypeScript - JavaScript - HTML - Css - Bootstrap 5
 
 ## Admin Sayfası
 
+![adminsayfası](https://github.com/hasansaid/kodlamaioBootcampProject/blob/master/adminpage.gif)
 
 
