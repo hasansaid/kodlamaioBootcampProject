@@ -19,11 +19,12 @@
               <table class="table">
                 <thead>
                   <tr>
-                    <th scope="col" style="text-align: center">Id</th>
+                    <th scope="col" style="text-align: center">Eğitmen Numarası</th>
                     <th scope="col" style="text-align: center">İsim</th>
                     <th scope="col" style="text-align: center">Soyisim</th>
-                    <th scope="col" style="text-align: center">Email</th>
-                    <th scope="col" style="text-align: center">Şirket</th>
+                    <th scope="col" style="text-align: center">E-Mail</th>
+                    <th scope="col" style="text-align: center">Şifre</th>
+                    <th scope="col" style="text-align: center">Şirket İsmi</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -36,6 +37,7 @@
                       {{ instructor.lastName }}
                     </td>
                     <td style="text-align: center">{{ instructor.email }}</td>
+                    <td style="text-align: center">{{ instructor.password }}</td>
                     <td style="text-align: center">
                       {{ instructor.companyName }}
                     </td>
