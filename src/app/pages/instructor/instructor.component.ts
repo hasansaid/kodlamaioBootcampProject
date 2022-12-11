@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./instructor.component.css'],
 })
 export class InstructorComponent implements OnInit {
-  name = localStorage.getItem('fullname');
+  name = localStorage.getItem('name') + ' ' + localStorage.getItem('lastName');
+  image = localStorage.getItem('image');
   constructor(
     private loginEmployeeService: LoginEmployeeService,
     private router: Router

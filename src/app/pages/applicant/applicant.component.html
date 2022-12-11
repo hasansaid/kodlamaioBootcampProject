@@ -1,9 +1,6 @@
 <div class="row">
   <div class="col-md-2 ms-5">
-    <div
-      class="sidebar pe-4 pb-3 border rounded shadow-lg mt-4 ms-4"
-      style="height: 90%"
-    >
+    <div class="sidebar pe-4 pb-3 border rounded shadow-lg mt-4 ms-4" style="height: 90%">
       <nav class="navbar">
         <a routerLink="/applicant-page" class="navbar-brand mx-4 mb-3">
           <h5 class="text-primary">
@@ -12,15 +9,9 @@
         </a>
         <div class="d-flex align-items-center ms-4 mb-4">
           <div class="position-relative">
-            <img
-              class="rounded-circle"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQihyZtmBuy7E75HPllahoZEVxR6FLbSMHwqr2lpV8&s"
-              alt=""
-              style="width: 40px; height: 40px"
-            />
-            <div
-              class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"
-            ></div>
+            <img class="rounded-circle" src="{{image}}" alt="" style="width: 40px; height: 40px" />
+            <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1">
+            </div>
           </div>
           <div class="ms-3">
             <h6 class="mb-0">{{ name }}</h6>
@@ -28,17 +19,12 @@
           </div>
         </div>
         <div class="navbar-nav w-100">
-          <a routerLink="applicant-bootcamp" class="nav-item nav-link"
-            ><i class="fa fa-table me-2"></i>Anasayfa</a
-          >
-          <a routerLink="applicant-notification" class="nav-item nav-link"
-            ><i class="far fa-file-alt me-2"></i>Başvurularım</a
-          >
+          <a routerLink="applicant-bootcamp" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Anasayfa</a>
+          <a routerLink="applicant-notification" class="nav-item nav-link"><i
+              class="far fa-file-alt me-2"></i>Başvurularım</a>
 
           <div class="navbar-nav w-100" style="margin-top: 320px">
-            <a (click)="logout()" class="nav-item nav-link"
-              ><i class="fa fa-bars me-2"></i>Çıkış Yap</a
-            >
+            <a (click)="logout()" class="nav-item nav-link"><i class="fa fa-bars me-2"></i>Çıkış Yap</a>
           </div>
         </div>
       </nav>

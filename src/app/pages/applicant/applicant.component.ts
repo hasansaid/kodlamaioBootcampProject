@@ -9,7 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./applicant.component.css'],
 })
 export class ApplicantComponent implements OnInit {
-  name = localStorage.getItem('fullname');
+  name = localStorage.getItem('name') + ' ' + localStorage.getItem('lastName');
+  image = localStorage.getItem('image');
   constructor(
     private loginEmployeeService: LoginEmployeeService,
     private router: Router

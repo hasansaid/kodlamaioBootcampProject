@@ -12,7 +12,9 @@ export class LoginEmployeeService {
   roleAs: string;
   idAs: string;
   instructorIdAs: string;
-  fullnameAs: string;
+  firstNameAs: string;
+  lastNameAs: string;
+  imageAs: string;
   constructor(private httpClient: HttpClient) {}
 
   loginEmployee(user: LoginEmployeeModel) {
@@ -43,9 +45,18 @@ export class LoginEmployeeService {
     this.idAs = localStorage.getItem('userId');
     return this.idAs;
   }
-  getfullname() {
-    this.fullnameAs = localStorage.getItem('fullname');
-    return this.fullnameAs;
+
+  getfirstname() {
+    this.firstNameAs = localStorage.getItem('name');
+    return this.firstNameAs;
+  }
+  getlastName() {
+    this.lastNameAs = localStorage.getItem('lastName');
+    return this.lastNameAs;
+  }
+  getimage() {
+    this.imageAs = localStorage.getItem('image');
+    return this.imageAs;
   }
 
   logout() {

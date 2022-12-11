@@ -110,6 +110,18 @@
       "dateOfBirth": "19/07/1991",
       "position": "Müdür",
       "image": "https://avatars.githubusercontent.com/u/116732583?v=4"
+    },
+    {
+      "id": 2,
+      "firstName": "Hasan",
+      "lastName": "Sertkaya",
+      "email": "sertkaya@gmail.com",
+      "nationalIdentity": "58745632195",
+      "dateOfBirth": "09/01/1995",
+      "password": "123",
+      "role": "roleEmployee",
+      "position": "Müdür Yardımcısı",
+      "image": "https://avatars.githubusercontent.com/u/64565872?v=4"
     }
   ],
   "bootcamp": [
@@ -191,7 +203,7 @@
       "expiration": "aa",
       "token": "aa",
       "role": "roleApplicant",
-      "fullname": "Uğur Meydanlı"
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiTk2aCTMPWvb-NZG54t4hg1bFPlNzXuLLYw&usqp=CAU"
     },
     {
       "id": 2,
@@ -202,7 +214,7 @@
       "expiration": "aa",
       "token": "aa",
       "role": "roleEmployee",
-      "fullname": "Hasan Sertkaya"
+      "image": "https://avatars.githubusercontent.com/u/64565872?v=4"
     },
     {
       "id": 3,
@@ -213,8 +225,7 @@
       "expiration": "aa",
       "token": "aa",
       "role": "roleInstructor",
-      "instructorId": "2",
-      "fullname": "Veli Yılmaz"
+      "instructorId": "2"
     },
     {
       "id": 4,
@@ -226,7 +237,7 @@
       "token": "aa",
       "role": "roleInstructor",
       "instructorId": "3",
-      "fullname": "Engin Demiroğ"
+      "image": "https://yt3.ggpht.com/ytc/AMLnZu-0ZFlPJSSrc3HL_kNOY5LtHysire2aNCP72z-H6w=s900-c-k-c0x00ffffff-no-rj"
     },
     {
       "id": 5,
@@ -237,7 +248,7 @@
       "expiration": "aa",
       "token": "aa",
       "role": "roleEmployee",
-      "fullname": "Enes Karaca"
+      "image": "https://avatars.githubusercontent.com/u/116732583?v=4"
     },
     {
       "id": 6,
@@ -248,7 +259,7 @@
       "expiration": "aa",
       "token": "aa",
       "role": "roleApplicant",
-      "fullname": "Ali Meydanlı"
+      "image": "https://www.cumhuriyet.com.tr/Archive/2022/7/19/1959771/kapak_143811.jpg"
     },
     {
       "id": 7,
@@ -260,7 +271,7 @@
       "token": "aa",
       "role": "roleInstructor",
       "instructorId": "1",
-      "fullname": "Enes Malik"
+      "image": "https://i.ibb.co/N7y00pZ/bfc5bf4f-284f-42f2-a4fe-b6505576a55b.jpg"
     },
     {
       "id": 8,
@@ -272,7 +283,7 @@
       "token": "aa",
       "role": "roleInstructor",
       "instructorId": "2",
-      "fullname": "Serhat Taşçı"
+      "image": "https://i.ibb.co/vvPg5dR/f27f45c7-cb00-408c-b716-4c09312c04f4.jpg"
     },
     {
       "id": 9,
@@ -284,7 +295,7 @@
       "token": "aa",
       "role": "roleInstructor",
       "instructorId": "4",
-      "fullname": "İsmail Karakaya"
+      "image": "https://i.ibb.co/m8GmMZ5/3a3b7789-46d1-472f-ae39-f7eef7c6132e.jpg"
     }
   ]
 }
