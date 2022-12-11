@@ -10,3 +10,10 @@ Senaryo: kodlamaio isimli şirket bootcamp eğitimleri düzenlemektedir. Bunun �
 ## Kullanılan Teknolojiler
 Angular - TypeScript - JavaScript - HTML - Css - Bootstrap 5 
 
+## Anasayfa
+
+
+## Admin Sayfası
+
+
+
