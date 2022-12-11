@@ -49,19 +49,19 @@ export class BlacklistUpdateComponent implements OnInit {
     });
   }
 
-  updateBlackList() {
-    if(this.blackListUpdateForm.valid){
-    this.blacklistService
-      .updateBlackList(
-        this.activatedRoute.snapshot.params['id'],
-        this.blackListUpdateForm.value
-      )
-      .subscribe();
-      this.toastrService.success('Güncellemeniz Gerçekleşmiştir');
-    }else{
-      this.toastrService.error('Dikkat Form Eksik!!!');
-    }
-  }
+  // updateBlackList() {
+  //   if(this.blackListUpdateForm.valid){
+  //   this.blacklistService
+  //     .updateBlackList(
+  //       this.activatedRoute.snapshot.params['id'],
+  //       this.blackListUpdateForm.value
+  //     )
+  //     .subscribe();
+  //     this.toastrService.success('Güncellemeniz Gerçekleşmiştir');
+  //   }else{
+  //     this.toastrService.error('Dikkat Form Eksik!!!');
+  //   }
+  // }
 
   
 }

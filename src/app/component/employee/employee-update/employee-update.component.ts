@@ -57,20 +57,20 @@ export class EmployeeUpdateComponent implements OnInit {
     });
   }
 
-  //  updateEmployee() {
-  //   if(this.employeeUpdateForm.valid){
-  //    this.employeeService
-  //     .updateEmployee(
-  //        this.activatedRoute.snapshot.params['id'],
-  //       this.employeeUpdateForm.value
-  //      )
-  //    .subscribe();
-  //    this.toastrService.success('Güncellemeniz Gerçekleşmiştir');
-  //  }else{
-  //   this.toastrService.error('Dikkat Form Eksik!!!');
+   updateEmployee() {
+    if(this.employeeUpdateForm.valid){
+     this.employeeService
+      .updateEmployee(
+         this.activatedRoute.snapshot.params['id'],
+        this.employeeUpdateForm.value
+       )
+     .subscribe();
+     this.toastrService.success('Güncellemeniz Gerçekleşmiştir');
+   }else{
+    this.toastrService.error('Dikkat Form Eksik!!!');
 
-  //  }
-  // }
+   }
+  }
 
   
 }
