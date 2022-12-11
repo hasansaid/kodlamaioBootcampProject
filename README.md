@@ -11,9 +11,8 @@ Senaryo: kodlamaio isimli şirket bootcamp eğitimleri düzenlemektedir. Bunun �
 Angular - TypeScript - JavaScript - HTML - Css - Bootstrap 5 
 
 ## Anasayfa
-https://github.com/hasansaid/kodlamaioBootcampProject/blob/master/5dd731efde7c10d561daac32cac85cc550b64879.gif?raw=true
 
-![adminpanel](https://github.com/hasansaid/kodlamaioBootcampProject/blob/master/5dd731efde7c10d561daac32cac85cc550b64879.gif)
+![anasayfa](https://github.com/hasansaid/kodlamaioBootcampProject/blob/master/5dd731efde7c10d561daac32cac85cc550b64879.gif)
 
 ## Admin Sayfası
 
