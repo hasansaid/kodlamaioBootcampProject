@@ -1,5 +1,5 @@
 # kodlamaioBootcampProject
-Çalışma ve Sosyal Güvenlik Eğitim Araştırma Merkezi bünyesinde yapılan Frontend Bootcamp programına eğitmenlik yapan <a href="https://www.instagram.com/engindemirog/" Engin DEMİROĞ </a> hocamızın bizden istediği bitirme projesi olarak kodlamaioBootcampProject projesini hayata geçirdik. Bu proje Angular ile ilk projemizdir.
+Çalışma ve Sosyal Güvenlik Eğitim Araştırma Merkezi bünyesinde yapılan Frontend Bootcamp programına eğitmenlik yapan <a href="https://www.instagram.com/engindemirog/"> Engin DEMİROĞ </a> hocamızın bizden istediği bitirme projesi olarak kodlamaioBootcampProject projesini hayata geçirdik. Bu proje Angular ile ilk projemizdir.
 
 ## Proje Geliştiricileri
 <a href="https://github.com/hasansaid"> Hasan Said SERTKAYA </a> -  <a href="https://github.com/ugur08">Uğur MEYDANLI</a> - <a href="https://github.com/karacaeness">Enes KARACA </a> - <a href="https://github.com/seyfettinturan"> Seyfettin TURAN</a>
