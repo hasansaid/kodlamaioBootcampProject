@@ -55,17 +55,17 @@ export class ApplicantUpdateComponent implements OnInit {
       this.getApplicant(params['id']);
     });
   }
-  // updateApplicant() {
-  //   if (this.applicantUpdateForm.valid) {
-  //     this.applicantService
-  //       .updateApplicant(
-  //         this.activatedRoute.snapshot.params['id'],
-  //         this.applicantUpdateForm.value
-  //       )
-  //       .subscribe();
-  //     this.toastrService.success('Düzenleme Başarılı');
-  //   } else {
-  //     this.toastrService.error('Dikkat Form Eksik!!!');
-  //   }
-  // }
+  updateApplicant() {
+    if (this.applicantUpdateForm.valid) {
+      this.applicantService
+        .updateApplicant(
+          this.activatedRoute.snapshot.params['id'],
+          this.applicantUpdateForm.value
+        )
+        .subscribe();
+      this.toastrService.success('Güncellemeniz Gerçekleşmiştir');
+    } else {
+      this.toastrService.error('Dikkat Form Eksik!!!');
+    }
+  }
 }
