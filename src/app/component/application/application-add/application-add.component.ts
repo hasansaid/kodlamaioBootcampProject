@@ -60,27 +60,27 @@ export class ApplicationAddComponent implements OnInit {
     });
   }
 
-  // add() {
-  //   if (this.applicationAddForm.valid) {
-  //     let applicationModel = Object.assign({}, this.applicationAddForm.value);
-  //     this.bootcampService
-  //       .getBootcamp(applicationModel.bootcampId)
-  //       .subscribe((data) => {
-  //         applicationModel.bootcampName = data.name;
-  //         this.applicantService
-  //           .getApplicant(applicationModel.userId)
-  //           .subscribe((data) => {
-  //             applicationModel.userName = data.firstName + ' ' + data.lastName;
-  //             this.applicationService
-  //               .addApplication(applicationModel)
-  //               .subscribe((data) => {
-  //                 this.toastrService.success('Başvuru Eklendi');
-  //                 this.router.navigate(['/admin/admin-application']);
-  //               });
-  //           });
-  //       });
-  //   } else {
-  //     this.toastrService.warning('Form Eksik!!');
-  //   }
-  // }
+  add() {
+    if (this.applicationAddForm.valid) {
+      let applicationModel = Object.assign({}, this.applicationAddForm.value);
+      this.bootcampService
+        .getBootcamp(applicationModel.bootcampId)
+        .subscribe((data) => {
+          applicationModel.bootcampName = data.name;
+          this.applicantService
+            .getApplicant(applicationModel.userId)
+            .subscribe((data) => {
+              applicationModel.userName = data.firstName + ' ' + data.lastName;
+              this.applicationService
+                .addApplication(applicationModel)
+                .subscribe((data) => {
+                  this.toastrService.success('Başvuru Eklendi');
+                  this.router.navigate(['/admin/admin-application']);
+                });
+            });
+        });
+    } else {
+      this.toastrService.warning('Form Eksik!!');
+    }
+  }
 }
