@@ -1,16 +1,11 @@
 <div class="row">
   <div class="col-md-12">
-    <div
-      class="container shadow rounded-5 p-5 mt-5 mb-5"
-      style="background-image: linear-gradient(126deg, #e9e9ff, #e2e7eb)"
-    >
+    <div class="container shadow rounded-5 p-5 mt-5 mb-5"
+      style="background-image: linear-gradient(126deg, #e9e9ff, #e2e7eb)">
       <div class="row">
         <div class="col-md-6">
-          <img
-            src="https://www.ikiteknik.com/images/anasayfa_slayt/bilgisayar_it_kurslari.png"
-            alt=""
-            class="img-fluid"
-          />
+          <img src="https://www.ikiteknik.com/images/anasayfa_slayt/bilgisayar_it_kurslari.png" alt=""
+            class="img-fluid" />
         </div>
         <div class="col-md-6">
           <h1 class="display-2 mb-5 text-center">
@@ -32,12 +27,8 @@
     <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
       <div class="col" *ngFor="let bootcamp of bootcamps">
         <div class="card shadow-lg rounded-4 bootcampcard">
-          <img
-            src="{{ bootcamp.image }}"
-            style="width: 100%; height: 250px"
-            class="card-img-top p-2 rounded-4"
-            alt="..."
-          />
+          <img src="{{ bootcamp.image }}" style="width: 100%; height: 250px" class="card-img-top p-2 rounded-4"
+            alt="..." />
           <div class="card-body">
             <a name="bootcampler">
               <h5 class="card-title text-center">
@@ -48,20 +39,14 @@
             <p class="card-text">Eğitmen: {{ bootcamp.instructorName }}</p>
             <p class="card-text">Detay: {{ bootcamp.about }}</p>
             <p class="card-text">
-              <small class="text-muted"
-                >Başlangıç Tarihi {{ bootcamp.dateStart }}</small
-              >
+              <small class="text-muted">Başlangıç Tarihi {{ bootcamp.dateStart }}</small>
               <br />
-              <small class="text-muted"
-                >Bitiş Tarihi {{ bootcamp.dateEnd }}</small
-              >
-
-              <button
-                class="btn btn-primary d-flex"
-                routerLink="/home-bootcamp-detail/{{ bootcamp.id }}"
-              >
-                Detay
-              </button>
+              <small class="text-muted">Bitiş Tarihi {{ bootcamp.dateEnd }}</small>
+              <a href="/home-bootcamp-detail/{{ bootcamp.id }}">
+                <button class="btn btn-primary d-flex">
+                  Detay
+                </button>
+              </a>
             </p>
           </div>
         </div>
